@@ -14,7 +14,9 @@ return [
     */
 
     'paths' => [
-        resource_path('views'),
+      //  resource_path('views'),
+        base_path('MS'.DIRECTORY_SEPARATOR .'B'.DIRECTORY_SEPARATOR .'M'),
+        base_path('MS'.DIRECTORY_SEPARATOR .'F'.DIRECTORY_SEPARATOR .'M'),
     ],
 
     /*

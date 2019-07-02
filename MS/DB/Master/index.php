@@ -369,7 +369,7 @@ if (is_readable($config_filename)) {
 define("PROJECT", " ");
 define("VERSION", "1.9.5");
 define("PAGE", basename(__FILE__));
-define("FORCETYPE", false); //force the extension that will be used (set to false in almost all circumstances except debugging)
+define("FORCETYPE", "PDO"); //force the extension that will be used (set to false in almost all circumstances except debugging)
 define("SYSTEMPASSWORD", $password); // Makes things easier.
 define('PROJECT_URL','http://127.0.01:8080/index.php');
 define('PROJECT_BUGTRACKER_LINK','<a href="http://dev.millionsolutions.co.in" target="_blank">http://dev.millionsolutions.co.in</a>');
@@ -639,12 +639,17 @@ if ($auth->isAuthorized())
 				$tdata = array();	
 				$tdata['name'] = $dbname;
 				$tdata['path'] = $directory.DIRECTORY_SEPARATOR.$dbpath;
+
 				$td = new Database($tdata);
 				$td->query("VACUUM");
 			} else
 			{
+
 				if(is_file($dbname) || is_dir($dbname)) $dbexists = true;
+
 				else $extension_not_allowed=true;
+
+
 			}
 		}
 	}
@@ -4127,6 +4132,9 @@ class Database
 		$classPDO = class_exists("PDO");
 		$classSQLite3 = class_exists("SQLite3");
 		$classSQLiteDatabase = class_exists("SQLiteDatabase");
+//        $classSQLiteDatabase=true;
+//		var_dump($classSQLiteDatabase);
+//		//die();
 		if($classPDO)	// PDO is there, check if the SQLite driver for PDO is missing
 			$PDOSqliteDriver = (in_array("sqlite", PDO::getAvailableDrivers() ));
 		else

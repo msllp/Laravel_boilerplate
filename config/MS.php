@@ -18,6 +18,8 @@ return[
         'Frontend'=>[],
         'Backend'=>[
             'MAS'=>true,
+            'HM'=>true,
+
 
 
 

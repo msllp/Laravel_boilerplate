@@ -21,14 +21,7 @@ $subdirectories = false;
 //if the above $directory variable is set to false, you must specify the databases manually in an array as the next variable
 //if any of the databases do not exist as they are referenced by their path, they will be created automatically
 $databases = array(
-	array(
-		'path'=> 'database1.sqlite',
-		'name'=> 'Database 1'
-	),
-	array(
-		'path'=> 'database2.sqlite',
-		'name'=> 'Database 2'
-	),
+
 );
 
 
@@ -42,7 +35,7 @@ $theme = 'phpliteadmin.css';
 $language = 'en';
 
 // set default number of rows. You need to relog after changing the number
-$rowsNum = 30;
+$rowsNum = 500;
 
 // reduce string characters by a number bigger than 10
 $charsNum = 300;
@@ -70,11 +63,11 @@ function leet_text($value)
 /* ---- Advanced options ---- */
 
 //changing the following variable allows multiple phpLiteAdmin installs to work under the same domain.
-$cookie_name = 'ICSDB';
+$cookie_name = 'MSDB';
 
 //whether or not to put the app in debug mode where errors are outputted
 $debug = false;
 
 // the user is allowed to create databases with only these extensions
-$allowed_extensions = array('db','db3','sqlite','sqlite3');
+$allowed_extensions = array('db','db3','sqlite','sqlite3','ms');
 

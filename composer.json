@@ -8,8 +8,11 @@
     ],
     "license": "MIT",
     "require": {
+        "barryvdh/laravel-dompdf": "^0.8.4",
+        "guzzlehttp/guzzle": "^6.3",
         "msllp/core": "dev-master",
-        "msllp/modules": "dev-master"
+        "msllp/modules": "dev-master",
+        "razorpay/razorpay": "2.*"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
