@@ -12,5 +12,5 @@ const mix = require('laravel-mix');
  */
 mix
     //.js('./vendor/msllp/core/src/Views/core/B/s/js/app.js', 'public/b/js');
-   //  .js('./vendor/msllp/core/src/Views/core/B/s/js/app.js', 'public/b/js')
+    .js('./vendor/msllp/core/src/Views/core/B/s/js/app.js', 'public/b/js')
     .sass('./vendor/msllp/core/src/Views/core/B/s/css/app.scss', 'public/b/css');

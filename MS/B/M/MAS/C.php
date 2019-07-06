@@ -27,6 +27,7 @@ class C extends BaseController
     }
     public function index(Request $r){
 
+        return view("MS::core.layouts.panel");
         //dd(new M(__NAMESPACE__ ) );
         $m=new \MS\Core\Helper\MSDB(__NAMESPACE__,'Master_User');
         $m->msData=$m->rowGet(['FirstName'=>"Mitul"]);
