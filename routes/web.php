@@ -12,9 +12,9 @@
 */
 
 
-\MS\Core\Helper\Comman::loadBack();
+//\MS\Core\Helper\Comman::loadBack();
 
-//Route::get('/', function () {
+
 //
 //
 //    return view("MS::core.layouts.login");

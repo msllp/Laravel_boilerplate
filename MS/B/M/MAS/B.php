@@ -28,12 +28,12 @@ class B extends Master
             'type'=>'get',
         ],
 
-        [
-            'name'=>'MAS.Index.data',
-            'route'=>'/data',
-            'method'=>'indexData',
-            'type'=>'get',
-        ],
+//        [
+//            'name'=>'MAS.Index.data',
+//            'route'=>'/data',
+//            'method'=>'indexData',
+//            'type'=>'get',
+//        ],
 
 
 
@@ -51,36 +51,45 @@ class B extends Master
             'type'=>'post',
         ],
 
-
         [
-            'name'=>'BM.Generate.Invoice.PDF',
-            'route'=>'/fromAppGenaratePdf',
-            'method'=>'genarateInvoicePDF',
-            'type'=>'get',
+            'name'=>'Test.Post.With.Data',
+            'route'=>'/test/post',
+            'method'=>'postLinkTest',
+            'type'=>'post',
         ],
 
 
-        [
-            'name'=>'BM.Generate.Invoice.PDF',
-            'route'=>'/getHsnCode',
-            'method'=>'findGst',
-            'type'=>'get',
-        ],
+
+//
+//        [
+//            'name'=>'BM.Generate.Invoice.PDF',
+//            'route'=>'/fromAppGenaratePdf',
+//            'method'=>'genarateInvoicePDF',
+//            'type'=>'get',
+//        ],
 
 
-        [
-            'name'=>'BM.Generate.Invoice.for.App',
-            'route'=>'/gen/invoice/app',
-            'method'=>'genInvFroApp',
-            'type'=>'get',
-        ],
+//        [
+//            'name'=>'BM.Generate.Invoice.PDF',
+//            'route'=>'/getHsnCode',
+//            'method'=>'findGst',
+//            'type'=>'get',
+//        ],
 
-        [
-            'name'=>'BM.Generate.Invoice.for.App',
-            'route'=>'/get/gstrate/from/code',
-            'method'=>'findGstRate',
-            'type'=>'get',
-        ],
+//
+//        [
+//            'name'=>'BM.Generate.Invoice.for.App',
+//            'route'=>'/gen/invoice/app',
+//            'method'=>'genInvFroApp',
+//            'type'=>'get',
+//        ],
+//
+//        [
+//            'name'=>'BM.Generate.Invoice.for.App',
+//            'route'=>'/get/gstrate/from/code',
+//            'method'=>'findGstRate',
+//            'type'=>'get',
+//        ],
 
 
 

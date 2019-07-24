@@ -13,7 +13,7 @@ return [
             [
 //                ['name'=>'UniqId','vName'=>'ID','type'=>'string', 'input'=>'locked', 'callback'=>'genUniqId',
 //                    'validation'=>['unique'=>true,]],
-                ['name'=>'ProductName','vName'=>'Product Name','type'=>'string', 'input'=>'text',"validation"=>[ 'existIn'=>"B\HM:HM_Product_Master:UniqId->HubName,HubCity,","required"=>true],'inputMultiple'=>true  ],
+                ['name'=>'ProductName','vName'=>'Product Name','type'=>'string', 'input'=>'text',"validation"=>[ 'existIn'=>"B\HM:HM_Product_Master:UniqId->HubName,HubCity","required"=>true],'inputMultiple'=>true  ],
                 ['name'=>'ProductIcon','vName'=>'Select display images','type'=>'string', 'input'=>'file',  ],
                 ['name'=>'ProductImages','vName'=>'Select other images','type'=>'string', 'input'=>'file',  ],
                 ['name'=>'Shortcode','vName'=>'Display Short Code','type'=>'string', 'input'=>'text',   ],

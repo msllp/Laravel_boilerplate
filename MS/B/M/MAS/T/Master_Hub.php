@@ -60,7 +60,7 @@ return [
                 ['name'=>'ConfirmPassword','vName'=>'Confirm Password', 'input'=>'text',    'validation'=>['required'=>true]],
                 ['name'=>'Role','vName'=>'Select Role','type'=>'string', 'input'=>'option','data'=>'getRole'  ],
 
-                ['name'=>'HubId','vName'=>'Select Hub','type'=>'string', 'input'=>'option','data'=>'getHub'  ],
+            //    ['name'=>'HubId','vName'=>'Select Hub','type'=>'string', 'input'=>'option','data'=>'getHub'  ],
                 ['name'=>'LedgerId','vName'=>'Master Ledger','type'=>'string', 'input'=>'generated','callback'=>'genAPIToken'  ,'validation'=>['unique']],
 
                 ['name'=>'APIToken','vName'=>'API Token','type'=>'string', 'input'=>'generated' ,'callback'=>'genAPIToken','validation'=>['unique'] ,'hidden'=>true ],
@@ -68,8 +68,13 @@ return [
 
             ],
         'action'=>[
-            'add'=>"",
-            'edit'=>"",
+            'add'=>[
+                "btnColor"=>"btn-success",
+                "route"=>"Test.Post.With.Data",
+                "btnIcon"=>"fa fa-home",
+                'btnText'=>"add Module"
+            ],
+
 
         ],
 

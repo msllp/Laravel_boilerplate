@@ -2,6 +2,7 @@
 
 namespace B\MAS;
 
+//use B\MAS\R\AddMSCoreModule;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -25,7 +26,76 @@ class C extends BaseController
 
         return view("BM.V.genInvoice");
     }
+
+
+
+    public function postLinkTest(Request $r){
+
+
+        $m=new \MS\Core\Helper\MSDB("B\MAS","Master_Mod");
+        $d=$r->all();
+
+        dd($m->checkRulesForData($r));
+       // if(!array_key_exists('uniqId',$d))$d['uniqId']="1125";
+//        if(array_key_exists('modIcon',$d))$d['modIcon']="fa-home";
+//        if(array_key_exists('_token',$d)) unset($d['_token']) ;
+//        if(array_key_exists('modHomeAction',$d)) unset($d['modHomeAction']) ;
+//        if(array_key_exists('modDataAction',$d)) unset($d['modDataAction']) ;
+//
+//        //dd($d);
+//        dd(  $m->rowAdd($d,['UniqId']));
+//        $m->rowAdd($r->all());
+
+        $validation=[
+        //    'modName'=>'required',
+         //   'modDesc'=>'required'
+        ];
+        $messages=[
+            'modName.required'=>'Please enter :attribute'
+        ];
+        $attribute=[
+
+            'modName' => 'Name of Module',
+        ];
+
+        $test=$r->make($validation,$messages,$attribute);
+      dd($test);
+
+
+
+           // $image=$r->file('modIcon');
+   // dd( $r->all()['modIcon']);
+//$i=0;
+//    foreach ($r->all()['modIcon'] as $file){
+//
+//        $filename=time().$i.".".$file->getClientOriginalExtension();
+//        $file->storeAs('Files',$filename ,'MS-CORE'
+//        );
+//
+//$i++;
+//    }
+
+
+        return response()->json(['ms'=>[
+
+            'status'=>200,
+            'Rdata'=> $r->input()
+
+        ]],202);
+
+    }
     public function index(Request $r){
+        //dd(config(R\AddMSCoreModule));
+      //  $m=new \MS\Core\Helper\MSDB("B\MAS","Master_Hub",[]);
+        $m=new \MS\Core\Helper\MSDB("B\MAS","Master_Mod",['fieldGroup']);
+      //  $m=new \MS\Core\Helper\MSDB("B\MAS","Master_Mod_Status",[]);
+
+
+
+      //  $m->migrate();
+        return $m->displayFrom(['group'=>['Add Module','Login Details','Add Module2'],'action'=>['add','back']]);
+
+
 
         return view("MS::core.layouts.panel");
         //dd(new M(__NAMESPACE__ ) );
@@ -107,6 +177,7 @@ class C extends BaseController
      //   dd(\MS\Core\Helper\Comman::decode($code));
 
         return view("BM.V.genInvoice");
+
 
         $m=new \MS\Core\Helper\MSDB("B\BM","Master_Booking",[]);
         //$m->migrate();

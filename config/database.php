@@ -35,9 +35,17 @@ return [
 
         'sqlite' => [
             'driver' => 'sqlite',
-            'database' => env('DB_DATABASE', database_path('database.sqlite')),
+            'database' =>base_path('MS/DB/Master/MS_Core'),
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
+        ],
+
+
+        'MS_Core' => [
+            'driver' => 'sqlite',
+            'database' => base_path('MS/DB/Master/MS_Core'),
+            'prefix' => '',
+            'foreign_key_constraints' => true,
         ],
 
         'mysql' => [
