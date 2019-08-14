@@ -18,7 +18,7 @@ return [
                     'type'=>'string',
                     'input'=>'auto',
                     'callback'=>'genUniqId',
-                    'validation'=>['required'=>true,],
+                    'validation'=>['required'=>true,'unique'=>true],
                     'inputInfo'=>"It is auto genrated Field.It can not edit by Any Human."
 
                 ],
@@ -26,11 +26,14 @@ return [
                 ['name'=>'modName','vName'=>'Name of Module','type'=>'string', 'input'=>'text',"validation"=>[ 'required'=>true],'inputInfo'=>"Full Module Name that can display all over application."],
                 ['name'=>'modDesc','vName'=>'Description of Module','type'=>'string', 'input'=>'text',],
                 ['name'=>'modCode','vName'=>'Module Code','type'=>'string', 'input'=>'text',],
-                ['name'=>'modIcon','vName'=>'Module Icon','type'=>'string', 'input'=>'multifile',],
+                ['name'=>'modIcon','vName'=>'Module Icon','type'=>'string', 'input'=>'file',
+                    'storeTo'=>"MS-MASTER-Storage:MAS.UniqId.ModIcon->icon"
+
+                    ],
                 ['name'=>'modPrefix','vName'=>'Route Prefix','type'=>'string', 'input'=>'text',],
                 ['name'=>'modForSuperAdmin','vName'=>'Module For Super Admin Only','type'=>'boolean', 'input'=>'radio',"validation"=>[ 'existIn'=>MSCORE_UI_STATUS_1]],
-                ['name'=>'modForAdmin','vName'=>'Module For Admin Only','type'=>'boolean', 'input'=>'radio',"validation"=>[ 'existIn'=>MSCORE_UI_STATUS_1]],
-                ['name'=>'modStatus','vName'=>'Module Status','type'=>'boolean', 'input'=>'checkbox',"validation"=>[ 'existIn'=>MSCORE_UI_STATUS_1,'required'=>true,]],
+                ['name'=>'modForAdmin','vName'=>'Module For Admin Only','type'=>'boolean', 'input'=>'checkbox',"validation"=>[ 'existIn'=>MSCORE_UI_STATUS_1]],
+                ['name'=>'modStatus','vName'=>'Module Status','type'=>'boolean', 'input'=>'radio',"validation"=>[ 'existIn'=>MSCORE_UI_STATUS_1,'required'=>true,]],
                 ['name'=>'modHomeAction','vName'=>'Home Action','type'=>'boolean', 'input'=>'text',],
                 ['name'=>'modDataAction','vName'=>'Home-Data Action','type'=>'boolean', 'input'=>'text',],
 
@@ -38,8 +41,8 @@ return [
 
         'fieldGroup'=>[
             'Add Module'=>['UniqId','modName','modDesc','modCode','modIcon','modPrefix','modForSuperAdmin','modForAdmin','modStatus','modHomeAction','modDataAction'],
-            'Add Module2'=>['modName','modDesc','modCode','modIcon','modPrefix','modForSuperAdmin','modForAdmin','modStatus','modHomeAction','modDataAction'],
-            'Login Details'=>['modName','modDesc','modCode','modIcon',],
+           // 'Add Module2'=>['modName','modDesc','modCode','modIcon','modPrefix','modForSuperAdmin','modForAdmin','modStatus','modHomeAction','modDataAction'],
+           // 'Login Details'=>['modName','modDesc','modCode','modIcon',],
          //   'Login Details 2'=>['Username','Password','ConfirmPassword','Role']
 
         ],

@@ -11,7 +11,7 @@ return[
     'front_module_root'=>'MS/F',
 
     'backend_prefix'=>"admin",
-    'modules'=>
+    'Modules'=>
 
     [
 

@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'MS_Core'),
 
     /*
     |--------------------------------------------------------------------------
@@ -44,6 +44,13 @@ return [
         'MS_Core' => [
             'driver' => 'sqlite',
             'database' => base_path('MS/DB/Master/MS_Core'),
+            'prefix' => '',
+            'foreign_key_constraints' => true,
+        ],
+
+        'MS_Core_2' => [
+            'driver' => 'sqlite',
+            'database' => base_path('MS/DB/Master/MS_Core_2'),
             'prefix' => '',
             'foreign_key_constraints' => true,
         ],

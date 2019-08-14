@@ -7,6 +7,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
+use mysql_xdevapi\Exception;
 use Razorpay\Api;
 
 class C extends BaseController
@@ -33,9 +34,18 @@ class C extends BaseController
 
 
         $m=new \MS\Core\Helper\MSDB("B\MAS","Master_Mod");
+        $m->attachRequest($r);
+       // $m->migrate();
         $d=$r->all();
+        $valid=$m->checkRulesForData($r);
+       // dd(response()->json(  $m->errors() ,301));
+        //dd($valid);
+        if($valid){
+         // dd($d);
+            dd(  $m->rowAdd($d));
+        }
 
-        dd($m->checkRulesForData($r));
+        return response()->json(  $m->errors() ,301);
        // if(!array_key_exists('uniqId',$d))$d['uniqId']="1125";
 //        if(array_key_exists('modIcon',$d))$d['modIcon']="fa-home";
 //        if(array_key_exists('_token',$d)) unset($d['_token']) ;
@@ -84,16 +94,41 @@ class C extends BaseController
         ]],202);
 
     }
+    public  function testMail(){
+      //  phpinfo();
+      //  dd(extension_loaded ( 'imap' ));
+
+        try{
+            $mbox = imap_open ("{".env('MAIL_HOST').":".env('MAIL_PORT')."/ssl/".env('MAIL_DRIVER')."}INBOX", env('MAIL_USERNAME'), env('MAIL_PASSWORD'));
+        //    dd(imap_num_msg ($mbox));
+//            dd(imap_header  ($mbox,2));
+//            dd(imap_num_msg ($mbox));
+            for ($i=1;$i < imap_num_msg ($mbox);$i++){
+              //  dd((array)imap_header($mbox,$i));
+                dd(imap_utf7_decode ('34fce873543751c8d99a07a88647c663'));
+              var_dump("From ".imap_header  ($mbox,$i)->from[0]->mailbox."@".imap_header  ($mbox,$i)->from[0]->host."<br>");
+            }
+        }catch (Exception $exception){
+            dd($exception);
+        }
+
+    }
     public function index(Request $r){
+      //  return view("MS::core.layouts.panelWithLiveTab");
+       // dd($this->testMail());
+        //return $this->testMail();
+        //dd(route("MS.Test"));
+        //return redirect(route("MS.Test"));
+       // dd(config('MS'));
         //dd(config(R\AddMSCoreModule));
       //  $m=new \MS\Core\Helper\MSDB("B\MAS","Master_Hub",[]);
-        $m=new \MS\Core\Helper\MSDB("B\MAS","Master_Mod",['fieldGroup']);
+        //$m=new \MS\Core\Helper\MSDB("B\MAS","Master_Mod",['fieldGroup']);
       //  $m=new \MS\Core\Helper\MSDB("B\MAS","Master_Mod_Status",[]);
 
 
 
       //  $m->migrate();
-        return $m->displayFrom(['group'=>['Add Module','Login Details','Add Module2'],'action'=>['add','back']]);
+        //return $m->displayFrom(['group'=>['Add Module','Login Details','Add Module2'],'action'=>['add','back']]);
 
 
 

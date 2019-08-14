@@ -28,6 +28,16 @@ class B extends Master
             'type'=>'get',
         ],
 
+
+
+
+        [
+            'name'=>'MAS.core.encryptRequest',
+            'route'=>'::',
+            'method'=>'MS:Helper.MSSign@check',
+
+        ],
+
 //        [
 //            'name'=>'MAS.Index.data',
 //            'route'=>'/data',

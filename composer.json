@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "msllp/ms-frame-boiler",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "MS-Frame version 5.8",
     "keywords": [
         "framework",
         "laravel"
@@ -52,13 +52,13 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php mama package:discover --ansi"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
+            "@php mama key:generate --ansi"
         ]
     }
 }
