@@ -1909,13 +1909,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "msdashboard",
   data: function data() {
     return {
       msNavOn: true,
-      msMenuOn: false
+      msMenuOn: false,
+      msNavBar: true,
+      bus: new Vue()
     };
   },
   methods: {
@@ -1923,19 +1935,27 @@ __webpack_require__.r(__webpack_exports__);
       var show = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
       var event = arguments.length > 1 ? arguments[1] : undefined;
 
+      //this.$children['msMenu'].hideNav();
       if (!show) {
         this.msNavOn = false;
       } else {
         this.msNavOn = true;
-      }
+      } // console.log(event.offsetY);
 
-      console.log(event.offsetY);
     },
     clickToggaleButton: function clickToggaleButton() {
       if (this.msMenuOn) {
         this.msMenuOn = false;
       } else {
         this.msMenuOn = true;
+        console.log(this.$refs['msform'][0].fromOtherCom('hideNav'));
+      }
+    },
+    hideNavBar: function hideNavBar($event) {
+      if (this.msNavBar) {
+        this.msNavBar = false;
+      } else {
+        this.msNavBar = true;
       }
     }
   },
@@ -2151,6 +2171,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   getUrl: function getUrl(item) {
     var sectionSlug = lodash_kebabCase__WEBPACK_IMPORTED_MODULE_1___default()(item.txt);
     return "".concat(item.link, "/").concat(sectionSlug);
+  },
+  fromOtherCom: function fromOtherCom() {
+    var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+    var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+    console.log(type);
+
+    switch (type) {
+      case 'hideNsv':
+        this.msNavigationOn = false;
+        this.msContextClass = "";
+        this.msNavClass = " ms-nav menu__top_hidden";
+        break;
+    }
   },
   hideNav: function hideNav(event) {
     if (this.msNavigationOn) {
@@ -8585,7 +8618,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../../../..
 
 
 // module
-exports.push([module.i, ".hidden[data-v-b5711320]{\n  transition: all 500ms ease-in-out;\n}\n.ms-livebox[data-v-b5711320]{\n  min-height: 1000px;\n  padding-left:252px;\n}\n.ms-livebox-full[data-v-b5711320]{\n  padding-left: 82px;\n}\n", ""]);
+exports.push([module.i, ".hidden[data-v-b5711320]{\n  transition: all 500ms ease-in-out;\n}\n.ms-livebox[data-v-b5711320]{\n  min-height: 1000px;\n  padding-left:252px;\n}\n.ms-livebox-full[data-v-b5711320]{\n  padding-left: 82px;\n}\n.ms-company-logo[data-v-b5711320]{\n  cursor: pointer;\n}\n.hidden[data-v-b5711320]{\n@appply hidden;\n  overflow: hidden;\n}\n.ms-hidden-fix[data-v-b5711320]{\n  padding-left: 80px;\n}\n\n", ""]);
 
 // exports
 
@@ -8604,7 +8637,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../../../..
 
 
 // module
-exports.push([module.i, ".menu__top[data-v-6cf62330]{\n  background-color: #81e6d9;\n  padding: 0.75rem;\n}\nli> .menu__link[data-v-6cf62330]{\n  display: block;\n  padding: 0.5rem;\n  width: 250px;\n  background-color: #81e6d9;\n  border-top-width: 1px;\n}\n.context-menu-container[data-v-6cf62330]{\n  margin-left:252px ;\n  background-color: #4fd1c5;\n  border-top-width: 1px;\n  position: fixed;\n}\n.context-menu-container_small[data-v-6cf62330]{\n  margin-left:82px ;\n}\n.context-menu__title[data-v-6cf62330]{\n}\n.menu__icon[data-v-6cf62330]{\n  padding-right: 0.5rem;\n  padding-left: 0.5rem;\n}\n.menu__top_small[data-v-6cf62330]{\n  transition: all 800ms ease-in-out;\n  max-width: 80px;\n}\n.menu__arrow-icon[data-v-6cf62330]{\n  float: right;\n  padding: 0.25rem;\n}\n.context-menu[data-v-6cf62330]{\n  padding: 0.25rem;\n}\n.context-menu__title[data-v-6cf62330]{\n  padding-right: 0.75rem;\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  padding-left: 0.75rem;\n  min-width: 100%;\n}\n.context-li[data-v-6cf62330]{\n  display: flex;\n}\n.context-li-title[data-v-6cf62330]{\n  border-bottom-width: 1px;\n}\n\n", ""]);
+exports.push([module.i, ".menu__top[data-v-6cf62330]{\n  background-color: #81e6d9;\n  padding: 0.75rem;\n}\nli> .menu__link[data-v-6cf62330]{\n  display: block;\n  padding: 0.5rem;\n  width: 250px;\n  background-color: #81e6d9;\n  border-top-width: 1px;\n}\n.context-menu-container[data-v-6cf62330]{\n  margin-left:252px ;\n  top:80px;\n  min-width: 200px;\n  background-color: #4fd1c5;\n  border-top-width: 1px;\n  position: fixed;\n}\n.context-menu-container_small[data-v-6cf62330]{\n  margin-left:82px ;\n}\n.context-menu__title[data-v-6cf62330]{\n}\n.menu__icon[data-v-6cf62330]{\n  padding-right: 0.5rem;\n  padding-left: 0.5rem;\n}\n.menu__top_small[data-v-6cf62330]{\n  transition: all 800ms ease-in-out;\n  max-width: 80px;\n}\n.menu__arrow-icon[data-v-6cf62330]{\n  float: right;\n  padding: 0.25rem;\n}\n.context-menu[data-v-6cf62330]{\n  padding: 0.25rem;\n}\n.context-menu__title[data-v-6cf62330]{\n  padding-right: 0.75rem;\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  padding-left: 0.75rem;\n  min-width: 100%;\n}\n.context-li[data-v-6cf62330]{\n  display: flex;\n}\n.context-li-title[data-v-6cf62330]{\n  border-bottom-width: 1px;\n}\n.ms-nav[data-v-6cf62330]{\n  top: 80px;\n  cursor:ponter;\n}\n\n", ""]);
 
 // exports
 
@@ -8623,7 +8656,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../../../..
 
 
 // module
-exports.push([module.i, ".shadow-lg[data-v-4991664a]{\n  transition: all 400ms ease-in-out;\n}\n\n", ""]);
+exports.push([module.i, ".shadow-lg[data-v-4991664a]{\n  transition: all 400ms ease-in-out;\n}\n.ms-live-tab[data-v-4991664a]{\n  padding-top:80px\n}\n\n", ""]);
 
 // exports
 
@@ -42059,98 +42092,181 @@ var render = function() {
   return _c(
     "div",
     [
-      _c(
-        "nav",
-        {
-          staticClass:
-            "flex items-center justify-between flex-wrap bg-teal-100 p-6 "
-        },
-        [
-          _c(
-            "div",
-            { staticClass: "flex items-center flex-shrink-0 text-black mr-6" },
-            [
-              _c(
-                "svg",
-                {
-                  staticClass: "fill-current h-8 w-8 mr-2",
-                  attrs: {
-                    width: "54",
-                    height: "54",
-                    viewBox: "0 0 54 54",
-                    xmlns: "http://www.w3.org/2000/svg"
-                  }
-                },
-                [
-                  _c("path", {
-                    attrs: {
-                      d:
-                        "M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
-                    }
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "span",
-                { staticClass: "font-semibold text-xl tracking-tight" },
-                [_vm._v("Company Name")]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "block lg:hidden" }, [
+      _c("div", { staticClass: "fixed " }, [
+        _c(
+          "nav",
+          {
+            staticClass:
+              "flex items-center justify-between flex-wrap bg-teal-100 p-6  object-cover"
+          },
+          [
             _c(
-              "button",
+              "div",
               {
-                staticClass:
-                  "flex items-center px-3 py-2 border rounded text-black-200 text-black-200 hover:text-white hover:border-white",
-                on: { click: _vm.clickToggaleButton }
+                staticClass: "flex items-center flex-shrink-0 text-black mr-6",
+                on: {
+                  click: function($event) {
+                    return _vm.hideNavBar($event)
+                  }
+                }
               },
               [
                 _c(
                   "svg",
                   {
-                    staticClass: "fill-current h-3 w-3",
+                    staticClass: "fill-current h-8 w-8 mr-2 ms-company-logo",
                     attrs: {
-                      viewBox: "0 0 20 20",
+                      width: "54",
+                      height: "54",
+                      viewBox: "0 0 54 54",
                       xmlns: "http://www.w3.org/2000/svg"
                     }
                   },
                   [
-                    _c("title", [_vm._v("Menu")]),
                     _c("path", {
                       attrs: {
-                        d: "M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
+                        d:
+                          "M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
                       }
                     })
                   ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "font-semibold text-xl tracking-tight",
+                    class: { hidden: !_vm.msNavBar }
+                  },
+                  [_vm._v("Company Name")]
                 )
               ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "block lg:hidden" }, [
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "flex items-center px-3 py-2 border rounded text-black-200 text-black-200 hover:text-white hover:border-white",
+                  on: { click: _vm.clickToggaleButton }
+                },
+                [
+                  _c(
+                    "svg",
+                    {
+                      staticClass: "fill-current h-3 w-3",
+                      attrs: {
+                        viewBox: "0 0 20 20",
+                        xmlns: "http://www.w3.org/2000/svg"
+                      }
+                    },
+                    [
+                      _c("title", [_vm._v("Menu")]),
+                      _c("path", {
+                        attrs: {
+                          d: "M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
+                        }
+                      })
+                    ]
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "w-full block flex-grow lg:flex lg:items-center lg:w-auto ",
+                class: {
+                  hidden: !_vm.msMenuOn
+                }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "text-sm lg:flex-grow text-right",
+                    class: { "ms-hidden-fix": !_vm.msNavBar }
+                  },
+                  [
+                    _c("span", {
+                      staticClass:
+                        "fa fa-plus inline-block inline-block text-sm px-4 py-2 leading-none border rounded text-black border-teal-300 hover:border-teal-900  hover:text-teal-900 hover:bg-blue mt-4 lg:mt-0"
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "block mt-4 inline-block lg:mt-0 text-black-200 hover:text-teal-500 mr-4",
+                        class: { hidden: !_vm.msNavBar },
+                        attrs: { href: "#responsive-header" }
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Docs\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("span", {
+                      staticClass:
+                        "fa fa-plus inline-block inline-block text-sm px-4 py-2 leading-none border rounded text-black border-teal-300 hover:border-teal-900  hover:text-teal-900 hover:bg-blue mt-4 lg:mt-0"
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "block mt-4 inline-block lg:mt-0 text-black-200 hover:text-teal-500 mr-4",
+                        class: { hidden: !_vm.msNavBar },
+                        attrs: { href: "#responsive-header" }
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Examples\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("span", {
+                      staticClass:
+                        "fa fa-plus inline-block inline-block text-sm px-4 py-2 leading-none border rounded text-black border-teal-300 hover:border-teal-900  hover:text-teal-900 hover:bg-blue mt-4 lg:mt-0"
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "block mt-4 inline-block lg:mt-0 text-black-200 hover:text-teal-500",
+                        class: { hidden: !_vm.msNavBar },
+                        attrs: { href: "#responsive-header" }
+                      },
+                      [
+                        _vm._v(
+                          "\n                        Blog\n                    "
+                        )
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _vm._m(0)
+              ]
             )
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "w-full block flex-grow lg:flex lg:items-center lg:w-auto",
-              class: {
-                hidden: !_vm.msMenuOn
-              }
-            },
-            [_vm._m(0), _vm._v(" "), _vm._m(1)]
-          )
-        ]
-      ),
+          ]
+        )
+      ]),
       _vm._v(" "),
-      _c("ms-menubar", { attrs: { "ms-nav": _vm.msNavOn } }),
+      _c("ms-menubar", { ref: "msform", attrs: { "ms-nav": _vm.msNavOn } }),
       _vm._v(" "),
       _c(
         "div",
         {
           class: {
-            "ms-livebox border-t border-b border-l border-r": true,
+            "ms-livebox border-t border-b border-l shadow ": true,
             "ms-livebox-full": !_vm.msNavOn
           }
         },
@@ -42166,48 +42282,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-sm lg:flex-grow" }, [
+    return _c("div", { staticClass: "ml-3" }, [
       _c(
         "a",
         {
           staticClass:
-            "block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-teal-500 mr-4",
-          attrs: { href: "#responsive-header" }
-        },
-        [_vm._v("\n                Docs\n            ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-teal-500 mr-4",
-          attrs: { href: "#responsive-header" }
-        },
-        [_vm._v("\n                Examples\n            ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-teal-500",
-          attrs: { href: "#responsive-header" }
-        },
-        [_vm._v("\n                Blog\n            ")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "a",
-        {
-          staticClass:
-            "inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0",
+            "inline-block text-sm px-4 py-2 leading-none border rounded text-black border-teal-300 hover:border-teal-900  hover:text-teal-900 hover:bg-blue mt-4 lg:mt-0",
           attrs: { href: "#" }
         },
         [_vm._v("Download")]
@@ -42328,7 +42408,7 @@ var render = function() {
             _vm.msNavigationOn ? _c("span", [_vm._v("  Products")]) : _vm._e(),
             _vm._v(" "),
             _c("i", {
-              staticClass: "fa fa-chevron-right menu__arrow-icon",
+              staticClass: "fa fa-chevron-right menu__arrow-icon float-right",
               attrs: { "aria-hidden": "true" }
             })
           ]
@@ -42523,7 +42603,7 @@ var render = function() {
   return _c(
     "div",
     {
-      staticClass: "   ",
+      staticClass: " ms-live-tab  ",
       attrs: { "contextmenu.prevent": "rightClick($event)" }
     },
     [
