@@ -114,6 +114,8 @@ class C extends BaseController
 
     }
     public function index(Request $r){
+
+        return view("MS::core.layouts.panel");
         $docker=new \MS\Core\Docker\Image();
         dd($docker->makeImage());
       //  return view("MS::core.layouts.panelWithLiveTab");

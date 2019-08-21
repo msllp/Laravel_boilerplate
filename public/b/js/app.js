@@ -1919,15 +1919,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "msdashboard",
   data: function data() {
     return {
+      //  msRoot:app,
       msNavOn: true,
       msMenuOn: false,
       msNavBar: true,
-      bus: new Vue()
+      windowWidth: window.innerWidth
     };
   },
   methods: {
@@ -1948,7 +1955,7 @@ __webpack_require__.r(__webpack_exports__);
         this.msMenuOn = false;
       } else {
         this.msMenuOn = true;
-        console.log(this.$refs['msform'][0].fromOtherCom('hideNav'));
+        this.$refs['msMenull'].fromOtherCom('hideNav', this.msMenuOn); // console.log();
       }
     },
     hideNavBar: function hideNavBar($event) {
@@ -1958,6 +1965,9 @@ __webpack_require__.r(__webpack_exports__);
         this.msNavBar = true;
       }
     }
+  },
+  mounted: function mounted() {
+    if (this.msNavOn && window.innerWidth < 800) this.msNavOn = false;
   },
   components: {
     msMenubar: _msMenubar__WEBPACK_IMPORTED_MODULE_0__["default"]
@@ -2175,8 +2185,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   fromOtherCom: function fromOtherCom() {
     var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
     var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-    console.log(type);
 
+    //console.log(type)
     switch (type) {
       case 'hideNsv':
         this.msNavigationOn = false;
@@ -2203,7 +2213,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     return this.menuItens.length;
   }
 }), _defineProperty(_name$name$props$data, "mounted", function mounted() {
-  this.msNavigationOn = this.msNav;
+  console.log(Boolean(Number(this.msNav)));
+  this.msNavigationOn = Boolean(Number(this.msNav));
+  if (this.msNavigationOn && window.innerWidth < 800) this.msNavigationOn = 0;
 }), _name$name$props$data);
 
 /***/ }),
@@ -2290,6 +2302,7 @@ __webpack_require__.r(__webpack_exports__);
   name: "msviewpanel",
   props: {},
   mounted: function mounted() {
+    if (window.innerWidth < 800) this.maxTabLimit = 3;
     var sampleData = [{
       tabCode: '01',
       modCode: "MAS",
@@ -8618,7 +8631,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../../../..
 
 
 // module
-exports.push([module.i, ".hidden[data-v-b5711320]{\n  transition: all 500ms ease-in-out;\n}\n.ms-livebox[data-v-b5711320]{\n  min-height: 1000px;\n  padding-left:252px;\n}\n.ms-livebox-full[data-v-b5711320]{\n  padding-left: 82px;\n}\n.ms-company-logo[data-v-b5711320]{\n  cursor: pointer;\n}\n.hidden[data-v-b5711320]{\n@appply hidden;\n  overflow: hidden;\n}\n.ms-hidden-fix[data-v-b5711320]{\n  padding-left: 80px;\n}\n\n", ""]);
+exports.push([module.i, ".hidden[data-v-b5711320]{\n  transition: all 500ms ease-in-out;\n}\n.ms-livebox[data-v-b5711320]{\n  min-height: 1000px;\n  padding-left:252px;\n}\n.ms-livebox-full[data-v-b5711320]{\n  padding-left: 82px;\n}\n.ms-company-logo[data-v-b5711320]{\n  cursor: pointer;\n}\n.hidden[data-v-b5711320]{\n@appply hidden;\n  overflow: hidden;\n}\n.ms-hidden-fix[data-v-b5711320]{\n  padding-left: 0px;\n}\n.ms-hidden-fix-2[data-v-b5711320]{\n  padding-top: 10px;\n  padding-left: 0px;\n}\n.ms-nav-btn > .fa[data-v-b5711320] {\n  margin: 5px;\n}\n.ms-nav-btn > .a[data-v-b5711320] {\n  padding-top: 8px;\n}\n\n\n", ""]);
 
 // exports
 
@@ -42092,12 +42105,12 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("div", { staticClass: "fixed " }, [
+      _c("div", { staticClass: "fixed w-full" }, [
         _c(
           "nav",
           {
             staticClass:
-              "flex items-center justify-between flex-wrap bg-teal-100 p-6  object-cover"
+              "flex items-center justify-between flex-wrap bg-teal-100 p-6 lg:p-1  object-cover "
           },
           [
             _c(
@@ -42188,79 +42201,98 @@ var render = function() {
                   "div",
                   {
                     staticClass: "text-sm lg:flex-grow text-right",
-                    class: { "ms-hidden-fix": !_vm.msNavBar }
+                    class: {
+                      "ms-hidden-fix": !_vm.msNavBar,
+                      "ms-hidden-fix-2": _vm.msNavBar
+                    }
                   },
                   [
-                    _c("span", {
-                      staticClass:
-                        "fa fa-plus inline-block inline-block text-sm px-4 py-2 leading-none border rounded text-black border-teal-300 hover:border-teal-900  hover:text-teal-900 hover:bg-blue mt-4 lg:mt-0"
-                    }),
-                    _vm._v(" "),
                     _c(
-                      "a",
-                      {
-                        staticClass:
-                          "block mt-4 inline-block lg:mt-0 text-black-200 hover:text-teal-500 mr-4",
-                        class: { hidden: !_vm.msNavBar },
-                        attrs: { href: "#responsive-header" }
-                      },
+                      "div",
+                      { staticClass: "block  lg:inline-flex ms-nav-btn" },
                       [
-                        _vm._v(
-                          "\n                        Docs\n                    "
-                        )
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "inline-block mt-2 inline-block text-black-200 hover:text-teal-500 mr-4",
+                            class: { hidden: !_vm.msNavBar },
+                            attrs: { href: "#responsive-header" }
+                          },
+                          [
+                            _vm._v(
+                              "\n\n                            Docs\n                        "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("span", {
+                          staticClass:
+                            "fa fa-plus inline-block  text-sm px-4 py-2 leading-none border rounded text-black border-teal-300 hover:border-teal-900  hover:text-teal-900 hover:bg-blue "
+                        })
                       ]
                     ),
                     _vm._v(" "),
-                    _c("span", {
-                      staticClass:
-                        "fa fa-plus inline-block inline-block text-sm px-4 py-2 leading-none border rounded text-black border-teal-300 hover:border-teal-900  hover:text-teal-900 hover:bg-blue mt-4 lg:mt-0"
-                    }),
-                    _vm._v(" "),
                     _c(
-                      "a",
-                      {
-                        staticClass:
-                          "block mt-4 inline-block lg:mt-0 text-black-200 hover:text-teal-500 mr-4",
-                        class: { hidden: !_vm.msNavBar },
-                        attrs: { href: "#responsive-header" }
-                      },
+                      "div",
+                      { staticClass: "block  lg:inline-flex  ms-nav-btn" },
                       [
-                        _vm._v(
-                          "\n                        Examples\n                    "
-                        )
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "inline-block mt-2 inline-blocktext-black-200 hover:text-teal-500 mr-4",
+                            class: { hidden: !_vm.msNavBar },
+                            attrs: { href: "#responsive-header" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                        Examples\n                    "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("span", {
+                          staticClass:
+                            "fa fa-plus inline-block  text-sm px-4 py-2 leading-none border rounded text-black border-teal-300 hover:border-teal-900  hover:text-teal-900 hover:bg-blue "
+                        })
                       ]
                     ),
                     _vm._v(" "),
-                    _c("span", {
-                      staticClass:
-                        "fa fa-plus inline-block inline-block text-sm px-4 py-2 leading-none border rounded text-black border-teal-300 hover:border-teal-900  hover:text-teal-900 hover:bg-blue mt-4 lg:mt-0"
-                    }),
-                    _vm._v(" "),
                     _c(
-                      "a",
-                      {
-                        staticClass:
-                          "block mt-4 inline-block lg:mt-0 text-black-200 hover:text-teal-500",
-                        class: { hidden: !_vm.msNavBar },
-                        attrs: { href: "#responsive-header" }
-                      },
+                      "div",
+                      { staticClass: "block   lg:inline-flex ms-nav-btn" },
                       [
-                        _vm._v(
-                          "\n                        Blog\n                    "
-                        )
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "inline-block mt-2 inline-block text-black-200 hover:text-teal-500 mr-4",
+                            class: { hidden: !_vm.msNavBar },
+                            attrs: { href: "#responsive-header" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                        Blog\n                    "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("span", {
+                          staticClass:
+                            "fa fa-plus inline-block  text-sm px-4 py-2 leading-none border rounded text-black border-teal-300 hover:border-teal-900  hover:text-teal-900 hover:bg-blue  "
+                        })
                       ]
                     )
                   ]
-                ),
-                _vm._v(" "),
-                _vm._m(0)
+                )
               ]
             )
           ]
         )
       ]),
       _vm._v(" "),
-      _c("ms-menubar", { ref: "msform", attrs: { "ms-nav": _vm.msNavOn } }),
+      _c("ms-menubar", { ref: "msMenull", attrs: { "ms-nav": _vm.msNavOn } }),
       _vm._v(" "),
       _c(
         "div",
@@ -42277,24 +42309,7 @@ var render = function() {
     1
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "ml-3" }, [
-      _c(
-        "a",
-        {
-          staticClass:
-            "inline-block text-sm px-4 py-2 leading-none border rounded text-black border-teal-300 hover:border-teal-900  hover:text-teal-900 hover:bg-blue mt-4 lg:mt-0",
-          attrs: { href: "#" }
-        },
-        [_vm._v("Download")]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

@@ -12,7 +12,8 @@
         "guzzlehttp/guzzle": "^6.3",
         "msllp/core": "dev-master",
         "msllp/modules": "dev-master",
-        "razorpay/razorpay": "2.*"
+        "razorpay/razorpay": "2.*",
+        "symfony/yaml": "^4.3"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

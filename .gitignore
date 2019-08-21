@@ -1,4 +1,22 @@
 /node_modules
+/public/
+/public/storage
+/storage/*.key
+/vendor
+/.idea
+.env
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+*.bat
+*.lock
+*.js
+package-lock.json
+
+
+/node_modules
 /vendor
 /.idea
 .phpunit.result.cache
@@ -8,5 +26,4 @@ npm-debug.log
 yarn-error.log
 *.bat
 *.lock
-
 
