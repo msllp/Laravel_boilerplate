@@ -2017,6 +2017,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "msdashboard",
@@ -2252,7 +2253,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   getUrl: function getUrl(item) {
     var data = {};
-    data.modUrl = item.link; //data.modCode="MAS";
+    data.modUrl = item.link;
+    this.closeContextMenu(); //data.modCode="MAS";
 
     data.modDView = item.txt;
     this.$parent.driveRequestFromNavToLiveTab(data); // let sectionSlug = kebabCase(item.txt);
@@ -2432,7 +2434,17 @@ __webpack_require__.r(__webpack_exports__);
     },
     addActionToTab: function addActionToTab(data) {
       //delete this.allTab[this.currentTab];
-      this.allTab[this.currentTab].modDView = data.modDView;
+      console.log(this.allTab.length);
+
+      if (this.allTab.length < 1) {
+        data.tabCode = this.ms_rand(5, 1);
+        data.modCode = "MAS";
+        this.addNewTab(data);
+      } else {
+        this.allTab[this.currentTab].modDView = data.modDView;
+      } //
+
+
       this.$refs[this.currentTab][0].updateTab(data);
     }
   },
@@ -8780,7 +8792,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../../../..
 
 
 // module
-exports.push([module.i, ".hidden[data-v-b5711320]{\n  transition: all 500ms ease-in-out;\n}\n.ms-livebox[data-v-b5711320]{\n  min-height: 1000px;\n  padding-left:252px;\n}\n.ms-livebox-full[data-v-b5711320]{\n  padding-left: 82px;\n}\n.ms-company-logo[data-v-b5711320]{\n  cursor: pointer;\n}\n.hidden[data-v-b5711320]{\n@appply hidden;\n  overflow: hidden;\n}\n.ms-hidden-fix[data-v-b5711320]{\n  padding-left: 0px;\n}\n.ms-hidden-fix-2[data-v-b5711320]{\n  padding-top: 10px;\n  padding-left: 0px;\n}\n.ms-nav-btn > .fa[data-v-b5711320] {\n  margin: 5px;\n}\n.ms-nav-btn > .a[data-v-b5711320] {\n  padding-top: 8px;\n}\n\n\n", ""]);
+exports.push([module.i, ".hidden[data-v-b5711320]{\n  transition: all 500ms ease-in-out;\n}\n.ms-livebox[data-v-b5711320]{\n  min-height: 1000px;\n  padding-left:252px;\n}\n.ms-livebox-full[data-v-b5711320]{\n  padding-left: 82px;\n}\n.ms-company-logo[data-v-b5711320] {\n  cursor: pointer;\n  max-height:70px;\n}\n.hidden[data-v-b5711320]{\n@appply hidden;\n  overflow: hidden;\n}\n.ms-hidden-fix[data-v-b5711320]{\n  padding-left: 0px;\n}\n.ms-hidden-fix-2[data-v-b5711320]{\n  padding-top: 10px;\n  padding-left: 0px;\n}\n.ms-nav-btn > .fa[data-v-b5711320] {\n  margin: 5px;\n}\n.ms-nav-btn > .a[data-v-b5711320] {\n  padding-top: 8px;\n}\n\n\n", ""]);
 
 // exports
 
@@ -42283,7 +42295,7 @@ var render = function() {
           "nav",
           {
             staticClass:
-              "flex items-center justify-between flex-wrap bg-teal-100 p-6 lg:p-1  object-cover ",
+              "flex items-center justify-between flex-wrap bg-teal-100  lg:p-1  object-cover ",
             staticStyle: { "min-height": "70px" }
           },
           [
@@ -42298,34 +42310,19 @@ var render = function() {
                 }
               },
               [
-                _c(
-                  "svg",
-                  {
-                    staticClass: "fill-current h-8 w-8 mr-2 ms-company-logo",
-                    attrs: {
-                      width: "54",
-                      height: "54",
-                      viewBox: "0 0 54 54",
-                      xmlns: "http://www.w3.org/2000/svg"
-                    }
-                  },
-                  [
-                    _c("path", {
-                      attrs: {
-                        d:
-                          "M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
-                      }
-                    })
-                  ]
-                ),
+                _c("img", {
+                  staticClass:
+                    "fill-current h-12 mr-2 ms-company-logo hover:shadow-outline hover:bg-gray-200",
+                  attrs: { src: "/images/logo.png" }
+                }),
                 _vm._v(" "),
                 _c(
-                  "span",
+                  "div",
                   {
-                    staticClass: "font-semibold text-xl tracking-tight",
+                    staticClass: "font-semibold",
                     class: { hidden: !_vm.msNavBar }
                   },
-                  [_vm._v("Company Name")]
+                  [_vm._v(" Cloud Services")]
                 )
               ]
             ),
