@@ -19,9 +19,7 @@ return[
         'Backend'=>[
             'MAS'=>true,
             'HM'=>true,
-
-
-
+            'DCM'=>true,
 
         ],
 
