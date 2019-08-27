@@ -31,7 +31,7 @@ return [
                     'style'=>[
                         //'prefix'=>"lock",
                         //'perfix'=>"lock",
-                        'inputSize'=>"1",
+                        'inputSize'=>"3",
                         //'onlyInput'=>true,
                     ],
 
@@ -56,8 +56,8 @@ return [
                 ['name'=>'Email','vName'=>'Email','type'=>'string', 'input'=>'email',  'validation'=>['unique']],
 
                 ['name'=>'Username','vName'=>'Username','type'=>'string', 'input'=>'text',  'validation'=>['unique','required'=>true]],
-                ['name'=>'Password','vName'=>'Password','type'=>'string', 'input'=>'text',   'validation'=>['required'=>true]],
-                ['name'=>'ConfirmPassword','vName'=>'Confirm Password', 'input'=>'text',    'validation'=>['required'=>true]],
+                ['name'=>'Password','vName'=>'Password','type'=>'string', 'input'=>'password',   'validation'=>['required'=>true]],
+                ['name'=>'ConfirmPassword','vName'=>'Confirm Password', 'input'=>'password',    'validation'=>['required'=>true]],
                 ['name'=>'Role','vName'=>'Select Role','type'=>'string', 'input'=>'option','data'=>'getRole'  ],
 
                 ['name'=>'HubId','vName'=>'Select Hub','type'=>'string', 'input'=>'option','data'=>'getHub'  ],
@@ -84,7 +84,7 @@ return [
 
         'fieldGroup'=>[
             'Basic Details'=>['FirstName','LastName','MobileNo','Email'],
-            'Login Details'=>['Username','Password','ConfirmPassword','Role'],
+            'Login Details 1'=>['Username','Password','ConfirmPassword','Role'],
             'Login Details 2'=>['Username','Password','ConfirmPassword','Role']
 
         ],
