@@ -31,7 +31,7 @@ return [
                     'style'=>[
                         //'prefix'=>"lock",
                         //'perfix'=>"lock",
-                        'inputSize'=>"3",
+                 //       'inputSize'=>"3",
                         //'onlyInput'=>true,
                     ],
 
@@ -49,7 +49,17 @@ return [
 
                 ],
 
-                ['name'=>'LastName','vName'=>'Last Name','type'=>'string', 'input'=>'text',   ],
+                ['name'=>'LastName','vName'=>'Last Name','type'=>'string', 'input'=>'text',
+
+                    'style'=>[
+                        //'prefix'=>"lock",
+                        //'perfix'=>"lock",
+             //Password Must have a lowercase, upercase, number, symbol & 8 char. required
+                        //Min. 8 char. required           'inputSize'=>"9",
+                        //'onlyInput'=>true,
+                    ],
+
+                    ],
 
                 ['name'=>'MobileNo','vName'=>'Mobile No.','type'=>'string', 'input'=>'number',  'validation'=>['unique' ,'required'=>true]],
 

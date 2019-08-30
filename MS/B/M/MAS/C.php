@@ -117,9 +117,21 @@ class C extends BaseController
 
         //return view("MS::core.layouts.panel");
         $docker=new \MS\Core\Docker\Image();
-        $m=new \MS\Core\Helper\MSDB(__NAMESPACE__,'Master_User');
+      //  $m=new \MS\Core\Helper\MSDB(__NAMESPACE__,'Master_User');
+        $m=new \MS\Core\Helper\MSDB(__NAMESPACE__,'Master_Mod');
+        // $m=new \MS\Core\Helper\MSDB('B\\DCM','Master_Port');
+        $data=[
+            'UniqId'=>'0021',
+            'port'=>'40209',
+            'portUsedByUserId'=>'002',
+            'portAllocatedContainerId'=>'001_001',
+
+        ];
+        //dd($m->rowEdit(['port'=>'40209'],$data))  ;
         return $m->displayFrom();
         dd($docker->makeImage());
+
+
       //  return view("MS::core.layouts.panelWithLiveTab");
        // dd($this->testMail());
         //return $this->testMail();

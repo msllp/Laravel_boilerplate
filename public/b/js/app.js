@@ -2090,6 +2090,40 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
  /// console.log(MS);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2127,6 +2161,8 @@ __webpack_require__.r(__webpack_exports__);
       }, this);
     } // this.msFormData= this.msData.formData;
 
+
+    if (window.innerWidth < 800) this.onMobile = true;
   },
   data: function data() {
     return {
@@ -2140,7 +2176,9 @@ __webpack_require__.r(__webpack_exports__);
       msFormDataFinal: {},
       msQ: {},
       msViewIcon: "fa-eye",
-      msCurrentTab: null
+      msCurrentTab: null,
+      onMobile: false,
+      allErrors: []
     };
   },
   methods: {
@@ -2214,7 +2252,7 @@ __webpack_require__.r(__webpack_exports__);
       //  if(actionBtn.hasOwnProperty('btnIcon'))str=str+"<i class='"+actionBtn.btnIcon+"'></i> ";
 
       if (actionBtn.hasOwnProperty('btnText')) str = str + actionBtn.btnText;
-      return str;
+      return this.forNice(str);
     },
     getAllData: function getAllData(link) {
       //  console.log(link);
@@ -2274,6 +2312,15 @@ __webpack_require__.r(__webpack_exports__);
 
       this.msCurrentTab = section.id;
       return false;
+    },
+    formActionFromBtn: function formActionFromBtn(id) {
+      if (this.allErrors.length < 1) {
+        var route = this.msData.actionButton[id].route;
+        return this.getAllData(route);
+        console.log(this.msData.actionButton[id].route);
+      }
+
+      console.log(this.msData.actionButton[id].route);
     }
   }
 });
@@ -2290,6 +2337,52 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MS__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../MS */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/MS.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2585,7 +2678,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'msinput',
   mixins: [_MS__WEBPACK_IMPORTED_MODULE_0__["default"]],
-  props: {
+  props: _defineProperty({
     'msData': {
       type: Object,
       required: true
@@ -2594,7 +2687,10 @@ __webpack_require__.r(__webpack_exports__);
       type: Number,
       required: true
     }
-  },
+  }, "msGroupIndex", {
+    type: Number,
+    required: true
+  }),
   mounted: function mounted() {
     // console.log(this.msData);
     if (this.msData.hasOwnProperty('groupInput')) this.groupInput = this.msData.groupInput;
@@ -2650,17 +2746,16 @@ __webpack_require__.r(__webpack_exports__);
     } //   var finalArray= this.makeArrayForInput(this);
 
 
-    this.setFinalInput(this.makeArrayForInput(this));
-
-    if (!this.$root.checkGroupExist(this.groupInput)) {
-      this.$root.setUpGroup(this.groupInput);
-    } // if((this.inputType == "locked")|| (this.inputType == "auto") ){
+    this.setFinalInput(this.makeArrayForInput(this)); // if(!this.$ref['msFrom'].checkGroupExist(this.groupInput)){
+    //     this.$ref['msFrom'].setUpGroup(this.groupInput);
+    // }
+    // if((this.inputType == "locked")|| (this.inputType == "auto") ){
     //     this.msValue=this.dValue;
     //     //this.$parent.setInputData(this.inputName,this.dValue);
     // }
 
-
-    this.$parent.setInputData(this.inputName, this.msValue); // this.inputAuto.push({
+    this.$parent.setInputData(this.inputName, this.msValue);
+    if (window.innerWidth < 800) this.onMobile = true; // this.inputAuto.push({
     //         dText: 'hello',
     //         dValue:10,
     //     }
@@ -2673,6 +2768,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     setErrorZero: function setErrorZero() {
       this.msValid = "is-valid";
+      this.$parent["in"];
       this.inputError = new Object();
     },
     getValue: function getValue() {
@@ -2704,7 +2800,7 @@ __webpack_require__.r(__webpack_exports__);
 
     },
     hasAutofield: function hasAutofield(event) {
-      if (this.inputAuto.length > 0) return true; //this.hasAutofieldBool=true;
+      if (this.inputType == "text") if (this.inputAuto.length > 0) return true; //this.hasAutofieldBool=true;
 
       return false;
     },
@@ -2762,6 +2858,9 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         this.inputPasswordVisible = true; //  this.inputType='text';
       }
+    },
+    customSetValue: function customSetValue(val) {
+      this.msValue = val;
     }
   },
   data: function data() {
@@ -2786,7 +2885,8 @@ __webpack_require__.r(__webpack_exports__);
       inputCount: 0,
       groupInput: [],
       inputInfo: "",
-      inputPasswordVisible: false // hasAutofieldBool:false,
+      inputPasswordVisible: false,
+      onMobile: false // hasAutofieldBool:false,
 
     };
   },
@@ -3231,6 +3331,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3358,6 +3459,8 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
+    data = new Object();
+    data.modUrl = "http://gst.ms/MAS";
     this.getGetLink(data.modUrl, this);
     console.log(this.getGetLink(this.msData.modUrl, this));
   },
@@ -8069,7 +8172,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../../../..
 
 
 // module
-exports.push([module.i, ".btn[data-v-001e5938]{\n  text-transform: capitalize;\n}\n.expand-btn[data-v-001e5938]{\n  display: block;\n  text-align: center;\n  display: inline-flex;\n  border-radius: 0.25rem;\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  margin-bottom: 0.75rem;\n  float: right;\n  top: 0;\n  bottom: 0;\n  top: 0;\n  bottom: 0;\n}\n.hiiden[data-v-001e5938]{\n  transition: all 1s ease-in-out;\n}\n\n", ""]);
+exports.push([module.i, ".btn[data-v-001e5938]{\n  text-transform: capitalize;\n}\n.expand-btn[data-v-001e5938]{\n  display: block;\n  text-align: center;\n  display: inline-flex;\n  border-radius: 0.25rem;\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  margin-right: 0.5rem;\n  float: left;\n  top: 0;\n  bottom: 0;\n  top: 0;\n  bottom: 0;\n}\n.hiiden[data-v-001e5938]{\n  transition: all 1s ease-in-out;\n}\n\n", ""]);
 
 // exports
 
@@ -8088,7 +8191,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../../../..
 
 
 // module
-exports.push([module.i, ".margin-fix{\n}\n.custom-select{\n  border-radius: 0px;\n  min-height: 42px;\n}\n.input-group,.form-group{\n  border-radius: 0px;\n}\n.input-group-prepend{\n  border-radius: 0px;\n}\n.form-check-inline,.form-check-label,.form-check-input  {\n  cursor: pointer;\n}\n.form-check-inline\n{\n  border:1px solid rgba(23,162,184,0.5);\n  padding-left:5px;\n  min-height: 35px;\n  box-shadow: rgba(23, 162, 184, 0.2) -3px 3px 1px;\n  cursor: pointer;\n}\n.form-check-inline > div{\n  padding: 5px;\n}\n.form-check-inline >  label{\n  padding-left:5px ;\n  padding-right:5px ;\n  min-height: 35px;\n  padding:5px;\n}\ninput:checked + label  {\n  color:white;\n  background-color:  rgba(23,162,184,1);\n  box-shadow: -22px 0px 0px rgba(23,162,184,1);\n  transition: all 500ms ease-in-out ;\n  -webkit-touch-callout: none; /* iOS Safari */\n  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */\n  -moz-user-select: none; /* Firefox */\n  -ms-user-select: none; /* Internet Explorer/Edge */\n  user-select: none;\n  padding-top:5px ;\n  padding-bottom:5px ;\n}\n.form-group{\n  padding-left: 15px ;\n  margin-bottom: 15px;\n}\n.form-group > label,.form-group>div > label  , .form-group>section> label{\n  padding:5px 5px 5px 5px;\n  border-top:1px solid rgba(35,37,38,0.2) ;\n  border-bottom:1px solid rgba(35,37,38,0.2) ;\n  border-left:2px outset rgba(35,37,38,0.1) ;\n  border-right:2px solid rgba(35,37,38,0.1) ;\n  box-shadow: 3px 3px 1px rgba(35,37,38,0.2);\n  -webkit-touch-callout: none; /* iOS Safari */\n  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */\n  -moz-user-select: none; /* Firefox */\n  -ms-user-select: none; /* Internet Explorer/Edge */\n  user-select: none;\n}\n.form-control{\n  border-radius:0px;\n}\n.msPasswordVisible{\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n  border-right-width: 1px;\n  border-top-width: 1px;\n  border-bottom-width: 1px;\n  background-color: #90cdf4;\n  display: block;\n}\n\n\n", ""]);
+exports.push([module.i, ".margin-fix{\n}\n.custom-select{\n  border-radius: 0px;\n  min-height: 42px;\n}\n.input-group,.form-group{\n  border-radius: 0px;\n}\n.input-group-prepend{\n  border-radius: 0px;\n}\n.form-check-inline,.form-check-label,.form-check-input  {\n  cursor: pointer;\n}\n.form-check-inline\n{\n  border:1px solid rgba(23,162,184,0.5);\n  padding-left:5px;\n  min-height: 35px;\n  box-shadow: rgba(23, 162, 184, 0.2) -3px 3px 1px;\n  cursor: pointer;\n}\n.form-check-inline > div{\n  padding: 5px;\n}\n.form-check-inline >  label{\n  padding-left:5px ;\n  padding-right:5px ;\n  min-height: 35px;\n  padding:5px;\n}\ninput:checked + label  {\n  color:white;\n  background-color:  rgba(23,162,184,1);\n  box-shadow: -22px 0px 0px rgba(23,162,184,1);\n  transition: all 500ms ease-in-out ;\n  -webkit-touch-callout: none; /* iOS Safari */\n  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */\n  -moz-user-select: none; /* Firefox */\n  -ms-user-select: none; /* Internet Explorer/Edge */\n  user-select: none;\n  padding-top:5px ;\n  padding-bottom:5px ;\n}\n.form-group{\n  padding-left: 15px ;\n  margin-bottom: 15px;\n}\n.form-group > label,.form-group>div > label  , .form-group>section> label{\n  padding:5px 5px 5px 5px;\n  border-top:1px solid rgba(35,37,38,0.2) ;\n  border-bottom:1px solid rgba(35,37,38,0.2) ;\n  border-left:2px outset rgba(35,37,38,0.1) ;\n  border-right:2px solid rgba(35,37,38,0.1) ;\n  box-shadow: 3px 3px 1px rgba(35,37,38,0.2);\n  -webkit-touch-callout: none; /* iOS Safari */\n  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */\n  -moz-user-select: none; /* Firefox */\n  -ms-user-select: none; /* Internet Explorer/Edge */\n  user-select: none;\n}\n.form-control{\n  border-radius:0px;\n}\n.msPasswordVisible{\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n  border-right-width: 1px;\n  border-top-width: 1px;\n  border-bottom-width: 1px;\n  background-color: #90cdf4;\n  display: block;\n  text-align: center;\n}\n.msPasswordInput{\n  display: block;\n  border-width: 1px;\n  flex-wrap: wrap;\n}\n\n", ""]);
 
 // exports
 
@@ -41466,174 +41569,190 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticStyle: { "padding-bottom": "75px" } }, [
-    _c(
-      "div",
-      { staticClass: "block " },
-      [
-        _vm._l(_vm.msFormData, function(section, id, key) {
-          return _c(
-            "div",
-            {
-              staticClass:
-                "w-full rounded  border-t overflow-hidden shadow-lg mb-4 bg-gray-100"
-            },
-            [
-              _c(
-                "div",
-                {
-                  staticClass: " w-full px-6 py-4 cursor-pointer",
-                  class: { show: id === 0 },
-                  attrs: {
-                    id: section.id + "_target",
-                    "aria-labelledby": section.id
-                  }
-                },
-                [
-                  _c(
-                    "div",
-                    { staticClass: "font-bold text-xl mb-2 border-b " },
-                    [
-                      _vm._v(
-                        _vm._s(section.gruoupHeading) +
-                          "\n\n                    "
-                      ),
+  return _c(
+    "div",
+    {
+      staticClass: "bg-white border",
+      staticStyle: { "padding-bottom": "75px" }
+    },
+    [
+      _c(
+        "div",
+        { staticClass: "block " },
+        [
+          _vm._l(_vm.msFormData, function(section, id, key) {
+            return _c(
+              "div",
+              {
+                staticClass:
+                  "w-full rounded  border-t shadow-lg mb-4 bg-gray-100"
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      " w-full px-3 py-2 cursor-pointer mb-2 border-b",
+                    class: { show: id === 0 },
+                    attrs: {
+                      id: section.id + "_target",
+                      "aria-labelledby": section.id
+                    }
+                  },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "font-bold text-md border-b pb-2  " },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "expand-btn",
+                            class: {
+                              "bg-gray-200": !_vm.checkImHiddenOrNot(section),
+                              "bg-gray-500": _vm.checkImHiddenOrNot(section)
+                            },
+                            style: {
+                              opacity: _vm.checkImHiddenOrNot(section)
+                            },
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                return _vm.showCollapse(section.id)
+                              }
+                            }
+                          },
+                          [
+                            _c("i", {
+                              class: {
+                                "fas fa-search-minus ": !_vm.checkImHiddenOrNot(
+                                  section
+                                ),
+                                "fas fa-search-plus ": _vm.checkImHiddenOrNot(
+                                  section
+                                )
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _vm.checkMutlipleSub(section)
+                          ? _c(
+                              "div",
+                              {
+                                staticClass: "btn btn-outline-danger",
+                                on: {
+                                  click: function($event) {
+                                    $event.preventDefault()
+                                    return _vm.removeInputGroup(
+                                      id,
+                                      section.rootId
+                                    )
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-times-circle " })]
+                            )
+                          : _vm._e(),
+                        _vm._v(
+                          "\n\n                " +
+                            _vm._s(section.gruoupHeading) +
+                            "\n            "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", [
                       _c(
                         "div",
                         {
-                          staticClass: "expand-btn",
+                          staticClass: "text-gray-700 text-base flex flex-wrap",
                           class: {
-                            "bg-gray-200": !_vm.checkImHiddenOrNot(section),
-                            "bg-gray-500": _vm.checkImHiddenOrNot(section)
-                          },
-                          style: {
-                            opacity: _vm.checkImHiddenOrNot(section)
-                          },
-                          on: {
-                            click: function($event) {
-                              $event.preventDefault()
-                              return _vm.showCollapse(section.id)
-                            }
+                            hidden: _vm.checkImHiddenOrNot(section)
+                            // 'flex':onMobile,
+                            // 'flex':!onMobile
                           }
                         },
-                        [
-                          _c("i", {
-                            class: {
-                              "fas fa-search-minus ": !_vm.checkImHiddenOrNot(
-                                section
-                              ),
-                              "fas fa-search-plus ": _vm.checkImHiddenOrNot(
-                                section
-                              )
+                        _vm._l(section.inputs, function(inputRaw, id2) {
+                          return _c("msinput", {
+                            key: inputRaw.name.toLowerCase(),
+                            ref: inputRaw.name.toLowerCase(),
+                            refInFor: true,
+                            staticClass: "w-1/2",
+                            class: section.inputs[id2].inputSize,
+                            attrs: {
+                              "ms-data": inputRaw,
+                              "ms-group-index": id,
+                              "ms-input-index": id2
                             }
                           })
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _vm.checkMutlipleSub(section)
-                        ? _c(
-                            "div",
-                            {
-                              staticClass: "btn btn-outline-danger",
-                              on: {
-                                click: function($event) {
-                                  $event.preventDefault()
-                                  return _vm.removeInputGroup(
-                                    id,
-                                    section.rootId
-                                  )
-                                }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-times-circle " })]
-                          )
-                        : _vm._e()
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "text-gray-700 text-base w-full inline-flex",
-                      class: {
-                        hidden: _vm.checkImHiddenOrNot(section)
-                      }
-                    },
-                    _vm._l(section.inputs, function(inputRaw, id2) {
-                      return _c("msinput", {
-                        key: inputRaw.name.toLowerCase(),
-                        ref: inputRaw.name.toLowerCase(),
-                        refInFor: true,
-                        staticClass: "w-full",
-                        class: section.inputs[id2].inputSize,
-                        attrs: { "ms-data": inputRaw, "ms-group-index": id }
-                      })
-                    }),
-                    1
-                  )
-                ]
-              )
-            ]
-          )
-        }),
-        _vm._v(" "),
-        _vm._m(0)
-      ],
-      2
-    ),
-    _vm._v(" "),
-    false
-      ? undefined
-      : _vm._e()
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "w-full rounded overflow-hidden shadow-lg" },
-      [
-        _c("div", { staticClass: " px-6 py-4 border-t" }, [
+                        }),
+                        1
+                      )
+                    ])
+                  ]
+                )
+              ]
+            )
+          }),
+          _vm._v(" "),
           _c(
             "div",
-            { staticClass: "inline-flex w-full cursor-pointer text-center" },
+            { staticClass: "w-full rounded overflow-hidden shadow-lg" },
             [
-              _c(
-                "span",
-                {
-                  staticClass:
-                    "w-1/3 bg-gray-200  hover:bg-gray-400 border-t border-b  border-l px-3 py-1 text-sm font-semibold text-gray-700"
-                },
-                [_vm._v("#photography")]
-              ),
-              _vm._v(" "),
-              _c(
-                "span",
-                {
-                  staticClass:
-                    "w-1/3 bg-gray-200  hover:bg-gray-400 border-t border-b px-3 py-1 text-sm font-semibold text-gray-700"
-                },
-                [_vm._v("#travel")]
-              ),
-              _vm._v(" "),
-              _c(
-                "span",
-                {
-                  staticClass:
-                    "w-1/3 bg-gray-200  hover:bg-gray-400 border-t border-b  border-r px-3 py-1 text-sm font-semibold text-gray-700"
-                },
-                [_vm._v("#winter")]
-              )
+              _c("div", { staticClass: " px-6 py-4 border-t" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "inline-flex w-full cursor-pointer text-center",
+                    class: {
+                      "opacity-50 cursor-not-allowed": _vm.allErrors.length > 0
+                    }
+                  },
+                  _vm._l(_vm.msActionBtn, function(msBtn, index) {
+                    return _c(
+                      "span",
+                      {
+                        staticClass:
+                          "w-1/3 bg-gray-200  hover:bg-gray-400 border-t border-b  border-r px-3 py-1 text-sm font-semibold text-gray-700",
+                        class: [msBtn.btnClass],
+                        attrs: { type: "button" },
+                        on: {
+                          click: function($event) {
+                            $event.preventDefault()
+                            return _vm.formActionFromBtn(index)
+                          }
+                        }
+                      },
+                      [
+                        msBtn.hasOwnProperty("btnIcon")
+                          ? _c("i", { class: msBtn.btnIcon })
+                          : _vm._e(),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.displauActionBtnText(msBtn)) +
+                            "\n\n                "
+                        )
+                      ]
+                    )
+                  }),
+                  0
+                )
+              ])
             ]
           )
-        ])
-      ]
-    )
-  }
-]
+        ],
+        2
+      ),
+      _vm._v(" "),
+      false
+        ? undefined
+        : _vm._e()
+    ]
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -41656,19 +41775,19 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "inline-flex p-2" }, [
-      _c("span", { staticClass: "w-4/12 mr-2 select-none" }, [
-        _vm._v(_vm._s(_vm.inputVname))
-      ]),
-      _vm._v(" "),
-      _vm.inputPrefix
-        ? _c("div", { staticClass: "input-group-prepend" }, [
-            _c("i", { class: _vm.inputPrefix })
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.inputType == "text"
-        ? _c("div", [
+    _c("div", { staticClass: " p-2", class: {} }, [
+      _vm.inputType == "locked"
+        ? _c("div", { staticClass: "flex flex-wrap" }, [
+            _c(
+              "span",
+              {
+                staticClass: " select-none",
+                class: { "w-4/12 mr-2": !_vm.onMobile }
+              },
+              [_vm._v(_vm._s(_vm.inputVname))]
+            ),
+            _vm._v(" "),
+            _c("i", { staticClass: "fas p2 ml-2 mt-1 fa-qrcode mr-2" }),
             _vm.inputType === "checkbox"
               ? _c("input", {
                   directives: [
@@ -41680,7 +41799,120 @@ var render = function() {
                     }
                   ],
                   staticClass:
-                    "w-11/12 border focus:outline-none focus:shadow-outline",
+                    "text-center border focus:outline-none focus:shadow-outline",
+                  class: { "w-11/12": _vm.onMobile },
+                  attrs: {
+                    disabled: "",
+                    autocomplete: "off",
+                    name: _vm.inputName,
+                    id: _vm.msData.msGroupIndex,
+                    type: "checkbox"
+                  },
+                  domProps: {
+                    checked: Array.isArray(_vm.msValue)
+                      ? _vm._i(_vm.msValue, null) > -1
+                      : _vm.msValue
+                  },
+                  on: {
+                    change: function($event) {
+                      var $$a = _vm.msValue,
+                        $$el = $event.target,
+                        $$c = $$el.checked ? true : false
+                      if (Array.isArray($$a)) {
+                        var $$v = null,
+                          $$i = _vm._i($$a, $$v)
+                        if ($$el.checked) {
+                          $$i < 0 && (_vm.msValue = $$a.concat([$$v]))
+                        } else {
+                          $$i > -1 &&
+                            (_vm.msValue = $$a
+                              .slice(0, $$i)
+                              .concat($$a.slice($$i + 1)))
+                        }
+                      } else {
+                        _vm.msValue = $$c
+                      }
+                    }
+                  }
+                })
+              : _vm.inputType === "radio"
+              ? _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.msValue,
+                      expression: "msValue"
+                    }
+                  ],
+                  staticClass:
+                    "text-center border focus:outline-none focus:shadow-outline",
+                  class: { "w-11/12": _vm.onMobile },
+                  attrs: {
+                    disabled: "",
+                    autocomplete: "off",
+                    name: _vm.inputName,
+                    id: _vm.msData.msGroupIndex,
+                    type: "radio"
+                  },
+                  domProps: { checked: _vm._q(_vm.msValue, null) },
+                  on: {
+                    change: function($event) {
+                      _vm.msValue = null
+                    }
+                  }
+                })
+              : _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.msValue,
+                      expression: "msValue"
+                    }
+                  ],
+                  staticClass:
+                    "text-center border focus:outline-none focus:shadow-outline",
+                  class: { "w-11/12": _vm.onMobile },
+                  attrs: {
+                    disabled: "",
+                    autocomplete: "off",
+                    name: _vm.inputName,
+                    id: _vm.msData.msGroupIndex,
+                    type: _vm.inputType
+                  },
+                  domProps: { value: _vm.msValue },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.msValue = $event.target.value
+                    }
+                  }
+                })
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.inputType == "text"
+        ? _c("div", { staticClass: "flex flex-wrap" }, [
+            _c("span", { staticClass: " select-none lg:mr-2" }, [
+              _vm._v(_vm._s(_vm.inputVname))
+            ]),
+            _vm._v(" "),
+            _vm.inputType === "checkbox"
+              ? _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.msValue,
+                      expression: "msValue"
+                    }
+                  ],
+                  staticClass:
+                    " border focus:outline-none focus:shadow-outline lg:flex-1",
+                  class: { "w-full": _vm.onMobile },
                   attrs: {
                     autocomplete: "off",
                     name: _vm.inputName,
@@ -41725,7 +41957,8 @@ var render = function() {
                     }
                   ],
                   staticClass:
-                    "w-11/12 border focus:outline-none focus:shadow-outline",
+                    " border focus:outline-none focus:shadow-outline lg:flex-1",
+                  class: { "w-full": _vm.onMobile },
                   attrs: {
                     autocomplete: "off",
                     name: _vm.inputName,
@@ -41749,7 +41982,8 @@ var render = function() {
                     }
                   ],
                   staticClass:
-                    "w-11/12 border focus:outline-none focus:shadow-outline",
+                    " border focus:outline-none focus:shadow-outline lg:flex-1",
+                  class: { "w-full": _vm.onMobile },
                   attrs: {
                     autocomplete: "off",
                     name: _vm.inputName,
@@ -41768,152 +42002,16 @@ var render = function() {
                 })
           ])
         : _vm.inputType == "password"
-        ? _c(
-            "div",
-            {
-              staticClass: "select-none",
-              class: {
-                "inline-block": _vm.inputPasswordVisible,
-                "inline-flex": !_vm.inputPasswordVisible
-              }
-            },
-            [
-              _vm.inputType === "checkbox"
-                ? _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.msValue,
-                        expression: "msValue"
-                      }
-                    ],
-                    staticClass:
-                      "block border focus:outline-none focus:shadow-outline",
-                    attrs: {
-                      autocomplete: "off",
-                      name: _vm.inputName,
-                      id: _vm.msData.msGroupIndex,
-                      type: "checkbox"
-                    },
-                    domProps: {
-                      checked: Array.isArray(_vm.msValue)
-                        ? _vm._i(_vm.msValue, null) > -1
-                        : _vm.msValue
-                    },
-                    on: {
-                      change: function($event) {
-                        var $$a = _vm.msValue,
-                          $$el = $event.target,
-                          $$c = $$el.checked ? true : false
-                        if (Array.isArray($$a)) {
-                          var $$v = null,
-                            $$i = _vm._i($$a, $$v)
-                          if ($$el.checked) {
-                            $$i < 0 && (_vm.msValue = $$a.concat([$$v]))
-                          } else {
-                            $$i > -1 &&
-                              (_vm.msValue = $$a
-                                .slice(0, $$i)
-                                .concat($$a.slice($$i + 1)))
-                          }
-                        } else {
-                          _vm.msValue = $$c
-                        }
-                      }
-                    }
-                  })
-                : _vm.inputType === "radio"
-                ? _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.msValue,
-                        expression: "msValue"
-                      }
-                    ],
-                    staticClass:
-                      "block border focus:outline-none focus:shadow-outline",
-                    attrs: {
-                      autocomplete: "off",
-                      name: _vm.inputName,
-                      id: _vm.msData.msGroupIndex,
-                      type: "radio"
-                    },
-                    domProps: { checked: _vm._q(_vm.msValue, null) },
-                    on: {
-                      change: function($event) {
-                        _vm.msValue = null
-                      }
-                    }
-                  })
-                : _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.msValue,
-                        expression: "msValue"
-                      }
-                    ],
-                    staticClass:
-                      "block border focus:outline-none focus:shadow-outline",
-                    attrs: {
-                      autocomplete: "off",
-                      name: _vm.inputName,
-                      id: _vm.msData.msGroupIndex,
-                      type: _vm.inputType
-                    },
-                    domProps: { value: _vm.msValue },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.msValue = $event.target.value
-                      }
-                    }
-                  }),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "msPasswordVisible",
-                  on: { click: _vm.visiblePassowrd }
-                },
-                [
-                  _c("i", {
-                    class: {
-                      "far fa-eye mr-2": _vm.inputPasswordVisible,
-                      "far fa-eye-slash": !_vm.inputPasswordVisible,
-                      "object-center": true
-                    }
-                  }),
-                  _vm._v(" "),
-                  _vm.inputPasswordVisible
-                    ? _c(
-                        "div",
-                        {
-                          class: {
-                            "inline-block": true
-                          }
-                        },
-                        [
-                          _vm._v(
-                            "\n                      " +
-                              _vm._s(_vm.msValue) +
-                              "\n                  "
-                          )
-                        ]
-                      )
-                    : _vm._e()
-                ]
-              )
-            ]
-          )
-        : _vm.inputType == "email"
-        ? _c("div", [
+        ? _c("div", { staticClass: "select-none flex flex-wrap" }, [
+            _c(
+              "span",
+              {
+                staticClass: " select-none lg:flex-1",
+                class: { "w-full": !_vm.onMobile }
+              },
+              [_vm._v(_vm._s(_vm.inputVname))]
+            ),
+            _vm._v(" "),
             _vm.inputType === "checkbox"
               ? _c("input", {
                   directives: [
@@ -41925,7 +42023,8 @@ var render = function() {
                     }
                   ],
                   staticClass:
-                    "w-11/12 border focus:outline-none focus:shadow-outline",
+                    "msPasswordInput focus:outline-none focus:shadow-outline lg:flex-1 ",
+                  class: { "w-9/12": _vm.onMobile },
                   attrs: {
                     autocomplete: "off",
                     name: _vm.inputName,
@@ -41970,7 +42069,8 @@ var render = function() {
                     }
                   ],
                   staticClass:
-                    "w-11/12 border focus:outline-none focus:shadow-outline",
+                    "msPasswordInput focus:outline-none focus:shadow-outline lg:flex-1 ",
+                  class: { "w-9/12": _vm.onMobile },
                   attrs: {
                     autocomplete: "off",
                     name: _vm.inputName,
@@ -41994,7 +42094,149 @@ var render = function() {
                     }
                   ],
                   staticClass:
-                    "w-11/12 border focus:outline-none focus:shadow-outline",
+                    "msPasswordInput focus:outline-none focus:shadow-outline lg:flex-1 ",
+                  class: { "w-9/12": _vm.onMobile },
+                  attrs: {
+                    autocomplete: "off",
+                    name: _vm.inputName,
+                    id: _vm.msData.msGroupIndex,
+                    type: _vm.inputType
+                  },
+                  domProps: { value: _vm.msValue },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.msValue = $event.target.value
+                    }
+                  }
+                }),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "msPasswordVisible",
+                class: { "w-3/12": _vm.onMobile },
+                on: { click: _vm.visiblePassowrd }
+              },
+              [
+                _c("i", {
+                  class: {
+                    "far fa-eye": _vm.inputPasswordVisible,
+                    "far fa-eye-slash": !_vm.inputPasswordVisible,
+                    "object-center": true
+                  }
+                }),
+                _vm._v(" "),
+                _vm.inputPasswordVisible
+                  ? _c("div", {
+                      class: {
+                        "inline-block": true
+                      }
+                    })
+                  : _vm._e()
+              ]
+            ),
+            _vm._v(" "),
+            _vm.inputPasswordVisible
+              ? _c(
+                  "span",
+                  { staticClass: "w-full bg-info-100 mt-21 border text-bold" },
+                  [_vm._v(_vm._s(_vm.msValue))]
+                )
+              : _vm._e()
+          ])
+        : _vm.inputType == "email"
+        ? _c("div", { attrs: { lass: "flex flex-wrap" } }, [
+            _c("span", { staticClass: " select-none lg:mr-2" }, [
+              _vm._v(_vm._s(_vm.inputVname))
+            ]),
+            _vm._v(" "),
+            _vm.inputType === "checkbox"
+              ? _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.msValue,
+                      expression: "msValue"
+                    }
+                  ],
+                  staticClass: "border focus:outline-none focus:shadow-outline",
+                  class: { "w-full": _vm.onMobile },
+                  staticStyle: { "min-width": "60%" },
+                  attrs: {
+                    autocomplete: "off",
+                    name: _vm.inputName,
+                    id: _vm.msData.msGroupIndex,
+                    type: "checkbox"
+                  },
+                  domProps: {
+                    checked: Array.isArray(_vm.msValue)
+                      ? _vm._i(_vm.msValue, null) > -1
+                      : _vm.msValue
+                  },
+                  on: {
+                    change: function($event) {
+                      var $$a = _vm.msValue,
+                        $$el = $event.target,
+                        $$c = $$el.checked ? true : false
+                      if (Array.isArray($$a)) {
+                        var $$v = null,
+                          $$i = _vm._i($$a, $$v)
+                        if ($$el.checked) {
+                          $$i < 0 && (_vm.msValue = $$a.concat([$$v]))
+                        } else {
+                          $$i > -1 &&
+                            (_vm.msValue = $$a
+                              .slice(0, $$i)
+                              .concat($$a.slice($$i + 1)))
+                        }
+                      } else {
+                        _vm.msValue = $$c
+                      }
+                    }
+                  }
+                })
+              : _vm.inputType === "radio"
+              ? _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.msValue,
+                      expression: "msValue"
+                    }
+                  ],
+                  staticClass: "border focus:outline-none focus:shadow-outline",
+                  class: { "w-full": _vm.onMobile },
+                  staticStyle: { "min-width": "60%" },
+                  attrs: {
+                    autocomplete: "off",
+                    name: _vm.inputName,
+                    id: _vm.msData.msGroupIndex,
+                    type: "radio"
+                  },
+                  domProps: { checked: _vm._q(_vm.msValue, null) },
+                  on: {
+                    change: function($event) {
+                      _vm.msValue = null
+                    }
+                  }
+                })
+              : _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.msValue,
+                      expression: "msValue"
+                    }
+                  ],
+                  staticClass: "border focus:outline-none focus:shadow-outline",
+                  class: { "w-full": _vm.onMobile },
+                  staticStyle: { "min-width": "60%" },
                   attrs: {
                     autocomplete: "off",
                     name: _vm.inputName,
@@ -42013,7 +42255,11 @@ var render = function() {
                 })
           ])
         : _vm.inputType == "number"
-        ? _c("div", [
+        ? _c("div", { attrs: { lass: "flex flex-wrap" } }, [
+            _c("span", { staticClass: " select-none lg:mr-2" }, [
+              _vm._v(_vm._s(_vm.inputVname))
+            ]),
+            _vm._v(" "),
             _vm.inputType === "checkbox"
               ? _c("input", {
                   directives: [
@@ -42024,8 +42270,9 @@ var render = function() {
                       expression: "msValue"
                     }
                   ],
-                  staticClass:
-                    "w-11/12 border focus:outline-none focus:shadow-outline",
+                  staticClass: "border focus:outline-none focus:shadow-outline",
+                  class: { "w-full": _vm.onMobile },
+                  staticStyle: { "min-width": "50%" },
                   attrs: {
                     autocomplete: "off",
                     name: _vm.inputName,
@@ -42069,8 +42316,9 @@ var render = function() {
                       expression: "msValue"
                     }
                   ],
-                  staticClass:
-                    "w-11/12 border focus:outline-none focus:shadow-outline",
+                  staticClass: "border focus:outline-none focus:shadow-outline",
+                  class: { "w-full": _vm.onMobile },
+                  staticStyle: { "min-width": "50%" },
                   attrs: {
                     autocomplete: "off",
                     name: _vm.inputName,
@@ -42093,8 +42341,9 @@ var render = function() {
                       expression: "msValue"
                     }
                   ],
-                  staticClass:
-                    "w-11/12 border focus:outline-none focus:shadow-outline",
+                  staticClass: "border focus:outline-none focus:shadow-outline",
+                  class: { "w-full": _vm.onMobile },
+                  staticStyle: { "min-width": "50%" },
                   attrs: {
                     autocomplete: "off",
                     name: _vm.inputName,
@@ -42114,20 +42363,207 @@ var render = function() {
           ])
         : _vm._e(),
       _vm._v(" "),
-      _vm.inputPerfix
-        ? _c("div", { staticClass: "input-group-append " }, [
-            _c("i", { class: _vm.inputPerfix }, [
-              _vm.inputRequired
-                ? _c("span", {
-                    staticClass: " text-danger fa fa-asterisk ms-spin"
-                  })
-                : _vm._e()
-            ])
+      _vm.inputType == "file"
+        ? _c("div", { staticClass: "flex flex-wrap" }, [
+            _c(
+              "span",
+              {
+                staticClass: " select-none",
+                class: { "w-4/12 mr-2": !_vm.onMobile }
+              },
+              [_vm._v(_vm._s(_vm.inputVname))]
+            ),
+            _vm._v(" "),
+            _vm.inputType === "checkbox"
+              ? _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.msValue,
+                      expression: "msValue"
+                    }
+                  ],
+                  staticClass:
+                    "text-center border focus:outline-none focus:shadow-outline ",
+                  class: { "w-11/12": _vm.onMobile },
+                  attrs: {
+                    name: _vm.inputName,
+                    id: _vm.msData.msGroupIndex,
+                    type: "checkbox"
+                  },
+                  domProps: {
+                    checked: Array.isArray(_vm.msValue)
+                      ? _vm._i(_vm.msValue, null) > -1
+                      : _vm.msValue
+                  },
+                  on: {
+                    change: function($event) {
+                      var $$a = _vm.msValue,
+                        $$el = $event.target,
+                        $$c = $$el.checked ? true : false
+                      if (Array.isArray($$a)) {
+                        var $$v = null,
+                          $$i = _vm._i($$a, $$v)
+                        if ($$el.checked) {
+                          $$i < 0 && (_vm.msValue = $$a.concat([$$v]))
+                        } else {
+                          $$i > -1 &&
+                            (_vm.msValue = $$a
+                              .slice(0, $$i)
+                              .concat($$a.slice($$i + 1)))
+                        }
+                      } else {
+                        _vm.msValue = $$c
+                      }
+                    }
+                  }
+                })
+              : _vm.inputType === "radio"
+              ? _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.msValue,
+                      expression: "msValue"
+                    }
+                  ],
+                  staticClass:
+                    "text-center border focus:outline-none focus:shadow-outline ",
+                  class: { "w-11/12": _vm.onMobile },
+                  attrs: {
+                    name: _vm.inputName,
+                    id: _vm.msData.msGroupIndex,
+                    type: "radio"
+                  },
+                  domProps: { checked: _vm._q(_vm.msValue, null) },
+                  on: {
+                    change: function($event) {
+                      _vm.msValue = null
+                    }
+                  }
+                })
+              : _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.msValue,
+                      expression: "msValue"
+                    }
+                  ],
+                  staticClass:
+                    "text-center border focus:outline-none focus:shadow-outline ",
+                  class: { "w-11/12": _vm.onMobile },
+                  attrs: {
+                    name: _vm.inputName,
+                    id: _vm.msData.msGroupIndex,
+                    type: _vm.inputType
+                  },
+                  domProps: { value: _vm.msValue },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.msValue = $event.target.value
+                    }
+                  }
+                })
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.inputType == "radio"
+        ? _c(
+            "div",
+            { staticClass: "flex flex-wrap" },
+            [
+              _c(
+                "span",
+                {
+                  staticClass: " select-none",
+                  class: {
+                    "w-4/12 mr-2": !_vm.onMobile,
+                    "w-full": _vm.onMobile
+                  }
+                },
+                [_vm._v(_vm._s(_vm.inputVname))]
+              ),
+              _vm._v(" "),
+              _vm._l(_vm.msData.verifyBy.msdata, function(radio, key) {
+                return _c(
+                  "div",
+                  {
+                    class: {
+                      "select-none flex-1 border-l p-1 mr-1 border-b": true,
+                      "bg-blue-200 shadow":
+                        _vm.msValue == radio[_vm.msData.verifyBy.value]
+                    },
+                    on: {
+                      click: function($event) {
+                        return _vm.customSetValue(
+                          radio[_vm.msData.verifyBy.value]
+                        )
+                      }
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass: "far",
+                      class: {
+                        "fa-check-square text-green-500":
+                          _vm.msValue == radio[_vm.msData.verifyBy.value],
+                        "fa-square text-blue-500":
+                          _vm.msValue != radio[_vm.msData.verifyBy.value]
+                      }
+                    }),
+                    _vm._v(
+                      "  " +
+                        _vm._s(_vm.forNice(radio[_vm.msData.verifyBy.text])) +
+                        "\n                "
+                    )
+                  ]
+                )
+              })
+            ],
+            2
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.msValid == "is-invalid"
+        ? _c("div", { staticClass: "flex flex-wrap" }, [
+            _vm.msValid == "is-invalid"
+              ? _c(
+                  "small",
+                  {
+                    staticClass: "text-left bg-red-200 w-full",
+                    attrs: { id: _vm.inputName + "_error" }
+                  },
+                  _vm._l(_vm.inputError, function(item) {
+                    return _c(
+                      "div",
+                      {
+                        staticStyle: { "font-size": "smaller", padding: "5px" },
+                        attrs: { role: "alert" }
+                      },
+                      [
+                        _vm._v(
+                          "\n                        " +
+                            _vm._s(item) +
+                            "\n                    "
+                        )
+                      ]
+                    )
+                  }),
+                  0
+                )
+              : _vm._e()
           ])
         : _vm._e()
     ]),
     _vm._v(" "),
-    _vm.hasAutofield
+    _vm.hasAutofield()
       ? _c("div", { staticClass: "flex" }, [
           _c(
             "div",
@@ -42659,7 +43095,7 @@ var render = function() {
                 {
                   class: {
                     hidden: !_vm.checkActive(index),
-                    "visible p-3 ": _vm.checkActive(index)
+                    "visible ": _vm.checkActive(index)
                   }
                 },
                 [
@@ -56345,10 +56781,13 @@ var app = new Vue({
       //  console.log(Data);
 
       for (var inputName in Data) {
-        var key = inputName.toString().toLowerCase();
-        console.log(this.$refs['msFrom'].$refs[key][0].setError());
-        this.$refs['msFrom'].$refs[key][0].setError();
-        this.$refs['msFrom'].$refs[key][0].inputError = Data[inputName];
+        var key = inputName.toString().toLowerCase(); //
+
+        if (this.$refs['msFrom'].$refs.hasOwnProperty(key) && this.$refs['msFrom'].$refs[key].hasOwnProperty(0)) {
+          this.$refs['msFrom'].$refs[key][0].setError();
+          this.$refs['msFrom'].$refs[key][0].inputError = Data[inputName];
+          this.$refs['msFrom'].allErrors.push(Data[inputName]);
+        }
       } //    this.mserror.forEach(function(value, index) {
       //        var key=value.name.toString();
       //        this.$refs[key].setError();

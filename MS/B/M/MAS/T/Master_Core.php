@@ -54,7 +54,7 @@ return [
 
         'action'=>[
             'add'=>[
-                "btnColor"=>"btn-success",
+                "btnColor"=>"bg-green",
                 "route"=>"Test.Post.With.Data",
                 "btnIcon"=>"fa fa-home",
                 'btnText'=>"add Module"
