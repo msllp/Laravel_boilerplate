@@ -10,8 +10,11 @@
     "require": {
 
         "msllp/core": "dev-master",
-        "msllp/modules": "dev-master"
-
+        "msllp/modules": "dev-master",
+        "barryvdh/laravel-dompdf": "^0.8.4",
+        "guzzlehttp/guzzle": "^6.3",
+        "razorpay/razorpay": "2.*",
+        "symfony/yaml": "^4.3"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
