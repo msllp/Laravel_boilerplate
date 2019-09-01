@@ -10,7 +10,7 @@
     "require": {
 
         "msllp/core": "dev-master",
-        "msllp/modules": "dev-master",
+        "msllp/modules": "dev-master"
 
     },
     "require-dev": {
