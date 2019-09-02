@@ -2672,6 +2672,23 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
  // import  MDD from 'mobile-device-detect';
 // //console.log(MS);
 
@@ -2860,13 +2877,28 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
     },
     customSetValue: function customSetValue(val) {
-      this.msValue = val;
+      if (this.inputType == 'checkbox') {
+        if (!this.in_array(val, this.inputChecked)) {
+          this.inputChecked.push(val);
+        } else {
+          this.inputChecked = this.inputChecked.filter(function (ele) {
+            return ele != val;
+          });
+        }
+
+        this.msValue = this.inputChecked;
+      } else {
+        this.msValue = val;
+      }
+    },
+    makeInputName: function makeInputName(key) {
+      return this.inputVname + "[" + key + "]";
     }
   },
   data: function data() {
     return {
       msValid: 0,
-      msValue: '',
+      msValue: null,
       msMinCharValidation: 0,
       inputValidation: [],
       inputAuto: [],
@@ -2886,7 +2918,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       groupInput: [],
       inputInfo: "",
       inputPasswordVisible: false,
-      onMobile: false // hasAutofieldBool:false,
+      onMobile: false,
+      inputChecked: [] // hasAutofieldBool:false,
 
     };
   },
@@ -42512,10 +42545,73 @@ var render = function() {
                     _c("i", {
                       staticClass: "far",
                       class: {
-                        "fa-check-square text-green-500":
+                        "fa-check-circle text-green-500":
                           _vm.msValue == radio[_vm.msData.verifyBy.value],
-                        "fa-square text-blue-500":
+                        "fa-circle text-blue-500":
                           _vm.msValue != radio[_vm.msData.verifyBy.value]
+                      }
+                    }),
+                    _vm._v(
+                      "  " +
+                        _vm._s(_vm.forNice(radio[_vm.msData.verifyBy.text])) +
+                        "\n                "
+                    )
+                  ]
+                )
+              })
+            ],
+            2
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.inputType == "checkbox"
+        ? _c(
+            "div",
+            { staticClass: "flex flex-wrap" },
+            [
+              _c(
+                "span",
+                {
+                  staticClass: " select-none",
+                  class: {
+                    "w-4/12 mr-2": !_vm.onMobile,
+                    "w-full": _vm.onMobile
+                  }
+                },
+                [_vm._v(_vm._s(_vm.inputVname))]
+              ),
+              _vm._v(" "),
+              _vm._l(_vm.msData.verifyBy.msdata, function(radio, key) {
+                return _c(
+                  "div",
+                  {
+                    class: {
+                      "select-none flex-1 border-l p-1 mr-1 border-b": true,
+                      "bg-blue-200 shadow": _vm.in_array(
+                        radio[_vm.msData.verifyBy.value],
+                        _vm.inputChecked
+                      )
+                    },
+                    on: {
+                      click: function($event) {
+                        return _vm.customSetValue(
+                          radio[_vm.msData.verifyBy.value]
+                        )
+                      }
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass: "far",
+                      class: {
+                        "fa-check-square text-green-500": _vm.in_array(
+                          radio[_vm.msData.verifyBy.value],
+                          _vm.inputChecked
+                        ),
+                        "fa-square text-blue-500": !_vm.in_array(
+                          radio[_vm.msData.verifyBy.value],
+                          _vm.inputChecked
+                        )
                       }
                     }),
                     _vm._v(
