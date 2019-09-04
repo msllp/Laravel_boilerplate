@@ -33,19 +33,32 @@ class C extends BaseController
     public function postLinkTest(Request $r){
 
 
-        $m=new \MS\Core\Helper\MSDB("B\MAS","Master_Mod");
+        $m=new \MS\Core\Helper\MSDB(__NAMESPACE__,"Master_All_Feature");
+      //  $m=new \MS\Core\Helper\MSDB(__NAMESPACE__,"Master_Mode");
         $m->attachRequest($r);
        // $m->migrate();
         $d=$r->all();
+
         $valid=$m->checkRulesForData($r);
+      //  dd($valid);
+        //dd($m);
        // dd(response()->json(  $m->errors() ,301));
         //dd($valid);
+        $data=[
+
+            'data'=>
+            [
+                'notifyText'=>'Text',
+                'notifyLink'=>'/MAS',
+                'notifyIcon'=>'fa fa-home',
+
+            ]
+        ];
         if($valid){
-         // dd($d);
-            dd(  $m->rowAdd($d));
+            return response()->json($data,200);
         }
 
-        return response()->json(  $m->errors() ,301);
+        return response()->json(  $m->errors() ,422);
        // if(!array_key_exists('uniqId',$d))$d['uniqId']="1125";
 //        if(array_key_exists('modIcon',$d))$d['modIcon']="fa-home";
 //        if(array_key_exists('_token',$d)) unset($d['_token']) ;
@@ -117,9 +130,10 @@ class C extends BaseController
 
         //return view("MS::core.layouts.panel");
         $docker=new \MS\Core\Docker\Image();
-      //  $m=new \MS\Core\Helper\MSDB(__NAMESPACE__,'Master_User');
-        $m=new \MS\Core\Helper\MSDB(__NAMESPACE__,'Master_Mod');
+        $m=new \MS\Core\Helper\MSDB(__NAMESPACE__,'Master_All_Feature');
+      //  $m=new \MS\Core\Helper\MSDB(__NAMESPACE__,'Master_Mod');
         // $m=new \MS\Core\Helper\MSDB('B\\DCM','Master_Port');
+        //dd($m);
         $data=[
             'UniqId'=>'0021',
             'port'=>'40209',
@@ -129,7 +143,7 @@ class C extends BaseController
         ];
         //dd($m->rowEdit(['port'=>'40209'],$data))  ;
         return $m->displayFrom();
-        dd($docker->makeImage());
+      //  dd($docker->makeImage());
 
 
       //  return view("MS::core.layouts.panelWithLiveTab");

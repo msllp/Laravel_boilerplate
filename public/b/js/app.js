@@ -1972,7 +1972,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _MS__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../MS */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/MS.js");
+/* harmony import */ var _MS__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MS */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/MS.js");
 //
 //
 //
@@ -2272,7 +2272,7 @@ __webpack_require__.r(__webpack_exports__);
 
       }
 
-      var data = this.postLink(link, formData, this); //console.log(data);
+      var data = this.postLink(link, formData, this); //  console.log(data);
       // console.log($('form'));
     },
     setInputData: function setInputData(name, value) {
@@ -2300,6 +2300,17 @@ __webpack_require__.r(__webpack_exports__);
     setAllMsError: function setAllMsError(data) {
       //    console.log(data);
       this.$parent.setMsError(data, this.$refs);
+    },
+    setError: function setError(data) {
+      this.allErrors.push(data);
+    },
+    removeError: function removeError(key) {
+      // console.log(key);
+      var fkey = this.allErrors.findIndex(function (o) {
+        return o.inputName == key;
+      }); //  console.log(fkey);
+
+      if (fkey != -1) this.allErrors.splice(fkey, 1);
     },
     checkImHiddenOrNot: function checkImHiddenOrNot(section) {
       //  if()this.msCurrentTab=section.id;
@@ -2336,11 +2347,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _MS__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../MS */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/MS.js");
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-//
-//
+/* harmony import */ var _MS__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MS */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/MS.js");
 //
 //
 //
@@ -2695,7 +2702,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'msinput',
   mixins: [_MS__WEBPACK_IMPORTED_MODULE_0__["default"]],
-  props: _defineProperty({
+  props: {
     'msData': {
       type: Object,
       required: true
@@ -2703,11 +2710,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     'msGroupIndex': {
       type: Number,
       required: true
+    },
+    'msInputIndex': {
+      type: Number,
+      required: true
     }
-  }, "msGroupIndex", {
-    type: Number,
-    required: true
-  }),
+  },
   mounted: function mounted() {
     // console.log(this.msData);
     if (this.msData.hasOwnProperty('groupInput')) this.groupInput = this.msData.groupInput;
@@ -2853,13 +2861,28 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           if (error) error = 0;
         } else {
           error = 1;
-          this.inputError.MinLen = "Min. " + inputLen + " char. required";
+          var str = "";
+
+          switch (this.inputType) {
+            case 'checkbox':
+              this.inputError.MinLen = "Min. " + inputLen + " Selection required";
+              break;
+
+            default:
+              this.inputError.MinLen = "Min. " + inputLen + " char. required";
+              break;
+          }
         }
 
         if (!error) {
           //this.$parent.msFormDataValue[];
+          this.$parent.removeError(this.inputName);
           this.msValid = "is-valid";
         } else {
+          this.$parent.setError({
+            inputName: this.inputName,
+            errors: this.inputError
+          });
           this.msValid = "is-invalid";
         }
       } else {
@@ -3298,7 +3321,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _MS__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../MS */ "./vendor/msllp/core/src/Views/core/B/s/js/MS.js");
+/* harmony import */ var _C_MS__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./C/MS */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/MS.js");
 /* harmony import */ var mobile_device_detect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mobile-device-detect */ "./node_modules/mobile-device-detect/dist/index.js");
 /* harmony import */ var mobile_device_detect__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(mobile_device_detect__WEBPACK_IMPORTED_MODULE_1__);
 //
@@ -3370,7 +3393,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "msviewpanel",
   props: {},
-  mixins: [_MS__WEBPACK_IMPORTED_MODULE_0__["default"]],
+  mixins: [_C_MS__WEBPACK_IMPORTED_MODULE_0__["default"]],
   mounted: function mounted() {
     if (window.innerWidth < 800) this.maxTabLimit = 3;
     var sampleData = [{
@@ -3456,7 +3479,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _MS__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../MS */ "./vendor/msllp/core/src/Views/core/B/s/js/MS.js");
+/* harmony import */ var _C_MS__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./C/MS */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/MS.js");
 /* harmony import */ var E_MS_Master_Projects_FrameworkPHP_gst_invoice_Master_MS_B_M_DCM_V_Vue_dockerMasterDashboard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MS/B/M/DCM/V/Vue/dockerMasterDashboard */ "./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue");
 //
 //
@@ -3472,7 +3495,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "mswindow",
-  mixins: [_MS__WEBPACK_IMPORTED_MODULE_0__["default"]],
+  mixins: [_C_MS__WEBPACK_IMPORTED_MODULE_0__["default"]],
   props: {
     'msData': {
       type: Object,
@@ -8224,7 +8247,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../../../..
 
 
 // module
-exports.push([module.i, ".margin-fix{\n}\n.custom-select{\n  border-radius: 0px;\n  min-height: 42px;\n}\n.input-group,.form-group{\n  border-radius: 0px;\n}\n.input-group-prepend{\n  border-radius: 0px;\n}\n.form-check-inline,.form-check-label,.form-check-input  {\n  cursor: pointer;\n}\n.form-check-inline\n{\n  border:1px solid rgba(23,162,184,0.5);\n  padding-left:5px;\n  min-height: 35px;\n  box-shadow: rgba(23, 162, 184, 0.2) -3px 3px 1px;\n  cursor: pointer;\n}\n.form-check-inline > div{\n  padding: 5px;\n}\n.form-check-inline >  label{\n  padding-left:5px ;\n  padding-right:5px ;\n  min-height: 35px;\n  padding:5px;\n}\ninput:checked + label  {\n  color:white;\n  background-color:  rgba(23,162,184,1);\n  box-shadow: -22px 0px 0px rgba(23,162,184,1);\n  transition: all 500ms ease-in-out ;\n  -webkit-touch-callout: none; /* iOS Safari */\n  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */\n  -moz-user-select: none; /* Firefox */\n  -ms-user-select: none; /* Internet Explorer/Edge */\n  user-select: none;\n  padding-top:5px ;\n  padding-bottom:5px ;\n}\n.form-group{\n  padding-left: 15px ;\n  margin-bottom: 15px;\n}\n.form-group > label,.form-group>div > label  , .form-group>section> label{\n  padding:5px 5px 5px 5px;\n  border-top:1px solid rgba(35,37,38,0.2) ;\n  border-bottom:1px solid rgba(35,37,38,0.2) ;\n  border-left:2px outset rgba(35,37,38,0.1) ;\n  border-right:2px solid rgba(35,37,38,0.1) ;\n  box-shadow: 3px 3px 1px rgba(35,37,38,0.2);\n  -webkit-touch-callout: none; /* iOS Safari */\n  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */\n  -moz-user-select: none; /* Firefox */\n  -ms-user-select: none; /* Internet Explorer/Edge */\n  user-select: none;\n}\n.form-control{\n  border-radius:0px;\n}\n.msPasswordVisible{\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n  border-right-width: 1px;\n  border-top-width: 1px;\n  border-bottom-width: 1px;\n  background-color: #90cdf4;\n  display: block;\n  text-align: center;\n}\n.msPasswordInput{\n  display: block;\n  border-width: 1px;\n  flex-wrap: wrap;\n}\n\n", ""]);
+exports.push([module.i, ".margin-fix{\n}\n.custom-select{\n  border-radius: 0px;\n  min-height: 42px;\n}\n.input-group,.form-group{\n  border-radius: 0px;\n}\n.input-group-prepend{\n  border-radius: 0px;\n}\n.form-check-inline,.form-check-label,.form-check-input  {\n  cursor: pointer;\n}\n.form-check-inline\n{\n  border:1px solid rgba(23,162,184,0.5);\n  padding-left:5px;\n  min-height: 35px;\n  box-shadow: rgba(23, 162, 184, 0.2) -3px 3px 1px;\n  cursor: pointer;\n}\n.form-check-inline > div{\n  padding: 5px;\n}\n.form-check-inline >  label{\n  padding-left:5px ;\n  padding-right:5px ;\n  min-height: 35px;\n  padding:5px;\n}\ninput:checked + label  {\n  color:white;\n  background-color:  rgba(23,162,184,1);\n  box-shadow: -22px 0px 0px rgba(23,162,184,1);\n  transition: all 500ms ease-in-out ;\n  -webkit-touch-callout: none; /* iOS Safari */\n  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */\n  -moz-user-select: none; /* Firefox */\n  -ms-user-select: none; /* Internet Explorer/Edge */\n  user-select: none;\n  padding-top:5px ;\n  padding-bottom:5px ;\n}\n.form-group{\n  padding-left: 15px ;\n  margin-bottom: 15px;\n}\n.form-group > label,.form-group>div > label  , .form-group>section> label{\n  padding:5px 5px 5px 5px;\n  border-top:1px solid rgba(35,37,38,0.2) ;\n  border-bottom:1px solid rgba(35,37,38,0.2) ;\n  border-left:2px outset rgba(35,37,38,0.1) ;\n  border-right:2px solid rgba(35,37,38,0.1) ;\n  box-shadow: 3px 3px 1px rgba(35,37,38,0.2);\n  -webkit-touch-callout: none; /* iOS Safari */\n  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */\n  -moz-user-select: none; /* Firefox */\n  -ms-user-select: none; /* Internet Explorer/Edge */\n  user-select: none;\n}\n.form-control{\n  border-radius:0px;\n}\n.msPasswordVisible{\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n  border-right-width: 1px;\n  border-top-width: 1px;\n  border-bottom-width: 1px;\n  background-color: #90cdf4;\n  display: block;\n  text-align: center;\n}\n.msPasswordInput{\n  display: block;\n  border-width: 1px;\n  flex-wrap: wrap;\n}\n.is-invalid{\n  border-width: 1px;\n  border-color: #e53e3e;\n}\n.is-invalid > span{\n  color: #e53e3e;\n  font-weight: 500;\n}\n\n", ""]);
 
 // exports
 
@@ -41808,9 +41831,9 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: " p-2", class: {} }, [
+    _c("div", { staticClass: " p-2" }, [
       _vm.inputType == "locked"
-        ? _c("div", { staticClass: "flex flex-wrap" }, [
+        ? _c("div", { staticClass: "flex flex-wrap", class: _vm.msValid }, [
             _c(
               "span",
               {
@@ -41947,6 +41970,7 @@ var render = function() {
                     " border focus:outline-none focus:shadow-outline lg:flex-1",
                   class: { "w-full": _vm.onMobile },
                   attrs: {
+                    index: _vm.msInputIndex,
                     autocomplete: "off",
                     name: _vm.inputName,
                     id: _vm.msData.msGroupIndex,
@@ -41993,6 +42017,7 @@ var render = function() {
                     " border focus:outline-none focus:shadow-outline lg:flex-1",
                   class: { "w-full": _vm.onMobile },
                   attrs: {
+                    index: _vm.msInputIndex,
                     autocomplete: "off",
                     name: _vm.inputName,
                     id: _vm.msData.msGroupIndex,
@@ -42018,6 +42043,7 @@ var render = function() {
                     " border focus:outline-none focus:shadow-outline lg:flex-1",
                   class: { "w-full": _vm.onMobile },
                   attrs: {
+                    index: _vm.msInputIndex,
                     autocomplete: "off",
                     name: _vm.inputName,
                     id: _vm.msData.msGroupIndex,
@@ -42035,153 +42061,162 @@ var render = function() {
                 })
           ])
         : _vm.inputType == "password"
-        ? _c("div", { staticClass: "select-none flex flex-wrap" }, [
-            _c(
-              "span",
-              {
-                staticClass: " select-none lg:flex-1",
-                class: { "w-full": !_vm.onMobile }
-              },
-              [_vm._v(_vm._s(_vm.inputVname))]
-            ),
-            _vm._v(" "),
-            _vm.inputType === "checkbox"
-              ? _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.msValue,
-                      expression: "msValue"
-                    }
-                  ],
-                  staticClass:
-                    "msPasswordInput focus:outline-none focus:shadow-outline lg:flex-1 ",
-                  class: { "w-9/12": _vm.onMobile },
-                  attrs: {
-                    autocomplete: "off",
-                    name: _vm.inputName,
-                    id: _vm.msData.msGroupIndex,
-                    type: "checkbox"
-                  },
-                  domProps: {
-                    checked: Array.isArray(_vm.msValue)
-                      ? _vm._i(_vm.msValue, null) > -1
-                      : _vm.msValue
-                  },
-                  on: {
-                    change: function($event) {
-                      var $$a = _vm.msValue,
-                        $$el = $event.target,
-                        $$c = $$el.checked ? true : false
-                      if (Array.isArray($$a)) {
-                        var $$v = null,
-                          $$i = _vm._i($$a, $$v)
-                        if ($$el.checked) {
-                          $$i < 0 && (_vm.msValue = $$a.concat([$$v]))
+        ? _c(
+            "div",
+            { staticClass: "select-none flex flex-wrap", class: _vm.msValid },
+            [
+              _c(
+                "span",
+                {
+                  staticClass: " select-none lg:flex-1",
+                  class: { "w-full": !_vm.onMobile }
+                },
+                [_vm._v(_vm._s(_vm.inputVname))]
+              ),
+              _vm._v(" "),
+              _vm.inputType === "checkbox"
+                ? _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.msValue,
+                        expression: "msValue"
+                      }
+                    ],
+                    staticClass:
+                      "msPasswordInput focus:outline-none focus:shadow-outline lg:flex-1 ",
+                    class: { "w-9/12": _vm.onMobile },
+                    attrs: {
+                      index: _vm.msInputIndex,
+                      autocomplete: "off",
+                      name: _vm.inputName,
+                      id: _vm.msData.msGroupIndex,
+                      type: "checkbox"
+                    },
+                    domProps: {
+                      checked: Array.isArray(_vm.msValue)
+                        ? _vm._i(_vm.msValue, null) > -1
+                        : _vm.msValue
+                    },
+                    on: {
+                      change: function($event) {
+                        var $$a = _vm.msValue,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.msValue = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.msValue = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
                         } else {
-                          $$i > -1 &&
-                            (_vm.msValue = $$a
-                              .slice(0, $$i)
-                              .concat($$a.slice($$i + 1)))
+                          _vm.msValue = $$c
                         }
-                      } else {
-                        _vm.msValue = $$c
                       }
                     }
-                  }
-                })
-              : _vm.inputType === "radio"
-              ? _c("input", {
-                  directives: [
+                  })
+                : _vm.inputType === "radio"
+                ? _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.msValue,
+                        expression: "msValue"
+                      }
+                    ],
+                    staticClass:
+                      "msPasswordInput focus:outline-none focus:shadow-outline lg:flex-1 ",
+                    class: { "w-9/12": _vm.onMobile },
+                    attrs: {
+                      index: _vm.msInputIndex,
+                      autocomplete: "off",
+                      name: _vm.inputName,
+                      id: _vm.msData.msGroupIndex,
+                      type: "radio"
+                    },
+                    domProps: { checked: _vm._q(_vm.msValue, null) },
+                    on: {
+                      change: function($event) {
+                        _vm.msValue = null
+                      }
+                    }
+                  })
+                : _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.msValue,
+                        expression: "msValue"
+                      }
+                    ],
+                    staticClass:
+                      "msPasswordInput focus:outline-none focus:shadow-outline lg:flex-1 ",
+                    class: { "w-9/12": _vm.onMobile },
+                    attrs: {
+                      index: _vm.msInputIndex,
+                      autocomplete: "off",
+                      name: _vm.inputName,
+                      id: _vm.msData.msGroupIndex,
+                      type: _vm.inputType
+                    },
+                    domProps: { value: _vm.msValue },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.msValue = $event.target.value
+                      }
+                    }
+                  }),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "msPasswordVisible",
+                  class: { "w-3/12": _vm.onMobile },
+                  on: { click: _vm.visiblePassowrd }
+                },
+                [
+                  _c("i", {
+                    class: {
+                      "far fa-eye": _vm.inputPasswordVisible,
+                      "far fa-eye-slash": !_vm.inputPasswordVisible,
+                      "object-center": true
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.inputPasswordVisible
+                    ? _c("div", {
+                        class: {
+                          "inline-block": true
+                        }
+                      })
+                    : _vm._e()
+                ]
+              ),
+              _vm._v(" "),
+              _vm.inputPasswordVisible
+                ? _c(
+                    "span",
                     {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.msValue,
-                      expression: "msValue"
-                    }
-                  ],
-                  staticClass:
-                    "msPasswordInput focus:outline-none focus:shadow-outline lg:flex-1 ",
-                  class: { "w-9/12": _vm.onMobile },
-                  attrs: {
-                    autocomplete: "off",
-                    name: _vm.inputName,
-                    id: _vm.msData.msGroupIndex,
-                    type: "radio"
-                  },
-                  domProps: { checked: _vm._q(_vm.msValue, null) },
-                  on: {
-                    change: function($event) {
-                      _vm.msValue = null
-                    }
-                  }
-                })
-              : _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.msValue,
-                      expression: "msValue"
-                    }
-                  ],
-                  staticClass:
-                    "msPasswordInput focus:outline-none focus:shadow-outline lg:flex-1 ",
-                  class: { "w-9/12": _vm.onMobile },
-                  attrs: {
-                    autocomplete: "off",
-                    name: _vm.inputName,
-                    id: _vm.msData.msGroupIndex,
-                    type: _vm.inputType
-                  },
-                  domProps: { value: _vm.msValue },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.msValue = $event.target.value
-                    }
-                  }
-                }),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "msPasswordVisible",
-                class: { "w-3/12": _vm.onMobile },
-                on: { click: _vm.visiblePassowrd }
-              },
-              [
-                _c("i", {
-                  class: {
-                    "far fa-eye": _vm.inputPasswordVisible,
-                    "far fa-eye-slash": !_vm.inputPasswordVisible,
-                    "object-center": true
-                  }
-                }),
-                _vm._v(" "),
-                _vm.inputPasswordVisible
-                  ? _c("div", {
-                      class: {
-                        "inline-block": true
-                      }
-                    })
-                  : _vm._e()
-              ]
-            ),
-            _vm._v(" "),
-            _vm.inputPasswordVisible
-              ? _c(
-                  "span",
-                  { staticClass: "w-full bg-info-100 mt-21 border text-bold" },
-                  [_vm._v(_vm._s(_vm.msValue))]
-                )
-              : _vm._e()
-          ])
+                      staticClass: "w-full bg-info-100 mt-21 border text-bold"
+                    },
+                    [_vm._v(_vm._s(_vm.msValue))]
+                  )
+                : _vm._e()
+            ]
+          )
         : _vm.inputType == "email"
-        ? _c("div", { attrs: { lass: "flex flex-wrap" } }, [
+        ? _c("div", { staticClass: "flex flex-wrap", class: _vm.msValid }, [
             _c("span", { staticClass: " select-none lg:mr-2" }, [
               _vm._v(_vm._s(_vm.inputVname))
             ]),
@@ -42200,6 +42235,7 @@ var render = function() {
                   class: { "w-full": _vm.onMobile },
                   staticStyle: { "min-width": "60%" },
                   attrs: {
+                    index: _vm.msInputIndex,
                     autocomplete: "off",
                     name: _vm.inputName,
                     id: _vm.msData.msGroupIndex,
@@ -42246,6 +42282,7 @@ var render = function() {
                   class: { "w-full": _vm.onMobile },
                   staticStyle: { "min-width": "60%" },
                   attrs: {
+                    index: _vm.msInputIndex,
                     autocomplete: "off",
                     name: _vm.inputName,
                     id: _vm.msData.msGroupIndex,
@@ -42271,6 +42308,7 @@ var render = function() {
                   class: { "w-full": _vm.onMobile },
                   staticStyle: { "min-width": "60%" },
                   attrs: {
+                    index: _vm.msInputIndex,
                     autocomplete: "off",
                     name: _vm.inputName,
                     id: _vm.msData.msGroupIndex,
@@ -42288,7 +42326,7 @@ var render = function() {
                 })
           ])
         : _vm.inputType == "number"
-        ? _c("div", { attrs: { lass: "flex flex-wrap" } }, [
+        ? _c("div", { staticClass: "flex flex-wrap", class: _vm.msValid }, [
             _c("span", { staticClass: " select-none lg:mr-2" }, [
               _vm._v(_vm._s(_vm.inputVname))
             ]),
@@ -42307,6 +42345,7 @@ var render = function() {
                   class: { "w-full": _vm.onMobile },
                   staticStyle: { "min-width": "50%" },
                   attrs: {
+                    index: _vm.msInputIndex,
                     autocomplete: "off",
                     name: _vm.inputName,
                     id: _vm.msData.msGroupIndex,
@@ -42353,6 +42392,7 @@ var render = function() {
                   class: { "w-full": _vm.onMobile },
                   staticStyle: { "min-width": "50%" },
                   attrs: {
+                    index: _vm.msInputIndex,
                     autocomplete: "off",
                     name: _vm.inputName,
                     id: _vm.msData.msGroupIndex,
@@ -42378,6 +42418,7 @@ var render = function() {
                   class: { "w-full": _vm.onMobile },
                   staticStyle: { "min-width": "50%" },
                   attrs: {
+                    index: _vm.msInputIndex,
                     autocomplete: "off",
                     name: _vm.inputName,
                     id: _vm.msData.msGroupIndex,
@@ -42397,7 +42438,7 @@ var render = function() {
         : _vm._e(),
       _vm._v(" "),
       _vm.inputType == "file"
-        ? _c("div", { staticClass: "flex flex-wrap" }, [
+        ? _c("div", { staticClass: "flex flex-wrap", class: _vm.msValid }, [
             _c(
               "span",
               {
@@ -42421,6 +42462,7 @@ var render = function() {
                     "text-center border focus:outline-none focus:shadow-outline ",
                   class: { "w-11/12": _vm.onMobile },
                   attrs: {
+                    index: _vm.msInputIndex,
                     name: _vm.inputName,
                     id: _vm.msData.msGroupIndex,
                     type: "checkbox"
@@ -42466,6 +42508,7 @@ var render = function() {
                     "text-center border focus:outline-none focus:shadow-outline ",
                   class: { "w-11/12": _vm.onMobile },
                   attrs: {
+                    index: _vm.msInputIndex,
                     name: _vm.inputName,
                     id: _vm.msData.msGroupIndex,
                     type: "radio"
@@ -42490,6 +42533,7 @@ var render = function() {
                     "text-center border focus:outline-none focus:shadow-outline ",
                   class: { "w-11/12": _vm.onMobile },
                   attrs: {
+                    index: _vm.msInputIndex,
                     name: _vm.inputName,
                     id: _vm.msData.msGroupIndex,
                     type: _vm.inputType
@@ -42510,7 +42554,7 @@ var render = function() {
       _vm.inputType == "radio"
         ? _c(
             "div",
-            { staticClass: "flex flex-wrap" },
+            { staticClass: "flex flex-wrap", class: _vm.msValid },
             [
               _c(
                 "span",
@@ -42567,7 +42611,7 @@ var render = function() {
       _vm.inputType == "checkbox"
         ? _c(
             "div",
-            { staticClass: "flex flex-wrap" },
+            { staticClass: "flex flex-wrap", class: _vm.msValid },
             [
               _c(
                 "span",
@@ -42629,32 +42673,27 @@ var render = function() {
       _vm._v(" "),
       _vm.msValid == "is-invalid"
         ? _c("div", { staticClass: "flex flex-wrap" }, [
-            _vm.msValid == "is-invalid"
-              ? _c(
-                  "small",
+            _c(
+              "small",
+              { staticClass: "text-left bg-red-200 w-full" },
+              _vm._l(_vm.inputError, function(item) {
+                return _c(
+                  "div",
                   {
-                    staticClass: "text-left bg-red-200 w-full",
-                    attrs: { id: _vm.inputName + "_error" }
+                    staticStyle: { "font-size": "smaller", padding: "5px" },
+                    attrs: { role: "alert" }
                   },
-                  _vm._l(_vm.inputError, function(item) {
-                    return _c(
-                      "div",
-                      {
-                        staticStyle: { "font-size": "smaller", padding: "5px" },
-                        attrs: { role: "alert" }
-                      },
-                      [
-                        _vm._v(
-                          "\n                        " +
-                            _vm._s(item) +
-                            "\n                    "
-                        )
-                      ]
+                  [
+                    _vm._v(
+                      "\n                        " +
+                        _vm._s(item) +
+                        "\n                    "
                     )
-                  }),
-                  0
+                  ]
                 )
-              : _vm._e()
+              }),
+              0
+            )
           ])
         : _vm._e()
     ]),
@@ -55673,206 +55712,6 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./vendor/msllp/core/src/Views/core/B/s/js/MS.js":
-/*!*******************************************************!*\
-  !*** ./vendor/msllp/core/src/Views/core/B/s/js/MS.js ***!
-  \*******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  methods: {
-    validatePassword: function validatePassword(pass) {
-      var length = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 8;
-      var strenth = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 3;
-
-      switch (strenth) {
-        case 1:
-          var re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{" + length + ",})");
-          break;
-
-        case 2:
-          var re = new RegExp("^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{" + length + ",})");
-          break;
-
-        case 3:
-          var re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{" + length + ",})");
-          break;
-
-        default:
-          var re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{" + length + ",})");
-          break;
-      }
-
-      return re.test(pass);
-    },
-    validateLen: function validateLen(str) {
-      var size = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
-      var re = new RegExp("^(?=.{" + size + ",})");
-      return re.test(str);
-    },
-    getGetLink: function getGetLink(url, classFor) {
-      url = url + "?dataLink=true";
-      var returnX = "";
-      var self = classFor;
-      var re = axios.get(url).then(function (response) {
-        returnX = response.data;
-        self.setHtml(returnX);
-      })["catch"](function (error) {
-        // handle error
-        self.setMsError(error.response.data); //  console.log(error.response.data);
-      })["finally"](function (response) {});
-    },
-    postLink: function postLink(link, data, classFor) {
-      var Freturn = {};
-      axios.post(link, data, {
-        headers: {
-          'content-type': 'multipart/form-data',
-          // 'charset':'utf-8',
-          'boundary': Math.random().toString().substr(2),
-          'Accept': "application/json",
-          'maxContentLength': Math.random().toString().substr(2)
-        }
-      }).then(function (response) {
-        //console.log(response);
-        Freturn.data = response.data;
-      })["catch"](function (error) {
-        Freturn.error = error.response.data.errors; // console.log(error.response.data);
-
-        classFor.setAllMsError(Freturn.error); //  delete Freturn.error.message;
-      });
-      return Freturn; //  console.log(Freturn);
-    },
-    makeArrayForInput: function makeArrayForInput(base) {
-      var self = base;
-      var id = base.inputName;
-      var vName = base.inputVname;
-      var re = {
-        id: id,
-        label: 'Enter ' + vName,
-        baseValue: base
-      };
-
-      if (base.inputMultiple) {
-        re.id = id + "[]";
-        re.label = 'Enter ' + vName;
-      } //    console.log(re);
-      //   base.setFinalInput(re);
-
-
-      return re; // console.log(re);
-      // return [re];
-    },
-    makeArrayForInputGroup: function makeArrayForInputGroup(base, id, index) {
-      var self = base;
-      var idfor = id + "_" + index;
-      var Inputindex = 1; //  console.log(self.msFormData[id])
-
-      Inputindex = base.msCount[id] - 1;
-      var fordata = {
-        rootId: id,
-        id: index,
-        groupDynamic: true,
-        gruoupHeading: self.msFormData[id].gruoupHeading + " No of: " + Inputindex,
-        inputs: self.msFormData[id].inputs
-      };
-      return fordata;
-    },
-    in_array: function in_array(value, array) {
-      return array.includes(value);
-    },
-    get_time_diff: function get_time_diff(datetime) {
-      var datetime = typeof datetime !== 'undefined' ? datetime : "2014-01-01 01:02:03.123456";
-      var datetime = new Date(datetime).getTime();
-      var now = new Date().getTime();
-
-      if (isNaN(datetime)) {
-        return "";
-      } //console.log( datetime + " " + now);
-
-
-      if (datetime < now) {
-        var milisec_diff = now - datetime;
-      } else {
-        var milisec_diff = datetime - now;
-      }
-
-      var days = Math.floor(milisec_diff / 1000 / 60 / (60 * 24));
-      var date_diff = new Date(milisec_diff);
-      return date_diff.getMilliseconds();
-    },
-    roundToTwo: function roundToTwo(num) {
-      //    console.log(num);
-      //  console.log(Math.round(num)     );
-      return Math.round(num);
-    },
-    calc_get_prapotion: function calc_get_prapotion(totalValue, secondValue) {
-      var returnValue = 0;
-      returnValue = secondValue * 100 / totalValue;
-      return this.roundToTwo(returnValue);
-    },
-    check_uniq: function check_uniq(setArray, baseArray) {
-      for (var i = 0; i < baseArray.length; i++) {
-        if (this.in_array(baseArray[i], setArray)) return false;
-      }
-
-      return true;
-    },
-    isMobile: function isMobile() {
-      //     return true
-      var str = navigator.platformt; //var n = str.search("Windows");
-
-      console.log(navigator.platform); //if(n >0 )
-
-      if (str == 'Android' || str == 'iPhone' || str == 'iPod' || str == 'iPad' || str == 'BlackBerry' || str == 'Pocket PC' || str == 'webOS' || str == "Linux armv8l") {
-        return true;
-      } else {
-        return false;
-      }
-    },
-    forNice: function forNice(str) {
-      var txt = str;
-      return txt.toLowerCase().split(' ').map(function (s) {
-        return s.charAt(0).toUpperCase() + s.substring(1);
-      }).join(' ');
-    },
-    ms_rand: function ms_rand(length) {
-      var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
-
-      switch (type) {
-        case 1:
-          var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-          break;
-
-        case 2:
-          var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-          break;
-
-        case 3:
-          var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-          break;
-
-        case 4:
-          var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&*()_+{}|:';
-          break;
-      }
-
-      var result = '';
-      var charactersLength = characters.length;
-
-      for (var i = 0; i < length; i++) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-      }
-
-      return result;
-    }
-  }
-});
-
-/***/ }),
-
 /***/ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/MS.js":
 /*!************************************************************!*\
   !*** ./vendor/msllp/core/src/Views/core/B/s/js/MS/C/MS.js ***!
@@ -56247,206 +56086,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./vendor/msllp/core/src/Views/core/B/s/js/MS/MS.js":
-/*!**********************************************************!*\
-  !*** ./vendor/msllp/core/src/Views/core/B/s/js/MS/MS.js ***!
-  \**********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  methods: {
-    validatePassword: function validatePassword(pass) {
-      var length = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 8;
-      var strenth = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 3;
-
-      switch (strenth) {
-        case 1:
-          var re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{" + length + ",})");
-          break;
-
-        case 2:
-          var re = new RegExp("^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{" + length + ",})");
-          break;
-
-        case 3:
-          var re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{" + length + ",})");
-          break;
-
-        default:
-          var re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{" + length + ",})");
-          break;
-      }
-
-      return re.test(pass);
-    },
-    validateLen: function validateLen(str) {
-      var size = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
-      var re = new RegExp("^(?=.{" + size + ",})");
-      return re.test(str);
-    },
-    getGetLink: function getGetLink(url, classFor) {
-      url = url + "?dataLink=true";
-      var returnX = "";
-      var self = classFor;
-      var re = axios.get(url).then(function (response) {
-        returnX = response.data;
-        self.setHtml(returnX);
-      })["catch"](function (error) {
-        // handle error
-        self.setMsError(error.response.data); //  console.log(error.response.data);
-      })["finally"](function (response) {});
-    },
-    postLink: function postLink(link, data, classFor) {
-      var Freturn = {};
-      axios.post(link, data, {
-        headers: {
-          'content-type': 'multipart/form-data',
-          // 'charset':'utf-8',
-          'boundary': Math.random().toString().substr(2),
-          'Accept': "application/json",
-          'maxContentLength': Math.random().toString().substr(2)
-        }
-      }).then(function (response) {
-        //console.log(response);
-        Freturn.data = response.data;
-      })["catch"](function (error) {
-        Freturn.error = error.response.data.errors; // console.log(error.response.data);
-
-        classFor.setAllMsError(Freturn.error); //  delete Freturn.error.message;
-      });
-      return Freturn; //  console.log(Freturn);
-    },
-    makeArrayForInput: function makeArrayForInput(base) {
-      var self = base;
-      var id = base.inputName;
-      var vName = base.inputVname;
-      var re = {
-        id: id,
-        label: 'Enter ' + vName,
-        baseValue: base
-      };
-
-      if (base.inputMultiple) {
-        re.id = id + "[]";
-        re.label = 'Enter ' + vName;
-      } //    console.log(re);
-      //   base.setFinalInput(re);
-
-
-      return re; // console.log(re);
-      // return [re];
-    },
-    makeArrayForInputGroup: function makeArrayForInputGroup(base, id, index) {
-      var self = base;
-      var idfor = id + "_" + index;
-      var Inputindex = 1; //  console.log(self.msFormData[id])
-
-      Inputindex = base.msCount[id] - 1;
-      var fordata = {
-        rootId: id,
-        id: index,
-        groupDynamic: true,
-        gruoupHeading: self.msFormData[id].gruoupHeading + " No of: " + Inputindex,
-        inputs: self.msFormData[id].inputs
-      };
-      return fordata;
-    },
-    in_array: function in_array(value, array) {
-      return array.includes(value);
-    },
-    get_time_diff: function get_time_diff(datetime) {
-      var datetime = typeof datetime !== 'undefined' ? datetime : "2014-01-01 01:02:03.123456";
-      var datetime = new Date(datetime).getTime();
-      var now = new Date().getTime();
-
-      if (isNaN(datetime)) {
-        return "";
-      } //console.log( datetime + " " + now);
-
-
-      if (datetime < now) {
-        var milisec_diff = now - datetime;
-      } else {
-        var milisec_diff = datetime - now;
-      }
-
-      var days = Math.floor(milisec_diff / 1000 / 60 / (60 * 24));
-      var date_diff = new Date(milisec_diff);
-      return date_diff.getMilliseconds();
-    },
-    roundToTwo: function roundToTwo(num) {
-      //    console.log(num);
-      //  console.log(Math.round(num)     );
-      return Math.round(num);
-    },
-    calc_get_prapotion: function calc_get_prapotion(totalValue, secondValue) {
-      var returnValue = 0;
-      returnValue = secondValue * 100 / totalValue;
-      return this.roundToTwo(returnValue);
-    },
-    check_uniq: function check_uniq(setArray, baseArray) {
-      for (var i = 0; i < baseArray.length; i++) {
-        if (this.in_array(baseArray[i], setArray)) return false;
-      }
-
-      return true;
-    },
-    isMobile: function isMobile() {
-      //     return true
-      var str = navigator.platformt; //var n = str.search("Windows");
-
-      console.log(navigator.platform); //if(n >0 )
-
-      if (str == 'Android' || str == 'iPhone' || str == 'iPod' || str == 'iPad' || str == 'BlackBerry' || str == 'Pocket PC' || str == 'webOS' || str == "Linux armv8l") {
-        return true;
-      } else {
-        return false;
-      }
-    },
-    forNice: function forNice(str) {
-      var txt = str;
-      return txt.toLowerCase().split(' ').map(function (s) {
-        return s.charAt(0).toUpperCase() + s.substring(1);
-      }).join(' ');
-    },
-    ms_rand: function ms_rand(length) {
-      var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
-
-      switch (type) {
-        case 1:
-          var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-          break;
-
-        case 2:
-          var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-          break;
-
-        case 3:
-          var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-          break;
-
-        case 4:
-          var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&*()_+{}|:';
-          break;
-      }
-
-      var result = '';
-      var charactersLength = characters.length;
-
-      for (var i = 0; i < length; i++) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-      }
-
-      return result;
-    }
-  }
-});
-
-/***/ }),
-
 /***/ "./vendor/msllp/core/src/Views/core/B/s/js/MS/msDashboard.vue":
 /*!********************************************************************!*\
   !*** ./vendor/msllp/core/src/Views/core/B/s/js/MS/msDashboard.vue ***!
@@ -56801,7 +56440,7 @@ $(function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _MS__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MS */ "./vendor/msllp/core/src/Views/core/B/s/js/MS.js");
+/* harmony import */ var _MS_C_MS__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MS/C/MS */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/MS.js");
 window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -56865,7 +56504,7 @@ Vue.component('msdockerdashboard', __webpack_require__(/*! ./MS/B/M/DCM/V/Vue/do
 
 var app = new Vue({
   el: '#msapp',
-  mixins: [_MS__WEBPACK_IMPORTED_MODULE_0__["default"]],
+  mixins: [_MS_C_MS__WEBPACK_IMPORTED_MODULE_0__["default"]],
   methods: {
     getModBtn: function getModBtn(url) {
       // console.log(this);
@@ -56880,9 +56519,13 @@ var app = new Vue({
         var key = inputName.toString().toLowerCase(); //
 
         if (this.$refs['msFrom'].$refs.hasOwnProperty(key) && this.$refs['msFrom'].$refs[key].hasOwnProperty(0)) {
+          // console.log(inputName);
           this.$refs['msFrom'].$refs[key][0].setError();
           this.$refs['msFrom'].$refs[key][0].inputError = Data[inputName];
-          this.$refs['msFrom'].allErrors.push(Data[inputName]);
+          this.$refs['msFrom'].allErrors.push({
+            inputName: inputName,
+            errors: Data[inputName]
+          });
         }
       } //    this.mserror.forEach(function(value, index) {
       //        var key=value.name.toString();
