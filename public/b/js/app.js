@@ -2696,6 +2696,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
  // import  MDD from 'mobile-device-detect';
 // //console.log(MS);
 
@@ -2778,6 +2792,17 @@ __webpack_require__.r(__webpack_exports__);
     //     this.msValue=this.dValue;
     //     //this.$parent.setInputData(this.inputName,this.dValue);
     // }
+
+    if (this.inputType == 'date') {
+      var utc = new Date().toISOString('en', {
+        timeZone: 'Asia/Kolkata'
+      }).slice(0, 10);
+      var tzoffset = new Date().getTimezoneOffset() * 60000; //offset in milliseconds
+
+      var localISOTime = new Date(Date.now() - tzoffset).toISOString().slice(0, 10); //   console.log((new Date(Date.now() - tzoffset)).getTimezoneOffset());
+
+      this.msValue = localISOTime;
+    }
 
     this.$parent.setInputData(this.inputName, this.msValue);
     if (window.innerWidth < 800) this.onMobile = true; // this.inputAuto.push({
@@ -41834,14 +41859,9 @@ var render = function() {
     _c("div", { staticClass: " p-2" }, [
       _vm.inputType == "locked"
         ? _c("div", { staticClass: "flex flex-wrap", class: _vm.msValid }, [
-            _c(
-              "span",
-              {
-                staticClass: " select-none",
-                class: { "w-4/12 mr-2": !_vm.onMobile }
-              },
-              [_vm._v(_vm._s(_vm.inputVname))]
-            ),
+            _c("span", { staticClass: " select-none lg:mr-2" }, [
+              _vm._v(_vm._s(_vm.inputVname))
+            ]),
             _vm._v(" "),
             _c("i", { staticClass: "fas p2 ml-2 mt-1 fa-qrcode mr-2" }),
             _vm.inputType === "checkbox"
@@ -41855,8 +41875,8 @@ var render = function() {
                     }
                   ],
                   staticClass:
-                    "text-center border focus:outline-none focus:shadow-outline",
-                  class: { "w-11/12": _vm.onMobile },
+                    "text-center border focus:outline-none focus:shadow-outline lg:flex-1",
+                  class: { "w-full": _vm.onMobile },
                   attrs: {
                     disabled: "",
                     autocomplete: "off",
@@ -41902,8 +41922,8 @@ var render = function() {
                     }
                   ],
                   staticClass:
-                    "text-center border focus:outline-none focus:shadow-outline",
-                  class: { "w-11/12": _vm.onMobile },
+                    "text-center border focus:outline-none focus:shadow-outline lg:flex-1",
+                  class: { "w-full": _vm.onMobile },
                   attrs: {
                     disabled: "",
                     autocomplete: "off",
@@ -41928,8 +41948,8 @@ var render = function() {
                     }
                   ],
                   staticClass:
-                    "text-center border focus:outline-none focus:shadow-outline",
-                  class: { "w-11/12": _vm.onMobile },
+                    "text-center border focus:outline-none focus:shadow-outline lg:flex-1",
+                  class: { "w-full": _vm.onMobile },
                   attrs: {
                     disabled: "",
                     autocomplete: "off",
@@ -41951,7 +41971,7 @@ var render = function() {
         : _vm._e(),
       _vm._v(" "),
       _vm.inputType == "text"
-        ? _c("div", { staticClass: "flex flex-wrap" }, [
+        ? _c("div", { staticClass: "flex flex-wrap", class: _vm.msValid }, [
             _c("span", { staticClass: " select-none lg:mr-2" }, [
               _vm._v(_vm._s(_vm.inputVname))
             ]),
@@ -41971,6 +41991,7 @@ var render = function() {
                   class: { "w-full": _vm.onMobile },
                   attrs: {
                     index: _vm.msInputIndex,
+                    placeholder: "Enter " + _vm.inputVname + " here",
                     autocomplete: "off",
                     name: _vm.inputName,
                     id: _vm.msData.msGroupIndex,
@@ -42018,6 +42039,7 @@ var render = function() {
                   class: { "w-full": _vm.onMobile },
                   attrs: {
                     index: _vm.msInputIndex,
+                    placeholder: "Enter " + _vm.inputVname + " here",
                     autocomplete: "off",
                     name: _vm.inputName,
                     id: _vm.msData.msGroupIndex,
@@ -42044,6 +42066,7 @@ var render = function() {
                   class: { "w-full": _vm.onMobile },
                   attrs: {
                     index: _vm.msInputIndex,
+                    placeholder: "Enter " + _vm.inputVname + " here",
                     autocomplete: "off",
                     name: _vm.inputName,
                     id: _vm.msData.msGroupIndex,
@@ -42089,6 +42112,7 @@ var render = function() {
                     class: { "w-9/12": _vm.onMobile },
                     attrs: {
                       index: _vm.msInputIndex,
+                      placeholder: "Enter " + _vm.inputVname + " here",
                       autocomplete: "off",
                       name: _vm.inputName,
                       id: _vm.msData.msGroupIndex,
@@ -42136,6 +42160,7 @@ var render = function() {
                     class: { "w-9/12": _vm.onMobile },
                     attrs: {
                       index: _vm.msInputIndex,
+                      placeholder: "Enter " + _vm.inputVname + " here",
                       autocomplete: "off",
                       name: _vm.inputName,
                       id: _vm.msData.msGroupIndex,
@@ -42162,6 +42187,7 @@ var render = function() {
                     class: { "w-9/12": _vm.onMobile },
                     attrs: {
                       index: _vm.msInputIndex,
+                      placeholder: "Enter " + _vm.inputVname + " here",
                       autocomplete: "off",
                       name: _vm.inputName,
                       id: _vm.msData.msGroupIndex,
@@ -42231,11 +42257,13 @@ var render = function() {
                       expression: "msValue"
                     }
                   ],
-                  staticClass: "border focus:outline-none focus:shadow-outline",
+                  staticClass:
+                    "border focus:outline-none focus:shadow-outline lg:flex-1",
                   class: { "w-full": _vm.onMobile },
                   staticStyle: { "min-width": "60%" },
                   attrs: {
                     index: _vm.msInputIndex,
+                    placeholder: "Enter " + _vm.inputVname + " here",
                     autocomplete: "off",
                     name: _vm.inputName,
                     id: _vm.msData.msGroupIndex,
@@ -42278,11 +42306,13 @@ var render = function() {
                       expression: "msValue"
                     }
                   ],
-                  staticClass: "border focus:outline-none focus:shadow-outline",
+                  staticClass:
+                    "border focus:outline-none focus:shadow-outline lg:flex-1",
                   class: { "w-full": _vm.onMobile },
                   staticStyle: { "min-width": "60%" },
                   attrs: {
                     index: _vm.msInputIndex,
+                    placeholder: "Enter " + _vm.inputVname + " here",
                     autocomplete: "off",
                     name: _vm.inputName,
                     id: _vm.msData.msGroupIndex,
@@ -42304,11 +42334,13 @@ var render = function() {
                       expression: "msValue"
                     }
                   ],
-                  staticClass: "border focus:outline-none focus:shadow-outline",
+                  staticClass:
+                    "border focus:outline-none focus:shadow-outline lg:flex-1",
                   class: { "w-full": _vm.onMobile },
                   staticStyle: { "min-width": "60%" },
                   attrs: {
                     index: _vm.msInputIndex,
+                    placeholder: "Enter " + _vm.inputVname + " here",
                     autocomplete: "off",
                     name: _vm.inputName,
                     id: _vm.msData.msGroupIndex,
@@ -42341,7 +42373,8 @@ var render = function() {
                       expression: "msValue"
                     }
                   ],
-                  staticClass: "border focus:outline-none focus:shadow-outline",
+                  staticClass:
+                    "border focus:outline-none focus:shadow-outline lg:flex-1",
                   class: { "w-full": _vm.onMobile },
                   staticStyle: { "min-width": "50%" },
                   attrs: {
@@ -42388,7 +42421,8 @@ var render = function() {
                       expression: "msValue"
                     }
                   ],
-                  staticClass: "border focus:outline-none focus:shadow-outline",
+                  staticClass:
+                    "border focus:outline-none focus:shadow-outline lg:flex-1",
                   class: { "w-full": _vm.onMobile },
                   staticStyle: { "min-width": "50%" },
                   attrs: {
@@ -42414,7 +42448,8 @@ var render = function() {
                       expression: "msValue"
                     }
                   ],
-                  staticClass: "border focus:outline-none focus:shadow-outline",
+                  staticClass:
+                    "border focus:outline-none focus:shadow-outline lg:flex-1",
                   class: { "w-full": _vm.onMobile },
                   staticStyle: { "min-width": "50%" },
                   attrs: {
@@ -42439,14 +42474,9 @@ var render = function() {
       _vm._v(" "),
       _vm.inputType == "file"
         ? _c("div", { staticClass: "flex flex-wrap", class: _vm.msValid }, [
-            _c(
-              "span",
-              {
-                staticClass: " select-none",
-                class: { "w-4/12 mr-2": !_vm.onMobile }
-              },
-              [_vm._v(_vm._s(_vm.inputVname))]
-            ),
+            _c("span", { staticClass: " select-none  lg:mr-2" }, [
+              _vm._v(_vm._s(_vm.inputVname))
+            ]),
             _vm._v(" "),
             _vm.inputType === "checkbox"
               ? _c("input", {
@@ -42459,8 +42489,8 @@ var render = function() {
                     }
                   ],
                   staticClass:
-                    "text-center border focus:outline-none focus:shadow-outline ",
-                  class: { "w-11/12": _vm.onMobile },
+                    "text-center border focus:outline-none focus:shadow-outline lg:flex-1 ",
+                  class: { "w-full": _vm.onMobile },
                   attrs: {
                     index: _vm.msInputIndex,
                     name: _vm.inputName,
@@ -42505,8 +42535,8 @@ var render = function() {
                     }
                   ],
                   staticClass:
-                    "text-center border focus:outline-none focus:shadow-outline ",
-                  class: { "w-11/12": _vm.onMobile },
+                    "text-center border focus:outline-none focus:shadow-outline lg:flex-1 ",
+                  class: { "w-full": _vm.onMobile },
                   attrs: {
                     index: _vm.msInputIndex,
                     name: _vm.inputName,
@@ -42530,8 +42560,8 @@ var render = function() {
                     }
                   ],
                   staticClass:
-                    "text-center border focus:outline-none focus:shadow-outline ",
-                  class: { "w-11/12": _vm.onMobile },
+                    "text-center border focus:outline-none focus:shadow-outline lg:flex-1 ",
+                  class: { "w-full": _vm.onMobile },
                   attrs: {
                     index: _vm.msInputIndex,
                     name: _vm.inputName,
@@ -42669,6 +42699,152 @@ var render = function() {
             ],
             2
           )
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.inputType == "date"
+        ? _c("div", { staticClass: "flex flex-wrap", class: _vm.msValid }, [
+            _c("span", { staticClass: " select-none lg:mr-2" }, [
+              _vm._v(_vm._s(_vm.inputVname))
+            ]),
+            _vm._v(" "),
+            _vm.inputType === "checkbox"
+              ? _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.msValue,
+                      expression: "msValue"
+                    }
+                  ],
+                  staticClass:
+                    "text-center border focus:outline-none focus:shadow-outline lg:flex-1",
+                  class: { "w-full": _vm.onMobile },
+                  attrs: {
+                    index: _vm.msInputIndex,
+                    name: _vm.inputName,
+                    id: _vm.msData.msGroupIndex,
+                    type: "checkbox"
+                  },
+                  domProps: {
+                    checked: Array.isArray(_vm.msValue)
+                      ? _vm._i(_vm.msValue, null) > -1
+                      : _vm.msValue
+                  },
+                  on: {
+                    change: function($event) {
+                      var $$a = _vm.msValue,
+                        $$el = $event.target,
+                        $$c = $$el.checked ? true : false
+                      if (Array.isArray($$a)) {
+                        var $$v = null,
+                          $$i = _vm._i($$a, $$v)
+                        if ($$el.checked) {
+                          $$i < 0 && (_vm.msValue = $$a.concat([$$v]))
+                        } else {
+                          $$i > -1 &&
+                            (_vm.msValue = $$a
+                              .slice(0, $$i)
+                              .concat($$a.slice($$i + 1)))
+                        }
+                      } else {
+                        _vm.msValue = $$c
+                      }
+                    }
+                  }
+                })
+              : _vm.inputType === "radio"
+              ? _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.msValue,
+                      expression: "msValue"
+                    }
+                  ],
+                  staticClass:
+                    "text-center border focus:outline-none focus:shadow-outline lg:flex-1",
+                  class: { "w-full": _vm.onMobile },
+                  attrs: {
+                    index: _vm.msInputIndex,
+                    name: _vm.inputName,
+                    id: _vm.msData.msGroupIndex,
+                    type: "radio"
+                  },
+                  domProps: { checked: _vm._q(_vm.msValue, null) },
+                  on: {
+                    change: function($event) {
+                      _vm.msValue = null
+                    }
+                  }
+                })
+              : _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.msValue,
+                      expression: "msValue"
+                    }
+                  ],
+                  staticClass:
+                    "text-center border focus:outline-none focus:shadow-outline lg:flex-1",
+                  class: { "w-full": _vm.onMobile },
+                  attrs: {
+                    index: _vm.msInputIndex,
+                    name: _vm.inputName,
+                    id: _vm.msData.msGroupIndex,
+                    type: _vm.inputType
+                  },
+                  domProps: { value: _vm.msValue },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.msValue = $event.target.value
+                    }
+                  }
+                })
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.inputType == "textarea"
+        ? _c("div", { staticClass: "flex flex-wrap", class: _vm.msValid }, [
+            _c("span", { staticClass: " select-none lg:mr-2" }, [
+              _vm._v(_vm._s(_vm.inputVname))
+            ]),
+            _vm._v(" "),
+            _c("textarea", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.msValue,
+                  expression: "msValue"
+                }
+              ],
+              staticClass:
+                "border focus:outline-none focus:shadow-outline lg:flex-1",
+              class: { "w-full": _vm.onMobile },
+              attrs: {
+                index: _vm.msInputIndex,
+                type: _vm.inputType,
+                name: _vm.inputName,
+                id: _vm.msData.msGroupIndex
+              },
+              domProps: { value: _vm.msValue },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.msValue = $event.target.value
+                }
+              }
+            })
+          ])
         : _vm._e(),
       _vm._v(" "),
       _vm.msValid == "is-invalid"

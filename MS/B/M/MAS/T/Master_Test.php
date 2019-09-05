@@ -30,6 +30,7 @@ return [
 
                 ],
 
+
                 ['name'=>'test1','vName'=>'Name of Module 0', 'input'=>'text',],
                 ['name'=>'test2','vName'=>'Name of Module 1', 'input'=>'textarea',],
                 ['name'=>'test3','vName'=>'Name of Module 2', 'input'=>'number',],
@@ -45,11 +46,12 @@ return [
                 ['name'=>'test10','vName'=>'Module Icon','type'=>'string', 'input'=>'file',
                     'storeTo'=>"MS-MASTER-Storage:MAS.UniqId.ModIcon->icon"
                 ],
+                ['name'=>'test11','vName'=>'Name of Module 11', 'input'=>'password',],
 
             ],
 
         'fieldGroup'=>[
-            'Add Module'=>['test0','test1','test2','test3','test4','test5','test6','test7','test8','test9','test10',],
+            'Add Module'=>['test0','test1','test2','test3','test4','test5','test6','test7','test8','test9','test10','test11'],
             // 'Add Module2'=>['modName','modDesc','modCode','modIcon','modPrefix','modForSuperAdmin','modForAdmin','modStatus','modHomeAction','modDataAction'],
             // 'Login Details'=>['modName','modDesc','modCode','modIcon',],
             //   'Login Details 2'=>['Username','Password','ConfirmPassword','Role']
