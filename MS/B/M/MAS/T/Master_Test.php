@@ -51,7 +51,8 @@ return [
             ],
 
         'fieldGroup'=>[
-            'Add Module'=>['test0','test1','test2','test3','test4','test5','test6','test7','test8','test9','test10','test11'],
+            'Add Module'=>['test0','test1','test2','test3','test4',],
+            'Add Module 2'=>['test5','test6','test7','test8','test9','test10','test11'],
             // 'Add Module2'=>['modName','modDesc','modCode','modIcon','modPrefix','modForSuperAdmin','modForAdmin','modStatus','modHomeAction','modDataAction'],
             // 'Login Details'=>['modName','modDesc','modCode','modIcon',],
             //   'Login Details 2'=>['Username','Password','ConfirmPassword','Role']
@@ -89,6 +90,18 @@ return [
 
 
         ],
+
+
+        'MSforms'=>[
+            'add_form'=>[
+                'title'=>'Add Form',
+                'groups'=>['Add Module','Add Module 2'],
+                'actions'=>['add']
+
+            ],
+        ],
+
+
 
 
     ],
