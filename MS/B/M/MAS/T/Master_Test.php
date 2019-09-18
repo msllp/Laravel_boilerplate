@@ -11,7 +11,7 @@ return [
 
 
     "Master_All_Feature"=>[
-        'tableName'=>'MS_CORE_Mod',
+        'tableName'=>'Test',
         'connection'=>'MS_Core',
 
         'fields'=>
@@ -31,8 +31,8 @@ return [
                 ],
 
 
-                ['name'=>'test1','vName'=>'Name of Module 0', 'input'=>'text',],
-                ['name'=>'test2','vName'=>'Name of Module 1', 'input'=>'textarea',],
+                ['name'=>'test1','vName'=>'Name of Module 0', 'input'=>'text','validation'=>['required'=>true,]],
+                ['name'=>'test2','vName'=>'Name of Module 1', 'input'=>'textarea','validation'=>['required'=>true,]],
                 ['name'=>'test3','vName'=>'Name of Module 2', 'input'=>'number',],
                 ['name'=>'test4','vName'=>'Name of Module 3', 'input'=>'email',],
                 ['name'=>'test5','vName'=>'Name of Module 4', 'input'=>'date',],
@@ -52,7 +52,7 @@ return [
 
         'fieldGroup'=>[
             'Add Module'=>['test0','test1','test2','test3','test4',],
-            'Add Module 2'=>['test5','test6','test7','test8','test9','test10','test11'],
+            'Add Module 2'=>['test5','test6','test7','test8','test9','test10','test11','created_at'],
             // 'Add Module2'=>['modName','modDesc','modCode','modIcon','modPrefix','modForSuperAdmin','modForAdmin','modStatus','modHomeAction','modDataAction'],
             // 'Login Details'=>['modName','modDesc','modCode','modIcon',],
             //   'Login Details 2'=>['Username','Password','ConfirmPassword','Role']
@@ -99,6 +99,26 @@ return [
                 'actions'=>['add']
 
             ],
+        ],
+
+
+        'MSViews'=>[
+
+            'view_all'=>[
+                'title'=>'View all',
+                'icon'=>'fa fa-home',
+                'groups'=>['Add Module','Add Module 2'],
+                'searchable'=>true,
+                'actions'=>['add'],
+                'massAction'=>['add'],
+                'searchAllowed'=>[],
+                'pagination'=>true,
+                'paginationLink'=>'paginationLink.Test'
+
+
+            ]
+
+
         ],
 
 

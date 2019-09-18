@@ -29,7 +29,13 @@ class B extends Master
         ],
 
 
+[
+    'name'=>'paginationLink.Test',
+    'route'=>'/pagination',
+    'method'=>'paginationTest',
+    'type'=>'get',
 
+],
 
         [
             'name'=>'MAS.core.encryptRequest',

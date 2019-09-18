@@ -28,7 +28,14 @@ class C extends BaseController
         return view("BM.V.genInvoice");
     }
 
+    public function paginationTest(Request $r){
+       // dd($r->all());
 
+        $m=new \MS\Core\Helper\MSDB(__NAMESPACE__,'Master_All_Feature');
+
+        return $m->ForPagination($r);
+
+    }
 
     public function postLinkTest(Request $r){
 
@@ -39,6 +46,7 @@ class C extends BaseController
        // $m->migrate();
         $d=$r->all();
 
+        dd($m->rowAdd($d));
         $valid=$m->checkRulesForData($r);
       //  dd($valid);
         //dd($m);
@@ -49,10 +57,12 @@ class C extends BaseController
             'data'=>
             [
                 'notifyText'=>'Text',
-                'notifyLink'=>'/MAS',
+                'redirectLink'=>route('MAS.Index'),
                 'notifyIcon'=>'fa fa-home',
 
-            ]
+
+            ],
+            'type'=>'nr'
         ];
         if($valid){
             return response()->json($data,200);
@@ -141,8 +151,11 @@ class C extends BaseController
             'portAllocatedContainerId'=>'001_001',
 
         ];
+
+        return $m->viewData('view_all');
+      //  $m->migrate();
         //dd($m->rowEdit(['port'=>'40209'],$data))  ;
-        return $m->displayFrom('add_form');
+        return $m->displayForm('add_form');
       //  dd($docker->makeImage());
 
 

@@ -11364,6 +11364,18 @@ video {
   z-index: auto;
 }
 
+.ms-btn {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;
