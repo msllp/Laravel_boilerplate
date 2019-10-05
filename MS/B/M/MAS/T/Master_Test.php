@@ -31,20 +31,20 @@ return [
                 ],
 
 
-                ['name'=>'test1','vName'=>'Name of Module 0', 'input'=>'text','validation'=>['required'=>true,]],
-                ['name'=>'test2','vName'=>'Name of Module 1', 'input'=>'textarea','validation'=>['required'=>true,]],
+                ['name'=>'test1','vName'=>'Name of Module 0', 'input'=>'text','validation'=>['required'=>false,]],
+                ['name'=>'test2','vName'=>'Name of Module 1', 'input'=>'textarea','validation'=>['required'=>false,]],
                 ['name'=>'test3','vName'=>'Name of Module 2', 'input'=>'number',],
                 ['name'=>'test4','vName'=>'Name of Module 3', 'input'=>'email',],
                 ['name'=>'test5','vName'=>'Name of Module 4', 'input'=>'date',],
                 ['name'=>'test6','vName'=>'Name of Module 5', 'input'=>'time',],
 
-                ['name'=>'test7','vName'=>'Name of Module 6', 'input'=>'radio',"validation"=>[ 'existIn'=>MSCORE_UI_STATUS_1,'required'=>true,]],
-                ['name'=>'test8','vName'=>'Name of Module 7', 'input'=>'checkbox',"validation"=>[ 'existIn'=>MSCORE_UI_STATUS_1,'required'=>true,]],
+                ['name'=>'test7','vName'=>'Name of Module 6', 'input'=>'radio',"validation"=>[ 'existIn'=>MSCORE_UI_STATUS_1,'required'=>false,]],
+                ['name'=>'test8','vName'=>'Name of Module 7', 'input'=>'checkbox',"validation"=>[ 'existIn'=>MSCORE_UI_STATUS_1,'required'=>false,]],
                 ['name'=>'test9','vName'=>'Name of Module 8', 'input'=>'option',"validation"=>[ 'existIn'=>MSCORE_UI_STATUS_1,'required'=>false,]],
 
 
                 ['name'=>'test10','vName'=>'Module Icon','type'=>'string', 'input'=>'file',
-                    'storeTo'=>"MS-MASTER-Storage:MAS.UniqId.ModIcon->icon"
+                    'storeTo'=>"MS-MASTER-Storage:MAS.UniqId.ModIcon->icon","validation"=>['required'=>true,]
                 ],
                 ['name'=>'test11','vName'=>'Name of Module 11', 'input'=>'password',],
 
@@ -67,9 +67,9 @@ return [
         'action'=>[
             'add'=>[
                 "btnColor"=>"bg-green",
-                "route"=>"Test.Post.With.Data",
+                "route"=>"Test.StoreDataLink",
                 "btnIcon"=>"fa fa-home",
-                'btnText'=>"add Module"
+                'btnText'=>"add Button"
             ],
 
             'edit'=>[

@@ -267,6 +267,166 @@ class C extends BaseController
 
     }
 
+    public function testFormLink(){
+
+        $m=new \MS\Core\Helper\MSDB(__NAMESPACE__,'Master_All_Feature');
+        return $m->displayForm('add_form');
+    }
+
+    public function testGetSideBarData(Request $r){
+
+    $input=$r->all();
+        $returnArray=[
+            'msg'=>'Opps I am Computer not Human.'
+
+        ];
+        if(array_key_exists('accessToken',$input))$input['accessToken']=\MS\Core\Helper\Comman::decode($input['accessToken']);
+        if(array_key_exists('accessToken',$input) && array_key_exists('type',$input) && array_key_exists('find',$input)){
+
+            $returnArray['msg']='We finding Data';
+
+
+            switch ($input['type']){
+                case 'json':
+
+                    switch ($input['find']){
+
+                        case 'sidebar':
+                            $returnArray['msg']='We Have Data';
+                            $returnArray['items']=[
+                                [
+                                    'text'=>'Test',
+                                    'type'=>'mainNav',
+                                    'icon'=>'fa fa-home',
+                                    'sub' =>[
+                                         [
+                                         'type'=> 'title',
+                                         'text'=> 'Test Functions ',
+                                         'icon'=> ' fab fa-docker '
+                                         ],
+
+                                        [
+                                         'type'=> 'link',
+                                         'text'=> 'New Tab Test',
+                                         'link'=> route('Test.NewRab'),
+                                         'icon'=>'fas fa-compact-disc'
+                                        ]
+
+                                        ,
+
+                                        [
+                                            'type'=> 'link',
+                                            'text'=> 'Form Test',
+                                            'link'=> route('Test.FormLink'),
+                                            'icon'=>'fas fa-compact-disc'
+                                        ]
+                                    ],
+
+
+
+                            ],
+                                [
+                                    'text'=>'Main Nav Name',
+                                    'type'=>'mainNav',
+                                    'icon'=>'fa fa-home',
+                                    'sub' =>[
+                                        [
+                                            'type'=> 'title',
+                                            'text'=> 'Docker Functions',
+                                            'icon'=> ' fab fa-docker '
+                                        ],
+
+                                        [
+                                            'type'=> 'link',
+                                            'text'=> 'Make Image',
+                                            'link'=>  route('Test.NewRab'),
+                                            'icon'=>'fas fa-compact-disc'
+                                        ]
+                                    ],
+
+
+
+                                ],
+                                [
+                                    'text'=>'Main Nav Name',
+                                    'type'=>'mainNav',
+                                    'icon'=>'fa fa-home',
+                                    'sub' =>[
+                                        [
+                                            'type'=> 'title',
+                                            'text'=> 'Docker Functions',
+                                            'icon'=> ' fab fa-docker '
+                                        ],
+
+                                        [
+                                            'type'=> 'link',
+                                            'text'=> 'Make Image',
+                                            'link'=> '/DCM/action/make/image',
+                                            'icon'=>'fas fa-compact-disc'
+                                        ]
+                                    ],
+
+
+
+                                ]
+
+
+                            ];
+
+                            return response()->json($returnArray,200);
+                            break;
+
+
+                    }
+
+                    break;
+            }
+
+        }
+
+        return response()->json($returnArray,418);
+        dd($input);
+
+    }
+
+    public function storeDataLink(Request $r){
+
+        $m=new \MS\Core\Helper\MSDB(__NAMESPACE__,'Master_All_Feature');
+        $m->attachR($r);
+        // $m->migrate();
+        $d=$r->all();
+        $valid=$m->checkRulesForData();
+
+        if($valid){
+            //$m->checkRulesForData();
+
+            return response()->json(['ms'=>[
+
+                'status'=>200,
+                'Rdata'=> $r->input(),
+                'ProcessStatus'=>[$m->add()]
+
+            ]],200);
+        }
+        else{
+            return response()->json([
+                     'errors' => $m->CurrentError
+            ],418);
+            return $m->CurrentError;
+        }
+
+        dd($valid);
+    }
+
+
+    public  function  testNewTab(Request $r){
+        return view("MS::core.layouts.NewTab");
+        return  "<msdockerdashboard></msdockerdashboard>";
+
+    }
+
+
+
     public function productAddForm(Request $r){
 
         return $this->index($r);

@@ -28,6 +28,36 @@ class B extends Master
             'type'=>'get',
         ],
 
+        [
+            'name'=>'Test.FormLink',
+            'route'=>'test/form',
+            'method'=>'testFormLink',
+            'type'=>'get'
+        ],
+
+        [
+            'name'=>'Test.StoreDataLink',
+            'route'=>'test/store',
+            'method'=>'storeDataLink',
+            'type'=>'post'
+        ],
+        [
+            'name'=>'Test.SideBarData',
+            'route'=>'test/getSidebar',
+            'method'=>'testGetSideBarData',
+            'type'=>'get'
+        ],
+
+        [
+            'name'=>'Test.NewRab',
+            'route'=>'test/NewTab',
+            'method'=>'testNewTab',
+            'type'=>'get'
+
+        ],
+
+
+
 
 [
     'name'=>'paginationLink.Test',
