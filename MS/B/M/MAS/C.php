@@ -137,7 +137,7 @@ class C extends BaseController
 
     }
     public function index(Request $r){
-
+dd(\MS\Mod\B\MSSetup\F::setupApp());
         //return view("MS::core.layouts.panel");
         $docker=new \MS\Core\Docker\Image();
         $m=new \MS\Core\Helper\MSDB(__NAMESPACE__,'Master_All_Feature');

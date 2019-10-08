@@ -2563,6 +2563,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
  // import  MDD from 'mobile-device-detect';
 // //console.log(MS);
 
@@ -3002,6 +3005,7 @@ __webpack_require__.r(__webpack_exports__);
       //data.modCode="MAS";
       //    data.modDView=item.text;
 
+      this.$parent.hideNavOnlyForMobile(true);
       this.$parent.driveRequestFromNavToLiveTab(data); // let sectionSlug = kebabCase(item.txt);
       // return `${item.link}/${sectionSlug}`;
     },
@@ -43002,7 +43006,12 @@ var render = function() {
                 staticClass: " select-none",
                 class: { "w-4/12 mr-2": !_vm.onMobile, "w-full": _vm.onMobile }
               },
-              [_vm._v(_vm._s(_vm.inputVname))]
+              [
+                _vm._v(_vm._s(_vm.inputVname) + "  "),
+                _vm.msValue != null && _vm.msValue.search("msicon-") != "-1"
+                  ? _c("i", { class: _vm.msValue })
+                  : _vm._e()
+              ]
             ),
             _vm._v(" "),
             _c(
@@ -43042,7 +43051,8 @@ var render = function() {
                   { domProps: { value: radio[_vm.msData.verifyBy.value] } },
                   [
                     _vm._v(
-                      " " + _vm._s(_vm.forNice(radio[_vm.msData.verifyBy.text]))
+                      "\n\n                    " +
+                        _vm._s(_vm.forNice(radio[_vm.msData.verifyBy.text]))
                     )
                   ]
                 )
@@ -43519,7 +43529,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "flex flex-wrap" }, [
-    _c("div", { staticClass: "border shadow p-1 bg-white" }, [
+    _c("div", { staticClass: "w-full border shadow p-1 bg-white" }, [
       _c("div", { staticClass: "flex flex-wrap   border-blue-400 p-1" }, [
         _c(
           "div",

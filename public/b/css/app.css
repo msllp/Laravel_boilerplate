@@ -11533,7 +11533,6 @@ video {
 }
 
 .unhidden {
-  width: 100%;
   transition: all 500ms ease-in-out;
 }
 
@@ -11603,11 +11602,21 @@ video {
   background-size: 15px 15px;
 }
 
+.msicon-manage-module {
+  min-width: 23px;
+  min-height: 16px;
+  display: inline-block;
+  background-image: url("svg/planning.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15px 15px;
+}
+
 .ms-view-tab-block {
   position: -webkit-sticky;
   /* Safari */
   position: sticky;
-  top: 62px !important;
+  top: 66px !important;
   display: flex;
   border-bottom-width: 1px;
   cursor: pointer;
