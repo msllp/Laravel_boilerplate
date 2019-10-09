@@ -71,3 +71,4 @@ $debug = false;
 // the user is allowed to create databases with only these extensions
 $allowed_extensions = array('db','db3','sqlite','sqlite3','ms');
 
+date_default_timezone_set("Asia/Kolkata");
