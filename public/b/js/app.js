@@ -3195,8 +3195,8 @@ __webpack_require__.r(__webpack_exports__);
       }];
       var link = this.makeGetUrl(this.msData.path.sidebar, data); //  console.log(link);
 
-      this.getGetRaw(link, this, 'setMenuData');
-      var Han = this.$refs['msMenuSide']; //  this.sendNavDatatoBar();
+      this.getGetRaw(link, this, 'setMenuData'); // var Han=this.$refs['msMenuSide'];
+      //  this.sendNavDatatoBar();
       //  console.log(this.msMenuData);
       //  console.log(   this.sendNavDatatoBar());
       // var root= this.$root;
@@ -3406,6 +3406,38 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "msDatatable",
@@ -3423,22 +3455,35 @@ __webpack_require__.r(__webpack_exports__);
       msSearchBy: 'ms0',
       msSearch: "",
       msPerPage: 10,
-      msPerPageData: ['5', '10', '20', '30', '50', '100']
+      msPerPageData: ['5', '10', '20', '30', '50', '100'],
+      msAction: null
     };
   },
   beforeMount: function beforeMount() {
     this.msAllData = this.msData;
     this.msPath = this.msData.fromV.tableData.path;
-    this.msPerPage = this.msData.fromV.tableData.per_page; //  msSearch=this.msAllData.fromV.tableData.columns
+    this.msPerPage = this.msData.fromV.tableData.per_page;
+    this.msAction = this.msData.fromV.tableAction;
+    console.log(this.msAction); //  msSearch=this.msAllData.fromV.tableData.columns
   },
   methods: {
     setHtml: function setHtml(data) {
-      console.log(data);
+      //   console.log(data);
       this.msAllData.fromV.tableData = data.fromV.tableData; //this.msAllData.fromV.tableColumns=this.msData.fromV.tableColumns;
       //this.msAllData.fromV.tableTitle=this.msData.fromV.tableColumns;
     },
     getDataFromSerevr: function getDataFromSerevr(link) {
       var data = this.getGetLink(link, this);
+    },
+    msActionClick: function msActionClick(ac) {
+      var data = {
+        tabCode: '01',
+        modCode: "MAS",
+        modDView: ac.text,
+        modUrl: ac.url,
+        data: ""
+      };
+      window.vueApp.updateTab(data);
     },
     getPage: function getPage(page) {
       var data = [{
@@ -3476,6 +3521,20 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       return this.msPath + "?" + q.join('&');
+    },
+    getVnameFromDataForOption: function getVnameFromDataForOption(value, data) {
+      //  console.log(data);
+      //      console.log(value);
+      var outname = "";
+      data.msdata.filter(function (element) {
+        if (element[data.value] == value) {
+          //return element[data.text];
+          outname = element[data.text];
+        }
+
+        return element;
+      });
+      return outname;
     },
     getVnameFromDataForRadio: function getVnameFromDataForRadio(value, data) {
       // console.log(data);
@@ -43664,119 +43723,177 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c(
-        "table",
-        { staticClass: "table-auto mt-2" },
-        [
+      _c("table", { staticClass: "table-auto mt-2 w-full " }, [
+        _c("thead", { staticClass: "border border-blue-500  border-b-2 " }, [
           _c(
             "tr",
-            { staticClass: "border border-blue-500 border-t-2 border-b-2" },
-            _vm._l(_vm.msAllData.fromV.tableColumns, function(column) {
-              return _c("th", { staticClass: "border bg-blue-200" }, [
-                _vm._v(" " + _vm._s(column.vName))
-              ])
-            }),
-            0
-          ),
-          _vm._v(" "),
+            {},
+            [
+              _vm.msAction != null
+                ? _c("th", { staticClass: "border bg-blue-200" }, [
+                    _vm._v(" action")
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm._l(_vm.msAllData.fromV.tableColumns, function(column) {
+                return _c("th", { staticClass: "border bg-blue-200" }, [
+                  _vm._v(" " + _vm._s(column.vName))
+                ])
+              })
+            ],
+            2
+          )
+        ]),
+        _vm._v(" "),
+        _c(
+          "tbody",
+          { staticClass: " shadow" },
           _vm._l(_vm.msAllData.fromV.tableData.data, function(row) {
             return _c(
               "tr",
-              { staticClass: "border" },
-              _vm._l(_vm.msAllData.fromV.tableColumns, function(column, index) {
-                return _c(
-                  "td",
-                  {
-                    staticClass: "border p-1 text-center cursor-wait",
-                    attrs: { title: column.vName }
-                  },
-                  [
-                    column.type == "text" ||
-                    column.type == "number" ||
-                    column.type == "email" ||
-                    column.type == "textarea" ||
-                    column.type == "password" ||
-                    column.type == "auto"
-                      ? _c("span", [
-                          _vm._v(
-                            "\n\n                        " +
-                              _vm._s(column.type) +
-                              "\n                    " +
-                              _vm._s(row[index]) +
-                              "\n\n                    "
-                          )
-                        ])
-                      : _vm._e(),
-                    _vm._v(" "),
-                    column.type == "date" && true
-                      ? _c("span", [
-                          _vm._v(
-                            "\n                        " +
-                              _vm._s(_vm.getOutDate(row[index])) +
-                              "\n\n                    "
-                          )
-                        ])
-                      : _vm._e(),
-                    _vm._v(" "),
-                    column.type == "time" && true
-                      ? _c("span", [
-                          _vm._v(
-                            "\n                        " +
-                              _vm._s(_vm.getOutTime(row[index])) +
-                              "\n\n                    "
-                          )
-                        ])
-                      : _vm._e(),
-                    _vm._v(" "),
-                    column.type == "file" && true ? _c("span") : _vm._e(),
-                    _vm._v(" "),
-                    column.type == "option" && true ? _c("span") : _vm._e(),
-                    _vm._v(" "),
-                    column.type == "checkbox" && true ? _c("span") : _vm._e(),
-                    _vm._v(" "),
-                    column.type == "radio" && true
-                      ? _c("span", [
-                          _vm.msData.fromV.tableFromOther.hasOwnProperty(index)
-                            ? _c("span", { staticClass: " select-none" }, [
-                                _c("i", {
-                                  staticClass: "fas ",
-                                  class: {
-                                    "fa-chevron-right": !(
-                                      row[index] == 1 || row[index] == 0
-                                    ),
-                                    "text-blue-500": !(
-                                      row[index] == 1 || row[index] == 0
-                                    ),
-                                    "text-green-500":
-                                      row[index] == 1 || row[index] == "1",
-                                    "text-red-500": row[index] == 0,
-                                    "fa-power-off":
-                                      row[index] == 1 || row[index] == 0
-                                  }
-                                }),
-                                _vm._v(
-                                  "\n                        " +
-                                    _vm._s(
-                                      _vm.getVnameFromDataForRadio(
-                                        row[index],
-                                        _vm.msData.fromV.tableFromOther[index]
-                                      )
-                                    ) +
-                                    "\n\n                    "
-                                )
-                              ])
-                            : _vm._e()
-                        ])
-                      : _vm._e()
-                  ]
-                )
-              }),
-              0
+              { staticClass: "border bg-white" },
+              [
+                _vm.msAction != null
+                  ? _c(
+                      "td",
+                      { staticClass: "border p-1 text-center cursor-pointer" },
+                      _vm._l(_vm.msAction, function(ac, index) {
+                        return _c(
+                          "span",
+                          {
+                            staticClass: "hover:border hover:border-blue-500",
+                            class: ac.color,
+                            attrs: { title: ac.text },
+                            on: {
+                              click: function($event) {
+                                return _vm.msActionClick(ac)
+                              }
+                            }
+                          },
+                          [_c("i", { class: ac.icon })]
+                        )
+                      }),
+                      0
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm._l(_vm.msAllData.fromV.tableColumns, function(
+                  column,
+                  index
+                ) {
+                  return _c(
+                    "td",
+                    {
+                      staticClass: "border p-1 text-center cursor-wait",
+                      attrs: { title: column.vName }
+                    },
+                    [
+                      column.type == "text" ||
+                      column.type == "number" ||
+                      column.type == "email" ||
+                      column.type == "textarea" ||
+                      column.type == "password" ||
+                      column.type == "auto"
+                        ? _c("span", [
+                            _vm._v(
+                              "\n\n\n                        " +
+                                _vm._s(_vm.forNice(row[index])) +
+                                "\n\n                        "
+                            )
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      column.type == "date" && true
+                        ? _c("span", [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(_vm.getOutDate(row[index])) +
+                                "\n\n                        "
+                            )
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      column.type == "time" && true
+                        ? _c("span", [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(_vm.getOutTime(row[index])) +
+                                "\n\n                        "
+                            )
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      column.type == "file" && true ? _c("span") : _vm._e(),
+                      _vm._v(" "),
+                      column.type == "option" && true
+                        ? _c("span", [
+                            _vm.msData.fromV.tableFromOther.hasOwnProperty(
+                              index
+                            )
+                              ? _c("span", { staticClass: " select-none" }, [
+                                  _vm._v(
+                                    "\n\n\n                            " +
+                                      _vm._s(
+                                        _vm.getVnameFromDataForOption(
+                                          row[index],
+                                          _vm.msData.fromV.tableFromOther[index]
+                                        )
+                                      ) +
+                                      "\n\n                        "
+                                  )
+                                ])
+                              : _vm._e()
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      column.type == "checkbox" && true ? _c("span") : _vm._e(),
+                      _vm._v(" "),
+                      column.type == "radio" && true
+                        ? _c("span", [
+                            _vm.msData.fromV.tableFromOther.hasOwnProperty(
+                              index
+                            )
+                              ? _c("span", { staticClass: " select-none" }, [
+                                  _c("i", {
+                                    staticClass: "fas ",
+                                    class: {
+                                      "fa-chevron-right": !(
+                                        row[index] == 1 || row[index] == 0
+                                      ),
+                                      "text-blue-500": !(
+                                        row[index] == 1 || row[index] == 0
+                                      ),
+                                      "text-green-500":
+                                        row[index] == 1 || row[index] == "1",
+                                      "text-red-500": row[index] == 0,
+                                      "fa-power-off":
+                                        row[index] == 1 || row[index] == 0
+                                    }
+                                  }),
+                                  _vm._v(
+                                    "\n                            " +
+                                      _vm._s(
+                                        _vm.getVnameFromDataForRadio(
+                                          row[index],
+                                          _vm.msData.fromV.tableFromOther[index]
+                                        )
+                                      ) +
+                                      "\n\n                        "
+                                  )
+                                ])
+                              : _vm._e()
+                          ])
+                        : _vm._e()
+                    ]
+                  )
+                })
+              ],
+              2
             )
-          })
-        ],
-        2
-      ),
+          }),
+          0
+        )
+      ]),
       _vm._v(" "),
       _c("div", { staticClass: "flex flex-wrap " }, [
         _c("div", { staticClass: "w-8/12" }, [
@@ -56548,7 +56665,7 @@ __webpack_require__.r(__webpack_exports__);
       var returnX = "";
       var self = classFor;
       var re = axios.get(url).then(function (response) {
-        console.log(response.data);
+        //console.log(response.data);
         returnX = response.data;
         self.setHtml(returnX);
       })["catch"](function (error) {
