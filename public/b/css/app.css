@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans:500&display=swap);/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans:500&display=swap);@charset "UTF-8";
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
@@ -11364,6 +11366,114 @@ video {
   z-index: auto;
 }
 
+/*
+Flaticon icon font: Flaticon
+Creation date: 18/10/2019 23:34
+*/
+
+@font-face {
+  font-family: "Flaticon";
+
+  src: url("font/Flaticon.eot");
+
+  src: url("font/Flaticon.eot?#iefix") format("embedded-opentype"), url("font/Flaticon.woff2") format("woff2"), url("font/Flaticon.woff") format("woff"), url("font/Flaticon.ttf") format("truetype"), url("font/Flaticon.svg#Flaticon") format("svg");
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "Flaticon";
+
+    src: url("font/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+.fi:before {
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.flaticon-add:before {
+  content: "\F100";
+}
+
+.flaticon-user:before {
+  content: "\F101";
+}
+
+.flaticon-growth:before {
+  content: "\F102";
+}
+
+.flaticon-bin:before {
+  content: "\F103";
+}
+
+.flaticon-eye:before {
+  content: "\F104";
+}
+
+.flaticon-geschaft-und-finanzen:before {
+  content: "\F105";
+}
+
+.flaticon-customer-support:before {
+  content: "\F106";
+}
+
+.flaticon-save-file:before {
+  content: "\F107";
+}
+
+.flaticon-commerce-and-shopping:before {
+  content: "\F108";
+}
+
+.flaticon-commerce-and-shopping-1:before {
+  content: "\F109";
+}
+
+.flaticon-commerce-and-shopping-2:before {
+  content: "\F10A";
+}
+
+.flaticon-commerce-and-shopping-3:before {
+  content: "\F10B";
+}
+
+.flaticon-edit:before {
+  content: "\F10C";
+}
+
+.flaticon-execution:before {
+  content: "\F10D";
+}
+
+.flaticon-cms:before {
+  content: "\F10E";
+}
+
+.flaticon-plan:before {
+  content: "\F10F";
+}
+
+.flaticon-sketch:before {
+  content: "\F110";
+}
+
 .ms-nav-mian-div {
   position: fixed;
   top: 72px;
@@ -11589,6 +11699,7 @@ video {
   background-image: url("svg/add.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   background-size: 15px 15px;
 }
 
@@ -11622,6 +11733,7 @@ video {
   cursor: pointer;
   background: linear-gradient(47deg, #c8c8c8, #f0f0f0);
   font-size: 12px;
+  z-index: 1126;
 }
 
 .ms-tab-btn {
@@ -11669,6 +11781,59 @@ video {
   border-top-right-radius: 10px;
   color: #6158ce;
   transition: all 500ms ease-in-out;
+}
+
+.ms-datatable-header-box {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 111px !important;
+  background-color: #fff;
+  overflow-x: auto;
+  z-index: 1126;
+}
+
+.ms-datatable-header-thead {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 151px !important;
+}
+
+.ms-datatable-table-box {
+  display: block;
+  overflow-x: auto;
+  padding-left: 35px;
+}
+
+.ms-datatable-check-box-th {
+  left: 0;
+  position: absolute;
+  top: auto;
+  z-index: 1125;
+  border-width: 1px;
+  background-color: #bee3f8;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border-color: #4299e1;
+}
+
+.ms-datatable-check-box-td {
+  left: 0;
+  position: absolute;
+  top: auto;
+  z-index: 1;
+  background-color: #fff;
+  border-width: 1px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 body {

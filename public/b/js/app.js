@@ -3438,6 +3438,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "msDatatable",
@@ -3456,7 +3475,10 @@ __webpack_require__.r(__webpack_exports__);
       msSearch: "",
       msPerPage: 10,
       msPerPageData: ['5', '10', '20', '30', '50', '100'],
-      msAction: null
+      msAction: null,
+      msMassAction: null,
+      msSelectedRow: [],
+      msRowID: null
     };
   },
   beforeMount: function beforeMount() {
@@ -3464,7 +3486,9 @@ __webpack_require__.r(__webpack_exports__);
     this.msPath = this.msData.fromV.tableData.path;
     this.msPerPage = this.msData.fromV.tableData.per_page;
     this.msAction = this.msData.fromV.tableAction;
-    console.log(this.msAction); //  msSearch=this.msAllData.fromV.tableData.columns
+    this.msMassAction = this.msData.fromV.tableMassAction;
+    this.msRowID = this.msData.fromV.rowId; //      console.log(this.msMassAction);
+    //  msSearch=this.msAllData.fromV.tableData.columns
   },
   methods: {
     setHtml: function setHtml(data) {
@@ -3474,6 +3498,18 @@ __webpack_require__.r(__webpack_exports__);
     },
     getDataFromSerevr: function getDataFromSerevr(link) {
       var data = this.getGetLink(link, this);
+    },
+    msSelecetRow: function msSelecetRow(index) {
+      //  console.log(this.msSelectedRow.includes(this.msAllData.fromV.tableData.data[index][this.msRowID]));
+      if (!this.msSelectedRow.includes(this.msAllData.fromV.tableData.data[index][this.msRowID])) {
+        this.msSelectedRow.push(this.msAllData.fromV.tableData.data[index][this.msRowID]);
+      } else {
+        var mthis = this;
+        this.msSelectedRow.splice(this.msSelectedRow.findIndex(function (val) {
+          return val == mthis.msAllData.fromV.tableData.data[index][mthis.msRowID];
+        }), 1);
+      } //console.log(this.msSelectedRow);
+
     },
     msActionClick: function msActionClick(ac) {
       var data = {
@@ -43589,39 +43625,114 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "flex flex-wrap" }, [
     _c("div", { staticClass: "w-full border shadow p-1 bg-white" }, [
-      _c("div", { staticClass: "flex flex-wrap   border-blue-400 p-1" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "flex-1 p-2 border-blue-300  border-l border-t border-b "
-          },
-          [
-            _c("div", { staticClass: "flex flex-wrap" }, [
-              _c("div", { staticClass: "flex-1 pr-5" }, [_vm._v("Search ")]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.msSearch,
-                    expression: "msSearch"
-                  }
-                ],
-                staticClass:
-                  "flex-1  border focus:outline-none focus:shadow-outline shadow",
-                attrs: { type: "text" },
-                domProps: { value: _vm.msSearch },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
+      _c(
+        "div",
+        {
+          staticClass:
+            "flex flex-wrap   border-blue-400 p-1  ms-datatable-header-box"
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "w-1/3 p-2 border-blue-300  border-l border-t border-b border-r "
+            },
+            [
+              _c("div", { staticClass: "flex flex-wrap " }, [
+                _vm._m(0),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.msSearch,
+                      expression: "msSearch"
                     }
-                    _vm.msSearch = $event.target.value
+                  ],
+                  staticClass:
+                    "w-full border focus:outline-none focus:shadow-outline shadow",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.msSearch },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.msSearch = $event.target.value
+                    }
                   }
-                }
-              }),
+                }),
+                _vm._v(" "),
+                _c(
+                  "select",
+                  {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.msSearchBy,
+                        expression: "msSearchBy"
+                      }
+                    ],
+                    staticClass:
+                      "w-full mt-3  border focus:outline-none focus:shadow-outline shadow",
+                    on: {
+                      change: function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.msSearchBy = $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      }
+                    }
+                  },
+                  [
+                    _c(
+                      "option",
+                      { attrs: { value: "ms0", disabled: "", selected: "" } },
+                      [_vm._v("Please Select Column to search")]
+                    ),
+                    _vm._v(" "),
+                    _vm._l(_vm.msAllData.fromV.tableColumns, function(
+                      column,
+                      index,
+                      key
+                    ) {
+                      return _c("option", { domProps: { value: index } }, [
+                        _vm._v(_vm._s(column.vName))
+                      ])
+                    })
+                  ],
+                  2
+                )
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "w-1/3 border-t border-b border-blue-300 p-2" },
+            [
+              _c("span", [
+                _vm._v("take mass action on selected   "),
+                _c("strong", [_vm._v(_vm._s(_vm.msSelectedRow.length))])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "w-1/3 border-blue-300 border p-2 " }, [
+            _c("div", { staticClass: "flex flex-wrap  float-right" }, [
+              _c("div", { staticClass: "flex text-right pr-5" }, [
+                _vm._v("Per page rows ")
+              ]),
               _vm._v(" "),
               _c(
                 "select",
@@ -43630,12 +43741,12 @@ var render = function() {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.msSearchBy,
-                      expression: "msSearchBy"
+                      value: _vm.msPerPage,
+                      expression: "msPerPage"
                     }
                   ],
                   staticClass:
-                    "flex-1  border focus:outline-none focus:shadow-outline shadow",
+                    "flex-1   border focus:outline-none focus:shadow-outline shadow",
                   on: {
                     change: function($event) {
                       var $$selectedVal = Array.prototype.filter
@@ -43646,254 +43757,237 @@ var render = function() {
                           var val = "_value" in o ? o._value : o.value
                           return val
                         })
-                      _vm.msSearchBy = $event.target.multiple
+                      _vm.msPerPage = $event.target.multiple
                         ? $$selectedVal
                         : $$selectedVal[0]
                     }
                   }
                 },
-                [
-                  _c(
-                    "option",
-                    { attrs: { value: "ms0", disabled: "", selected: "" } },
-                    [_vm._v("Please Select Column to search")]
-                  ),
-                  _vm._v(" "),
-                  _vm._l(_vm.msAllData.fromV.tableColumns, function(
-                    column,
-                    index,
-                    key
-                  ) {
-                    return _c("option", { domProps: { value: index } }, [
-                      _vm._v(_vm._s(column.vName))
-                    ])
-                  })
-                ],
-                2
-              )
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "flex-1 border-blue-300 border p-2" }, [
-          _c("div", { staticClass: "flex flex-wrap  " }, [
-            _c("div", { staticClass: "flex-1 text-right pr-5" }, [
-              _vm._v("Per page rows ")
-            ]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.msPerPage,
-                    expression: "msPerPage"
-                  }
-                ],
-                staticClass:
-                  "flex-1   border focus:outline-none focus:shadow-outline shadow",
-                on: {
-                  change: function($event) {
-                    var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function(o) {
-                        return o.selected
-                      })
-                      .map(function(o) {
-                        var val = "_value" in o ? o._value : o.value
-                        return val
-                      })
-                    _vm.msPerPage = $event.target.multiple
-                      ? $$selectedVal
-                      : $$selectedVal[0]
-                  }
-                }
-              },
-              _vm._l(_vm.msPerPageData, function(column, index, key) {
-                return _c("option", { domProps: { value: column } }, [
-                  _vm._v(_vm._s(column))
-                ])
-              }),
-              0
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "flex-1 " }, [_vm._v("to display ")])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("table", { staticClass: "table-auto mt-2 w-full " }, [
-        _c("thead", { staticClass: "border border-blue-500  border-b-2 " }, [
-          _c(
-            "tr",
-            {},
-            [
-              _vm.msAction != null
-                ? _c("th", { staticClass: "border bg-blue-200" }, [
-                    _vm._v(" action")
+                _vm._l(_vm.msPerPageData, function(column, index, key) {
+                  return _c("option", { domProps: { value: column } }, [
+                    _vm._v(_vm._s(column))
                   ])
-                : _vm._e(),
+                }),
+                0
+              ),
               _vm._v(" "),
-              _vm._l(_vm.msAllData.fromV.tableColumns, function(column) {
-                return _c("th", { staticClass: "border bg-blue-200" }, [
-                  _vm._v(" " + _vm._s(column.vName))
-                ])
-              })
-            ],
-            2
-          )
-        ]),
-        _vm._v(" "),
-        _c(
-          "tbody",
-          { staticClass: " shadow" },
-          _vm._l(_vm.msAllData.fromV.tableData.data, function(row) {
-            return _c(
+              _c("div", { staticClass: "flex " }, [_vm._v("to display ")])
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "table",
+        { staticClass: "table-auto mt-2 w-full ms-datatable-table-box" },
+        [
+          _c("thead", { staticClass: "border border-blue-500  border-b-2 " }, [
+            _c(
               "tr",
-              { staticClass: "border bg-white" },
+              { staticClass: "ms-datatable-header-thead" },
               [
+                _vm._m(1),
+                _vm._v(" "),
                 _vm.msAction != null
-                  ? _c(
-                      "td",
-                      { staticClass: "border p-1 text-center cursor-pointer" },
-                      _vm._l(_vm.msAction, function(ac, index) {
-                        return _c(
-                          "span",
-                          {
-                            staticClass: "hover:border hover:border-blue-500",
-                            class: ac.color,
-                            attrs: { title: ac.text },
-                            on: {
-                              click: function($event) {
-                                return _vm.msActionClick(ac)
-                              }
-                            }
-                          },
-                          [_c("i", { class: ac.icon })]
-                        )
-                      }),
-                      0
-                    )
+                  ? _c("th", { staticClass: "border bg-blue-200" }, [
+                      _vm._v(" action")
+                    ])
                   : _vm._e(),
                 _vm._v(" "),
-                _vm._l(_vm.msAllData.fromV.tableColumns, function(
-                  column,
-                  index
-                ) {
-                  return _c(
-                    "td",
-                    {
-                      staticClass: "border p-1 text-center cursor-wait",
-                      attrs: { title: column.vName }
-                    },
-                    [
-                      column.type == "text" ||
-                      column.type == "number" ||
-                      column.type == "email" ||
-                      column.type == "textarea" ||
-                      column.type == "password" ||
-                      column.type == "auto"
-                        ? _c("span", [
-                            _vm._v(
-                              "\n\n\n                        " +
-                                _vm._s(_vm.forNice(row[index])) +
-                                "\n\n                        "
-                            )
-                          ])
-                        : _vm._e(),
-                      _vm._v(" "),
-                      column.type == "date" && true
-                        ? _c("span", [
-                            _vm._v(
-                              "\n                            " +
-                                _vm._s(_vm.getOutDate(row[index])) +
-                                "\n\n                        "
-                            )
-                          ])
-                        : _vm._e(),
-                      _vm._v(" "),
-                      column.type == "time" && true
-                        ? _c("span", [
-                            _vm._v(
-                              "\n                            " +
-                                _vm._s(_vm.getOutTime(row[index])) +
-                                "\n\n                        "
-                            )
-                          ])
-                        : _vm._e(),
-                      _vm._v(" "),
-                      column.type == "file" && true ? _c("span") : _vm._e(),
-                      _vm._v(" "),
-                      column.type == "option" && true
-                        ? _c("span", [
-                            _vm.msData.fromV.tableFromOther.hasOwnProperty(
-                              index
-                            )
-                              ? _c("span", { staticClass: " select-none" }, [
-                                  _vm._v(
-                                    "\n\n\n                            " +
-                                      _vm._s(
-                                        _vm.getVnameFromDataForOption(
-                                          row[index],
-                                          _vm.msData.fromV.tableFromOther[index]
-                                        )
-                                      ) +
-                                      "\n\n                        "
-                                  )
-                                ])
-                              : _vm._e()
-                          ])
-                        : _vm._e(),
-                      _vm._v(" "),
-                      column.type == "checkbox" && true ? _c("span") : _vm._e(),
-                      _vm._v(" "),
-                      column.type == "radio" && true
-                        ? _c("span", [
-                            _vm.msData.fromV.tableFromOther.hasOwnProperty(
-                              index
-                            )
-                              ? _c("span", { staticClass: " select-none" }, [
-                                  _c("i", {
-                                    staticClass: "fas ",
-                                    class: {
-                                      "fa-chevron-right": !(
-                                        row[index] == 1 || row[index] == 0
-                                      ),
-                                      "text-blue-500": !(
-                                        row[index] == 1 || row[index] == 0
-                                      ),
-                                      "text-green-500":
-                                        row[index] == 1 || row[index] == "1",
-                                      "text-red-500": row[index] == 0,
-                                      "fa-power-off":
-                                        row[index] == 1 || row[index] == 0
-                                    }
-                                  }),
-                                  _vm._v(
-                                    "\n                            " +
-                                      _vm._s(
-                                        _vm.getVnameFromDataForRadio(
-                                          row[index],
-                                          _vm.msData.fromV.tableFromOther[index]
-                                        )
-                                      ) +
-                                      "\n\n                        "
-                                  )
-                                ])
-                              : _vm._e()
-                          ])
-                        : _vm._e()
-                    ]
-                  )
+                _vm._l(_vm.msAllData.fromV.tableColumns, function(column) {
+                  return _c("th", { staticClass: "border bg-blue-200" }, [
+                    _vm._v(" " + _vm._s(column.vName))
+                  ])
                 })
               ],
               2
             )
-          }),
-          0
-        )
-      ]),
+          ]),
+          _vm._v(" "),
+          _c(
+            "tbody",
+            { staticClass: " shadow" },
+            _vm._l(_vm.msAllData.fromV.tableData.data, function(row, index) {
+              return _c(
+                "tr",
+                { staticClass: "border bg-white" },
+                [
+                  _c(
+                    "td",
+                    {
+                      staticClass: "ms-datatable-check-box-td",
+                      on: {
+                        click: function($event) {
+                          return _vm.msSelecetRow(index)
+                        }
+                      }
+                    },
+                    [
+                      _c("span", {
+                        staticClass: "far ",
+                        class: {
+                          "fa-square text-blue-500": !_vm.msSelectedRow.includes(
+                            row[_vm.msRowID]
+                          ),
+                          "fa-check-square text-green-500": _vm.msSelectedRow.includes(
+                            row[_vm.msRowID]
+                          )
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _vm.msAction != null
+                    ? _c(
+                        "td",
+                        {
+                          staticClass:
+                            "border p-1 text-center cursor-pointer select-none"
+                        },
+                        _vm._l(_vm.msAction, function(ac, index) {
+                          return _c(
+                            "span",
+                            {
+                              staticClass: "hover:border hover:border-blue-500",
+                              class: ac.color,
+                              attrs: { title: ac.text },
+                              on: {
+                                click: function($event) {
+                                  return _vm.msActionClick(ac)
+                                }
+                              }
+                            },
+                            [_c("i", { class: ac.icon })]
+                          )
+                        }),
+                        0
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm._l(_vm.msAllData.fromV.tableColumns, function(
+                    column,
+                    index
+                  ) {
+                    return _c(
+                      "td",
+                      {
+                        staticClass: "border p-1 text-center cursor-wait",
+                        attrs: { title: column.vName }
+                      },
+                      [
+                        column.type == "text" ||
+                        column.type == "number" ||
+                        column.type == "email" ||
+                        column.type == "textarea" ||
+                        column.type == "password" ||
+                        column.type == "auto"
+                          ? _c("span", [
+                              _vm._v(
+                                "\n\n\n                        " +
+                                  _vm._s(_vm.forNice(row[index])) +
+                                  "\n\n                        "
+                              )
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        column.type == "date" && true
+                          ? _c("span", [
+                              _vm._v(
+                                "\n                            " +
+                                  _vm._s(_vm.getOutDate(row[index])) +
+                                  "\n\n                        "
+                              )
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        column.type == "time" && true
+                          ? _c("span", [
+                              _vm._v(
+                                "\n                            " +
+                                  _vm._s(_vm.getOutTime(row[index])) +
+                                  "\n\n                        "
+                              )
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        column.type == "file" && true ? _c("span") : _vm._e(),
+                        _vm._v(" "),
+                        column.type == "option" && true
+                          ? _c("span", [
+                              _vm.msData.fromV.tableFromOther.hasOwnProperty(
+                                index
+                              )
+                                ? _c("span", { staticClass: " select-none" }, [
+                                    _vm._v(
+                                      "\n\n\n                            " +
+                                        _vm._s(
+                                          _vm.getVnameFromDataForOption(
+                                            row[index],
+                                            _vm.msData.fromV.tableFromOther[
+                                              index
+                                            ]
+                                          )
+                                        ) +
+                                        "\n\n                        "
+                                    )
+                                  ])
+                                : _vm._e()
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        column.type == "checkbox" && true
+                          ? _c("span")
+                          : _vm._e(),
+                        _vm._v(" "),
+                        column.type == "radio" && true
+                          ? _c("span", [
+                              _vm.msData.fromV.tableFromOther.hasOwnProperty(
+                                index
+                              )
+                                ? _c("span", { staticClass: " select-none" }, [
+                                    _c("i", {
+                                      staticClass: "fas ",
+                                      class: {
+                                        "fa-chevron-right": !(
+                                          row[index] == 1 || row[index] == 0
+                                        ),
+                                        "text-blue-500": !(
+                                          row[index] == 1 || row[index] == 0
+                                        ),
+                                        "text-green-500":
+                                          row[index] == 1 || row[index] == "1",
+                                        "text-red-500": row[index] == 0,
+                                        "fa-power-off":
+                                          row[index] == 1 || row[index] == 0
+                                      }
+                                    }),
+                                    _vm._v(
+                                      "\n                            " +
+                                        _vm._s(
+                                          _vm.getVnameFromDataForRadio(
+                                            row[index],
+                                            _vm.msData.fromV.tableFromOther[
+                                              index
+                                            ]
+                                          )
+                                        ) +
+                                        "\n\n                        "
+                                    )
+                                  ])
+                                : _vm._e()
+                            ])
+                          : _vm._e()
+                      ]
+                    )
+                  })
+                ],
+                2
+              )
+            }),
+            0
+          )
+        ]
+      ),
       _vm._v(" "),
       _c("div", { staticClass: "flex flex-wrap " }, [
         _c("div", { staticClass: "w-8/12" }, [
@@ -43908,7 +44002,7 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "w-4/12text-right" }, [
+        _c("div", { staticClass: "w-4/12 text-right" }, [
           _vm._v(
             "Page: " +
               _vm._s(_vm.msAllData.fromV.tableData.current_page) +
@@ -43961,14 +44055,7 @@ var render = function() {
                   }
                 }
               },
-              [
-                _vm._v(
-                  " " +
-                    _vm._s(n) +
-                    " " +
-                    _vm._s(_vm.msAllData.fromV.tableData.current_page == n)
-                )
-              ]
+              [_vm._v(" " + _vm._s(n) + " ")]
             )
           }),
           _vm._v(" "),
@@ -44015,7 +44102,25 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: " pr-5 w-full" }, [
+      _vm._v("Search "),
+      _c("i", { staticClass: "fi flaticon-add" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("th", { staticClass: "ms-datatable-check-box-th" }, [
+      _c("i", { staticClass: "far fa-square text-blue-500 " })
+    ])
+  }
+]
 render._withStripped = true
 
 
