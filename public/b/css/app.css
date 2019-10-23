@@ -11474,6 +11474,66 @@ Creation date: 18/10/2019 23:34
   content: "\F110";
 }
 
+.flaticon-network:before {
+  content: "\F111";
+}
+
+.flaticon-clock:before {
+  content: "\F112";
+}
+
+.flaticon-placeholder:before {
+  content: "\F113";
+}
+
+.flaticon-distributed:before {
+  content: "\F114";
+}
+
+.flaticon-team:before {
+  content: "\F115";
+}
+
+.flaticon-contract:before {
+  content: "\F116";
+}
+
+.flaticon-users-group:before {
+  content: "\F117";
+}
+
+.flaticon-group-of-users-silhouette:before {
+  content: "\F118";
+}
+
+.flaticon-user-with-computer-monitor-and-bar-graphs:before {
+  content: "\F119";
+}
+
+.flaticon-problem:before {
+  content: "\F11A";
+}
+
+.flaticon-analytics:before {
+  content: "\F11B";
+}
+
+.flaticon-startup:before {
+  content: "\F11C";
+}
+
+.flaticon-plea:before {
+  content: "\F11D";
+}
+
+.flaticon-partner:before {
+  content: "\F11E";
+}
+
+.flaticon-success:before {
+  content: "\F11F";
+}
+
 .ms-nav-mian-div {
   position: fixed;
   top: 72px;

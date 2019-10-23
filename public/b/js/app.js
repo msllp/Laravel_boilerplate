@@ -2116,6 +2116,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
  /// console.log(MS);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2129,7 +2144,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    // console.log(MS);
+    //  console.log(this.msData);
     var d = new Date();
     var n = d.getTime();
     this.mslastActive = n; //console.log(this.checkLastActive());
@@ -2184,7 +2199,7 @@ __webpack_require__.r(__webpack_exports__);
       //console.log(this.section.class);
     },
     checkMutlipleFirst: function checkMutlipleFirst(section) {
-      //  console.log(section.hasOwnProperty("rootId"));
+      // console.log(section);
       if (section.groupDynamic) {
         if (section.hasOwnProperty("rootId")) return false; //  console.log(section);
 
@@ -2566,6 +2581,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
  // import  MDD from 'mobile-device-detect';
 // //console.log(MS);
 
@@ -2586,7 +2604,7 @@ __webpack_require__.r(__webpack_exports__);
       required: true
     }
   },
-  mounted: function mounted() {
+  beforeMount: function beforeMount() {
     // console.log(this.msData);
     if (this.msData.hasOwnProperty('groupInput')) this.groupInput = this.msData.groupInput;
 
@@ -2661,7 +2679,8 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     this.$parent.setInputData(this.inputName, this.msValue);
-    if (window.innerWidth < 800) this.onMobile = true; // this.inputAuto.push({
+    if (window.innerWidth < 800) this.onMobile = true; //  console.log(this.inputAuto);
+    // this.inputAuto.push({
     //         dText: 'hello',
     //         dValue:10,
     //     }
@@ -2702,17 +2721,19 @@ __webpack_require__.r(__webpack_exports__);
       this.$parent.setInputData(this.inputName, {});
 
       for (var i = 0; i < event.target.files.length; i++) {
-        console.log(event.target.files[i]);
+        //    console.log(event.target.files[i]);
         this.$parent.setInputData(this.inputName, event.target.files[i]);
       } //    console.log(this.$parent.msFormDataFinal);
 
     },
     hasAutofield: function hasAutofield(event) {
-      if (this.inputType == "text") if (this.inputAuto.length > 0) return true; //this.hasAutofieldBool=true;
+      if (this.inputType == "text") //    console.log(this.msData);
+        if (this.inputAuto.length > 0 && this.msFocus) return true; //this.hasAutofieldBool=true;
 
       return false;
     },
     setFinalInputFromAuto: function setFinalInputFromAuto(value) {
+      this.msFocus = false;
       this.msValue = value;
     },
     inpututProcess: function inpututProcess(val, oldVal) {
@@ -2829,7 +2850,8 @@ __webpack_require__.r(__webpack_exports__);
       inputPasswordVisible: false,
       onMobile: false,
       inputChecked: [],
-      msFile: null // hasAutofieldBool:false,
+      msFile: null,
+      msFocus: false // hasAutofieldBool:false,,
 
     };
   },
@@ -3457,6 +3479,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "msDatatable",
@@ -3478,7 +3520,8 @@ __webpack_require__.r(__webpack_exports__);
       msAction: null,
       msMassAction: null,
       msSelectedRow: [],
-      msRowID: null
+      msRowID: null,
+      msMassActionSelected: null
     };
   },
   beforeMount: function beforeMount() {
@@ -3487,7 +3530,7 @@ __webpack_require__.r(__webpack_exports__);
     this.msPerPage = this.msData.fromV.tableData.per_page;
     this.msAction = this.msData.fromV.tableAction;
     this.msMassAction = this.msData.fromV.tableMassAction;
-    this.msRowID = this.msData.fromV.rowId; //      console.log(this.msMassAction);
+    this.msRowID = this.msData.fromV.rowId; //   console.log(this.msData.fromV);
     //  msSearch=this.msAllData.fromV.tableData.columns
   },
   methods: {
@@ -3559,17 +3602,19 @@ __webpack_require__.r(__webpack_exports__);
       return this.msPath + "?" + q.join('&');
     },
     getVnameFromDataForOption: function getVnameFromDataForOption(value, data) {
-      //  console.log(data);
-      //      console.log(value);
+      //console.log(data);
+      //console.log(value);
       var outname = "";
       data.msdata.filter(function (element) {
+        //  console.log(data.value);
         if (element[data.value] == value) {
           //return element[data.text];
           outname = element[data.text];
         }
 
         return element;
-      });
+      }); //console.log(outname);
+
       return outname;
     },
     getVnameFromDataForRadio: function getVnameFromDataForRadio(value, data) {
@@ -41912,12 +41957,15 @@ var render = function() {
                 [
                   _c(
                     "div",
-                    { staticClass: "font-bold text-md border-b pb-2  " },
+                    {
+                      staticClass:
+                        "font-bold text-md border-b pb-2  flex flex-wrap"
+                    },
                     [
                       _c(
                         "div",
                         {
-                          staticClass: "expand-btn",
+                          staticClass: "expand-btn flex",
                           class: {
                             "bg-gray-200": !_vm.checkImHiddenOrNot(section),
                             "bg-gray-500": _vm.checkImHiddenOrNot(section)
@@ -41945,30 +41993,67 @@ var render = function() {
                           })
                         ]
                       ),
-                      _vm._v(" "),
-                      _vm.checkMutlipleSub(section)
+                      _vm._v(
+                        "\n\n\n                " +
+                          _vm._s(section.gruoupHeading) +
+                          "\n\n                "
+                      ),
+                      section.groupDynamic
                         ? _c(
                             "div",
                             {
-                              staticClass: "btn btn-outline-danger",
-                              on: {
-                                click: function($event) {
-                                  $event.preventDefault()
-                                  return _vm.removeInputGroup(
-                                    id,
-                                    section.rootId
-                                  )
-                                }
-                              }
+                              staticClass:
+                                "flex px-3 border ml-3 hover:bg-white hover:shadow"
                             },
-                            [_c("i", { staticClass: "fa fa-times-circle " })]
+                            [
+                              _vm.checkMutlipleFirst(section)
+                                ? _c(
+                                    "div",
+                                    {
+                                      staticClass: "text-green-500",
+                                      on: {
+                                        click: function($event) {
+                                          $event.preventDefault()
+                                          return _vm.addInputGroup(id)
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c("i", {
+                                        staticClass: "fa fa-times-circle ",
+                                        staticStyle: {
+                                          transform: "rotate(45deg)"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                : _vm._e(),
+                              _vm._v(" "),
+                              _vm.checkMutlipleSub(section)
+                                ? _c(
+                                    "div",
+                                    {
+                                      staticClass: "text-red-500",
+                                      on: {
+                                        click: function($event) {
+                                          $event.preventDefault()
+                                          return _vm.removeInputGroup(
+                                            id,
+                                            section.rootId
+                                          )
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c("i", {
+                                        staticClass: "fa fa-times-circle "
+                                      })
+                                    ]
+                                  )
+                                : _vm._e()
+                            ]
                           )
-                        : _vm._e(),
-                      _vm._v(
-                        "\n\n                " +
-                          _vm._s(section.gruoupHeading) +
-                          "\n            "
-                      )
+                        : _vm._e()
                     ]
                   ),
                   _vm._v(" "),
@@ -42224,6 +42309,9 @@ var render = function() {
                       : _vm.msValue
                   },
                   on: {
+                    focus: function($event) {
+                      _vm.msFocus = true
+                    },
                     change: function($event) {
                       var $$a = _vm.msValue,
                         $$el = $event.target,
@@ -42268,6 +42356,9 @@ var render = function() {
                   },
                   domProps: { checked: _vm._q(_vm.msValue, null) },
                   on: {
+                    focus: function($event) {
+                      _vm.msFocus = true
+                    },
                     change: function($event) {
                       _vm.msValue = null
                     }
@@ -42295,6 +42386,9 @@ var render = function() {
                   },
                   domProps: { value: _vm.msValue },
                   on: {
+                    focus: function($event) {
+                      _vm.msFocus = true
+                    },
                     input: function($event) {
                       if ($event.target.composing) {
                         return
@@ -43194,16 +43288,23 @@ var render = function() {
                 "div",
                 {
                   staticClass: "bg-gray-200 p-1 bprder m-1",
-                  attrs: { value: autofiled.dValue },
+                  class: {
+                    "bg-blue-300":
+                      autofiled[_vm.msData.verifyBy.value] == _vm.msValue
+                  },
                   on: {
                     click: function($event) {
-                      return _vm.setFinalInputFromAuto(autofiled.dValue)
+                      return _vm.setFinalInputFromAuto(
+                        autofiled[_vm.msData.verifyBy.value]
+                      )
                     }
                   }
                 },
                 [
                   _vm._v(
-                    "\n            " + _vm._s(autofiled.dText) + "\n        "
+                    "\n            " +
+                      _vm._s(autofiled[_vm.msData.verifyBy.text]) +
+                      "\n        "
                   )
                 ]
               )
@@ -43721,10 +43822,76 @@ var render = function() {
             "div",
             { staticClass: "w-1/3 border-t border-b border-blue-300 p-2" },
             [
-              _c("span", [
-                _vm._v("take mass action on selected   "),
-                _c("strong", [_vm._v(_vm._s(_vm.msSelectedRow.length))])
-              ])
+              _vm.msSelectedRow.length > 0
+                ? _c("div", { staticClass: "flex flex-wrap " }, [
+                    _c(
+                      "span",
+                      { staticClass: "w-full ms-btn border-l hover:shadow" },
+                      [_vm._v("Perform")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.msMassActionSelected,
+                            expression: "msMassActionSelected"
+                          }
+                        ],
+                        staticClass:
+                          "w-full mt-3  border focus:outline-none focus:shadow-outline shadow",
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.msMassActionSelected = $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          }
+                        }
+                      },
+                      [
+                        _c(
+                          "option",
+                          {
+                            attrs: { value: "ms0", disabled: "", selected: "" }
+                          },
+                          [_vm._v("Please Select Action to perform")]
+                        ),
+                        _vm._v(" "),
+                        _vm._l(_vm.msMassAction, function(column, index) {
+                          return _c(
+                            "option",
+                            { class: column.color, domProps: { value: index } },
+                            [
+                              _c("i", { class: column.icon }),
+                              _vm._v(" " + _vm._s(column.text))
+                            ]
+                          )
+                        })
+                      ],
+                      2
+                    ),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "w-full" }, [
+                      _vm._v("on selected   "),
+                      _c("strong", [_vm._v(_vm._s(_vm.msSelectedRow.length))])
+                    ])
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.msSelectedRow.length < 1
+                ? _c("div", [_vm._v("No Selection made yet")])
+                : _vm._e()
             ]
           ),
           _vm._v(" "),
@@ -43918,8 +44085,13 @@ var render = function() {
                                 index
                               )
                                 ? _c("span", { staticClass: " select-none" }, [
+                                    _vm.msData.fromV.tableFromOther[
+                                      index
+                                    ].hasOwnProperty(column.name)
+                                      ? _c("span", [_vm._v("SS")])
+                                      : _vm._e(),
                                     _vm._v(
-                                      "\n\n\n                            " +
+                                      "\n\n                            " +
                                         _vm._s(
                                           _vm.getVnameFromDataForOption(
                                             row[index],
@@ -43928,7 +44100,7 @@ var render = function() {
                                             ]
                                           )
                                         ) +
-                                        "\n\n                        "
+                                        "\n\n\n                        "
                                     )
                                   ])
                                 : _vm._e()
