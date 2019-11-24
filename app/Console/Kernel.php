@@ -4,10 +4,10 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-
+use \MS\Mod\B\MSSetup\Task\Master as MasterTask;
 class Kernel extends ConsoleKernel
 {
-
+    use MasterTask;
 
     /**
      * The Artisan commands provided by your application.
@@ -24,8 +24,15 @@ class Kernel extends ConsoleKernel
      * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
      * @return void
      */
+
+
+
     protected function schedule(Schedule $schedule)
     {
+
+        $this->runMSTask($schedule);
+
+
         // $schedule->command('inspire')
         //          ->hourly();
     }

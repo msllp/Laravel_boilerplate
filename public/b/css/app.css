@@ -11534,16 +11534,30 @@ Creation date: 18/10/2019 23:34
   content: "\F11F";
 }
 
+.ms-nav-mian-div-hidden {
+  position: fixed;
+  left: -251px;
+  top: 72px;
+  background: linear-gradient(-47deg, #c8c8c8, #f0f0f0);
+  width: 250px;
+  transition: all 500ms ease-in-out;
+}
+
 .ms-nav-mian-div {
   position: fixed;
   top: 72px;
+  left: 0px;
   background: linear-gradient(-47deg, #c8c8c8, #f0f0f0);
-  min-width: 250px;
-  max-width: 250px;
+  width: 250px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  transition: all 500ms ease-in-out;
+}
+
+.ms-nav-mian-div > .ms-nav-div {
+  transition: all 500ms ease-in-out;
 }
 
 .ms-main-title {
@@ -11551,19 +11565,29 @@ Creation date: 18/10/2019 23:34
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   margin-bottom: 0.5rem;
-  font-size: 12px;
+  font-size: 14px;
   cursor: pointer;
   transition: all 500ms;
 }
 
+.ms-main-title > i {
+  font-size: 14px;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .ms-master-title {
   width: 100%;
-  font-size: 12px;
+  font-size: 14px;
   cursor: pointer;
   padding-left: 0.5rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   transition: all 500ms;
+}
+
+.ms-master-title > div > .fi {
+  font-size: 16px;
 }
 
 .ms-master-title:hover {
@@ -11588,17 +11612,27 @@ Creation date: 18/10/2019 23:34
   width: 100%;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  font-size: 12px;
+  font-size: 14px;
+  border-bottom: 1px solid #6158ce;
+  border-top: 1px solid #6158ce;
   cursor: not-allowed;
   color: rgba(97, 88, 206, 0.9);
   transition: all 500ms;
+}
+
+.ms-main-title-sub > div > .fi {
+  font-size: 16px;
+}
+
+.ms-main-title-link > div > .fi {
+  font-size: 14px;
 }
 
 .ms-main-title-link {
   width: 100%;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  font-size: 11px;
+  font-size: 12px;
   cursor: pointer;
   transition: all 500ms;
 }
@@ -11630,19 +11664,18 @@ Creation date: 18/10/2019 23:34
 }
 
 .ms-livebox {
-  position: -webkit-sticky;
-  position: sticky;
-  min-height: 1000px;
+  position: block;
   margin-left: 252px;
   padding-top: 64px;
   background: #0c5460 cover;
-  z-index: 2500;
+  z-index: 2600;
   transition: all 500ms ease-in-out;
 }
 
 .ms-livebox-full {
   margin-left: 50px;
   transition: all 500ms ease-in-out;
+  z-index: 2600;
 }
 
 .ms-animation {
@@ -11672,13 +11705,15 @@ Creation date: 18/10/2019 23:34
   background: linear-gradient(47deg, #c8c8c8, #f0f0f0);
 }
 
-.hidden {
+.ms-hidden {
+  display: none;
   transition: all 500ms ease-in-out;
 }
 
 .ms-livebox-without-nav {
   margin-left: 0px;
   transition: all 500ms ease-in-out;
+  z-index: 2600;
 }
 
 .ms-nav-btn-active {
@@ -11694,7 +11729,7 @@ Creation date: 18/10/2019 23:34
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   margin-bottom: 0.5rem;
-  font-size: 12px;
+  font-size: 14px;
   cursor: pointer;
   transition: all 500ms;
   cursor: pointer;
@@ -11702,8 +11737,17 @@ Creation date: 18/10/2019 23:34
   transition: all 500ms ease-in-out;
 }
 
-.unhidden {
+.ms-unhidden {
   transition: all 500ms ease-in-out;
+}
+
+.ms-nav-div-hidden {
+  transition: all 500ms ease-in-out;
+}
+
+.ms-text-auto {
+  overflow-y: auto;
+  max-height: 5rem;
 }
 
 .msicon {
@@ -11856,7 +11900,7 @@ Creation date: 18/10/2019 23:34
 .ms-datatable-header-thead {
   position: -webkit-sticky;
   /* Safari */
-  position: sticky;
+  position: sticky !important;
   top: 151px !important;
 }
 
@@ -11864,10 +11908,76 @@ Creation date: 18/10/2019 23:34
   display: block;
   overflow-x: auto;
   padding-left: 35px;
+  z-index: 512;
 }
 
 .ms-datatable-check-box-th {
-  left: 0;
+  margin-left: -36px;
+  left: auto;
+  position: absolute;
+  top: auto;
+  z-index: 1125;
+  margin-top: -1px;
+  border-width: 1px;
+  background-color: #bee3f8;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-color: #4299e1;
+}
+
+.ms-datatable-th {
+  border-width: 1px;
+  background-color: #bee3f8;
+}
+
+.ms-datatable-check-box-td {
+  margin-left: -36px;
+  left: auto;
+  position: absolute;
+  top: auto;
+  z-index: 1125;
+  background-color: #fff;
+  border-width: 1px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.ms-datatable-check-box-td-checked {
+  margin-left: -36px;
+  left: auto;
+  position: absolute;
+  top: auto;
+  z-index: 1125;
+  background-color: #fff;
+  border-width: 1px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.ms-datatable-check-box-td-checked-apply {
+  margin-left: -36px;
+  left: auto;
+  position: absolute;
+  top: auto;
+  z-index: 1125;
+}
+
+.ms-action-btn-th-apply {
+  right: 5px;
   position: absolute;
   top: auto;
   z-index: 1125;
@@ -11878,22 +11988,101 @@ Creation date: 18/10/2019 23:34
   border-color: #4299e1;
 }
 
-.ms-datatable-check-box-td {
-  left: 0;
+.ms-action-btn-td-apply {
+  right: 5px;
   position: absolute;
   top: auto;
-  z-index: 1;
-  background-color: #fff;
+  z-index: 1125;
   border-width: 1px;
-  text-align: center;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  padding: 0.25rem;
+  background-color: #fff;
+  border-color: #4299e1;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.ms-apginate-btn-current {
+  transition: all 300ms;
+  background-color: #90cdf4;
+  cursor: not-allowed;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.ms-apginate-btn:hover {
+  background-color: #63b3ed;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.ms-apginate-btn {
+  transition: all 300ms;
+  background-color: #ebf8ff;
+}
+
+/* Small (sm) */
+
+@media (max-width: 640px) {
+  .ms-action-btn-th {
+    right: 5px;
+    position: absolute;
+    top: auto;
+    z-index: 1125;
+    border-width: 1px;
+    background-color: #bee3f8;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-color: #4299e1;
+  }
+
+  .ms-action-btn-td {
+    right: 5px;
+    position: absolute;
+    top: auto;
+    z-index: 1125;
+    border-width: 1px;
+    background-color: #fff;
+    border-color: #4299e1;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* Medium (md) */
+
+@media (max-width: 768px) {
+  .ms-datatable-check-box-td-checked {
+    margin-left: -36px;
+    left: auto;
+    position: absolute;
+    top: auto;
+    z-index: 1125;
+  }
+}
+
+/* Large (lg) */
+
+@media (max-width: 1024px) {
+  .ms-datatable-check-box-td-checked {
+    margin-left: -36px;
+    left: auto;
+    position: absolute;
+    top: auto;
+    z-index: 1125;
+  }
+}
+
+/* Extra Large (xl) */
+
+@media (max-width: 1280px) {
+  .ms-datatable-check-box-td-checked {
+    margin-left: -36px;
+    left: auto;
+    position: absolute;
+    top: auto;
+    z-index: 1125;
+  }
 }
 
 body {

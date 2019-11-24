@@ -2859,6 +2859,17 @@ __webpack_require__.r(__webpack_exports__);
   watch: {
     msValue: function msValue(val, oldVal) {
       this.inpututProcess(val, oldVal);
+
+      switch (this.inputType) {
+        case 'text':
+          if (this.inputAuto.length > 0) {
+            var msData1 = this.inputAuto;
+            var msThis = this;
+            console.log(msData1.filter(function (ele) {}));
+          }
+
+          break;
+      }
     },
     msFile: function msFile(val, oldVal) {//   console.log(val)
     }
@@ -3069,32 +3080,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _C_MS__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./C/MS */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/MS.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -3499,6 +3484,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "msDatatable",
@@ -3518,6 +3526,8 @@ __webpack_require__.r(__webpack_exports__);
       msPerPage: 10,
       msPerPageData: ['5', '10', '20', '30', '50', '100'],
       msAction: null,
+      msActionView: false,
+      msActionViewRow: [],
       msMassAction: null,
       msSelectedRow: [],
       msRowID: null,
@@ -3649,6 +3659,22 @@ __webpack_require__.r(__webpack_exports__);
       }];
       var link = this.makeLink(data);
       this.getDataFromSerevr(link);
+    },
+    msShowAction: function msShowAction(index) {
+      if (this.msActionView != true) {
+        this.msActionView = true;
+        this.msActionViewRow.push(index); //console.log("hover in trigred");
+      }
+    },
+    msHideAction: function msHideAction(index) {
+      var msIndex = index;
+
+      if (this.msActionView != false) {
+        this.msActionView = false;
+        this.msActionViewRow.splice(this.msActionViewRow.findIndex(function (val) {
+          return val == msIndex;
+        }), 1); //   console.log("hover out trigred");
+      }
     }
   },
   watch: {
@@ -3657,12 +3683,31 @@ __webpack_require__.r(__webpack_exports__);
         this.getSearch(newVal);
       }
 
-      if (newVal.length == 0) this.getPage(1);
+      if (newVal.length < 2) this.getPage(1);
     },
     msPerPage: function msPerPage(newVal, oldVal) {
       this.changePerPage(newVal);
     }
   }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/msLoginPage.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./vendor/msllp/core/src/Views/core/B/s/js/MS/msLoginPage.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "msLoginPage"
 });
 
 /***/ }),
@@ -43282,7 +43327,7 @@ var render = function() {
       ? _c("div", { staticClass: "flex" }, [
           _c(
             "div",
-            { staticClass: "w-full block" },
+            { staticClass: "w-full block ms-text-auto" },
             _vm._l(_vm.inputAuto, function(autofiled) {
               return _c(
                 "div",
@@ -43294,16 +43339,14 @@ var render = function() {
                   },
                   on: {
                     click: function($event) {
-                      return _vm.setFinalInputFromAuto(
-                        autofiled[_vm.msData.verifyBy.value]
-                      )
+                      return _vm.setFinalInputFromAuto(autofiled[_vm.dValue])
                     }
                   }
                 },
                 [
                   _vm._v(
                     "\n            " +
-                      _vm._s(autofiled[_vm.msData.verifyBy.text]) +
+                      _vm._s(autofiled[_vm.dText]) +
                       "\n        "
                   )
                 ]
@@ -43361,194 +43404,187 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    {
-      staticClass: "ms-nav-mian-div",
-      class: { "ms-nav-div-hidden": !_vm.msNavigationOn }
-    },
-    [
-      _vm.currentMainTab
-        ? _c(
-            "div",
-            { staticClass: "flex flex-wrap ms-nav-div" },
-            [
-              _c(
+  return _c("div", { class: { "ms-nav-div-hidden": !_vm.msNavigationOn } }, [
+    _vm.currentMainTab
+      ? _c(
+          "div",
+          { staticClass: "flex flex-wrap ms-nav-div" },
+          [
+            _c(
+              "div",
+              {
+                staticClass: "ms-main-title cursor-pointer",
+                on: {
+                  click: function($event) {
+                    if (
+                      !$event.type.indexOf("key") &&
+                      _vm._k(
+                        $event.keyCode,
+                        "prvent",
+                        undefined,
+                        $event.key,
+                        undefined
+                      )
+                    ) {
+                      return null
+                    }
+                    return _vm.hideNav($event)
+                  }
+                }
+              },
+              [
+                _c("i", {
+                  staticClass: "fas fa-ellipsis-v p-1",
+                  class: {
+                    "ms-animation fa-rotate-90": !_vm.msNavigationOn
+                  }
+                }),
+                _vm._v(" "),
+                _vm.msNavigationOn
+                  ? _c(
+                      "span",
+                      { class: { "ms-animation": _vm.msNavigationOn } },
+                      [_vm._v("Navigation")]
+                    )
+                  : _vm._e()
+              ]
+            ),
+            _vm._v(" "),
+            _vm._l(_vm.msData, function(mainNav, index) {
+              return _c(
                 "div",
                 {
-                  staticClass: "ms-main-title cursor-pointer",
+                  staticClass: "ms-master-title",
                   on: {
                     click: function($event) {
-                      if (
-                        !$event.type.indexOf("key") &&
-                        _vm._k(
-                          $event.keyCode,
-                          "prvent",
-                          undefined,
-                          $event.key,
-                          undefined
-                        )
-                      ) {
-                        return null
-                      }
-                      return _vm.hideNav($event)
+                      return _vm.setMainTab(index)
                     }
                   }
                 },
                 [
-                  _c("i", {
-                    staticClass: "fas fa-ellipsis-v p-1",
-                    class: {
-                      "ms-animation fa-rotate-90": !_vm.msNavigationOn
-                    }
-                  }),
-                  _vm._v(" "),
-                  _vm.msNavigationOn
-                    ? _c(
-                        "span",
-                        { class: { "ms-animation": _vm.msNavigationOn } },
-                        [_vm._v("Navigation")]
-                      )
-                    : _vm._e()
-                ]
-              ),
-              _vm._v(" "),
-              _vm._l(_vm.msData, function(mainNav, index) {
-                return _c(
-                  "div",
-                  {
-                    staticClass: "ms-master-title",
-                    on: {
-                      click: function($event) {
-                        return _vm.setMainTab(index)
-                      }
-                    }
-                  },
-                  [
-                    _c("div", {}, [
-                      mainNav.hasOwnProperty("icon")
-                        ? _c("i", { staticClass: "p-1", class: mainNav.icon })
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.msNavigationOn
-                        ? _c(
-                            "span",
-                            { class: { "ms-animation": _vm.msNavigationOn } },
-                            [_vm._v(_vm._s(mainNav.text))]
-                          )
-                        : _vm._e()
-                    ])
-                  ]
-                )
-              })
-            ],
-            2
-          )
-        : _vm._e(),
-      _vm._v(" "),
-      !_vm.currentMainTab
-        ? _c(
-            "div",
-            { staticClass: "flex-wrap ms-nav-div" },
-            [
-              _c(
-                "div",
-                {
-                  staticClass: "ms-main-title cursor-pointer",
-                  on: { click: _vm.backToMain }
-                },
-                [
-                  _c("i", { staticClass: "fas fa-backward p-1" }),
-                  _vm._v(" "),
-                  _vm.msNavigationOn
-                    ? _c("span", [_vm._v("back to Main Navigation")])
-                    : _vm._e()
-                ]
-              ),
-              _vm._v(" "),
-              _vm._l(_vm.msData, function(mainNav, index) {
-                return _vm.currentSubTab == index
-                  ? _c("div", {}, [
-                      _c("div", { staticClass: "flex flex-wrap" }, [
-                        _c(
+                  _c("div", {}, [
+                    mainNav.hasOwnProperty("icon")
+                      ? _c("i", { staticClass: "p-1", class: mainNav.icon })
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.msNavigationOn
+                      ? _c(
                           "span",
-                          { staticClass: "w-full ms-master-title-in-sub" },
-                          [
-                            mainNav.hasOwnProperty("icon")
-                              ? _c("i", {
-                                  staticClass: "p-1",
-                                  class: mainNav.icon
-                                })
-                              : _vm._e(),
-                            _vm._v(" "),
-                            _vm.msNavigationOn
-                              ? _c("span", [_vm._v(_vm._s(mainNav.text))])
-                              : _vm._e()
-                          ]
-                        ),
-                        _vm._v(" "),
-                        mainNav.hasOwnProperty("sub")
-                          ? _c(
-                              "div",
-                              { staticClass: "flex flex-wrap" },
-                              _vm._l(mainNav.sub, function(subMainNav) {
-                                return _c(
-                                  "div",
-                                  {
-                                    staticClass: "w-full",
-                                    on: {
-                                      click: function($event) {
-                                        $event.preventDefault()
-                                        _vm.openTab(
-                                          subMainNav,
+                          { class: { "ms-animation": _vm.msNavigationOn } },
+                          [_vm._v(_vm._s(mainNav.text))]
+                        )
+                      : _vm._e()
+                  ])
+                ]
+              )
+            })
+          ],
+          2
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.currentMainTab
+      ? _c(
+          "div",
+          { staticClass: "flex-wrap ms-nav-div" },
+          [
+            _c(
+              "div",
+              {
+                staticClass: "ms-main-title cursor-pointer",
+                on: { click: _vm.backToMain }
+              },
+              [
+                _c("i", { staticClass: "fas fa-backward p-1" }),
+                _vm._v(" "),
+                _vm.msNavigationOn
+                  ? _c("span", [_vm._v("back to Main Navigation")])
+                  : _vm._e()
+              ]
+            ),
+            _vm._v(" "),
+            _vm._l(_vm.msData, function(mainNav, index) {
+              return _vm.currentSubTab == index
+                ? _c("div", {}, [
+                    _c("div", { staticClass: "flex flex-wrap" }, [
+                      _c(
+                        "span",
+                        { staticClass: "w-full ms-master-title-in-sub" },
+                        [
+                          mainNav.hasOwnProperty("icon")
+                            ? _c("i", {
+                                staticClass: "p-1",
+                                class: mainNav.icon
+                              })
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.msNavigationOn
+                            ? _c("span", [_vm._v(_vm._s(mainNav.text))])
+                            : _vm._e()
+                        ]
+                      ),
+                      _vm._v(" "),
+                      mainNav.hasOwnProperty("sub")
+                        ? _c(
+                            "div",
+                            { staticClass: "flex flex-wrap" },
+                            _vm._l(mainNav.sub, function(subMainNav) {
+                              return _c(
+                                "div",
+                                {
+                                  staticClass: "w-full",
+                                  on: {
+                                    click: function($event) {
+                                      $event.preventDefault()
+                                      _vm.openTab(
+                                        subMainNav,
+                                        subMainNav.type == "link"
+                                      )
+                                    }
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      class: {
+                                        "ms-main-title-link":
+                                          subMainNav.type == "link",
+                                        "ms-main-title-sub": !(
                                           subMainNav.type == "link"
                                         )
                                       }
-                                    }
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      {
-                                        class: {
-                                          "ms-main-title-link":
-                                            subMainNav.type == "link",
-                                          "ms-main-title-sub": !(
-                                            subMainNav.type == "link"
-                                          )
-                                        }
-                                      },
-                                      [
-                                        subMainNav.hasOwnProperty("icon")
-                                          ? _c("i", {
-                                              staticClass: "p-1",
-                                              class: subMainNav.icon
-                                            })
-                                          : _vm._e(),
-                                        _vm._v(" "),
-                                        _vm.msNavigationOn
-                                          ? _c("span", [
-                                              _vm._v(_vm._s(subMainNav.text))
-                                            ])
-                                          : _vm._e()
-                                      ]
-                                    )
-                                  ]
-                                )
-                              }),
-                              0
-                            )
-                          : _vm._e()
-                      ])
+                                    },
+                                    [
+                                      subMainNav.hasOwnProperty("icon")
+                                        ? _c("i", {
+                                            staticClass: "p-1",
+                                            class: subMainNav.icon
+                                          })
+                                        : _vm._e(),
+                                      _vm._v(" "),
+                                      _vm.msNavigationOn
+                                        ? _c("span", [
+                                            _vm._v(_vm._s(subMainNav.text))
+                                          ])
+                                        : _vm._e()
+                                    ]
+                                  )
+                                ]
+                              )
+                            }),
+                            0
+                          )
+                        : _vm._e()
                     ])
-                  : _vm._e()
-              })
-            ],
-            2
-          )
-        : _vm._e()
-    ]
-  )
+                  ])
+                : _vm._e()
+            })
+          ],
+          2
+        )
+      : _vm._e()
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -43648,10 +43684,7 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "div",
-                  {
-                    staticClass: "font-semibold",
-                    class: { hidden: !_vm.msNavBar }
-                  },
+                  { staticClass: "font-semibold", class: { hidden: false } },
                   [_vm._v(" Cloud Services")]
                 )
               ]
@@ -43661,28 +43694,23 @@ var render = function() {
               ? undefined
               : _vm._e(),
             _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "w-full block flex-grow lg:flex lg:items-center lg:w-auto ",
-                class: {
-                  hidden: !_vm.msMenuOn
-                }
-              },
-              [
-                false
-                  ? undefined
-                  : _vm._e()
-              ]
-            )
+            _c("div", {
+              staticClass:
+                "w-full block flex-grow lg:flex lg:items-center lg:w-auto ",
+              class: {
+                hidden: !_vm.msMenuOn
+              }
+            })
           ]
         )
       ]),
       _vm._v(" "),
       _c("mssidenav", {
         ref: "msMenuSide",
-        class: { hidden: !_vm.msNavBar, unhidden: _vm.msNavBar },
+        class: {
+          "ms-nav-mian-div-hidden": !_vm.msNavBar,
+          "ms-nav-mian-div": _vm.msNavBar
+        },
         attrs: { "ms-nav": _vm.msNavOn }
       }),
       _vm._v(" "),
@@ -43725,12 +43753,12 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "flex flex-wrap" }, [
-    _c("div", { staticClass: "w-full border shadow p-1 bg-white" }, [
+    _c("div", { staticClass: "w-full border shadow py-1 bg-white" }, [
       _c(
         "div",
         {
           staticClass:
-            "flex flex-wrap   border-blue-400 p-1  ms-datatable-header-box"
+            "flex flex-wrap   border-blue-400 my-1  ms-datatable-header-box"
         },
         [
           _c(
@@ -43955,14 +43983,8 @@ var render = function() {
               [
                 _vm._m(1),
                 _vm._v(" "),
-                _vm.msAction != null
-                  ? _c("th", { staticClass: "border bg-blue-200" }, [
-                      _vm._v(" action")
-                    ])
-                  : _vm._e(),
-                _vm._v(" "),
                 _vm._l(_vm.msAllData.fromV.tableColumns, function(column) {
-                  return _c("th", { staticClass: "border bg-blue-200" }, [
+                  return _c("th", { staticClass: "ms-datatable-th" }, [
                     _vm._v(" " + _vm._s(column.vName))
                   ])
                 })
@@ -43977,12 +43999,33 @@ var render = function() {
             _vm._l(_vm.msAllData.fromV.tableData.data, function(row, index) {
               return _c(
                 "tr",
-                { staticClass: "border bg-white" },
+                {
+                  staticClass: "border bg-white",
+                  class: {
+                    "bg-white": !_vm.msSelectedRow.includes(row[_vm.msRowID]),
+                    "bg-blue-200": _vm.msSelectedRow.includes(row[_vm.msRowID])
+                  },
+                  on: {
+                    mouseenter: function($event) {
+                      return _vm.msShowAction(index)
+                    },
+                    mouseleave: function($event) {
+                      return _vm.msHideAction(index)
+                    }
+                  }
+                },
                 [
                   _c(
                     "td",
                     {
-                      staticClass: "ms-datatable-check-box-td",
+                      class: {
+                        "ms-datatable-check-box-td": !_vm.msSelectedRow.includes(
+                          row[_vm.msRowID]
+                        ),
+                        "ms-datatable-check-box-td-checked": _vm.msSelectedRow.includes(
+                          row[_vm.msRowID]
+                        )
+                      },
                       on: {
                         click: function($event) {
                           return _vm.msSelecetRow(index)
@@ -44004,18 +44047,153 @@ var render = function() {
                     ]
                   ),
                   _vm._v(" "),
-                  _vm.msAction != null
+                  _vm._l(_vm.msAllData.fromV.tableColumns, function(
+                    column,
+                    index,
+                    key
+                  ) {
+                    return _c(
+                      "td",
+                      {
+                        staticClass: "border p-1 text-center cursor-wait",
+                        attrs: { title: column.vName }
+                      },
+                      [
+                        _c("div", [
+                          column.type == "text" ||
+                          column.type == "number" ||
+                          column.type == "email" ||
+                          column.type == "textarea" ||
+                          column.type == "password" ||
+                          column.type == "auto"
+                            ? _c("span", [
+                                _vm._v(
+                                  "\n\n\n                        " +
+                                    _vm._s(_vm.forNice(row[index])) +
+                                    "\n\n                        "
+                                )
+                              ])
+                            : _vm._e(),
+                          _vm._v(" "),
+                          column.type == "date" && true
+                            ? _c("span", [
+                                _vm._v(
+                                  "\n                            " +
+                                    _vm._s(_vm.getOutDate(row[index])) +
+                                    "\n\n                        "
+                                )
+                              ])
+                            : _vm._e(),
+                          _vm._v(" "),
+                          column.type == "time" && true
+                            ? _c("span", [
+                                _vm._v(
+                                  "\n                            " +
+                                    _vm._s(_vm.getOutTime(row[index])) +
+                                    "\n\n                        "
+                                )
+                              ])
+                            : _vm._e(),
+                          _vm._v(" "),
+                          column.type == "file" && true ? _c("span") : _vm._e(),
+                          _vm._v(" "),
+                          column.type == "option" && true
+                            ? _c("span", [
+                                _vm.msData.fromV.tableFromOther.hasOwnProperty(
+                                  index
+                                )
+                                  ? _c(
+                                      "span",
+                                      { staticClass: " select-none" },
+                                      [
+                                        _vm.msData.fromV.tableFromOther[
+                                          index
+                                        ].hasOwnProperty(column.name)
+                                          ? _c("span", [_vm._v("SS")])
+                                          : _vm._e(),
+                                        _vm._v(
+                                          "\n\n                            " +
+                                            _vm._s(
+                                              _vm.getVnameFromDataForOption(
+                                                row[index],
+                                                _vm.msData.fromV.tableFromOther[
+                                                  index
+                                                ]
+                                              )
+                                            ) +
+                                            "\n\n\n                        "
+                                        )
+                                      ]
+                                    )
+                                  : _vm._e()
+                              ])
+                            : _vm._e(),
+                          _vm._v(" "),
+                          column.type == "checkbox" && true
+                            ? _c("span")
+                            : _vm._e(),
+                          _vm._v(" "),
+                          column.type == "radio" && true
+                            ? _c("span", [
+                                _vm.msData.fromV.tableFromOther.hasOwnProperty(
+                                  index
+                                )
+                                  ? _c(
+                                      "span",
+                                      { staticClass: " select-none" },
+                                      [
+                                        _c("i", {
+                                          staticClass: "fas ",
+                                          class: {
+                                            "fa-chevron-right": !(
+                                              row[index] == 1 || row[index] == 0
+                                            ),
+                                            "text-blue-500": !(
+                                              row[index] == 1 || row[index] == 0
+                                            ),
+                                            "text-green-500":
+                                              row[index] == 1 ||
+                                              row[index] == "1",
+                                            "text-red-500": row[index] == 0,
+                                            "fa-power-off":
+                                              row[index] == 1 || row[index] == 0
+                                          }
+                                        }),
+                                        _vm._v(
+                                          "\n                            " +
+                                            _vm._s(
+                                              _vm.getVnameFromDataForRadio(
+                                                row[index],
+                                                _vm.msData.fromV.tableFromOther[
+                                                  index
+                                                ]
+                                              )
+                                            ) +
+                                            "\n\n                        "
+                                        )
+                                      ]
+                                    )
+                                  : _vm._e()
+                              ])
+                            : _vm._e()
+                        ])
+                      ]
+                    )
+                  }),
+                  _vm._v(" "),
+                  _vm.msActionViewRow.includes(index)
                     ? _c(
                         "td",
                         {
                           staticClass:
-                            "border p-1 text-center cursor-pointer select-none"
+                            "border p-1 text-center bg-grey-100 cursor-pointer select-none ms-action-btn-td  hover:bg-blue-200",
+                          class: {}
                         },
                         _vm._l(_vm.msAction, function(ac, index) {
                           return _c(
                             "span",
                             {
-                              staticClass: "hover:border hover:border-blue-500",
+                              staticClass: "hover:border",
                               class: ac.color,
                               attrs: { title: ac.text },
                               on: {
@@ -44029,129 +44207,7 @@ var render = function() {
                         }),
                         0
                       )
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm._l(_vm.msAllData.fromV.tableColumns, function(
-                    column,
-                    index
-                  ) {
-                    return _c(
-                      "td",
-                      {
-                        staticClass: "border p-1 text-center cursor-wait",
-                        attrs: { title: column.vName }
-                      },
-                      [
-                        column.type == "text" ||
-                        column.type == "number" ||
-                        column.type == "email" ||
-                        column.type == "textarea" ||
-                        column.type == "password" ||
-                        column.type == "auto"
-                          ? _c("span", [
-                              _vm._v(
-                                "\n\n\n                        " +
-                                  _vm._s(_vm.forNice(row[index])) +
-                                  "\n\n                        "
-                              )
-                            ])
-                          : _vm._e(),
-                        _vm._v(" "),
-                        column.type == "date" && true
-                          ? _c("span", [
-                              _vm._v(
-                                "\n                            " +
-                                  _vm._s(_vm.getOutDate(row[index])) +
-                                  "\n\n                        "
-                              )
-                            ])
-                          : _vm._e(),
-                        _vm._v(" "),
-                        column.type == "time" && true
-                          ? _c("span", [
-                              _vm._v(
-                                "\n                            " +
-                                  _vm._s(_vm.getOutTime(row[index])) +
-                                  "\n\n                        "
-                              )
-                            ])
-                          : _vm._e(),
-                        _vm._v(" "),
-                        column.type == "file" && true ? _c("span") : _vm._e(),
-                        _vm._v(" "),
-                        column.type == "option" && true
-                          ? _c("span", [
-                              _vm.msData.fromV.tableFromOther.hasOwnProperty(
-                                index
-                              )
-                                ? _c("span", { staticClass: " select-none" }, [
-                                    _vm.msData.fromV.tableFromOther[
-                                      index
-                                    ].hasOwnProperty(column.name)
-                                      ? _c("span", [_vm._v("SS")])
-                                      : _vm._e(),
-                                    _vm._v(
-                                      "\n\n                            " +
-                                        _vm._s(
-                                          _vm.getVnameFromDataForOption(
-                                            row[index],
-                                            _vm.msData.fromV.tableFromOther[
-                                              index
-                                            ]
-                                          )
-                                        ) +
-                                        "\n\n\n                        "
-                                    )
-                                  ])
-                                : _vm._e()
-                            ])
-                          : _vm._e(),
-                        _vm._v(" "),
-                        column.type == "checkbox" && true
-                          ? _c("span")
-                          : _vm._e(),
-                        _vm._v(" "),
-                        column.type == "radio" && true
-                          ? _c("span", [
-                              _vm.msData.fromV.tableFromOther.hasOwnProperty(
-                                index
-                              )
-                                ? _c("span", { staticClass: " select-none" }, [
-                                    _c("i", {
-                                      staticClass: "fas ",
-                                      class: {
-                                        "fa-chevron-right": !(
-                                          row[index] == 1 || row[index] == 0
-                                        ),
-                                        "text-blue-500": !(
-                                          row[index] == 1 || row[index] == 0
-                                        ),
-                                        "text-green-500":
-                                          row[index] == 1 || row[index] == "1",
-                                        "text-red-500": row[index] == 0,
-                                        "fa-power-off":
-                                          row[index] == 1 || row[index] == 0
-                                      }
-                                    }),
-                                    _vm._v(
-                                      "\n                            " +
-                                        _vm._s(
-                                          _vm.getVnameFromDataForRadio(
-                                            row[index],
-                                            _vm.msData.fromV.tableFromOther[
-                                              index
-                                            ]
-                                          )
-                                        ) +
-                                        "\n\n                        "
-                                    )
-                                  ])
-                                : _vm._e()
-                            ])
-                          : _vm._e()
-                      ]
-                    )
-                  })
+                    : _vm._e()
                 ],
                 2
               )
@@ -44186,26 +44242,49 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "flex flex-wrap text-center cursor-pointer" },
+        { staticClass: "flex flex-wrap text-center cursor-pointer shadow" },
         [
-          _c(
-            "div",
-            {
-              staticClass: "ms-btn flex-1",
-              class: {
-                "cursor-not-allowed":
-                  _vm.msAllData.fromV.tableData.prev_page_url == null
-              },
-              on: {
-                click: function($event) {
-                  return _vm.getDataFromSerevr(
-                    _vm.msAllData.fromV.tableData.prev_page_url
-                  )
-                }
-              }
-            },
-            [_c("i", { staticClass: "fas fa-angle-left" })]
-          ),
+          _vm.msAllData.fromV.tableData.prev_page_url != null
+            ? _c(
+                "div",
+                {
+                  staticClass: "ms-btn  flex-1",
+                  class: {
+                    "cursor-not-allowed":
+                      _vm.msAllData.fromV.tableData.prev_page_url == null
+                  },
+                  on: {
+                    click: function($event) {
+                      return _vm.getDataFromSerevr(
+                        _vm.msAllData.fromV.tableData.first_page_url
+                      )
+                    }
+                  }
+                },
+                [_c("i", { staticClass: "fas fa-angle-double-left" })]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.msAllData.fromV.tableData.prev_page_url != null
+            ? _c(
+                "div",
+                {
+                  staticClass: "ms-btn border-l flex-1",
+                  class: {
+                    "cursor-not-allowed":
+                      _vm.msAllData.fromV.tableData.prev_page_url == null
+                  },
+                  on: {
+                    click: function($event) {
+                      return _vm.getDataFromSerevr(
+                        _vm.msAllData.fromV.tableData.prev_page_url
+                      )
+                    }
+                  }
+                },
+                [_c("i", { staticClass: "fas fa-angle-left" })]
+              )
+            : _vm._e(),
           _vm._v(" "),
           _vm._l(_vm.msAllData.fromV.tableData.last_page, function(n) {
             return _c(
@@ -44213,13 +44292,10 @@ var render = function() {
               {
                 staticClass: "ms-btn flex-1",
                 class: {
-                  "bg-blue-200":
+                  "ms-apginate-btn-current":
                     _vm.msAllData.fromV.tableData.current_page == n,
-                  "bg-blue-400":
-                    _vm.msAllData.fromV.tableData.current_page != n,
-                  "text-white": _vm.msAllData.fromV.tableData.current_page != n,
-                  "cursor-not-allowed":
-                    _vm.msAllData.fromV.tableData.current_page == n
+                  "ms-apginate-btn":
+                    _vm.msAllData.fromV.tableData.current_page != n
                 },
                 on: {
                   click: function($event) {
@@ -44231,43 +44307,47 @@ var render = function() {
             )
           }),
           _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "ms-btn  flex-1",
-              class: {
-                "cursor-not-allowed":
-                  _vm.msAllData.fromV.tableData.next_page_url == null
-              },
-              on: {
-                click: function($event) {
-                  return _vm.getDataFromSerevr(
-                    _vm.msAllData.fromV.tableData.next_page_url
-                  )
-                }
-              }
-            },
-            [_c("i", { staticClass: "fas fa-angle-right" })]
-          ),
+          _vm.msAllData.fromV.tableData.next_page_url != null
+            ? _c(
+                "div",
+                {
+                  staticClass: "ms-btn  flex-1",
+                  class: {
+                    "cursor-not-allowed":
+                      _vm.msAllData.fromV.tableData.next_page_url == null
+                  },
+                  on: {
+                    click: function($event) {
+                      return _vm.getDataFromSerevr(
+                        _vm.msAllData.fromV.tableData.next_page_url
+                      )
+                    }
+                  }
+                },
+                [_c("i", { staticClass: "fas fa-angle-right" })]
+              )
+            : _vm._e(),
           _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "ms-btn  flex-1",
-              class: {
-                "cursor-not-allowed":
-                  _vm.msAllData.fromV.tableData.next_page_url == null
-              },
-              on: {
-                click: function($event) {
-                  return _vm.getDataFromSerevr(
-                    _vm.msAllData.fromV.tableData.next_page_url
-                  )
-                }
-              }
-            },
-            [_c("i", { staticClass: "fas fa-angle-double-right" })]
-          )
+          _vm.msAllData.fromV.tableData.next_page_url != null
+            ? _c(
+                "div",
+                {
+                  staticClass: "ms-btn  flex-1",
+                  class: {
+                    "cursor-not-allowed":
+                      _vm.msAllData.fromV.tableData.next_page_url == null
+                  },
+                  on: {
+                    click: function($event) {
+                      return _vm.getDataFromSerevr(
+                        _vm.msAllData.fromV.tableData.last_page_url
+                      )
+                    }
+                  }
+                },
+                [_c("i", { staticClass: "fas fa-angle-double-right" })]
+              )
+            : _vm._e()
         ],
         2
       )
@@ -44293,6 +44373,30 @@ var staticRenderFns = [
     ])
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/msLoginPage.vue?vue&type=template&id=6a3d5918&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./vendor/msllp/core/src/Views/core/B/s/js/MS/msLoginPage.vue?vue&type=template&id=6a3d5918&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div")
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -57577,6 +57681,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./vendor/msllp/core/src/Views/core/B/s/js/MS/msLoginPage.vue":
+/*!********************************************************************!*\
+  !*** ./vendor/msllp/core/src/Views/core/B/s/js/MS/msLoginPage.vue ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _msLoginPage_vue_vue_type_template_id_6a3d5918_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./msLoginPage.vue?vue&type=template&id=6a3d5918&scoped=true& */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/msLoginPage.vue?vue&type=template&id=6a3d5918&scoped=true&");
+/* harmony import */ var _msLoginPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./msLoginPage.vue?vue&type=script&lang=js& */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/msLoginPage.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _msLoginPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _msLoginPage_vue_vue_type_template_id_6a3d5918_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _msLoginPage_vue_vue_type_template_id_6a3d5918_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "6a3d5918",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "vendor/msllp/core/src/Views/core/B/s/js/MS/msLoginPage.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./vendor/msllp/core/src/Views/core/B/s/js/MS/msLoginPage.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************!*\
+  !*** ./vendor/msllp/core/src/Views/core/B/s/js/MS/msLoginPage.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_msLoginPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./msLoginPage.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/msLoginPage.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_msLoginPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./vendor/msllp/core/src/Views/core/B/s/js/MS/msLoginPage.vue?vue&type=template&id=6a3d5918&scoped=true&":
+/*!***************************************************************************************************************!*\
+  !*** ./vendor/msllp/core/src/Views/core/B/s/js/MS/msLoginPage.vue?vue&type=template&id=6a3d5918&scoped=true& ***!
+  \***************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_msLoginPage_vue_vue_type_template_id_6a3d5918_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./msLoginPage.vue?vue&type=template&id=6a3d5918&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/msLoginPage.vue?vue&type=template&id=6a3d5918&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_msLoginPage_vue_vue_type_template_id_6a3d5918_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_msLoginPage_vue_vue_type_template_id_6a3d5918_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./vendor/msllp/core/src/Views/core/B/s/js/MS/msMenubar.vue":
 /*!******************************************************************!*\
   !*** ./vendor/msllp/core/src/Views/core/B/s/js/MS/msMenubar.vue ***!
@@ -57888,7 +58061,8 @@ Vue.component('msmenubar', __webpack_require__(/*! ./MS/msMenubar.vue */ "./vend
 Vue.component('msdatatable', __webpack_require__(/*! ./MS/msDatatable.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/msDatatable.vue")["default"]);
 Vue.component('msdockerdashboard', __webpack_require__(/*! ./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue */ "./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue")["default"]);
 Vue.component('mssidenav', __webpack_require__(/*! ./MS/C/msSideNav.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msSideNav.vue")["default"]);
-Vue.component('newtab', __webpack_require__(/*! ./MS/C/msNewTab.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msNewTab.vue")["default"]); //Components
+Vue.component('newtab', __webpack_require__(/*! ./MS/C/msNewTab.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msNewTab.vue")["default"]);
+Vue.component('mslogin', __webpack_require__(/*! ./MS/msLoginPage.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/msLoginPage.vue")["default"]); //Components
 
 
 var store = {
@@ -57913,8 +58087,7 @@ var app = new Vue({
     updateTab: function updateTab(data) {
       var dashBoard = this.$children[0];
       var viewPanel = dashBoard.$refs['ms-live-tab'];
-      viewPanel.addActionToTab(data); //console.log();
-      //console.log(data);
+      viewPanel.addActionToTab(data);
     },
     getModBtn: function getModBtn(url) {
       // console.log(this);
