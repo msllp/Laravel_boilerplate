@@ -18,3 +18,5 @@ mix
     processCssUrls: false,
     postCss: [ tailwindcss('./vendor/msllp/core/src/Views/core/B/s/js/tailwind.config.js') ],
 });
+//mix.browserSync(process.env.MIX_APP_URL_RAW);
+mix.disableNotifications();

@@ -2324,23 +2324,28 @@ __webpack_require__.r(__webpack_exports__);
       if (Data != undefined) {
         this.mserror = Data; //console.log(Data);
 
-        alert('Opps,,System need some more inputs please find highlihted inputs.'); //  console.log(Data);
+        if (Data.hasOwnProperty('errorsRaw')) {
+          alert(Data.errorsRaw);
+        } //  console.log(Data);
 
-        for (var inputName in Data) {
-          var key = inputName.toString().toLowerCase(); //
-          //console.log(inputName);
 
-          if (this.$refs.hasOwnProperty(key) && this.$refs[key].hasOwnProperty(0)) {
-            this.$refs[key][0].setError();
-            this.$refs[key][0].inputError = Data[inputName];
-            this.allErrors.push({
-              inputName: inputName,
-              errors: Data[inputName]
-            });
+        if (Data.hasOwnProperty('errors')) {
+          for (var inputName in Data) {
+            var key = inputName.toString().toLowerCase(); //
+            //console.log(inputName);
+
+            if (this.$refs.hasOwnProperty(key) && this.$refs[key].hasOwnProperty(0)) {
+              this.$refs[key][0].setError();
+              this.$refs[key][0].inputError = Data[inputName];
+              this.allErrors.push({
+                inputName: inputName,
+                errors: Data[inputName]
+              });
+            }
           }
         }
       } else {
-        alert('Opps,,System had some wrong enviroment to work please reload your page. Sorry & Thank you.');
+        alert('Opps...System had some wrong enviroment to work please reload your page. Sorry & Thank you.');
       } //    this.mserror.forEach(function(value, index) {
       //        var key=value.name.toString();
       //        this.$refs[key].setError();
@@ -2373,8 +2378,11 @@ __webpack_require__.r(__webpack_exports__);
       this.msCurrentTab = section.id;
       return false;
     },
-    formActionFromBtn: function formActionFromBtn(id) {
+    formActionFromBtn: function formActionFromBtn(id, row) {
       if (this.allErrors.length < 1) {
+        var row = this.msData.actionButton[id];
+        var mKey = row.msLinkKey; //console.log(mKey);
+
         var route = this.msData.actionButton[id].route;
         return this.getAllData(route); //   console.log(this.msData.actionButton[id].route);
       } else {
@@ -57089,9 +57097,14 @@ __webpack_require__.r(__webpack_exports__);
         returnX = response.data;
         self.setHtml(returnX);
       })["catch"](function (error) {
-        console.log(error); // handle error
+        //console.log(error);
+        if (error.hasOwnProperty('errorsRaw')) {
+          self.setMsError(error);
+        } else {
+          self.setMsError(error.response);
+        } // handle error
+        //  console.log(error.response.data);
 
-        self.setMsError(error.response); //  console.log(error.response.data);
       })["finally"](function (response) {});
       return returnX;
     },
@@ -57124,9 +57137,16 @@ __webpack_require__.r(__webpack_exports__);
         //console.log(this.Freturn);
       })["catch"](function (error) {
         // console.log(error.response.data);
-        outData = error.response.data.errors; // console.log(error.response.data);
+        outData = error.response.data.errors;
+        console.log(error.response.data);
 
-        classFor.setAllMsError(outData); //  delete Freturn.error.message;
+        if (error.response.data.hasOwnProperty('errorsRaw')) {
+          classFor.setAllMsError(error.response.data);
+        } else {
+          classFor.setAllMsError(outData);
+        }
+
+        ; //  delete Freturn.error.message;
       })["finally"](function () {//  return this.Freturn;
       }); //console.dir(outData);
       //return await returnD;
