@@ -2631,7 +2631,10 @@ __webpack_require__.r(__webpack_exports__);
       if (this.msData.verifyBy.hasOwnProperty('text')) this.dText = this.msData.verifyBy.text;
     }
 
-    if (this.msData.hasOwnProperty('value')) this.dValue = this.msData.value;
+    if (this.msData.hasOwnProperty('value')) {
+      this.dValue = this.msData.value;
+    }
+
     if (this.msData.hasOwnProperty('inputMultiple')) this.inputMultiple = this.msData.inputMultiple;
 
     if (this.msData.hasOwnProperty('validation')) {
@@ -2655,6 +2658,10 @@ __webpack_require__.r(__webpack_exports__);
 
       case "radio":
         this.msValid = "is-valid";
+        break;
+
+      default:
+        if (this.hasOwnProperty('dValue')) this.msValue = this.dValue;
         break;
     } //   var finalArray= this.makeArrayForInput(this);
 
@@ -3507,6 +3514,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "msDatatable",
@@ -3533,6 +3542,8 @@ __webpack_require__.r(__webpack_exports__);
       msRowID: null,
       msMassActionSelected: null
     };
+  },
+  mounted: function mounted() {//  console.log(this.msAction);
   },
   beforeMount: function beforeMount() {
     this.msAllData = this.msData;
@@ -3564,15 +3575,29 @@ __webpack_require__.r(__webpack_exports__);
       } //console.log(this.msSelectedRow);
 
     },
-    msActionClick: function msActionClick(ac) {
-      var data = {
-        tabCode: '01',
-        modCode: "MAS",
-        modDView: ac.text,
-        modUrl: ac.url,
-        data: ""
-      };
-      window.vueApp.updateTab(data);
+    msActionClick: function msActionClick(ac, row) {
+      if (ac.hasOwnProperty('msLinkKey')) {
+        var newUrl = ac.url + "/" + row[ac.msLinkKey];
+        var data = {
+          tabCode: '02',
+          modCode: "MAS",
+          modDView: this.forNice(ac.text + " " + row[ac.msLinkText]),
+          modUrl: newUrl,
+          data: ""
+        };
+        window.vueApp.addNewTab(data);
+      } else {
+        var data = {
+          tabCode: '01',
+          modCode: "MAS",
+          modDView: this.forNice(ac.text),
+          modUrl: ac.url,
+          data: ""
+        };
+        window.vueApp.updateTab(data);
+      }
+
+      console.log(data); //     window.vueApp.updateTab(data);
     },
     getPage: function getPage(page) {
       var data = [{
@@ -4118,11 +4143,25 @@ __webpack_require__.r(__webpack_exports__);
         this.allTab.push(data);
       } else {
         alert("Opps... Max tab limit reached. Contact Million Solution to Increase it.");
-        console.log("Limite: " + this.maxTabLimit + " current lenth: " + this.allTab.length);
+        console.log("Limit: " + this.maxTabLimit + " current lenth: " + this.allTab.length);
       }
     },
-    addActionToTab: function addActionToTab(data) {
+    addNewTabnUpdate: function addNewTabnUpdate(data) {
       var _this = this;
+
+      this.addNewTab(data);
+      var newtab = this.allTab.length - 1;
+      this.currentTab = newtab - 1;
+      this.$nextTick(function () {
+        var nextTab = _this.allTab.length - 1;
+        var Handler = _this.$refs['tab_' + nextTab][0];
+        Handler.updateTab(data); //    console.log(data);
+        //normalizeArray(this.$refs.form).classList.remove("was-validated");
+      }, data);
+      this.currentTab = newtab;
+    },
+    addActionToTab: function addActionToTab(data) {
+      var _this2 = this;
 
       //delete this.allTab[this.currentTab];
       // console.log(data);
@@ -4136,7 +4175,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
       this.$nextTick(function () {
-        var Handler = _this.$refs['tab_' + _this.currentTab][0];
+        var Handler = _this2.$refs['tab_' + _this2.currentTab][0];
         Handler.updateTab(data); //    console.log(data);
         //normalizeArray(this.$refs.form).classList.remove("was-validated");
       }, data); //this.$children[this.currentTab].updateTab(data);
@@ -44198,7 +44237,7 @@ var render = function() {
                               attrs: { title: ac.text },
                               on: {
                                 click: function($event) {
-                                  return _vm.msActionClick(ac)
+                                  return _vm.msActionClick(ac, row)
                                 }
                               }
                             },
@@ -58088,6 +58127,11 @@ var app = new Vue({
       var dashBoard = this.$children[0];
       var viewPanel = dashBoard.$refs['ms-live-tab'];
       viewPanel.addActionToTab(data);
+    },
+    addNewTab: function addNewTab(data) {
+      var dashBoard = this.$children[0];
+      var viewPanel = dashBoard.$refs['ms-live-tab'];
+      viewPanel.addNewTabnUpdate(data);
     },
     getModBtn: function getModBtn(url) {
       // console.log(this);
