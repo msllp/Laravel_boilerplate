@@ -2326,10 +2326,7 @@ __webpack_require__.r(__webpack_exports__);
 
         if (Data.hasOwnProperty('errorsRaw')) {
           alert(Data.errorsRaw);
-        } //  console.log(Data);
-
-
-        if (Data.hasOwnProperty('errors')) {
+        } else {
           for (var inputName in Data) {
             var key = inputName.toString().toLowerCase(); //
             //console.log(inputName);
@@ -3584,28 +3581,45 @@ __webpack_require__.r(__webpack_exports__);
 
     },
     msActionClick: function msActionClick(ac, row) {
-      if (ac.hasOwnProperty('msLinkKey')) {
-        var newUrl = ac.url + "/" + row[ac.msLinkKey];
-        var data = {
-          tabCode: '02',
-          modCode: "MAS",
-          modDView: this.forNice(ac.text + " " + row[ac.msLinkText]),
-          modUrl: newUrl,
-          data: ""
-        };
-        window.vueApp.addNewTab(data);
-      } else {
-        var data = {
-          tabCode: '01',
-          modCode: "MAS",
-          modDView: this.forNice(ac.text),
-          modUrl: ac.url,
-          data: ""
-        };
-        window.vueApp.updateTab(data);
+      var mValid = 1; //   console.log(ac);
+
+      if (ac.hasOwnProperty('doubleConfirm') && ac.hasOwnProperty('doubleConfirmText') && ac.doubleConfirm == 'true' && ac.hasOwnProperty('msLinkText') && row.hasOwnProperty(ac.msLinkText)) {
+        mValid = 0;
+
+        if (confirm(ac.doubleConfirmText + " " + row[ac.msLinkText])) {
+          mValid = 1;
+        }
       }
 
-      console.log(data); //     window.vueApp.updateTab(data);
+      if (mValid) {
+        if (ac.hasOwnProperty('msLinkKey')) {
+          var newUrl = ac.url + "/" + row[ac.msLinkKey];
+          var data = {
+            tabCode: '02',
+            modCode: "MAS",
+            modDView: this.forNice(ac.text + " " + row[ac.msLinkText]),
+            modUrl: newUrl,
+            data: ""
+          };
+
+          if (ac.hasOwnProperty('ownTab') && ac.ownTab == 'true') {
+            window.vueApp.updateTab(data);
+          } else {
+            window.vueApp.addNewTab(data);
+          }
+        } else {
+          var data = {
+            tabCode: '01',
+            modCode: "MAS",
+            modDView: this.forNice(ac.text),
+            modUrl: ac.url,
+            data: ""
+          };
+          window.vueApp.updateTab(data);
+        }
+      } // console.log(data);
+      //     window.vueApp.updateTab(data);
+
     },
     getPage: function getPage(page) {
       var data = [{
@@ -4172,15 +4186,13 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       //delete this.allTab[this.currentTab];
-      // console.log(data);
       if (this.allTab.length < 1) {
         data.tabCode = this.ms_rand(5, 1);
         data.modCode = "MAS";
         this.addNewTab(data);
       } else {
         this.allTab[this.currentTab].modDView = data.modDView;
-      } //Handler[callBack](data);
-
+      }
 
       this.$nextTick(function () {
         var Handler = _this2.$refs['tab_' + _this2.currentTab][0];
@@ -4211,6 +4223,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _C_MS__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./C/MS */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/MS.js");
 /* harmony import */ var _C_msForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./C/msForm */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msForm.vue");
 /* harmony import */ var E_MS_Master_Projects_FrameworkPHP_gst_invoice_Master_MS_B_M_DCM_V_Vue_dockerMasterDashboard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MS/B/M/DCM/V/Vue/dockerMasterDashboard */ "./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 //
 //
 //
@@ -4264,25 +4278,31 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     updateTab: function updateTab(data) {
       // this.getGetRaw(data.modUrl,this,'setHtml');
-      this.currentData = data;
       this.getGetLink(data.modUrl, this);
     },
+    setTabData: function setTabData(data) {
+      this.getGetLink(data.ms.nextData.modUrl, this);
+    },
     setHtml: function setHtml(data) {
-      this.data.push(data); //this.currentData=data;
-      // this.liveComponent="<div id='mswindow"+this.index+"' >"+ data +"</div>";
-
-      this.liveComponent = new Vue({
-        name: 'mslivetab',
-        data: {
-          message: '{}'
-        },
-        el: '#mswindow' + this.index,
-        template: "<div id='mswindow" + this.index + "' >" + data + "</div>",
-        //     sharedState: store.state,
-        mounted: function mounted() {//      console.log(this.$root.$data);
-        }
-      }); //  document.getElementsByTagName('#mswindow_maaster'+this.index)[0].setAttribute("id", "democlass");
+      if (_typeof(data) == 'object') {
+        this.getGetLink(data.ms.nextData.modUrl, this, 'setTabData');
+      } else {
+        this.currentData = data;
+        this.data.push(data);
+        this.liveComponent = new Vue({
+          name: 'mslivetab',
+          data: {
+            message: '{}'
+          },
+          el: '#mswindow' + this.index,
+          template: "<div id='mswindow" + this.index + "' >" + data + "</div>",
+          //     sharedState: store.state,
+          mounted: function mounted() {//      console.log(this.$root.$data);
+          }
+        });
+      } //  document.getElementsByTagName('#mswindow_maaster'+this.index)[0].setAttribute("id", "democlass");
       // console.log(data);
+
     },
     setMsError: function setMsError(data) {
       this.data.push(data); //       console.log(data);
@@ -44240,7 +44260,7 @@ var render = function() {
                           return _c(
                             "span",
                             {
-                              staticClass: "hover:border",
+                              staticClass: "hover:border px-2 py-1",
                               class: ac.color,
                               attrs: { title: ac.text },
                               on: {
@@ -57056,33 +57076,13 @@ __webpack_require__.r(__webpack_exports__);
       return re.test(str);
     },
     getGetRaw: function getGetRaw(url, classFor, callBack) {
-      //   url=url+"?dataLink=true"
-      var returnX = 'ok'; // let re= axios.get(url)
-      //     .then(
-      //         function(response){
-      //             var Handler=classFor;
-      //            // classFor.[callBack](response.data);
-      //             Handler[callBack](response.data);
-      //             returnX=response.data;
-      //         }
-      //     )
-      //     .catch(function (error) {
-      //         // handle error
-      //         returnX=error.response.data;
-      //         //  console.log(error.response.data);
-      //     })
-      //     .finally( response => {
-      //     });
-      //console.log(url);
-
+      var returnX = 'ok';
       fetch(url).then(function (response) {
-        return response.json().then(function (data) {
-          //  console.log(data)
-          var Handler = classFor;
-          Handler[callBack](data); // classFor.returnX=data;
-
-          return data;
-        });
+        console.log(response);
+        return response.json();
+      }).then(function (data) {
+        var Handler = classFor;
+        Handler[callBack](data);
       })["catch"](function (error) {
         console.log(error);
       });
@@ -57137,12 +57137,13 @@ __webpack_require__.r(__webpack_exports__);
         //console.log(this.Freturn);
       })["catch"](function (error) {
         // console.log(error.response.data);
-        outData = error.response.data.errors;
+        var outData = error.response.data.errors;
         console.log(error.response.data);
 
         if (error.response.data.hasOwnProperty('errorsRaw')) {
           classFor.setAllMsError(error.response.data);
         } else {
+          console.log(outData);
           classFor.setAllMsError(outData);
         }
 
