@@ -1963,6 +1963,76 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "mscalc"
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msForm.vue?vue&type=script&lang=js&":
 /*!**************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msForm.vue?vue&type=script&lang=js& ***!
@@ -1973,6 +2043,94 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MS__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MS */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/MS.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2193,7 +2351,7 @@ __webpack_require__.r(__webpack_exports__);
     msNoClick: function msNoClick() {},
     showCollapse: function showCollapse(id, event) {
       // this.msclass +=' show';
-      if (this.checkLastActive()) this.msCurrentTab = id; // console.log(section.id);
+      if (true) this.msCurrentTab = id; // console.log(section.id);
       //$("#"+id).collapse('toggle');
       // event.target.tagName
       //console.log(this.section.class);
@@ -2231,11 +2389,15 @@ __webpack_require__.r(__webpack_exports__);
       } //console.log(this.msData.formData[id]);
 
     },
-    removeInputGroup: function removeInputGroup(id, rootId) {
+    removeInputGroup: function removeInputGroup(id, rootId, rid) {
       //console.log(this.msCount.hasOwnProperty(id))
-      if (this.checkLastActive()) {
+      // console.log("ID: "+id+" Rootid: "+rootId);
+      if (confirm('Are you sure you want to remove Input group ?')) {
         if (this.msCount.hasOwnProperty(rootId) && this.msCount[rootId] > 1) {
-          //    console.log(id);
+          for (var row in this.msFormData[id].inputs) {
+            this.removeDataFromDynamicWithGroup(rid, this.msFormData[id].inputs[row].name);
+          }
+
           delete this.msFormData.splice(id, 1);
           this.msCount[rootId]--;
         }
@@ -2244,11 +2406,14 @@ __webpack_require__.r(__webpack_exports__);
     },
     checkLastActive: function checkLastActive() {
       var d = new Date();
-      var n = d.getTime(); //  console.log(this.get_time_diff(this.mslastActive));
+      var n = d.getTime();
+      console.log(this.get_time_diff(this.mslastActive));
 
-      if (this.get_time_diff(this.mslastActive) > 250) {
+      if (this.get_time_diff(this.mslastActive) > 150) {
         this.mslastActive = n;
         return true;
+      } else {
+        alert('You clicking so fast please wait for our server to respond.');
       }
 
       this.mslastActive = n;
@@ -2269,11 +2434,12 @@ __webpack_require__.r(__webpack_exports__);
 
       for (var propertyName in this.msFormDataFinal) {
         if (this.msFormDataFinal[propertyName] instanceof Object) {
-          var d = this.$refs[propertyName]; //   console.log(d.msValue);
+          var d = this.$refs[propertyName]; //console.log(d.msValue);
 
           for (var file in this.msFormDataFinal[propertyName]) {
-            formData.append(propertyName + "[" + file + "]", this.msFormDataFinal[propertyName][file]);
-          }
+            formData.append(propertyName + "[" + file + "]", this.msFormDataFinal[propertyName][file]); //console.log(file)
+          } // formData.append(propertyName,this.msFormDataFinal[propertyName]);
+
         } else {
           formData.append(propertyName, this.msFormDataFinal[propertyName]);
         } // propertyName is what you want
@@ -2288,23 +2454,45 @@ __webpack_require__.r(__webpack_exports__);
       //console.log(data.nextData);
       window.vueApp.updateTab(data.nextData);
     },
+    setInputDataFromDynamic: function setInputDataFromDynamic(name, index, value) {
+      if (!this.msFormDataFinal.hasOwnProperty(name)) this.msFormDataFinal[name] = [];
+      if (!this.in_array(value, this.msFormDataFinal[name])) this.msFormDataFinal[name].push(value);
+      return true;
+    },
+    removeDataFromDynamicWithGroup: function removeDataFromDynamicWithGroup(id, name) {
+      //   if(this.msFormDataFinal.hasOwnProperty(name) && this.msFormDataFinal[name].hasOwnProperty(id))console.log(id);     console.log(this.msFormDataFinal[name][id]);
+      if (this.msFormDataFinal.hasOwnProperty(name) && this.msFormDataFinal[name].hasOwnProperty(id)) {
+        delete this.msFormDataFinal[name][id];
+      } else {
+        console.log(id);
+        console.log(this.msFormDataFinal);
+        console.log(name);
+      }
+    },
+    removeDataFromDynamic: function removeDataFromDynamic(name, index, section, value) {
+      //  console.log(this.msFormDataFinal[name].findIndex(key=>key==value));
+      delete this.msFormData[section].msDyData[name].msdata.splice(this.msFormData[section].inputs[index].verifyBy.msdata.findIndex(function (data) {
+        return true;
+      }), 1); // console.log(this.msFormDataFinal[name].findIndex(key=>key==value))
+
+      delete this.msFormDataFinal[name].splice(index, 1); //  delete this.msFormDataFinal[name][index];
+    },
     setInputData: function setInputData(name, value) {
-      var name2 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "test";
+      var multi = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+      var index = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
 
       //console.log(name2 != "");
-      // console.log(name2);
-      if (name2 != "test") {
-        if (!(this.msFormDataFinal[name] instanceof Object)) {
-          this.msFormDataFinal[name] = {};
-        } //  console.log("226");
+      /// console.log(multi);
+      if (false) {} else {
+        if (multi) {
+          //TODO: Make array for thing
+          if (!this.msFormDataFinal.hasOwnProperty(name)) this.msFormDataFinal[name] = {}; //   delete this.msFormDataFinal[name].splice(index, 1);
+          //this.setInputDataFromDynamic(name,index,value);
 
-
-        if (this.msFormDataFinal.hasOwnProperty(name) && this.msFormDataFinal[name].hasOwnProperty(name2)) {// console.log(name);
+          this.msFormDataFinal[name][index] = value;
         } else {
-          this.msFormDataFinal[name][name2] = value;
+          this.msFormDataFinal[name] = value;
         }
-      } else {
-        this.msFormDataFinal[name] = value;
       } //
       //console.log(this.msFormDataFinal[name].mslength);
 
@@ -2615,12 +2803,13 @@ __webpack_require__.r(__webpack_exports__);
 
     if (this.msData.hasOwnProperty('name')) {
       if (this.msData.hasOwnProperty('inputMultiple')) {
-        this.inputName = this.msData.name + "[" + this.msGroupIndex + "]";
+        this.inputName = this.msData.name; //this.inputName=this.msData.name+"["+this.msGroupIndex+"]";
       } else {
         this.inputName = this.msData.name;
       }
     }
 
+    if (this.msData.hasOwnProperty('inputMultiple')) this.inputMultiple = this.msData.inputMultiple;
     if (this.msData.hasOwnProperty('inputInfo')) this.inputInfo = this.msData.inputInfo;
     if (this.msData.hasOwnProperty('vName')) this.inputVname = this.msData.vName; // if(!this.msData.hasOwnProperty('vName'))this.inputVname=this.msData.name;
 
@@ -2631,16 +2820,15 @@ __webpack_require__.r(__webpack_exports__);
     if (this.msData.hasOwnProperty('required')) this.inputRequired = this.msData.required;
 
     if (this.msData.hasOwnProperty('verifyBy')) {
-      if (this.msData.verifyBy.hasOwnProperty('msdata')) this.inputAuto = this.msData.verifyBy.msdata;
-      if (this.msData.verifyBy.hasOwnProperty('value')) this.dValue = this.msData.verifyBy.value;
+      if (this.msData.verifyBy.hasOwnProperty('msdata')) this.inputAuto = this.msData.verifyBy.msdata; //    if(this.msData.verifyBy.hasOwnProperty('value'))this.dValue=this.msData.verifyBy.value;
+
       if (this.msData.verifyBy.hasOwnProperty('text')) this.dText = this.msData.verifyBy.text;
+      if (this.msData.verifyBy.hasOwnProperty('value')) this.dValue = this.msData.verifyBy.value;
     }
 
     if (this.msData.hasOwnProperty('value')) {
       this.dValue = this.msData.value;
     }
-
-    if (this.msData.hasOwnProperty('inputMultiple')) this.inputMultiple = this.msData.inputMultiple;
 
     if (this.msData.hasOwnProperty('validation')) {
       var str = this.msData.validation;
@@ -2666,7 +2854,7 @@ __webpack_require__.r(__webpack_exports__);
         break;
 
       default:
-        if (this.hasOwnProperty('dValue')) this.msValue = this.dValue;
+        if (this.hasOwnProperty('dValue') && !this.inputMultiple) this.msValue = this.dValue;
         break;
     } //   var finalArray= this.makeArrayForInput(this);
 
@@ -2688,9 +2876,10 @@ __webpack_require__.r(__webpack_exports__);
       var localISOTime = new Date(Date.now() - tzoffset).toISOString().slice(0, 10); //   console.log((new Date(Date.now() - tzoffset)).getTimezoneOffset());
 
       this.msValue = localISOTime;
-    }
+    } //    if(this.msData.hasOwnProperty('inputMultiple')) return this.$parent.setInputData(this.inputName,val,this.msData.inputMultiple);
 
-    this.$parent.setInputData(this.inputName, this.msValue);
+
+    if (!this.inputMultiple) this.$parent.setInputData(this.inputName, this.msValue, this.inputMultiple, this.msGroupIndex);
     if (window.innerWidth < 800) this.onMobile = true; //  console.log(this.inputAuto);
     // this.inputAuto.push({
     //         dText: 'hello',
@@ -2704,8 +2893,8 @@ __webpack_require__.r(__webpack_exports__);
       this.msValid = "is-invalid";
     },
     setErrorZero: function setErrorZero() {
-      this.msValid = "is-valid";
-      this.$parent["in"];
+      this.msValid = "is-valid"; //this.$parent.in
+
       this.inputError = new Object();
     },
     getValue: function getValue() {
@@ -2747,6 +2936,7 @@ __webpack_require__.r(__webpack_exports__);
     setFinalInputFromAuto: function setFinalInputFromAuto(value) {
       this.msFocus = false;
       this.msValue = value;
+      this.$parent.setInputData(this.inputName, value, this.inputMultiple, this.msGroupIndex);
     },
     inpututProcess: function inpututProcess(val, oldVal) {
       if (this.inputRequired) {
@@ -2804,9 +2994,10 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         this.msValid = " ";
       } //  console.log(val);
+      //  if(this.msData.hasOwnProperty('inputMultiple')) return this.$parent.setInputData(this.inputName,val,this.msData.inputMultiple,this.msData.msGroupIndex);
 
 
-      this.$parent.setInputData(this.inputName, val);
+      this.$parent.setInputData(this.inputName, val, this.inputMultiple, this.msGroupIndex);
     },
     visiblePassowrd: function visiblePassowrd() {
       if (this.inputPasswordVisible) {
@@ -2876,8 +3067,18 @@ __webpack_require__.r(__webpack_exports__);
         case 'text':
           if (this.inputAuto.length > 0) {
             var msData1 = this.inputAuto;
-            var msThis = this;
-            console.log(msData1.filter(function (ele) {}));
+            var msThis = this; // console.log(
+            //
+            //     msData1.filter(function (ele) {
+            //
+            //
+            //
+            //
+            //     })
+            //
+            //
+            //
+            //                        );
           }
 
           break;
@@ -3149,6 +3350,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
  // import msMenubar from './msMenubar';
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3171,6 +3385,9 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
+    onCalac: function onCalac(event, kCode) {
+      window.vueApp.msShortCut(event, kCode);
+    },
     setNavOn: function setNavOn() {
       var show = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
       var event = arguments.length > 1 ? arguments[1] : undefined;
@@ -3586,7 +3803,7 @@ __webpack_require__.r(__webpack_exports__);
       if (ac.hasOwnProperty('doubleConfirm') && ac.hasOwnProperty('doubleConfirmText') && ac.doubleConfirm == 'true' && ac.hasOwnProperty('msLinkText') && row.hasOwnProperty(ac.msLinkText)) {
         mValid = 0;
 
-        if (confirm(ac.doubleConfirmText + " " + row[ac.msLinkText])) {
+        if (confirm(ac.doubleConfirmText + " " + row[ac.msLinkText] + " ?")) {
           mValid = 1;
         }
       }
@@ -3753,8 +3970,98 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "msLoginPage"
+  name: "msLoginPage",
+  props: {
+    'msData': {
+      type: Object,
+      required: true,
+      "default": {}
+    }
+  },
+  data: function data() {
+    return {
+      msPageData: {} //  loader:null
+
+    };
+  },
+  beforeMount: function beforeMount() {
+    var loader = [{
+      propName: 'ClientIcon',
+      setPropName: 'cIcon'
+    }, {
+      propName: 'MasterIcon',
+      setPropName: 'mIcon'
+    }, {
+      propName: 'formData',
+      setPropName: 'fData',
+      defualt: {}
+    }, {
+      propName: 'loginPostUrl',
+      setPropName: 'pUrl'
+    }, {
+      propName: 'CheckUsernamePostUrl',
+      setPropName: 'cuUrl'
+    }, {
+      propName: 'bgImg',
+      setPropName: 'bgImg'
+    }]; //  this.loader=loader;
+
+    var mThis = this;
+    loader.forEach(function (load) {
+      //   console.log(load);
+      if (this.msData.hasOwnProperty(load.propName)) {
+        this.msPageData[load.setPropName] = this.msData[load.propName];
+      } else {
+        if (load.hasOwnProperty('defualt')) {
+          this.msPageData[load.setPropName] = load.defualt;
+        } else {
+          this.msPageData[load.setPropName] = null;
+        }
+      }
+    }, this); //for (load ,key in loader)
+
+    if (this.msData.hasOwnProperty('ClientIcon')) this.msPageData.cIcon = this.msData.ClientIcon;
+  }
 });
 
 /***/ }),
@@ -4204,6 +4511,10 @@ __webpack_require__.r(__webpack_exports__);
       //  var msHandle2=msHandle[0];
       // console.log(msHandle2);
       //   this.$refs[this.currentTab][0].updateTab(data);
+    },
+    updateTabFromOthe: function updateTabFromOthe(data) {
+      //console.log(data);
+      this.allTab[this.currentTab].modDView = data.modDView;
     }
   },
   watch: {}
@@ -4278,15 +4589,18 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   methods: {
     updateTab: function updateTab(data) {
       // this.getGetRaw(data.modUrl,this,'setHtml');
+      // console.log(data);
       this.getGetLink(data.modUrl, this);
     },
     setTabData: function setTabData(data) {
       this.getGetLink(data.ms.nextData.modUrl, this);
     },
     setHtml: function setHtml(data) {
-      if (_typeof(data) == 'object') {
-        this.getGetLink(data.ms.nextData.modUrl, this, 'setTabData');
+      if (_typeof(data) == 'object' && data.hasOwnProperty('ms') && _typeof(data.ms) == 'object' && data.ms.hasOwnProperty('nextData') && _typeof(data.ms.nextData) == 'object' && data.ms.nextData.hasOwnProperty('modUrl')) {
+        this.$parent.updateTabFromOthe(data.ms.nextData);
+        this.getGetLink(data.ms.nextData.modUrl, this);
       } else {
+        // console.log(data);
         this.currentData = data;
         this.data.push(data);
         this.liveComponent = new Vue({
@@ -8757,6 +9071,25 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
 }));
 //# sourceMappingURL=bootstrap.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=style&index=0&id=4e27df16&scoped=true&lang=css&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=style&index=0&id=4e27df16&scoped=true&lang=css& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".calculator[data-v-4e27df16] {\n  width: 100%;\n  height: 100%;\n  min-height: 600px;\n  background-image: linear-gradient(to bottom, #038FA1, #023E6E);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 2501;\n}\n.calc-body[data-v-4e27df16] {\n  width: 85%;\n  max-width: 250px;\n  height: 375px;\n  background-image: linear-gradient(to bottom, #004D59, #012024);\n  padding: 10px;\n  border-radius: 10px;\n  box-shadow: 0 25px 35px -15px rgba(3, 28, 31, .85);\n  /*flex*/\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  align-items: stretch;\n  align-content: space-between;\n}\n.calc-body-screen[data-v-4e27df16] {\n  flex: 1 0 100%;\n  height: 24%;\n  color: #A8EEFF;\n  box-shadow: inset 0 0 0 1px #225861;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  text-align: right;\n}\n.calc-body-screen .q[data-v-4e27df16] {\n  width: 100%;\n  line-height: 40px;\n  padding: 0 5%;\n  box-sizing: border-box;\n  font-size: 15px;\n}\n.calc-body-screen .a[data-v-4e27df16] {\n  line-height: 50px;\n  width: 100%;\n  padding: 0 5%;\n  box-sizing: border-box;\n  font-size: 38px;\n}\n.calc-body-btn[data-v-4e27df16] {\n  cursor: pointer;\n  opacity: .6;\n  font-size: 12px;\n  flex: 0 1 18%;\n  height: 11%;\n  color: #A8EEFF;\n  box-shadow: inset 0 0 0 1px #225861;\n  text-align: center;\n  border-radius: 5px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.calc-body-btn[data-v-4e27df16]:hover {\n  background-color: #225861;\n}\n.calc-body-btn.qu[data-v-4e27df16] {\n  height: 23%;\n}\n.left[data-v-4e27df16] {\n  display: flex;\n  flex: 0 0 79.5%;\n  height: 23%;\n  align-content: space-between;\n  justify-content: space-between;\n  flex-wrap: wrap;\n}\n.left .calc-body-btn[data-v-4e27df16] {\n  height: 46%;\n  flex: 0 0 23%;\n}\n.left .calc-body-btn.zero[data-v-4e27df16] {\n  flex: 0 1 48.5%;\n}\n", ""]);
+
+// exports
 
 
 /***/ }),
@@ -41310,6 +41643,36 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=style&index=0&id=4e27df16&scoped=true&lang=css&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=style&index=0&id=4e27df16&scoped=true&lang=css& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../../../../../../node_modules/css-loader??ref--6-1!../../../../../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../../../../../node_modules/postcss-loader/src??ref--6-2!../../../../../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./msCalc.vue?vue&type=style&index=0&id=4e27df16&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=style&index=0&id=4e27df16&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msForm.vue?vue&type=style&index=0&id=001e5938&scoped=true&lang=css&":
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msForm.vue?vue&type=style&index=0&id=001e5938&scoped=true&lang=css& ***!
@@ -42008,6 +42371,179 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=template&id=4e27df16&scoped=true&":
+/*!******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=template&id=4e27df16&scoped=true& ***!
+  \******************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "ms-clac" }, [
+      _c("div", { staticClass: "calculator" }, [
+        _c("div", { staticClass: "calc-body" }, [
+          _c("div", { staticClass: "calc-body-screen" }, [
+            _c("div", { staticClass: "q" }, [
+              _c("span", { attrs: { id: "inputtile" } })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "a" }, [
+              _c("span", { attrs: { id: "answertile" } })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "calc-body-btn" }, [
+            _c("span", [_vm._v("MC")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "calc-body-btn" }, [
+            _c("span", [_vm._v("MR")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "calc-body-btn" }, [
+            _c("span", [_vm._v("MS")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "calc-body-btn" }, [
+            _c("span", [_vm._v("M+")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "calc-body-btn" }, [
+            _c("span", [_vm._v("M-")])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "calc-body-btn", attrs: { id: "btn_back" } },
+            [_c("span", [_vm._v("←")])]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "calc-body-btn", attrs: { id: "btn_clear_all" } },
+            [_c("span", [_vm._v("CE")])]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "calc-body-btn", attrs: { id: "btn_clear" } },
+            [_c("span", [_vm._v("C")])]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "calc-body-btn", attrs: { id: "btn_rvnag" } },
+            [_c("span", [_vm._v("±")])]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "calc-body-btn", attrs: { id: "btn_sqrt" } },
+            [_c("span", [_vm._v("√")])]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "calc-body-btn btnnum" }, [
+            _c("span", [_vm._v("7")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "calc-body-btn btnnum" }, [
+            _c("span", [_vm._v("8")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "calc-body-btn btnnum" }, [
+            _c("span", [_vm._v("9")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "calc-body-btn btnnum" }, [
+            _c("span", [_vm._v("/")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "calc-body-btn btnnum" }, [
+            _c("span", [_vm._v("%")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "calc-body-btn btnnum" }, [
+            _c("span", [_vm._v("4")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "calc-body-btn btnnum" }, [
+            _c("span", [_vm._v("5")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "calc-body-btn btnnum" }, [
+            _c("span", [_vm._v("6")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "calc-body-btn btnnum" }, [
+            _c("span", [_vm._v("＊")])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "calc-body-btn", attrs: { id: "btn_reverse" } },
+            [_c("span", [_vm._v("1/x")])]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "left" }, [
+            _c("div", { staticClass: "calc-body-btn btnnum" }, [
+              _c("span", [_vm._v("1")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "calc-body-btn btnnum" }, [
+              _c("span", [_vm._v("2")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "calc-body-btn btnnum" }, [
+              _c("span", [_vm._v("3")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "calc-body-btn btnnum" }, [
+              _c("span", [_vm._v("-")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "calc-body-btn zero btnnum" }, [
+              _c("span", [_vm._v("0")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "calc-body-btn btnnum" }, [
+              _c("span", [_vm._v(".")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "calc-body-btn btnnum" }, [
+              _c("span", [_vm._v("+")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "calc-body-btn qu", attrs: { id: "btn_cal_all" } },
+            [_c("span", [_vm._v("=")])]
+          )
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msForm.vue?vue&type=template&id=001e5938&scoped=true&":
 /*!******************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msForm.vue?vue&type=template&id=001e5938&scoped=true& ***!
@@ -42038,7 +42574,9 @@ var render = function() {
                   "fab fa-wpforms pr-2 font-black-500 hover:font-bold"
               }),
               _vm._v(
-                "\n            " + _vm._s(_vm.msData.formTitle) + "\n        "
+                "\n                " +
+                  _vm._s(_vm.msData.formTitle) +
+                  "\n            "
               )
             ]
           )
@@ -42050,157 +42588,485 @@ var render = function() {
       { staticClass: "block " },
       [
         _vm._l(_vm.msFormData, function(section, id, key) {
-          return _c(
-            "div",
-            {
-              staticClass: "w-full rounded  border-t shadow-lg mb-4 bg-gray-100"
-            },
-            [
-              _c(
+          return !(section.hasOwnProperty("withData") && section.withData)
+            ? _c(
                 "div",
                 {
-                  staticClass: " w-full px-3 py-2 cursor-pointer mb-2 border-b",
-                  class: { show: id === 0 },
-                  attrs: {
-                    id: section.id + "_target",
-                    "aria-labelledby": section.id
-                  }
+                  staticClass:
+                    "w-full rounded  border-t shadow-lg mb-4 bg-gray-100"
                 },
                 [
                   _c(
                     "div",
                     {
                       staticClass:
-                        "font-bold text-md border-b pb-2  flex flex-wrap"
+                        " w-full px-3 py-2 cursor-pointer mb-2 border-b",
+                      class: { show: id === 0 },
+                      attrs: {
+                        id: section.id + "_target",
+                        "aria-labelledby": section.id
+                      }
                     },
                     [
                       _c(
                         "div",
                         {
-                          staticClass: "expand-btn flex",
+                          staticClass:
+                            "font-bold text-md border-b p-2  flex flex-wrap",
                           class: {
-                            "bg-gray-200": !_vm.checkImHiddenOrNot(section),
-                            "bg-gray-500": _vm.checkImHiddenOrNot(section)
-                          },
-                          style: {
-                            opacity: _vm.checkImHiddenOrNot(section)
-                          },
-                          on: {
-                            click: function($event) {
-                              $event.preventDefault()
-                              return _vm.showCollapse(section.id)
-                            }
+                            "bg-blue-200 ": !_vm.checkImHiddenOrNot(section)
                           }
                         },
                         [
-                          _c("i", {
-                            class: {
-                              "fas fa-search-minus ": !_vm.checkImHiddenOrNot(
-                                section
-                              ),
-                              "fas fa-search-plus ": _vm.checkImHiddenOrNot(
-                                section
-                              )
-                            }
-                          })
-                        ]
-                      ),
-                      _vm._v(
-                        "\n\n\n                " +
-                          _vm._s(section.gruoupHeading) +
-                          "\n\n                "
-                      ),
-                      section.groupDynamic
-                        ? _c(
+                          _c(
                             "div",
                             {
-                              staticClass:
-                                "flex px-3 border ml-3 hover:bg-white hover:shadow"
+                              staticClass: "expand-btn flex",
+                              class: {
+                                "bg-gray-200": !_vm.checkImHiddenOrNot(section),
+                                "bg-gray-500": _vm.checkImHiddenOrNot(section)
+                              },
+                              style: {
+                                opacity: _vm.checkImHiddenOrNot(section)
+                              },
+                              on: {
+                                click: function($event) {
+                                  $event.preventDefault()
+                                  return _vm.showCollapse(section.id)
+                                }
+                              }
                             },
                             [
-                              _vm.checkMutlipleFirst(section)
-                                ? _c(
-                                    "div",
-                                    {
-                                      staticClass: "text-green-500",
-                                      on: {
-                                        click: function($event) {
-                                          $event.preventDefault()
-                                          return _vm.addInputGroup(id)
-                                        }
-                                      }
-                                    },
-                                    [
-                                      _c("i", {
-                                        staticClass: "fa fa-times-circle ",
-                                        staticStyle: {
-                                          transform: "rotate(45deg)"
-                                        }
-                                      })
-                                    ]
+                              _c("i", {
+                                class: {
+                                  "fas fa-search-minus ": !_vm.checkImHiddenOrNot(
+                                    section
+                                  ),
+                                  "fas fa-search-plus ": _vm.checkImHiddenOrNot(
+                                    section
                                   )
-                                : _vm._e(),
-                              _vm._v(" "),
-                              _vm.checkMutlipleSub(section)
-                                ? _c(
-                                    "div",
-                                    {
-                                      staticClass: "text-red-500",
-                                      on: {
-                                        click: function($event) {
-                                          $event.preventDefault()
-                                          return _vm.removeInputGroup(
-                                            id,
-                                            section.rootId
-                                          )
-                                        }
-                                      }
-                                    },
-                                    [
-                                      _c("i", {
-                                        staticClass: "fa fa-times-circle "
-                                      })
-                                    ]
-                                  )
-                                : _vm._e()
+                                }
+                              })
                             ]
-                          )
-                        : _vm._e()
+                          ),
+                          _vm._v(" "),
+                          _c("span", {}, [
+                            _vm._v(_vm._s(section.gruoupHeading))
+                          ]),
+                          _vm._v(" "),
+                          section.groupDynamic
+                            ? _c("div", { staticClass: "flex px-3  ml-3 " }, [
+                                _vm.checkMutlipleFirst(section)
+                                  ? _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "text-green-500 bg-gray-200 border hover:border-green-500 hover:shadow px-2 mx-1 hover:bg-gray-300 ",
+                                        on: {
+                                          click: function($event) {
+                                            $event.preventDefault()
+                                            return _vm.addInputGroup(id)
+                                          }
+                                        }
+                                      },
+                                      [
+                                        _c("i", {
+                                          staticClass: "fa fa-times-circle ",
+                                          staticStyle: {
+                                            transform: "rotate(45deg)"
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _vm.checkMutlipleSub(section)
+                                  ? _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "text-red-500 bg-gray-200 border hover:border-red-500  hover:shadow px-2 mx-1 hover:bg-gray-300 ",
+                                        on: {
+                                          click: function($event) {
+                                            $event.preventDefault()
+                                            return _vm.removeInputGroup(
+                                              id,
+                                              section.rootId,
+                                              section.id
+                                            )
+                                          }
+                                        }
+                                      },
+                                      [
+                                        _c("i", {
+                                          staticClass: "fa fa-times-circle "
+                                        })
+                                      ]
+                                    )
+                                  : _vm._e()
+                              ])
+                            : _vm._e()
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "text-gray-700 text-base flex flex-wrap",
+                            class: {
+                              hidden: _vm.checkImHiddenOrNot(section)
+                              // 'flex':onMobile,
+                              // 'flex':!onMobile
+                            }
+                          },
+                          _vm._l(section.inputs, function(inputRaw, id2) {
+                            return !(
+                              section.hasOwnProperty("withData") &&
+                              section.withData
+                            )
+                              ? _c("msinput", {
+                                  key: inputRaw.name.toLowerCase(),
+                                  ref: inputRaw.name.toLowerCase(),
+                                  refInFor: true,
+                                  staticClass: "w-1/2",
+                                  class: section.inputs[id2].inputSize,
+                                  attrs: {
+                                    "ms-data": inputRaw,
+                                    "ms-group-index": id,
+                                    "ms-input-index": id2
+                                  }
+                                })
+                              : _vm._l(section.inputs, function(
+                                  inputRaw,
+                                  id2,
+                                  key
+                                ) {
+                                  return _c("msinput", {
+                                    key: inputRaw.name.toLowerCase(),
+                                    ref: inputRaw.name.toLowerCase(),
+                                    refInFor: true,
+                                    staticClass: "w-1/2",
+                                    class: section.inputs[id2].inputSize,
+                                    attrs: {
+                                      "ms-data": inputRaw,
+                                      "ms-group-index": id,
+                                      "ms-input-index": Object.keys(
+                                        section.inputs[id2].inputs
+                                      ).find(function(key) {
+                                        return section.inputs[id2].name == id2
+                                      })
+                                    }
+                                  })
+                                })
+                          }),
+                          1
+                        )
+                      ])
                     ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", [
-                    _c(
-                      "div",
-                      {
-                        staticClass: "text-gray-700 text-base flex flex-wrap",
-                        class: {
-                          hidden: _vm.checkImHiddenOrNot(section)
-                          // 'flex':onMobile,
-                          // 'flex':!onMobile
-                        }
-                      },
-                      _vm._l(section.inputs, function(inputRaw, id2) {
-                        return _c("msinput", {
-                          key: inputRaw.name.toLowerCase(),
-                          ref: inputRaw.name.toLowerCase(),
-                          refInFor: true,
-                          staticClass: "w-1/2",
-                          class: section.inputs[id2].inputSize,
-                          attrs: {
-                            "ms-data": inputRaw,
-                            "ms-group-index": id,
-                            "ms-input-index": id2
-                          }
-                        })
-                      }),
-                      1
-                    )
-                  ])
+                  )
                 ]
               )
-            ]
-          )
+            : section.hasOwnProperty("withData") && section.withData
+            ? _c(
+                "div",
+                {
+                  staticClass:
+                    "w-full rounded  border-t shadow-lg mb-4 bg-gray-100"
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        " w-full px-3 py-2 cursor-pointer mb-2 border-b",
+                      class: { show: id === 0 },
+                      attrs: {
+                        id: section.id + "_target",
+                        "aria-labelledby": section.id
+                      }
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "font-bold text-md border-b p-2  flex flex-wrap",
+                          class: {
+                            "bg-blue-200 ": !_vm.checkImHiddenOrNot(section)
+                          }
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass: "expand-btn flex",
+                              class: {
+                                "bg-gray-200": !_vm.checkImHiddenOrNot(section),
+                                "bg-gray-500": _vm.checkImHiddenOrNot(section)
+                              },
+                              style: {
+                                opacity: _vm.checkImHiddenOrNot(section)
+                              },
+                              on: {
+                                click: function($event) {
+                                  $event.preventDefault()
+                                  return _vm.showCollapse(section.id)
+                                }
+                              }
+                            },
+                            [
+                              _c("i", {
+                                class: {
+                                  "fas fa-search-minus ": !_vm.checkImHiddenOrNot(
+                                    section
+                                  ),
+                                  "fas fa-search-plus ": _vm.checkImHiddenOrNot(
+                                    section
+                                  )
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(
+                            "\n\n\n                    " +
+                              _vm._s(section.gruoupHeading) +
+                              "\n\n                    "
+                          ),
+                          section.groupDynamic
+                            ? _c("div", { staticClass: "flex px-3  ml-3 " }, [
+                                _vm.checkMutlipleFirst(section)
+                                  ? _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "text-green-500 bg-gray-200 border hover:border-green-500 hover:shadow px-2 mx-1 hover:bg-gray-300 ",
+                                        on: {
+                                          click: function($event) {
+                                            $event.preventDefault()
+                                            return _vm.addInputGroup(id)
+                                          }
+                                        }
+                                      },
+                                      [
+                                        _c("i", {
+                                          staticClass: "fa fa-times-circle ",
+                                          staticStyle: {
+                                            transform: "rotate(45deg)"
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _vm.checkMutlipleSub(section)
+                                  ? _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "text-red-500 bg-gray-200 border hover:border-red-500  hover:shadow px-2 mx-1 hover:bg-gray-300 ",
+                                        on: {
+                                          click: function($event) {
+                                            $event.preventDefault()
+                                            return _vm.removeInputGroup(
+                                              id,
+                                              section.rootId
+                                            )
+                                          }
+                                        }
+                                      },
+                                      [
+                                        _c("i", {
+                                          staticClass: "fa fa-times-circle "
+                                        })
+                                      ]
+                                    )
+                                  : _vm._e()
+                              ])
+                            : _vm._e()
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "text-gray-700 text-base flex flex-wrap",
+                            class: {
+                              hidden: _vm.checkImHiddenOrNot(section)
+                              // 'flex':onMobile,
+                              // 'flex':!onMobile
+                            }
+                          },
+                          _vm._l(section.msDyData, function(inputRaw, id2) {
+                            return _c("div", [
+                              _c(
+                                "table",
+                                {
+                                  staticClass:
+                                    "table-auto mt-2 w-full border border-blue-300"
+                                },
+                                [
+                                  _c(
+                                    "thead",
+                                    {
+                                      staticClass:
+                                        "border border-blue-500  border-b-2 "
+                                    },
+                                    [
+                                      _c(
+                                        "tr",
+                                        {
+                                          staticClass:
+                                            "ms-datatable-header-thead bg-blue-200"
+                                        },
+                                        [
+                                          _c(
+                                            "th",
+                                            {
+                                              staticClass:
+                                                "border border-blue-300 px-2 pt-2"
+                                            },
+                                            [
+                                              _vm._v(
+                                                "\n\n\n            " +
+                                                  _vm._s(
+                                                    section.inputs.find(
+                                                      function(key) {
+                                                        return key.name == id2
+                                                      }
+                                                    ).vName
+                                                  )
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "th",
+                                            {
+                                              staticClass:
+                                                "border border-blue-300 px-2 pt-2"
+                                            },
+                                            [_vm._v(" Action ")]
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  false
+                                    ? undefined
+                                    : _vm._e(),
+                                  _vm._v(" "),
+                                  _vm._l(inputRaw.msdata, function(
+                                    subRow,
+                                    id3
+                                  ) {
+                                    return true
+                                      ? _c(
+                                          "tbody",
+                                          _vm._l(
+                                            section.inputs
+                                              .find(function(key) {
+                                                return key.name == id2
+                                              })
+                                              .verifyBy.msdata.filter(function(
+                                                data
+                                              ) {
+                                                return (
+                                                  data[
+                                                    section.inputs.find(
+                                                      function(key) {
+                                                        return key.name == id2
+                                                      }
+                                                    ).verifyBy.value
+                                                  ] == subRow[inputRaw.text]
+                                                )
+                                              }),
+                                            function(foundRow) {
+                                              return _vm.setInputDataFromDynamic(
+                                                id2,
+                                                section.inputs.findIndex(
+                                                  function(key) {
+                                                    return key.name == id2
+                                                  }
+                                                ),
+                                                foundRow[
+                                                  section.inputs.find(function(
+                                                    key
+                                                  ) {
+                                                    return key.name == id2
+                                                  }).verifyBy.value
+                                                ]
+                                              )
+                                                ? _c("tr", [
+                                                    _c("td", [
+                                                      _vm._v(
+                                                        "\n                             " +
+                                                          _vm._s(
+                                                            foundRow[
+                                                              section.inputs.find(
+                                                                function(key) {
+                                                                  return (
+                                                                    key.name ==
+                                                                    id2
+                                                                  )
+                                                                }
+                                                              ).verifyBy.text
+                                                            ]
+                                                          ) +
+                                                          "\n                                    "
+                                                      )
+                                                    ]),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "td",
+                                                      {
+                                                        on: {
+                                                          click: function(
+                                                            $event
+                                                          ) {
+                                                            $event.preventDefault()
+                                                            _vm.removeDataFromDynamic(
+                                                              id2,
+                                                              section.inputs.findIndex(
+                                                                function(key) {
+                                                                  return (
+                                                                    key.name ==
+                                                                    id2
+                                                                  )
+                                                                }
+                                                              ),
+                                                              id
+                                                            )
+                                                          }
+                                                        }
+                                                      },
+                                                      [_vm._m(1, true)]
+                                                    )
+                                                  ])
+                                                : _vm._e()
+                                            }
+                                          ),
+                                          0
+                                        )
+                                      : undefined
+                                  })
+                                ],
+                                2
+                              )
+                            ])
+                          }),
+                          0
+                        )
+                      ])
+                    ]
+                  )
+                ]
+              )
+            : _vm._e()
         }),
         _vm._v(" "),
         _c("div", { staticClass: "w-full rounded overflow-hidden shadow-lg" }, [
@@ -42233,7 +43099,7 @@ var render = function() {
                     _vm._v(
                       " " +
                         _vm._s(_vm.displauActionBtnText(msBtn)) +
-                        "\n\n                "
+                        "\n\n                    "
                     )
                   ]
                 )
@@ -42244,14 +43110,37 @@ var render = function() {
         ])
       ],
       2
-    ),
-    _vm._v(" "),
-    false
-      ? undefined
-      : _vm._e()
+    )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      {
+        staticClass:
+          "text-red-500 bg-gray-200 border hover:border-red-500  hover:shadow px-2 mx-1 hover:bg-gray-300 "
+      },
+      [_c("i", { staticClass: "fa fa-times-circle " })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      {
+        staticClass:
+          "text-red-500 bg-gray-200 border hover:border-red-500  hover:shadow px-2 mx-1 hover:bg-gray-300 "
+      },
+      [_c("i", { staticClass: "fa fa-times-circle " })]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -43309,7 +44198,9 @@ var render = function() {
               },
               [
                 _vm._v(_vm._s(_vm.inputVname) + "  "),
-                _vm.msValue != null && _vm.msValue.search("msicon-") != "-1"
+                _vm.msValue != null &&
+                (_vm.msValue.search("msicon-") != "-1" ||
+                  _vm.msValue.search("flaticon-") != "-1")
                   ? _c("i", { class: _vm.msValue })
                   : _vm._e()
               ]
@@ -43573,77 +44464,81 @@ var render = function() {
             _vm._l(_vm.msData, function(mainNav, index) {
               return _vm.currentSubTab == index
                 ? _c("div", {}, [
-                    _c("div", { staticClass: "flex flex-wrap" }, [
-                      _c(
-                        "span",
-                        { staticClass: "w-full ms-master-title-in-sub" },
-                        [
-                          mainNav.hasOwnProperty("icon")
-                            ? _c("i", {
-                                staticClass: "p-1",
-                                class: mainNav.icon
-                              })
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _vm.msNavigationOn
-                            ? _c("span", [_vm._v(_vm._s(mainNav.text))])
-                            : _vm._e()
-                        ]
-                      ),
-                      _vm._v(" "),
-                      mainNav.hasOwnProperty("sub")
-                        ? _c(
-                            "div",
-                            { staticClass: "flex flex-wrap" },
-                            _vm._l(mainNav.sub, function(subMainNav) {
-                              return _c(
-                                "div",
-                                {
-                                  staticClass: "w-full",
-                                  on: {
-                                    click: function($event) {
-                                      $event.preventDefault()
-                                      _vm.openTab(
-                                        subMainNav,
-                                        subMainNav.type == "link"
-                                      )
-                                    }
-                                  }
-                                },
-                                [
-                                  _c(
-                                    "div",
-                                    {
-                                      class: {
-                                        "ms-main-title-link":
-                                          subMainNav.type == "link",
-                                        "ms-main-title-sub": !(
+                    _c(
+                      "div",
+                      { staticClass: "flex flex-wrap ms-side-sun-div" },
+                      [
+                        _c(
+                          "span",
+                          { staticClass: "w-full ms-master-title-in-sub" },
+                          [
+                            mainNav.hasOwnProperty("icon")
+                              ? _c("i", {
+                                  staticClass: "p-1",
+                                  class: mainNav.icon
+                                })
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _vm.msNavigationOn
+                              ? _c("span", [_vm._v(_vm._s(mainNav.text))])
+                              : _vm._e()
+                          ]
+                        ),
+                        _vm._v(" "),
+                        mainNav.hasOwnProperty("sub")
+                          ? _c(
+                              "div",
+                              { staticClass: "flex flex-wrap" },
+                              _vm._l(mainNav.sub, function(subMainNav) {
+                                return _c(
+                                  "div",
+                                  {
+                                    staticClass: "w-full",
+                                    on: {
+                                      click: function($event) {
+                                        $event.preventDefault()
+                                        _vm.openTab(
+                                          subMainNav,
                                           subMainNav.type == "link"
                                         )
                                       }
-                                    },
-                                    [
-                                      subMainNav.hasOwnProperty("icon")
-                                        ? _c("i", {
-                                            staticClass: "p-1",
-                                            class: subMainNav.icon
-                                          })
-                                        : _vm._e(),
-                                      _vm._v(" "),
-                                      _vm.msNavigationOn
-                                        ? _c("span", [
-                                            _vm._v(_vm._s(subMainNav.text))
-                                          ])
-                                        : _vm._e()
-                                    ]
-                                  )
-                                ]
-                              )
-                            }),
-                            0
-                          )
-                        : _vm._e()
-                    ])
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      {
+                                        class: {
+                                          "ms-main-title-link":
+                                            subMainNav.type == "link",
+                                          "ms-main-title-sub": !(
+                                            subMainNav.type == "link"
+                                          )
+                                        }
+                                      },
+                                      [
+                                        subMainNav.hasOwnProperty("icon")
+                                          ? _c("i", {
+                                              staticClass: "p-1",
+                                              class: subMainNav.icon
+                                            })
+                                          : _vm._e(),
+                                        _vm._v(" "),
+                                        _vm.msNavigationOn
+                                          ? _c("span", [
+                                              _vm._v(_vm._s(subMainNav.text))
+                                            ])
+                                          : _vm._e()
+                                      ]
+                                    )
+                                  ]
+                                )
+                              }),
+                              0
+                            )
+                          : _vm._e()
+                      ]
+                    )
                   ])
                 : _vm._e()
             })
@@ -43690,26 +44585,7 @@ var render = function() {
           [
             _c(
               "div",
-              {
-                staticClass: "flex items-center flex-shrink-0 lg:hidden",
-                on: {
-                  click: function($event) {
-                    if (
-                      !$event.type.indexOf("key") &&
-                      _vm._k(
-                        $event.keyCode,
-                        "prvent",
-                        undefined,
-                        $event.key,
-                        undefined
-                      )
-                    ) {
-                      return null
-                    }
-                    return _vm.hideNavOnlyForMobile($event)
-                  }
-                }
-              },
+              { staticClass: "flex items-center flex-shrink-0 lg:hidden" },
               [
                 _c(
                   "div",
@@ -43718,11 +44594,53 @@ var render = function() {
                     class: {
                       "ms-nav-btn-active": !_vm.msNavBar,
                       border: _vm.msNavBar
+                    },
+                    on: {
+                      click: function($event) {
+                        if (
+                          !$event.type.indexOf("key") &&
+                          _vm._k(
+                            $event.keyCode,
+                            "prvent",
+                            undefined,
+                            $event.key,
+                            undefined
+                          )
+                        ) {
+                          return null
+                        }
+                        return _vm.hideNavOnlyForMobile($event)
+                      }
                     }
                   },
                   [
                     _c("i", {
                       staticClass: "fas fa-ellipsis-v p-1",
+                      class: {
+                        "ms-animation fa-rotate-90": !_vm.msNavBar
+                      }
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "ms-nav-btn",
+                    class: {
+                      "ms-nav-btn-active": !_vm.msNavBar,
+                      border: _vm.msNavBar
+                    },
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        return _vm.onCalac($event, 67)
+                      }
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass: "fi flaticon-technological p-1",
                       class: {
                         "ms-animation fa-rotate-90": !_vm.msNavBar
                       }
@@ -44260,7 +45178,8 @@ var render = function() {
                           return _c(
                             "span",
                             {
-                              staticClass: "hover:border px-2 py-1",
+                              staticClass:
+                                "hover:border hover:shadow-inner px-2 py-1 mx-1",
                               class: ac.color,
                               attrs: { title: ac.text },
                               on: {
@@ -44461,9 +45380,96 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c(
+    "div",
+    _vm._l(_vm.msPageData.fData.formData, function(formGroup) {
+      return _c(
+        "div",
+        [
+          _c(
+            "div",
+            { staticClass: "max-w-sm rounded overflow-hidden shadow-lg" },
+            [
+              _c("img", {
+                staticClass: "w-full",
+                attrs: {
+                  src: _vm.msPageData.bgImg,
+                  alt: "Sunset in the mountains"
+                }
+              }),
+              _vm._v(" "),
+              _c("img", {
+                staticClass: "w-full",
+                attrs: { src: _vm.msPageData.cIcon }
+              }),
+              _vm._v(" "),
+              _vm._m(0, true),
+              _vm._v(" "),
+              _vm._m(1, true)
+            ]
+          ),
+          _vm._v(" "),
+          _vm._l(formGroup.inputs, function(input) {
+            return _c("div")
+          })
+        ],
+        2
+      )
+    }),
+    0
+  )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "px-6 py-4" }, [
+      _c("div", { staticClass: "font-bold text-xl mb-2" }, [
+        _vm._v("The Coldest Sunset")
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "text-gray-700 text-base" }, [
+        _vm._v(
+          "\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.\n                "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "px-6 py-4" }, [
+      _c(
+        "span",
+        {
+          staticClass:
+            "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+        },
+        [_vm._v("#photography")]
+      ),
+      _vm._v(" "),
+      _c(
+        "span",
+        {
+          staticClass:
+            "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+        },
+        [_vm._v("#travel")]
+      ),
+      _vm._v(" "),
+      _c(
+        "span",
+        {
+          staticClass:
+            "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
+        },
+        [_vm._v("#winter")]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -57078,7 +58084,7 @@ __webpack_require__.r(__webpack_exports__);
     getGetRaw: function getGetRaw(url, classFor, callBack) {
       var returnX = 'ok';
       fetch(url).then(function (response) {
-        console.log(response);
+        //   console.log(response);
         return response.json();
       }).then(function (data) {
         var Handler = classFor;
@@ -57288,6 +58294,93 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
 });
+
+/***/ }),
+
+/***/ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue":
+/*!*****************************************************************!*\
+  !*** ./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _msCalc_vue_vue_type_template_id_4e27df16_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./msCalc.vue?vue&type=template&id=4e27df16&scoped=true& */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=template&id=4e27df16&scoped=true&");
+/* harmony import */ var _msCalc_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./msCalc.vue?vue&type=script&lang=js& */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _msCalc_vue_vue_type_style_index_0_id_4e27df16_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./msCalc.vue?vue&type=style&index=0&id=4e27df16&scoped=true&lang=css& */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=style&index=0&id=4e27df16&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _msCalc_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _msCalc_vue_vue_type_template_id_4e27df16_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _msCalc_vue_vue_type_template_id_4e27df16_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "4e27df16",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************!*\
+  !*** ./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_msCalc_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./msCalc.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_msCalc_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=style&index=0&id=4e27df16&scoped=true&lang=css&":
+/*!**************************************************************************************************************************!*\
+  !*** ./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=style&index=0&id=4e27df16&scoped=true&lang=css& ***!
+  \**************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_msCalc_vue_vue_type_style_index_0_id_4e27df16_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../node_modules/style-loader!../../../../../../../../../../../node_modules/css-loader??ref--6-1!../../../../../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../../../../../node_modules/postcss-loader/src??ref--6-2!../../../../../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./msCalc.vue?vue&type=style&index=0&id=4e27df16&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=style&index=0&id=4e27df16&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_msCalc_vue_vue_type_style_index_0_id_4e27df16_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_msCalc_vue_vue_type_style_index_0_id_4e27df16_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_msCalc_vue_vue_type_style_index_0_id_4e27df16_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_msCalc_vue_vue_type_style_index_0_id_4e27df16_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_msCalc_vue_vue_type_style_index_0_id_4e27df16_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=template&id=4e27df16&scoped=true&":
+/*!************************************************************************************************************!*\
+  !*** ./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=template&id=4e27df16&scoped=true& ***!
+  \************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_msCalc_vue_vue_type_template_id_4e27df16_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./msCalc.vue?vue&type=template&id=4e27df16&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue?vue&type=template&id=4e27df16&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_msCalc_vue_vue_type_template_id_4e27df16_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_msCalc_vue_vue_type_template_id_4e27df16_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 
@@ -58122,6 +59215,7 @@ Vue.component('msdatatable', __webpack_require__(/*! ./MS/msDatatable.vue */ "./
 Vue.component('msdockerdashboard', __webpack_require__(/*! ./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue */ "./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue")["default"]);
 Vue.component('mssidenav', __webpack_require__(/*! ./MS/C/msSideNav.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msSideNav.vue")["default"]);
 Vue.component('newtab', __webpack_require__(/*! ./MS/C/msNewTab.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msNewTab.vue")["default"]);
+Vue.component('mscalc', __webpack_require__(/*! ./MS/C/msCalc.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue")["default"]);
 Vue.component('mslogin', __webpack_require__(/*! ./MS/msLoginPage.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/msLoginPage.vue")["default"]); //Components
 
 
@@ -58140,10 +59234,36 @@ var store = {
   }
 };
 window.vm = {};
+$("body").on("keydown", function (event) {
+  if (event.altKey) {
+    app.msShortCut(event, event.which);
+  }
+});
 var app = new Vue({
   el: '#msapp',
   mixins: [_MS_C_MS__WEBPACK_IMPORTED_MODULE_0__["default"]],
   methods: {
+    msShortCut: function msShortCut(event) {
+      var keyCode = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+      var fKeyCode = 0;
+
+      if (keyCode != false) {
+        fKeyCode = keyCode;
+      } else {
+        fKeyCode = event.which;
+      }
+
+      switch (fKeyCode) {
+        case 67:
+          if (this.msCalc) {
+            this.msCalc = false;
+          } else {
+            this.msCalc = true;
+          }
+
+          break;
+      }
+    },
     updateTab: function updateTab(data) {
       var dashBoard = this.$children[0];
       var viewPanel = dashBoard.$refs['ms-live-tab'];
@@ -58213,7 +59333,8 @@ var app = new Vue({
       mstab: [],
       mserrorCount: false,
       msform: [],
-      msNavigation: false
+      msNavigation: false,
+      msCalc: false
     };
   },
   mounted: function mounted() {// console.log(this.msform);

@@ -55,6 +55,13 @@ $d=[
             'foreign_key_constraints' => true,
         ],
 
+        'MS_Core_Laravel'=>[
+        'driver' => 'sqlite',
+        'database' =>base_path( '\\'.implode(DIRECTORY_SEPARATOR,['MS','DB','Master','MS_Core_Laravel'])),
+        'prefix' => '',
+        'foreign_key_constraints' => true,
+    ],
+
     ],
 
     /*

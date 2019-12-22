@@ -42,6 +42,13 @@ return [
             'secret' => env('STRIPE_WEBHOOK_SECRET'),
             'tolerance' => env('STRIPE_WEBHOOK_TOLERANCE', 300),
         ],
+
+        'google' => [
+            'client_id' => env('GITHUB_CLIENT_ID'),
+            'client_secret' => 'AIzaSyBMQqJymSTJsPATgT893k3ziR4W9pUf4Xoms',
+            'redirect' => 'http://your-callback-url',
+        ],
+        'API_KEY'=>'',
     ],
 
 ];
