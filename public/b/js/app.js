@@ -4009,6 +4009,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "msLoginPage",
   props: {
@@ -4036,14 +4071,32 @@ __webpack_require__.r(__webpack_exports__);
       setPropName: 'fData',
       defualt: {}
     }, {
-      propName: 'loginPostUrl',
-      setPropName: 'pUrl'
+      propName: 'inspire',
+      setPropName: 'inspire'
     }, {
-      propName: 'CheckUsernamePostUrl',
-      setPropName: 'cuUrl'
+      propName: 'copyrightPre',
+      setPropName: 'copyrightPre'
+    }, {
+      propName: 'copyrightPer',
+      setPropName: 'copyrightPer'
     }, {
       propName: 'bgImg',
       setPropName: 'bgImg'
+    }, {
+      propName: 'bgImg',
+      setPropName: 'bgImg'
+    }, {
+      propName: 'OtherSource',
+      setPropName: 'os'
+    }, {
+      propName: 'AllSoucesData',
+      setPropName: 'asd'
+    }, {
+      propName: 'VerifyCallback',
+      setPropName: 'vcurl'
+    }, {
+      propName: 'VerifyUrl',
+      setPropName: 'vurl'
     }]; //  this.loader=loader;
 
     var mThis = this;
@@ -45382,94 +45435,124 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { staticClass: "ms-login-div" },
     _vm._l(_vm.msPageData.fData.formData, function(formGroup) {
-      return _c(
-        "div",
-        [
+      return _c("div", [
+        _c("div", { staticClass: "ms-login-h" }, [
+          _c("img", {
+            staticClass: "w-full",
+            attrs: { src: _vm.msPageData.cIcon }
+          }),
+          _vm._v(" "),
           _c(
             "div",
-            { staticClass: "max-w-sm rounded overflow-hidden shadow-lg" },
+            { staticClass: "px-6 py-4" },
             [
-              _c("img", {
-                staticClass: "w-full",
-                attrs: {
-                  src: _vm.msPageData.bgImg,
-                  alt: "Sunset in the mountains"
-                }
-              }),
+              _c("div", { staticClass: "font-bold text-xl mb-2" }, [
+                _vm._v(_vm._s(_vm.msPageData.fData.formTitle))
+              ]),
               _vm._v(" "),
-              _c("img", {
-                staticClass: "w-full",
-                attrs: { src: _vm.msPageData.cIcon }
-              }),
-              _vm._v(" "),
-              _vm._m(0, true),
-              _vm._v(" "),
-              _vm._m(1, true)
-            ]
+              _vm._l(formGroup.inputs, function(input) {
+                return _c("div", { staticClass: "text-gray-700 text-base" }, [
+                  _vm._v(
+                    "\n                " +
+                      _vm._s(input.vName) +
+                      "\n\n                        "
+                  ),
+                  _c("input", { attrs: { type: input.type, name: input.name } })
+                ])
+              })
+            ],
+            2
           ),
           _vm._v(" "),
-          _vm._l(formGroup.inputs, function(input) {
-            return _c("div")
-          })
-        ],
-        2
-      )
+          _c(
+            "div",
+            { staticClass: "px-6 py-4  flex justify-center " },
+            _vm._l(_vm.msPageData.fData.actionButton, function(btn) {
+              var _obj
+              return _c(
+                "span",
+                {
+                  staticClass:
+                    "flex-wrap  w-full text-center bg-gray-200 rounded-full px-3 py-1 text-gray-700 mr-2"
+                },
+                [
+                  _c("i", {
+                    class: ((_obj = {}),
+                    (_obj[btn.btnIcon] = true),
+                    (_obj["inline-flex"] = true),
+                    _obj)
+                  }),
+                  _vm._v(" "),
+                  _c("strong", { class: { "inline-flex": true } }, [
+                    _vm._v(" " + _vm._s(btn.btnText))
+                  ])
+                ]
+              )
+            }),
+            0
+          ),
+          _vm._v(" "),
+          _vm.msPageData.os
+            ? _c("div", { staticClass: "ms-login-others-box" }, [
+                _c("div", { staticClass: "text-center" }, [
+                  _c("hr"),
+                  _vm._v("\n                        or "),
+                  _c("br"),
+                  _vm._v(
+                    " Sign in\n                        with your social network\n                        "
+                  ),
+                  _c(
+                    "div",
+                    { staticClass: "ms-login-others-btn-box " },
+                    _vm._l(_vm.msPageData.asd, function(sor) {
+                      var _obj
+                      return _c("div", { staticClass: "cursor-pointer" }, [
+                        _c("a", { attrs: { href: sor.VerifyUrl } }, [
+                          _c("i", {
+                            class: ((_obj = {}),
+                            (_obj[sor.VerifyIcon] = true),
+                            _obj)
+                          })
+                        ])
+                      ])
+                    }),
+                    0
+                  ),
+                  _vm._v(" "),
+                  _c("hr")
+                ])
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _c("div", { staticClass: "ms-login-copyright-box" }, [
+            _c("span", { staticClass: "ms-login-copyright-pre" }, [
+              _vm._v(" " + _vm._s(_vm.msPageData.copyrightPre))
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "ms-login-copyright-icon-class" }, [
+              _c("img", {
+                staticClass: "ms-login-msater-icon",
+                attrs: { src: _vm.msPageData.mIcon }
+              })
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "ms-login-copyright-per" }, [
+              _vm._v(" " + _vm._s(_vm.msPageData.copyrightPer))
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "ms-login-bottom-line" }, [
+          _vm._v("\n    " + _vm._s(_vm.msPageData.inspire) + "\n")
+        ])
+      ])
     }),
     0
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "px-6 py-4" }, [
-      _c("div", { staticClass: "font-bold text-xl mb-2" }, [
-        _vm._v("The Coldest Sunset")
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-gray-700 text-base" }, [
-        _vm._v(
-          "\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.\n                "
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "px-6 py-4" }, [
-      _c(
-        "span",
-        {
-          staticClass:
-            "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
-        },
-        [_vm._v("#photography")]
-      ),
-      _vm._v(" "),
-      _c(
-        "span",
-        {
-          staticClass:
-            "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
-        },
-        [_vm._v("#travel")]
-      ),
-      _vm._v(" "),
-      _c(
-        "span",
-        {
-          staticClass:
-            "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
-        },
-        [_vm._v("#winter")]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

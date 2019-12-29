@@ -13,6 +13,6 @@ return [
     ,'hr'=>'HR'
     ,'purchase'=>'Purchase'
     ,'users'=>'Users'
-    ,'usersname'=>'Username'
+    ,'username'=>'Username'
 
 ];

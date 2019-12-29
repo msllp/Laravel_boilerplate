@@ -43,12 +43,14 @@ return [
             'tolerance' => env('STRIPE_WEBHOOK_TOLERANCE', 300),
         ],
 
-        'google' => [
-            'client_id' => env('GITHUB_CLIENT_ID'),
-            'client_secret' => 'AIzaSyBMQqJymSTJsPATgT893k3ziR4W9pUf4Xoms',
-            'redirect' => 'http://your-callback-url',
-        ],
-        'API_KEY'=>'',
+
+
     ],
+
+//    'google' => [
+//        'client_id' => '319261013343-na7nnss33ank4sg98jld64iuf2ou342p.apps.googleusercontent.com',
+//        'client_secret' => 'vnRnQ-0hmh3rG7Mli_5XNWtJ',
+//        'redirect' => 'http://gst.ms/Core/User/master/Users/Sub/Roles/login/Owner/Callback',
+//    ],
 
 ];
