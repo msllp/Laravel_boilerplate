@@ -4044,6 +4044,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//TODO Make Post Request & Error Display and Show Forgot Password Button after 3 unsuccessful Try to login.
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "msLoginPage",
   props: {
@@ -4055,7 +4070,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      msPageData: {} //  loader:null
+      msPageData: {},
+      waitingForData: false,
+      msError: false,
+      msErrorData: [] //  loader:null
 
     };
   },
@@ -4112,8 +4130,45 @@ __webpack_require__.r(__webpack_exports__);
         }
       }
     }, this); //for (load ,key in loader)
+    //   if(this.msData.hasOwnProperty('ClientIcon'))this.msPageData.cIcon=this.msData.ClientIcon;
+  },
+  methods: {
+    sendDataToLoginData: function sendDataToLoginData() {
+      var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      //  console.log(data.hasOwnProperty('route'));
+      var link = data.hasOwnProperty('route') ? data.route : "";
 
-    if (this.msData.hasOwnProperty('ClientIcon')) this.msPageData.cIcon = this.msData.ClientIcon;
+      if (link != "") {
+        // console.log(window.axios);
+        var t = this;
+        t.waitingForData = true;
+        t.msErrorData = [];
+        t.msError = t.msError ? false : false;
+        window.axios.post(link, {
+          firstName: 'Fred',
+          lastName: 'Flintstone'
+        }).then(function (response) {
+          t.msError = false;
+          t.waitingForData = false;
+          console.log(response);
+        })["catch"](function (error) {
+          t.msError = true;
+          t.waitingForData = false; //t.msErrorData=;
+
+          t.setMSErrorData(error.response.data.errors); //console.log();
+        });
+      } //if()var link = data.route
+
+    },
+    setMSErrorData: function setMSErrorData(data) {
+      var t = this;
+      Object.keys(data).forEach(function (key, index) {
+        console.log(data[key]); // key: the name of the object key
+        // index: the ordinal position of the key within the object
+
+        t.msErrorData.push(data[key]);
+      }); //this.msErrorData=data;
+    }
   }
 });
 
@@ -45435,36 +45490,74 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "ms-login-div" },
+    { staticClass: "ms-login-div select-none" },
     _vm._l(_vm.msPageData.fData.formData, function(formGroup) {
       return _c("div", [
         _c("div", { staticClass: "ms-login-h" }, [
           _c("img", {
-            staticClass: "w-full",
+            staticClass: "ms-clientlogo",
             attrs: { src: _vm.msPageData.cIcon }
           }),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "px-6 py-4" },
-            [
-              _c("div", { staticClass: "font-bold text-xl mb-2" }, [
-                _vm._v(_vm._s(_vm.msPageData.fData.formTitle))
-              ]),
-              _vm._v(" "),
-              _vm._l(formGroup.inputs, function(input) {
-                return _c("div", { staticClass: "text-gray-700 text-base" }, [
-                  _vm._v(
-                    "\n                " +
-                      _vm._s(input.vName) +
-                      "\n\n                        "
-                  ),
-                  _c("input", { attrs: { type: input.type, name: input.name } })
-                ])
-              })
-            ],
-            2
-          ),
+          _c("hr"),
+          _vm._v(" "),
+          _c("div", { staticClass: "px-6 py-1 " }, [
+            _c("div", { staticClass: "font-bold text-xl mb-4 " }, [
+              _vm._v(_vm._s(_vm.msPageData.fData.formTitle))
+            ]),
+            _vm._v(" "),
+            _vm.msError
+              ? _c(
+                  "div",
+                  { staticClass: "ms-login-error-box text-xs" },
+                  _vm._l(_vm.msErrorData, function(er) {
+                    return _c(
+                      "ul",
+                      _vm._l(er, function(e) {
+                        return _c("li", [_vm._v(_vm._s(e) + " ")])
+                      }),
+                      0
+                    )
+                  }),
+                  0
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            !_vm.waitingForData
+              ? _c(
+                  "table",
+                  { staticClass: "ms-login-table  mb-2" },
+                  _vm._l(formGroup.inputs, function(input) {
+                    return _c(
+                      "tr",
+                      { staticClass: "text-gray-700 text-base" },
+                      [
+                        _c("th", [
+                          _vm._v(_vm._s(input.vName) + "  "),
+                          input.type == "password"
+                            ? _c("i", { staticClass: "fi2 flaticon-key" })
+                            : _vm._e(),
+                          input.type == "text"
+                            ? _c("i", { staticClass: "fi2 flaticon-user-2" })
+                            : _vm._e()
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            attrs: { type: input.type, name: input.name }
+                          })
+                        ])
+                      ]
+                    )
+                  }),
+                  0
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.waitingForData
+              ? _c("div", [_vm._v("Please wait...")])
+              : _vm._e()
+          ]),
           _vm._v(" "),
           _c(
             "div",
@@ -45474,8 +45567,12 @@ var render = function() {
               return _c(
                 "span",
                 {
-                  staticClass:
-                    "flex-wrap  w-full text-center bg-gray-200 rounded-full px-3 py-1 text-gray-700 mr-2"
+                  staticClass: "ms-login-btn",
+                  on: {
+                    click: function($event) {
+                      return _vm.sendDataToLoginData(btn)
+                    }
+                  }
                 },
                 [
                   _c("i", {
@@ -45519,9 +45616,7 @@ var render = function() {
                       ])
                     }),
                     0
-                  ),
-                  _vm._v(" "),
-                  _c("hr")
+                  )
                 ])
               ])
             : _vm._e(),

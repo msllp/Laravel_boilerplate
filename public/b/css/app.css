@@ -56080,7 +56080,7 @@ Creation date: 10/12/2019 22:01
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateY(-60%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
   min-width: 92%;
   background-color: rgba(255, 255, 255, 0.95);
 }
@@ -56174,6 +56174,10 @@ Creation date: 10/12/2019 22:01
   display: inline-block;
 }
 
+.ms-login-others-box {
+  font-size: 0.75rem;
+}
+
 .ms-login-others-btn-box {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -56188,8 +56192,8 @@ Creation date: 10/12/2019 22:01
   display: inline-block;
   background-image: url("svg/google.svg");
   /* Full height & Width */
-  height: 45px;
-  width: 45px;
+  height: 25px;
+  width: 25px;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
@@ -56212,6 +56216,91 @@ Creation date: 10/12/2019 22:01
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.ms-clientlogo {
+  max-height: 50px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.ms-clientlogo:hover {
+  transition: all 200ms ease-in;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.ms-login-table {
+  width: 100%;
+}
+
+.ms-login-table tr {
+  width: 100%;
+  border-color: #bee3f8;
+  display: table-row;
+}
+
+.ms-login-table tr th {
+  text-align: left;
+  width: 33.333333%;
+}
+
+.ms-login-table tr th i {
+  float: right;
+  padding-right: 0.5rem;
+  color: rgba(121, 71, 199, 0.9);
+}
+
+.ms-login-table tr td {
+  width: 66.666667%;
+}
+
+.ms-login-table tr td input {
+  width: 100%;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-color: rgba(121, 71, 199, 0.9);
+}
+
+.ms-login-table tr td input:active, .ms-login-table tr td input:focus {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(164, 130, 217, 0.4);
+}
+
+.ms-login-btn {
+  width: 100%;
+  text-align: center;
+  background-color: rgba(164, 130, 217, 0.4);
+  color: rgba(0, 0, 0, 0.9);
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+}
+
+.ms-login-btn:hover {
+  transition: all 200ms ease-in;
+  background-color: #552d94;
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.ms-login-error-box {
+  background-color: #fed7d7;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 body {
