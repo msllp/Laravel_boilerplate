@@ -43186,12 +43186,15 @@ var render = function() {
                 class: {}
               },
               _vm._l(_vm.msActionBtn, function(msBtn, index) {
+                var _obj
                 return _c(
                   "span",
                   {
                     staticClass:
                       "w-1/3 bg-gray-200  hover:bg-gray-400 border-t border-b  border-r px-3 py-1 text-sm font-semibold text-gray-700",
-                    class: [msBtn.btnClass],
+                    class: ((_obj = {}),
+                    (_obj[msBtn.btnColor] = msBtn.hasOwnProperty("btnColor")),
+                    _obj),
                     attrs: { type: "button" },
                     on: {
                       click: function($event) {
