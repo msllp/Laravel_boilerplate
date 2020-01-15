@@ -54921,6 +54921,47 @@ Creation date: 18/10/2019 23:34
   font-size: 1.875rem;
 }
 
+#zingchart-vue-0-menu-sep-reload, #zingchart-vue-0-menu-item-viewaspng, #zingchart-vue-0-license-text, #zingchart-vue-0-menu-item-xmiabt, #zingchart-vue-0-menu-item-downloadsvg, #zingchart-vue-0-menu-item-downloadcsv, #zingchart-vue-0-menu-item-downloadxls, #zingchart-vue-0-menu-sep-print, #zingchart-vue-0-menu-item-xmiabt, #zingchart-vue-0-menu-item-viewsource, #zingchart-vue-0-menu-item-viewdatatable {
+  display: none !important;
+}
+
+#zingchart-vue-1-menu-sep-reload, #zingchart-vue-1-menu-item-viewaspng, #zingchart-vue-1-license-text, #zingchart-vue-1-menu-item-xmiabt, #zingchart-vue-1-menu-item-downloadsvg, #zingchart-vue-1-menu-item-downloadcsv, #zingchart-vue-1-menu-item-downloadxls, #zingchart-vue-1-menu-sep-print, #zingchart-vue-1-menu-item-xmiabt, #zingchart-vue-1-menu-item-viewsource, #zingchart-vue-1-menu-item-viewdatatable {
+  display: none !important;
+}
+
+#zingchart-vue-2-menu-sep-reload, #zingchart-vue-2-menu-item-viewaspng, #zingchart-vue-2-license-text, #zingchart-vue-2-menu-item-xmiabt, #zingchart-vue-2-menu-item-downloadsvg, #zingchart-vue-2-menu-item-downloadcsv, #zingchart-vue-2-menu-item-downloadxls, #zingchart-vue-2-menu-sep-print, #zingchart-vue-2-menu-item-xmiabt, #zingchart-vue-2-menu-item-viewsource, #zingchart-vue-2-menu-item-viewdatatable {
+  display: none !important;
+}
+
+#zingchart-vue-3-menu-sep-reload, #zingchart-vue-3-menu-item-viewaspng, #zingchart-vue-3-license-text, #zingchart-vue-3-menu-item-xmiabt, #zingchart-vue-3-menu-item-downloadsvg, #zingchart-vue-3-menu-item-downloadcsv, #zingchart-vue-3-menu-item-downloadxls, #zingchart-vue-3-menu-sep-print, #zingchart-vue-3-menu-item-xmiabt, #zingchart-vue-3-menu-item-viewsource, #zingchart-vue-3-menu-item-viewdatatable {
+  display: none !important;
+}
+
+.ms-dashboard-action-box {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-width: 1px;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.ms-dashboard-action-box:hover {
+  background-color: rgba(164, 130, 217, 0.4);
+  transition: all 500ms ease-in-out;
+}
+
+svg {
+  pointer-events: none;
+}
+
+.msicon-svg-lg {
+  max-height: 39px;
+  max-width: 39px;
+  display: inline-block;
+}
+
 .msicon {
   min-width: 23px !important;
   min-height: 16px !important;

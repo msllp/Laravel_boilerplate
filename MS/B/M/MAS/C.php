@@ -137,6 +137,7 @@ class C extends BaseController
 
     }
     public function index(Request $r){
+     //   dd("sd");
 dd(\MS\Mod\B\MSSetup\F::setupApp());
         //return view("MS::core.layouts.panel");
         $docker=new \MS\Core\Docker\Image();
@@ -237,7 +238,7 @@ dd(\MS\Mod\B\MSSetup\F::setupApp());
                 [
                     'name'=>'ProductName',
                     'msg'=>["erroe"]
-                    
+
 
                 ]
 
