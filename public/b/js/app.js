@@ -2043,6 +2043,93 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MS__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MS */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/MS.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2344,10 +2431,23 @@ __webpack_require__.r(__webpack_exports__);
       msCurrentTab: null,
       onMobile: false,
       allErrors: [],
-      CurrentDataFromServer: null
+      CurrentDataFromServer: null,
+      compactForm: true
     };
   },
   methods: {
+    formShortcut: function formShortcut(event) {
+      switch (event.keyCode) {
+        case '102':
+          break;
+      }
+
+      console.log(event.keyCode);
+    },
+    makeitForCompactForm: function makeitForCompactForm(data) {
+      data.inputOnly = true;
+      return data;
+    },
     msNoClick: function msNoClick() {},
     showCollapse: function showCollapse(id, event) {
       // this.msclass +=' show';
@@ -2385,13 +2485,14 @@ __webpack_require__.r(__webpack_exports__);
         } //  console.log(this.makeArrayForInputGroup(this,id,this.msCount[id]))
 
 
-        this.msFormData.push(this.makeArrayForInputGroup(this, id, this.msFormData.length));
+        this.msFormData.push(this.makeArrayForInputGroup(this, id, this.msFormData.length, this.msCount[id]));
       } //console.log(this.msData.formData[id]);
 
     },
     removeInputGroup: function removeInputGroup(id, rootId, rid) {
       //console.log(this.msCount.hasOwnProperty(id))
-      // console.log("ID: "+id+" Rootid: "+rootId);
+      console.log("id: " + id + " rootId: " + rootId + " rid: " + rid);
+
       if (confirm('Are you sure you want to remove Input group ?')) {
         if (this.msCount.hasOwnProperty(rootId) && this.msCount[rootId] > 1) {
           for (var row in this.msFormData[id].inputs) {
@@ -2461,12 +2562,13 @@ __webpack_require__.r(__webpack_exports__);
     },
     removeDataFromDynamicWithGroup: function removeDataFromDynamicWithGroup(id, name) {
       //   if(this.msFormDataFinal.hasOwnProperty(name) && this.msFormDataFinal[name].hasOwnProperty(id))console.log(id);     console.log(this.msFormDataFinal[name][id]);
-      if (this.msFormDataFinal.hasOwnProperty(name) && this.msFormDataFinal[name].hasOwnProperty(id)) {
+      if (this.msFormDataFinal.hasOwnProperty(name) && _typeof(this.msFormDataFinal[name]) == 'object' && this.msFormDataFinal[name].hasOwnProperty(id)) {
+        console.log("found: id: " + id + " name :" + name);
         delete this.msFormDataFinal[name][id];
       } else {
-        console.log(id);
-        console.log(this.msFormDataFinal);
-        console.log(name);
+        console.log("Not found: id: " + id + " name :" + name); // console.log( id);
+        // console.log( this.msFormDataFinal);
+        // console.log(name);
       }
     },
     removeDataFromDynamic: function removeDataFromDynamic(name, index, section, value) {
@@ -2480,9 +2582,10 @@ __webpack_require__.r(__webpack_exports__);
     setInputData: function setInputData(name, value) {
       var multi = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
       var index = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
-
       //console.log(name2 != "");
       /// console.log(multi);
+      console.log('Name: ' + name + ' value: ' + value + ' multi: ' + multi + ' index: ' + index);
+
       if (false) {} else {
         if (multi) {
           //TODO: Make array for thing
@@ -2795,10 +2898,16 @@ __webpack_require__.r(__webpack_exports__);
     'msInputIndex': {
       type: Number,
       required: true
+    },
+    'msMultiIndex': {
+      type: Number,
+      required: false,
+      "default": 1
     }
   },
   beforeMount: function beforeMount() {
     // console.log(this.msData);
+    if (this.hasOwnProperty('msMultiIndex')) this.inputMultipleIndex = this.msMultiIndex;
     if (this.msData.hasOwnProperty('groupInput')) this.groupInput = this.msData.groupInput;
 
     if (this.msData.hasOwnProperty('name')) {
@@ -2809,6 +2918,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
 
+    if (this.msData.hasOwnProperty('msMultiIndex')) this.inputMultipleIndex = this.msData.msMultiIndex;
     if (this.msData.hasOwnProperty('inputMultiple')) this.inputMultiple = this.msData.inputMultiple;
     if (this.msData.hasOwnProperty('inputInfo')) this.inputInfo = this.msData.inputInfo;
     if (this.msData.hasOwnProperty('vName')) this.inputVname = this.msData.vName; // if(!this.msData.hasOwnProperty('vName'))this.inputVname=this.msData.name;
@@ -2879,7 +2989,10 @@ __webpack_require__.r(__webpack_exports__);
     } //    if(this.msData.hasOwnProperty('inputMultiple')) return this.$parent.setInputData(this.inputName,val,this.msData.inputMultiple);
 
 
-    if (!this.inputMultiple) this.$parent.setInputData(this.inputName, this.msValue, this.inputMultiple, this.msGroupIndex);
+    if (!this.inputMultiple) {
+      this.$parent.setInputData(this.inputName, this.msValue, this.inputMultiple, this.msGroupIndex);
+    }
+
     if (window.innerWidth < 800) this.onMobile = true; //  console.log(this.inputAuto);
     // this.inputAuto.push({
     //         dText: 'hello',
@@ -2997,7 +3110,7 @@ __webpack_require__.r(__webpack_exports__);
       //  if(this.msData.hasOwnProperty('inputMultiple')) return this.$parent.setInputData(this.inputName,val,this.msData.inputMultiple,this.msData.msGroupIndex);
 
 
-      this.$parent.setInputData(this.inputName, val, this.inputMultiple, this.msGroupIndex);
+      this.$parent.setInputData(this.inputName, val, this.inputMultiple, this.inputMultipleIndex);
     },
     visiblePassowrd: function visiblePassowrd() {
       if (this.inputPasswordVisible) {
@@ -3054,7 +3167,8 @@ __webpack_require__.r(__webpack_exports__);
       onMobile: false,
       inputChecked: [],
       msFile: null,
-      msFocus: false // hasAutofieldBool:false,,
+      msFocus: false,
+      inputMultipleIndex: this.msMultiIndex // hasAutofieldBool:false,,
 
     };
   },
@@ -3612,6 +3726,66 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
  // import msMenubar from './msMenubar';
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3624,7 +3798,13 @@ __webpack_require__.r(__webpack_exports__);
       msMenuOn: false,
       msNavBar: true,
       windowWidth: window.innerWidth,
-      msMenuData: null
+      msMenuData: null,
+      msProfileDiv: false,
+      msUserData: {
+        Username: 'maxirooney',
+        sex: 'male',
+        email: 'user@company.com'
+      }
     };
   },
   props: {
@@ -3634,6 +3814,14 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
+    oprateProfileBox: function oprateProfileBox() {
+      if (this.msProfileDiv) {
+        ;
+        this.msProfileDiv = false;
+      } else {
+        this.msProfileDiv = true;
+      }
+    },
     onCalac: function onCalac(event, kCode) {
       window.vueApp.msShortCut(event, kCode);
     },
@@ -76746,9 +76934,7 @@ var render = function() {
                   "fab fa-wpforms pr-2 font-black-500 hover:font-bold"
               }),
               _vm._v(
-                "\n                " +
-                  _vm._s(_vm.msData.formTitle) +
-                  "\n            "
+                "\n            " + _vm._s(_vm.msData.formTitle) + "\n        "
               )
             ]
           )
@@ -76760,7 +76946,354 @@ var render = function() {
       { staticClass: "block " },
       [
         _vm._l(_vm.msFormData, function(section, id, key) {
-          return !(section.hasOwnProperty("withData") && section.withData)
+          return _vm.compactForm
+            ? _c(
+                "div",
+                {
+                  staticClass: "w-full rounded  border-t shadow-lg bg-gray-100"
+                },
+                [
+                  section.groupDynamic
+                    ? _c("div", [
+                        _vm.msCount[id] >= 1
+                          ? _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "font-bold text-md border-b p-2  flex flex-wrap bg-blue-200 "
+                              },
+                              [
+                                _vm._v(
+                                  _vm._s(section.gruoupHeading) +
+                                    " " +
+                                    _vm._s(_vm.msCount[id])
+                                )
+                              ]
+                            )
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _c("table", [
+                          id < 3
+                            ? _c(
+                                "tr",
+                                [
+                                  _vm._l(section.inputs, function(input) {
+                                    return _c(
+                                      "th",
+                                      {
+                                        staticClass:
+                                          "border-l  border-r border-b"
+                                      },
+                                      [_vm._v(_vm._s(input.vName))]
+                                    )
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "th",
+                                    {
+                                      staticClass: "border-l  border-r border-b"
+                                    },
+                                    [_vm._v("Action")]
+                                  )
+                                ],
+                                2
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _c(
+                            "tr",
+                            {},
+                            [
+                              _vm._l(section.inputs, function(inputRaw, id2) {
+                                return !(
+                                  section.hasOwnProperty("withData") &&
+                                  section.withData
+                                )
+                                  ? _c("msinput", {
+                                      key: inputRaw.name.toLowerCase(),
+                                      ref: inputRaw.name.toLowerCase(),
+                                      refInFor: true,
+                                      staticClass:
+                                        "border-l  border-r border-b",
+                                      class: section.inputs[id2].inputSize,
+                                      staticStyle: { display: "table-cell" },
+                                      attrs: {
+                                        "ms-multi-index": section.msMultiIndex,
+                                        "ms-data": _vm.makeitForCompactForm(
+                                          inputRaw
+                                        ),
+                                        "ms-group-index": id,
+                                        "ms-input-index": id2
+                                      }
+                                    })
+                                  : _vm._e()
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "td",
+                                { staticClass: "border-l  border-r border-b" },
+                                [
+                                  section.groupDynamic
+                                    ? _c(
+                                        "div",
+                                        { staticClass: "flex px-3  ml-3 " },
+                                        [
+                                          _vm.checkMutlipleFirst(section)
+                                            ? _c(
+                                                "div",
+                                                {
+                                                  staticClass:
+                                                    "text-green-500 bg-gray-200 border hover:border-green-500 hover:shadow px-2 mx-1 hover:bg-gray-300 ",
+                                                  on: {
+                                                    click: function($event) {
+                                                      $event.preventDefault()
+                                                      return _vm.addInputGroup(
+                                                        id
+                                                      )
+                                                    }
+                                                  }
+                                                },
+                                                [
+                                                  _c("i", {
+                                                    staticClass:
+                                                      "fa fa-times-circle ",
+                                                    staticStyle: {
+                                                      transform: "rotate(45deg)"
+                                                    }
+                                                  })
+                                                ]
+                                              )
+                                            : _vm._e(),
+                                          _vm._v(" "),
+                                          _vm.checkMutlipleSub(section)
+                                            ? _c(
+                                                "div",
+                                                {
+                                                  staticClass:
+                                                    "text-red-500 bg-gray-200 border hover:border-red-500  hover:shadow px-2 mx-1 hover:bg-gray-300 ",
+                                                  on: {
+                                                    click: function($event) {
+                                                      $event.preventDefault()
+                                                      return _vm.removeInputGroup(
+                                                        id,
+                                                        section.rootId,
+                                                        section.msMultiIndex
+                                                      )
+                                                    }
+                                                  }
+                                                },
+                                                [
+                                                  _c("i", {
+                                                    staticClass:
+                                                      "fa fa-times-circle "
+                                                  })
+                                                ]
+                                              )
+                                            : _vm._e()
+                                        ]
+                                      )
+                                    : _vm._e()
+                                ]
+                              )
+                            ],
+                            2
+                          )
+                        ])
+                      ])
+                    : _c("div", [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              " w-full px-3 py-2 cursor-pointer mb-2 border-b",
+                            class: { show: id === 0 },
+                            attrs: {
+                              id: section.id + "_target",
+                              "aria-labelledby": section.id
+                            }
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "font-bold text-md border-b p-2  flex flex-wrap",
+                                class: {
+                                  "bg-blue-200 ": !_vm.checkImHiddenOrNot(
+                                    section
+                                  )
+                                }
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "expand-btn flex",
+                                    class: {
+                                      "bg-gray-200": !_vm.checkImHiddenOrNot(
+                                        section
+                                      ),
+                                      "bg-gray-500": _vm.checkImHiddenOrNot(
+                                        section
+                                      )
+                                    },
+                                    style: {
+                                      opacity: _vm.checkImHiddenOrNot(section)
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        $event.preventDefault()
+                                        return _vm.showCollapse(section.id)
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("i", {
+                                      class: {
+                                        "fas fa-search-minus": !_vm.checkImHiddenOrNot(
+                                          section
+                                        ),
+                                        "fas fa-search-plus": _vm.checkImHiddenOrNot(
+                                          section
+                                        )
+                                      }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c("span", {}, [
+                                  _vm._v(_vm._s(section.gruoupHeading))
+                                ]),
+                                _vm._v(" "),
+                                section.groupDynamic
+                                  ? _c(
+                                      "div",
+                                      { staticClass: "flex px-3  ml-3 " },
+                                      [
+                                        _vm.checkMutlipleFirst(section)
+                                          ? _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "text-green-500 bg-gray-200 border hover:border-green-500 hover:shadow px-2 mx-1 hover:bg-gray-300 ",
+                                                on: {
+                                                  click: function($event) {
+                                                    $event.preventDefault()
+                                                    return _vm.addInputGroup(id)
+                                                  }
+                                                }
+                                              },
+                                              [
+                                                _c("i", {
+                                                  staticClass:
+                                                    "fa fa-times-circle ",
+                                                  staticStyle: {
+                                                    transform: "rotate(45deg)"
+                                                  }
+                                                })
+                                              ]
+                                            )
+                                          : _vm._e(),
+                                        _vm._v(" "),
+                                        _vm.checkMutlipleSub(section)
+                                          ? _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "text-red-500 bg-gray-200 border hover:border-red-500  hover:shadow px-2 mx-1 hover:bg-gray-300 ",
+                                                on: {
+                                                  click: function($event) {
+                                                    $event.preventDefault()
+                                                    return _vm.removeInputGroup(
+                                                      id,
+                                                      section.rootId,
+                                                      section.id
+                                                    )
+                                                  }
+                                                }
+                                              },
+                                              [
+                                                _c("i", {
+                                                  staticClass:
+                                                    "fa fa-times-circle "
+                                                })
+                                              ]
+                                            )
+                                          : _vm._e()
+                                      ]
+                                    )
+                                  : _vm._e()
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("div", [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "text-gray-700 text-base flex flex-wrap",
+                                  class: {
+                                    hidden: _vm.checkImHiddenOrNot(section)
+                                    // 'flex':onMobile,
+                                    // 'flex':!onMobile
+                                  }
+                                },
+                                _vm._l(section.inputs, function(inputRaw, id2) {
+                                  return !(
+                                    section.hasOwnProperty("withData") &&
+                                    section.withData
+                                  )
+                                    ? _c("msinput", {
+                                        key: inputRaw.name.toLowerCase(),
+                                        ref: inputRaw.name.toLowerCase(),
+                                        refInFor: true,
+                                        staticClass: "w-1/2",
+                                        class: section.inputs[id2].inputSize,
+                                        attrs: {
+                                          "ms-data": inputRaw,
+                                          "ms-group-index": id,
+                                          "ms-input-index": id2
+                                        }
+                                      })
+                                    : _vm._l(section.inputs, function(
+                                        inputRaw,
+                                        id2,
+                                        key
+                                      ) {
+                                        return _c("msinput", {
+                                          key: inputRaw.name.toLowerCase(),
+                                          ref: inputRaw.name.toLowerCase(),
+                                          refInFor: true,
+                                          staticClass: "w-1/2",
+                                          class: section.inputs[id2].inputSize,
+                                          attrs: {
+                                            "ms-data": inputRaw,
+                                            "ms-group-index": id,
+                                            "ms-input-index": Object.keys(
+                                              section.inputs[id2].inputs
+                                            ).find(function(key) {
+                                              return (
+                                                section.inputs[id2].name == id2
+                                              )
+                                            })
+                                          }
+                                        })
+                                      })
+                                }),
+                                1
+                              )
+                            ])
+                          ]
+                        )
+                      ])
+                ]
+              )
+            : _vm._e()
+        }),
+        _vm._v(" "),
+        _vm._l(_vm.msFormData, function(section, id, key) {
+          return !(section.hasOwnProperty("withData") && section.withData) &&
+            !_vm.compactForm
             ? _c(
                 "div",
                 {
@@ -76811,10 +77344,10 @@ var render = function() {
                             [
                               _c("i", {
                                 class: {
-                                  "fas fa-search-minus ": !_vm.checkImHiddenOrNot(
+                                  "fas fa-search-minus": !_vm.checkImHiddenOrNot(
                                     section
                                   ),
-                                  "fas fa-search-plus ": _vm.checkImHiddenOrNot(
+                                  "fas fa-search-plus": _vm.checkImHiddenOrNot(
                                     section
                                   )
                                 }
@@ -76826,7 +77359,7 @@ var render = function() {
                             _vm._v(_vm._s(section.gruoupHeading))
                           ]),
                           _vm._v(" "),
-                          section.groupDynamic
+                          section.groupDynamic && false
                             ? _c("div", { staticClass: "flex px-3  ml-3 " }, [
                                 _vm.checkMutlipleFirst(section)
                                   ? _c(
@@ -77002,9 +77535,9 @@ var render = function() {
                             ]
                           ),
                           _vm._v(
-                            "\n\n\n                    " +
+                            "\n\n\n                        " +
                               _vm._s(section.gruoupHeading) +
-                              "\n\n                    "
+                              "\n\n                        "
                           ),
                           section.groupDynamic
                             ? _c("div", { staticClass: "flex px-3  ml-3 " }, [
@@ -77103,7 +77636,7 @@ var render = function() {
                                             },
                                             [
                                               _vm._v(
-                                                "\n\n\n            " +
+                                                "\n\n\n                " +
                                                   _vm._s(
                                                     section.inputs.find(
                                                       function(key) {
@@ -77176,7 +77709,7 @@ var render = function() {
                                                 ? _c("tr", [
                                                     _c("td", [
                                                       _vm._v(
-                                                        "\n                             " +
+                                                        "\n                                 " +
                                                           _vm._s(
                                                             foundRow[
                                                               section.inputs.find(
@@ -77189,7 +77722,7 @@ var render = function() {
                                                               ).verifyBy.text
                                                             ]
                                                           ) +
-                                                          "\n                                    "
+                                                          "\n                                        "
                                                       )
                                                     ]),
                                                     _vm._v(" "),
@@ -77274,7 +77807,7 @@ var render = function() {
                     _vm._v(
                       " " +
                         _vm._s(_vm.displauActionBtnText(msBtn)) +
-                        "\n\n                    "
+                        "\n\n                        "
                     )
                   ]
                 )
@@ -77341,9 +77874,11 @@ var render = function() {
     _c("div", { staticClass: " p-2" }, [
       _vm.inputType == "locked"
         ? _c("div", { staticClass: "flex flex-wrap", class: _vm.msValid }, [
-            _c("span", { staticClass: " select-none lg:mr-2" }, [
-              _vm._v(_vm._s(_vm.inputVname))
-            ]),
+            !_vm.inputOnly
+              ? _c("span", { staticClass: " select-none lg:mr-2" }, [
+                  _vm._v(_vm._s(_vm.inputVname))
+                ])
+              : _vm._e(),
             _vm._v(" "),
             _c("i", { staticClass: "fas p2 ml-2 mt-1 fa-qrcode mr-2" }),
             _vm.inputType === "checkbox"
@@ -77454,9 +77989,11 @@ var render = function() {
       _vm._v(" "),
       _vm.inputType == "text"
         ? _c("div", { staticClass: "flex flex-wrap", class: _vm.msValid }, [
-            _c("span", { staticClass: " select-none lg:mr-2" }, [
-              _vm._v(_vm._s(_vm.inputVname))
-            ]),
+            !_vm.inputOnly
+              ? _c("span", { staticClass: " select-none lg:mr-2" }, [
+                  _vm._v(_vm._s(_vm.inputVname))
+                ])
+              : _vm._e(),
             _vm._v(" "),
             _vm.inputType === "checkbox"
               ? _c("input", {
@@ -77579,14 +78116,16 @@ var render = function() {
             "div",
             { staticClass: "select-none flex flex-wrap", class: _vm.msValid },
             [
-              _c(
-                "span",
-                {
-                  staticClass: " select-none lg:flex-1",
-                  class: { "w-full": !_vm.onMobile }
-                },
-                [_vm._v(_vm._s(_vm.inputVname))]
-              ),
+              !_vm.inputOnly
+                ? _c(
+                    "span",
+                    {
+                      staticClass: " select-none lg:flex-1",
+                      class: { "w-full": !_vm.onMobile }
+                    },
+                    [_vm._v(_vm._s(_vm.inputVname))]
+                  )
+                : _vm._e(),
               _vm._v(" "),
               _vm.inputType === "checkbox"
                 ? _c("input", {
@@ -77734,9 +78273,11 @@ var render = function() {
           )
         : _vm.inputType == "email"
         ? _c("div", { staticClass: "flex flex-wrap", class: _vm.msValid }, [
-            _c("span", { staticClass: " select-none lg:mr-2" }, [
-              _vm._v(_vm._s(_vm.inputVname))
-            ]),
+            !_vm.inputOnly
+              ? _c("span", { staticClass: " select-none lg:mr-2" }, [
+                  _vm._v(_vm._s(_vm.inputVname))
+                ])
+              : _vm._e(),
             _vm._v(" "),
             _vm.inputType === "checkbox"
               ? _c("input", {
@@ -77850,9 +78391,11 @@ var render = function() {
           ])
         : _vm.inputType == "number"
         ? _c("div", { staticClass: "flex flex-wrap", class: _vm.msValid }, [
-            _c("span", { staticClass: " select-none lg:mr-2" }, [
-              _vm._v(_vm._s(_vm.inputVname))
-            ]),
+            !_vm.inputOnly
+              ? _c("span", { staticClass: " select-none lg:mr-2" }, [
+                  _vm._v(_vm._s(_vm.inputVname))
+                ])
+              : _vm._e(),
             _vm._v(" "),
             _vm.inputType === "checkbox"
               ? _c("input", {
@@ -77965,9 +78508,11 @@ var render = function() {
       _vm._v(" "),
       _vm.inputType == "file"
         ? _c("div", { staticClass: "flex flex-wrap", class: _vm.msValid }, [
-            _c("span", { staticClass: " select-none  lg:mr-2" }, [
-              _vm._v(_vm._s(_vm.inputVname))
-            ]),
+            !_vm.inputOnly
+              ? _c("span", { staticClass: " select-none  lg:mr-2" }, [
+                  _vm._v(_vm._s(_vm.inputVname))
+                ])
+              : _vm._e(),
             _vm._v(" "),
             _c("input", {
               staticClass:
@@ -77993,17 +78538,19 @@ var render = function() {
             "div",
             { staticClass: "flex flex-wrap", class: _vm.msValid },
             [
-              _c(
-                "span",
-                {
-                  staticClass: " select-none",
-                  class: {
-                    "w-4/12 mr-2": !_vm.onMobile,
-                    "w-full": _vm.onMobile
-                  }
-                },
-                [_vm._v(_vm._s(_vm.inputVname))]
-              ),
+              !_vm.inputOnly
+                ? _c(
+                    "span",
+                    {
+                      staticClass: " select-none",
+                      class: {
+                        "w-4/12 mr-2": !_vm.onMobile,
+                        "w-full": _vm.onMobile
+                      }
+                    },
+                    [_vm._v(_vm._s(_vm.inputVname))]
+                  )
+                : _vm._e(),
               _vm._v(" "),
               _vm._l(_vm.msData.verifyBy.msdata, function(radio, key) {
                 return _c(
@@ -78050,17 +78597,19 @@ var render = function() {
             "div",
             { staticClass: "flex flex-wrap", class: _vm.msValid },
             [
-              _c(
-                "span",
-                {
-                  staticClass: " select-none",
-                  class: {
-                    "w-4/12 mr-2": !_vm.onMobile,
-                    "w-full": _vm.onMobile
-                  }
-                },
-                [_vm._v(_vm._s(_vm.inputVname))]
-              ),
+              !_vm.inputOnly
+                ? _c(
+                    "span",
+                    {
+                      staticClass: " select-none",
+                      class: {
+                        "w-4/12 mr-2": !_vm.onMobile,
+                        "w-full": _vm.onMobile
+                      }
+                    },
+                    [_vm._v(_vm._s(_vm.inputVname))]
+                  )
+                : _vm._e(),
               _vm._v(" "),
               _vm._l(_vm.msData.verifyBy.msdata, function(radio, key) {
                 return _c(
@@ -78110,9 +78659,11 @@ var render = function() {
       _vm._v(" "),
       _vm.inputType == "date"
         ? _c("div", { staticClass: "flex flex-wrap", class: _vm.msValid }, [
-            _c("span", { staticClass: " select-none lg:mr-2" }, [
-              _vm._v(_vm._s(_vm.inputVname))
-            ]),
+            !_vm.inputOnly
+              ? _c("span", { staticClass: " select-none lg:mr-2" }, [
+                  _vm._v(_vm._s(_vm.inputVname))
+                ])
+              : _vm._e(),
             _vm._v(" "),
             _vm.inputType === "checkbox"
               ? _c("input", {
@@ -78219,9 +78770,11 @@ var render = function() {
       _vm._v(" "),
       _vm.inputType == "time"
         ? _c("div", { staticClass: "flex flex-wrap", class: _vm.msValid }, [
-            _c("span", { staticClass: " select-none lg:mr-2" }, [
-              _vm._v(_vm._s(_vm.inputVname))
-            ]),
+            !_vm.inputOnly
+              ? _c("span", { staticClass: " select-none lg:mr-2" }, [
+                  _vm._v(_vm._s(_vm.inputVname))
+                ])
+              : _vm._e(),
             _vm._v(" "),
             _vm.inputType === "checkbox"
               ? _c("input", {
@@ -78328,9 +78881,11 @@ var render = function() {
       _vm._v(" "),
       _vm.inputType == "textarea"
         ? _c("div", { staticClass: "flex flex-wrap", class: _vm.msValid }, [
-            _c("span", { staticClass: " select-none lg:mr-2" }, [
-              _vm._v(_vm._s(_vm.inputVname))
-            ]),
+            !_vm.inputOnly
+              ? _c("span", { staticClass: " select-none lg:mr-2" }, [
+                  _vm._v(_vm._s(_vm.inputVname))
+                ])
+              : _vm._e(),
             _vm._v(" "),
             _c("textarea", {
               directives: [
@@ -78365,21 +78920,26 @@ var render = function() {
       _vm._v(" "),
       _vm.inputType == "option"
         ? _c("div", { staticClass: "flex flex-wrap", class: _vm.msValid }, [
-            _c(
-              "span",
-              {
-                staticClass: " select-none",
-                class: { "w-4/12 mr-2": !_vm.onMobile, "w-full": _vm.onMobile }
-              },
-              [
-                _vm._v(_vm._s(_vm.inputVname) + "  "),
-                _vm.msValue != null &&
-                (_vm.msValue.search("msicon-") != "-1" ||
-                  _vm.msValue.search("flaticon-") != "-1")
-                  ? _c("i", { class: _vm.msValue })
-                  : _vm._e()
-              ]
-            ),
+            !_vm.inputOnly
+              ? _c(
+                  "span",
+                  {
+                    staticClass: " select-none",
+                    class: {
+                      "w-4/12 mr-2": !_vm.onMobile,
+                      "w-full": _vm.onMobile
+                    }
+                  },
+                  [
+                    _vm._v(_vm._s(_vm.inputVname) + "  "),
+                    _vm.msValue != null &&
+                    (_vm.msValue.search("msicon-") != "-1" ||
+                      _vm.msValue.search("flaticon-") != "-1")
+                      ? _c("i", { class: _vm.msValue })
+                      : _vm._e()
+                  ]
+                )
+              : _vm._e(),
             _vm._v(" "),
             _c(
               "select",
@@ -79065,38 +79625,18 @@ var render = function() {
                   },
                   [
                     _c("i", {
-                      staticClass: "fas fa-ellipsis-v p-1",
+                      staticClass: "fas fa-level-down-alt p-1",
                       class: {
-                        "ms-animation fa-rotate-90": !_vm.msNavBar
+                        "ms-animation fa-rotate-90": !_vm.msNavBar,
+                        "ms-animation": _vm.msNavBar
                       }
                     })
                   ]
                 ),
                 _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "ms-nav-btn",
-                    class: {
-                      "ms-nav-btn-active": !_vm.msNavBar,
-                      border: _vm.msNavBar
-                    },
-                    on: {
-                      click: function($event) {
-                        $event.preventDefault()
-                        return _vm.onCalac($event, 67)
-                      }
-                    }
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "fi flaticon-technological p-1",
-                      class: {
-                        "ms-animation fa-rotate-90": !_vm.msNavBar
-                      }
-                    })
-                  ]
-                )
+                false
+                  ? undefined
+                  : _vm._e()
               ]
             ),
             _vm._v(" "),
@@ -79115,13 +79655,7 @@ var render = function() {
                   staticClass:
                     "fill-current h-12 mr-2 ms-company-logo hover:shadow-outline hover:bg-gray-200",
                   attrs: { src: "/images/logo.png" }
-                }),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "font-semibold", class: { hidden: false } },
-                  [_vm._v(" Cloud Services")]
-                )
+                })
               ]
             ),
             _vm._v(" "),
@@ -79129,13 +79663,104 @@ var render = function() {
               ? undefined
               : _vm._e(),
             _vm._v(" "),
-            _c("div", {
-              staticClass:
-                "w-full block flex-grow lg:flex lg:items-center lg:w-auto ",
-              class: {
-                hidden: !_vm.msMenuOn
-              }
-            })
+            _c("div", { staticClass: "ms-dashboard-right-nav-box" }, [
+              _c("div", { staticClass: "ms-dashboard-right-nav-btn" }, [
+                _c(
+                  "div",
+                  { staticClass: "ms-dashboard-right-nav-btn-notification" },
+                  [
+                    _c("svg", {}, [
+                      _c("use", {
+                        attrs: { "xlink:href": "#msicon-svg-notification-read" }
+                      })
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "ms-dashboard-right-nav-btn ",
+                  on: {
+                    click: function($event) {
+                      return _vm.oprateProfileBox()
+                    }
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "ms-dashboard-right-nav-btn-profile" },
+                    [
+                      _c("span", [
+                        _vm._v(_vm._s(_vm.msUserData.Username.charAt(0)))
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            class: {
+              "ms-dashboard-profile-box": _vm.msProfileDiv,
+              "ms-dashboard-profile-box-hidden": !_vm.msProfileDiv
+            }
+          },
+          [
+            _c("div", { staticClass: "ms-dashboard-profile-body" }, [
+              _c("div", { staticClass: "ms-dashboard-profile-user-box " }, [
+                _c("svg", { staticClass: "ms-dashboard-profile-user-icon" }, [
+                  _c("use", {
+                    attrs: {
+                      "xlink:href":
+                        "#msicon-svg-user-" + _vm.msUserData.sex + "-1"
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("hr", { staticClass: "ms-dashboard-profile-hr" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "text-center" }, [
+                _vm._v(_vm._s(_vm.msUserData.Username) + "\n                "),
+                _c("br"),
+                _vm._v(_vm._s(_vm.msUserData.email) + "\n                ")
+              ]),
+              _vm._v(" "),
+              _c("hr", { staticClass: "ms-dashboard-profile-hr" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "ms-dashboard-profile-footer" }, [
+                _c("div", { staticClass: "ms-dashboard-profile-edit-btn" }, [
+                  _c("svg", { staticClass: "ms-dashboard-profile-edit-icon" }, [
+                    _c("use", {
+                      attrs: { "xlink:href": "#msicon-svg-user-edit" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("span", [_vm._v("Edit Profile")])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "ms-dashboard-profile-signout-btn" }, [
+                  _c("span", [_vm._v("Log out")]),
+                  _vm._v(" "),
+                  _c(
+                    "svg",
+                    { staticClass: "ms-dashboard-profile-signout-icon" },
+                    [
+                      _c("use", {
+                        attrs: { "xlink:href": "#msicon-svg-user-signout" }
+                      })
+                    ]
+                  )
+                ])
+              ])
+            ])
           ]
         )
       ]),
@@ -92701,17 +93326,19 @@ __webpack_require__.r(__webpack_exports__);
       // return [re];
     },
     makeArrayForInputGroup: function makeArrayForInputGroup(base, id, index) {
+      var multiIndex = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
       var self = base;
       var idfor = id + "_" + index;
       var Inputindex = 1; //  console.log(self.msFormData[id])
 
-      Inputindex = base.msCount[id] - 1;
+      Inputindex = base.msCount[id];
       var fordata = {
         rootId: id,
         id: index,
         groupDynamic: true,
         gruoupHeading: self.msFormData[id].gruoupHeading + " No of: " + Inputindex,
-        inputs: self.msFormData[id].inputs
+        inputs: self.msFormData[id].inputs,
+        msMultiIndex: multiIndex
       };
       return fordata;
     },
@@ -93220,15 +93847,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!****************************************************************!*\
   !*** ./vendor/msllp/core/src/Views/core/B/s/js/MS/D/Sales.vue ***!
   \****************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Sales_vue_vue_type_template_id_2f37247a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Sales.vue?vue&type=template&id=2f37247a&scoped=true& */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/D/Sales.vue?vue&type=template&id=2f37247a&scoped=true&");
 /* harmony import */ var _Sales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sales.vue?vue&type=script&lang=js& */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/D/Sales.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Sales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Sales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _Sales_vue_vue_type_style_index_0_id_2f37247a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Sales.vue?vue&type=style&index=0&id=2f37247a&scoped=true&lang=css& */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/D/Sales.vue?vue&type=style&index=0&id=2f37247a&scoped=true&lang=css&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Sales_vue_vue_type_style_index_0_id_2f37247a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Sales.vue?vue&type=style&index=0&id=2f37247a&scoped=true&lang=css& */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/D/Sales.vue?vue&type=style&index=0&id=2f37247a&scoped=true&lang=css&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -93260,7 +93886,7 @@ component.options.__file = "vendor/msllp/core/src/Views/core/B/s/js/MS/D/Sales.v
 /*!*****************************************************************************************!*\
   !*** ./vendor/msllp/core/src/Views/core/B/s/js/MS/D/Sales.vue?vue&type=script&lang=js& ***!
   \*****************************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93847,11 +94473,6 @@ var store = {
   }
 };
 window.vm = {};
-$("body").on("keydown", function (event) {
-  if (event.altKey) {
-    app.msShortCut(event, event.which);
-  }
-});
 var app = new Vue({
   el: '#msapp',
   mixins: [_MS_C_MS__WEBPACK_IMPORTED_MODULE_1__["default"]],
