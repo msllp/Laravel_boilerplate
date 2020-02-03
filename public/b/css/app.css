@@ -54686,7 +54686,7 @@ Creation date: 18/10/2019 23:34
   cursor: pointer;
   padding: 0.75rem;
   transition: all 500ms ease-in-out;
-  background-color: rgba(164, 130, 217, 0.4);
+  background-color: #c0a9e5;
 }
 
 .ms-unhidden {
@@ -54796,7 +54796,7 @@ Creation date: 18/10/2019 23:34
 }
 
 .ms-dashboard-action-box:hover {
-  background-color: rgba(164, 130, 217, 0.4);
+  background-color: #c0a9e5;
   transition: all 500ms ease-in-out;
 }
 
@@ -54823,15 +54823,15 @@ Creation date: 18/10/2019 23:34
   text-align: center;
   text-transform: uppercase;
   padding: 0.75rem;
-  background-color: rgba(121, 71, 199, 0.9);
+  background-color: #7947c7;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  border-color: #552d94;
+  border-color: #703bc3;
   border-width: 1px;
   transition: all 500ms ease-in-out;
 }
 
 .ms-dashboard-right-nav-box .ms-dashboard-right-nav-btn .ms-dashboard-right-nav-btn-profile:hover {
-  background-color: #552d94;
+  background-color: #703bc3;
   border-color: rgba(0, 0, 0, 0.8);
   color: rgba(255, 255, 255, 0.8);
   transition: all 500ms ease-in-out;
@@ -54841,10 +54841,10 @@ Creation date: 18/10/2019 23:34
   padding: 0.75rem;
   max-height: 48px;
   max-width: 48px;
-  background-color: rgba(164, 130, 217, 0.4);
+  background-color: #c0a9e5;
   border-radius: 50%;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  border-color: #552d94;
+  border-color: #703bc3;
   border-width: 1px;
 }
 
@@ -54854,7 +54854,7 @@ Creation date: 18/10/2019 23:34
 }
 
 .ms-dashboard-right-nav-box .ms-dashboard-right-nav-btn .ms-dashboard-right-nav-btn-notification:hover {
-  background-color: #552d94;
+  background-color: #703bc3;
   border-color: rgba(0, 0, 0, 0.8);
   color: rgba(255, 255, 255, 0.8);
   transition: all 500ms ease-in-out;
@@ -54866,7 +54866,7 @@ Creation date: 18/10/2019 23:34
 
 .ms-dashboard-profile-box {
   border-width: 1px;
-  border-color: rgba(164, 130, 217, 0.4);
+  border-color: #c0a9e5;
   background-color: white;
   position: fixed;
   top: 70px;
@@ -54889,7 +54889,7 @@ Creation date: 18/10/2019 23:34
 
 .ms-dashboard-profile-box .ms-dashboard-profile-body .ms-dashboard-profile-user-box .ms-dashboard-profile-user-icon {
   border-width: 1px;
-  border-color: rgba(164, 130, 217, 0.4);
+  border-color: #c0a9e5;
   border-radius: 9999px;
   padding: 0.25rem;
   display: flex;
@@ -54899,7 +54899,7 @@ Creation date: 18/10/2019 23:34
 }
 
 .ms-dashboard-profile-hr {
-  border-color: rgba(164, 130, 217, 0.4);
+  border-color: #c0a9e5;
   margin-left: -0.75rem;
   margin-right: -0.75rem;
 }
@@ -54932,7 +54932,7 @@ Creation date: 18/10/2019 23:34
   display: flex;
   max-width: 50px;
   max-height: 50px;
-  border-color: rgba(164, 130, 217, 0.4);
+  border-color: #c0a9e5;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
@@ -54957,7 +54957,7 @@ Creation date: 18/10/2019 23:34
 .ms-dashboard-profile-signout-btn {
   border-width: 1px;
   cursor: pointer;
-  border-color: rgba(164, 130, 217, 0.4);
+  border-color: #c0a9e5;
   width: auto;
   border-radius: 0.25rem;
 }
@@ -54985,7 +54985,7 @@ Creation date: 18/10/2019 23:34
 .ms-dashboard-profile-edit-btn {
   border-width: 1px;
   cursor: pointer;
-  border-color: rgba(164, 130, 217, 0.4);
+  border-color: #c0a9e5;
   width: auto;
   border-radius: 0.25rem;
 }
@@ -55024,7 +55024,7 @@ Creation date: 18/10/2019 23:34
   position: fixed;
   top: 72px;
   left: 0px;
-  background: linear-gradient(-47deg, #c8c8c8, rgba(164, 130, 217, 0.4));
+  background: linear-gradient(-47deg, #c8c8c8, #c0a9e5);
   width: 250px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -55069,7 +55069,7 @@ Creation date: 18/10/2019 23:34
   position: sticky;
   top: 0;
   color: white;
-  background-color: rgba(121, 71, 199, 0.9);
+  background-color: #7947c7;
 }
 
 .ms-main-title > i {
@@ -55097,7 +55097,7 @@ Creation date: 18/10/2019 23:34
   margin-right: 0.75rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   color: rgba(255, 255, 255, 0.8);
-  background-color: #552d94;
+  background-color: #703bc3;
   transition: all 500ms ease-in-out;
 }
 
@@ -55106,7 +55106,7 @@ Creation date: 18/10/2019 23:34
   margin-right: 0.75rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   color: rgba(255, 255, 255, 0.8);
-  background-color: #552d94;
+  background-color: #703bc3;
   transition: all 500ms ease-in-out;
 }
 
@@ -55142,21 +55142,21 @@ Creation date: 18/10/2019 23:34
 .ms-main-title-link:hover {
   transition: all 500ms ease-in-out;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  background-color: rgba(164, 130, 217, 0.4);
+  background-color: #c0a9e5;
   padding-left: 1rem;
   border-width: 1px;
-  border-color: #552d94;
+  border-color: #703bc3;
   transition: all 500ms ease-in-out;
 }
 
 .ms-main-title-link:hover i {
   transition: all 500ms ease-in-out;
   font-weight: 700;
-  color: #552d94;
+  color: #703bc3;
 }
 
 .ms-main-title-link:hover span {
-  color: #552d94;
+  color: #703bc3;
   transition: all 500ms ease-in-out;
 }
 
@@ -55168,7 +55168,7 @@ Creation date: 18/10/2019 23:34
 
 .ms-master-title-in-sub {
   border-bottom-width: 1px;
-  background-color: #552d94;
+  background-color: #703bc3;
   color: rgba(255, 255, 255, 0.9);
   border-color: rgba(97, 88, 206, 0.8);
   position: -webkit-sticky;
@@ -56650,7 +56650,7 @@ Creation date: 10/12/2019 22:01
 .ms-login-table tr th i {
   float: right;
   padding-right: 0.5rem;
-  color: rgba(121, 71, 199, 0.9);
+  color: #7947c7;
 }
 
 .ms-login-table tr td {
@@ -56661,20 +56661,20 @@ Creation date: 10/12/2019 22:01
   width: 100%;
   border-right-width: 1px;
   border-bottom-width: 1px;
-  border-color: rgba(121, 71, 199, 0.9);
+  border-color: #7947c7;
 }
 
 .ms-login-table tr td input:active, .ms-login-table tr td input:focus {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.9);
-  background-color: rgba(164, 130, 217, 0.4);
+  background-color: #c0a9e5;
 }
 
 .ms-login-btn {
   width: 100%;
   text-align: center;
-  background-color: rgba(164, 130, 217, 0.4);
+  background-color: #c0a9e5;
   color: rgba(0, 0, 0, 0.9);
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -56686,7 +56686,7 @@ Creation date: 10/12/2019 22:01
 
 .ms-login-btn:hover {
   transition: all 200ms ease-in;
-  background-color: #552d94;
+  background-color: #703bc3;
   color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
@@ -56698,6 +56698,157 @@ Creation date: 10/12/2019 22:01
   padding-left: 0.25rem;
   padding-right: 0.25rem;
   margin-bottom: 0.5rem;
+}
+
+.profileBox {
+  background: linear-gradient(-180deg, #ededed, #e0e0e0);
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+}
+
+.profileBox .profileBox-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.profileBox .profileBox-container .profileBox-left-box {
+  width: 33.333333%;
+  padding: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profileBox .profileBox-container .profileBox-left-box .profileBox-left-icon {
+  flex-wrap: wrap;
+  border-width: 1px;
+  border-radius: 300px;
+  background-color: white;
+  border-color: #703bc3;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.profileBox .profileBox-container .profileBox-left-box .profileBox-left-icon .profileBox-left-icon-user {
+  max-height: 100px;
+  max-width: 100px;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+.profileBox .profileBox-container .profileBox-left-box .profileBox-left-username {
+  width: 100%;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.profileBox .profileBox-container .profileBox-right-box {
+  width: 66.666667%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.profileBox .profileBox-container .profileBox-right-box .profileBox-right-box-table {
+  width: 100%;
+  border-color: #c0a9e5;
+}
+
+.profileBox .profileBox-container .profileBox-right-box .profileBox-right-box-table tr {
+  border-bottom-width: 1px;
+  border-color: #c0a9e5;
+}
+
+.profileBox .profileBox-container .profileBox-right-box .profileBox-right-box-table th {
+  padding: 0.25rem;
+  text-align: left;
+  padding-right: 0.5rem;
+}
+
+.profileBox .profileBox-container .profileBox-right-box .profileBox-right-box-table td {
+  padding: 0.25rem;
+}
+
+.usageBox {
+  background: linear-gradient(-180deg, #ededed, #e0e0e0);
+  margin-top: 0.5rem;
+  width: 50%;
+}
+
+.usageBox .usageBox-box-table {
+  margin: 0.5rem;
+  width: 100%;
+  border-color: #c0a9e5;
+}
+
+.usageBox .usageBox-box-table .usageBox-box-table-h {
+  text-align: center;
+}
+
+.usageBox .usageBox-box-table .usageBox-box-table-h th {
+  padding-bottom: 0.5rem;
+}
+
+.usageBox .usageBox-box-table progress {
+  max-width: 24px;
+}
+
+.planUpgradeBox {
+  background: linear-gradient(-180deg, #ededed, #e0e0e0);
+  margin-top: 0.5rem;
+  width: 50%;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .planUpgradeBox {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .planUpgradeBox {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .planUpgradeBox {
+    width: 33.333333%;
+  }
+}
+
+.planUpgradeBox .planUpgradeBox-table {
+  margin: 0.5rem;
+  width: 100%;
+  border-color: #c0a9e5;
+  overflow: auto;
+}
+
+.planUpgradeBox .planUpgradeBox-table .planUpgradeBox-table-h {
+  text-align: center;
+}
+
+.planUpgradeBox .planUpgradeBox-table .planUpgradeBox-table-h th {
+  padding-bottom: 0.5rem;
+}
+
+.planUpgradeBox .planUpgradeBox-table progress {
+  max-width: 24px;
+}
+
+.planUpgradeBox .planUpgradeBox-table .planUpgradeBox-table-f {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.planUpgradeBox .planUpgradeBox-table .planUpgradeBox-table-f span {
+  background-color: #7947c7;
 }
 
 body {
