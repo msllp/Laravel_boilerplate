@@ -86,18 +86,18 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue":
-/*!****************************************************!*\
-  !*** ./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue ***!
-  \****************************************************/
+/***/ "../../php/MSFrame/6/Master/MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue":
+/*!**********************************************************************************!*\
+  !*** E:/Pojects/php/MSFrame/6/Master/MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue ***!
+  \**********************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _dockerMasterDashboard_vue_vue_type_template_id_607e3425_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dockerMasterDashboard.vue?vue&type=template&id=607e3425&scoped=true& */ "./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=template&id=607e3425&scoped=true&");
-/* harmony import */ var _dockerMasterDashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dockerMasterDashboard.vue?vue&type=script&lang=js& */ "./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _dockerMasterDashboard_vue_vue_type_template_id_43cb5e4e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dockerMasterDashboard.vue?vue&type=template&id=43cb5e4e&scoped=true& */ "../../php/MSFrame/6/Master/MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=template&id=43cb5e4e&scoped=true&");
+/* harmony import */ var _dockerMasterDashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dockerMasterDashboard.vue?vue&type=script&lang=js& */ "../../php/MSFrame/6/Master/MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Live_o3_mainframe_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../../Live/o3 mainframe/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -105,51 +105,51 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_Live_o3_mainframe_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
   _dockerMasterDashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _dockerMasterDashboard_vue_vue_type_template_id_607e3425_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _dockerMasterDashboard_vue_vue_type_template_id_607e3425_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _dockerMasterDashboard_vue_vue_type_template_id_43cb5e4e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _dockerMasterDashboard_vue_vue_type_template_id_43cb5e4e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  "607e3425",
+  "43cb5e4e",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue"
+component.options.__file = "php/MSFrame/6/Master/MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************!*\
-  !*** ./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************/
+/***/ "../../php/MSFrame/6/Master/MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************!*\
+  !*** E:/Pojects/php/MSFrame/6/Master/MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dockerMasterDashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./dockerMasterDashboard.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dockerMasterDashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _Live_o3_mainframe_node_modules_babel_loader_lib_index_js_ref_4_0_Live_o3_mainframe_node_modules_vue_loader_lib_index_js_vue_loader_options_dockerMasterDashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../Live/o3 mainframe/node_modules/babel-loader/lib??ref--4-0!../../../../../../../../../../Live/o3 mainframe/node_modules/vue-loader/lib??vue-loader-options!./dockerMasterDashboard.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../../php/MSFrame/6/Master/MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_Live_o3_mainframe_node_modules_babel_loader_lib_index_js_ref_4_0_Live_o3_mainframe_node_modules_vue_loader_lib_index_js_vue_loader_options_dockerMasterDashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=template&id=607e3425&scoped=true&":
-/*!***********************************************************************************************!*\
-  !*** ./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=template&id=607e3425&scoped=true& ***!
-  \***********************************************************************************************/
+/***/ "../../php/MSFrame/6/Master/MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=template&id=43cb5e4e&scoped=true&":
+/*!*****************************************************************************************************************************!*\
+  !*** E:/Pojects/php/MSFrame/6/Master/MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=template&id=43cb5e4e&scoped=true& ***!
+  \*****************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_dockerMasterDashboard_vue_vue_type_template_id_607e3425_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./dockerMasterDashboard.vue?vue&type=template&id=607e3425&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=template&id=607e3425&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_dockerMasterDashboard_vue_vue_type_template_id_607e3425_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _Live_o3_mainframe_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Live_o3_mainframe_node_modules_vue_loader_lib_index_js_vue_loader_options_dockerMasterDashboard_vue_vue_type_template_id_43cb5e4e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../Live/o3 mainframe/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../Live/o3 mainframe/node_modules/vue-loader/lib??vue-loader-options!./dockerMasterDashboard.vue?vue&type=template&id=43cb5e4e&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../../php/MSFrame/6/Master/MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=template&id=43cb5e4e&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Live_o3_mainframe_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Live_o3_mainframe_node_modules_vue_loader_lib_index_js_vue_loader_options_dockerMasterDashboard_vue_vue_type_template_id_43cb5e4e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_dockerMasterDashboard_vue_vue_type_template_id_607e3425_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Live_o3_mainframe_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Live_o3_mainframe_node_modules_vue_loader_lib_index_js_vue_loader_options_dockerMasterDashboard_vue_vue_type_template_id_43cb5e4e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -179,6 +179,7 @@ module.exports = __webpack_require__(/*! ./lib/axios */ "./node_modules/axios/li
 var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
 var settle = __webpack_require__(/*! ./../core/settle */ "./node_modules/axios/lib/core/settle.js");
 var buildURL = __webpack_require__(/*! ./../helpers/buildURL */ "./node_modules/axios/lib/helpers/buildURL.js");
+var buildFullPath = __webpack_require__(/*! ../core/buildFullPath */ "./node_modules/axios/lib/core/buildFullPath.js");
 var parseHeaders = __webpack_require__(/*! ./../helpers/parseHeaders */ "./node_modules/axios/lib/helpers/parseHeaders.js");
 var isURLSameOrigin = __webpack_require__(/*! ./../helpers/isURLSameOrigin */ "./node_modules/axios/lib/helpers/isURLSameOrigin.js");
 var createError = __webpack_require__(/*! ../core/createError */ "./node_modules/axios/lib/core/createError.js");
@@ -201,7 +202,8 @@ module.exports = function xhrAdapter(config) {
       requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
     }
 
-    request.open(config.method.toUpperCase(), buildURL(config.url, config.params, config.paramsSerializer), true);
+    var fullPath = buildFullPath(config.baseURL, config.url);
+    request.open(config.method.toUpperCase(), buildURL(fullPath, config.params, config.paramsSerializer), true);
 
     // Set the request timeout in MS
     request.timeout = config.timeout;
@@ -262,7 +264,11 @@ module.exports = function xhrAdapter(config) {
 
     // Handle timeout
     request.ontimeout = function handleTimeout() {
-      reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED',
+      var timeoutErrorMessage = 'timeout of ' + config.timeout + 'ms exceeded';
+      if (config.timeoutErrorMessage) {
+        timeoutErrorMessage = config.timeoutErrorMessage;
+      }
+      reject(createError(timeoutErrorMessage, config, 'ECONNABORTED',
         request));
 
       // Clean up request
@@ -276,7 +282,7 @@ module.exports = function xhrAdapter(config) {
       var cookies = __webpack_require__(/*! ./../helpers/cookies */ "./node_modules/axios/lib/helpers/cookies.js");
 
       // Add xsrf header
-      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
+      var xsrfValue = (config.withCredentials || isURLSameOrigin(fullPath)) && config.xsrfCookieName ?
         cookies.read(config.xsrfCookieName) :
         undefined;
 
@@ -299,8 +305,8 @@ module.exports = function xhrAdapter(config) {
     }
 
     // Add withCredentials to request if needed
-    if (config.withCredentials) {
-      request.withCredentials = true;
+    if (!utils.isUndefined(config.withCredentials)) {
+      request.withCredentials = !!config.withCredentials;
     }
 
     // Add responseType to request if needed
@@ -579,7 +585,15 @@ Axios.prototype.request = function request(config) {
   }
 
   config = mergeConfig(this.defaults, config);
-  config.method = config.method ? config.method.toLowerCase() : 'get';
+
+  // Set config.method
+  if (config.method) {
+    config.method = config.method.toLowerCase();
+  } else if (this.defaults.method) {
+    config.method = this.defaults.method.toLowerCase();
+  } else {
+    config.method = 'get';
+  }
 
   // Hook up interceptors middleware
   var chain = [dispatchRequest, undefined];
@@ -696,6 +710,38 @@ module.exports = InterceptorManager;
 
 /***/ }),
 
+/***/ "./node_modules/axios/lib/core/buildFullPath.js":
+/*!******************************************************!*\
+  !*** ./node_modules/axios/lib/core/buildFullPath.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var isAbsoluteURL = __webpack_require__(/*! ../helpers/isAbsoluteURL */ "./node_modules/axios/lib/helpers/isAbsoluteURL.js");
+var combineURLs = __webpack_require__(/*! ../helpers/combineURLs */ "./node_modules/axios/lib/helpers/combineURLs.js");
+
+/**
+ * Creates a new URL by combining the baseURL with the requestedURL,
+ * only when the requestedURL is not already an absolute URL.
+ * If the requestURL is absolute, this function returns the requestedURL untouched.
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} requestedURL Absolute or relative URL to combine
+ * @returns {string} The combined full path
+ */
+module.exports = function buildFullPath(baseURL, requestedURL) {
+  if (baseURL && !isAbsoluteURL(requestedURL)) {
+    return combineURLs(baseURL, requestedURL);
+  }
+  return requestedURL;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/axios/lib/core/createError.js":
 /*!****************************************************!*\
   !*** ./node_modules/axios/lib/core/createError.js ***!
@@ -740,8 +786,6 @@ var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/util
 var transformData = __webpack_require__(/*! ./transformData */ "./node_modules/axios/lib/core/transformData.js");
 var isCancel = __webpack_require__(/*! ../cancel/isCancel */ "./node_modules/axios/lib/cancel/isCancel.js");
 var defaults = __webpack_require__(/*! ../defaults */ "./node_modules/axios/lib/defaults.js");
-var isAbsoluteURL = __webpack_require__(/*! ./../helpers/isAbsoluteURL */ "./node_modules/axios/lib/helpers/isAbsoluteURL.js");
-var combineURLs = __webpack_require__(/*! ./../helpers/combineURLs */ "./node_modules/axios/lib/helpers/combineURLs.js");
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -761,11 +805,6 @@ function throwIfCancellationRequested(config) {
 module.exports = function dispatchRequest(config) {
   throwIfCancellationRequested(config);
 
-  // Support baseURL config
-  if (config.baseURL && !isAbsoluteURL(config.url)) {
-    config.url = combineURLs(config.baseURL, config.url);
-  }
-
   // Ensure headers exist
   config.headers = config.headers || {};
 
@@ -780,7 +819,7 @@ module.exports = function dispatchRequest(config) {
   config.headers = utils.merge(
     config.headers.common || {},
     config.headers[config.method] || {},
-    config.headers || {}
+    config.headers
   );
 
   utils.forEach(
@@ -903,13 +942,23 @@ module.exports = function mergeConfig(config1, config2) {
   config2 = config2 || {};
   var config = {};
 
-  utils.forEach(['url', 'method', 'params', 'data'], function valueFromConfig2(prop) {
+  var valueFromConfig2Keys = ['url', 'method', 'params', 'data'];
+  var mergeDeepPropertiesKeys = ['headers', 'auth', 'proxy'];
+  var defaultToConfig2Keys = [
+    'baseURL', 'url', 'transformRequest', 'transformResponse', 'paramsSerializer',
+    'timeout', 'withCredentials', 'adapter', 'responseType', 'xsrfCookieName',
+    'xsrfHeaderName', 'onUploadProgress', 'onDownloadProgress',
+    'maxContentLength', 'validateStatus', 'maxRedirects', 'httpAgent',
+    'httpsAgent', 'cancelToken', 'socketPath'
+  ];
+
+  utils.forEach(valueFromConfig2Keys, function valueFromConfig2(prop) {
     if (typeof config2[prop] !== 'undefined') {
       config[prop] = config2[prop];
     }
   });
 
-  utils.forEach(['headers', 'auth', 'proxy'], function mergeDeepProperties(prop) {
+  utils.forEach(mergeDeepPropertiesKeys, function mergeDeepProperties(prop) {
     if (utils.isObject(config2[prop])) {
       config[prop] = utils.deepMerge(config1[prop], config2[prop]);
     } else if (typeof config2[prop] !== 'undefined') {
@@ -921,13 +970,25 @@ module.exports = function mergeConfig(config1, config2) {
     }
   });
 
-  utils.forEach([
-    'baseURL', 'transformRequest', 'transformResponse', 'paramsSerializer',
-    'timeout', 'withCredentials', 'adapter', 'responseType', 'xsrfCookieName',
-    'xsrfHeaderName', 'onUploadProgress', 'onDownloadProgress', 'maxContentLength',
-    'validateStatus', 'maxRedirects', 'httpAgent', 'httpsAgent', 'cancelToken',
-    'socketPath'
-  ], function defaultToConfig2(prop) {
+  utils.forEach(defaultToConfig2Keys, function defaultToConfig2(prop) {
+    if (typeof config2[prop] !== 'undefined') {
+      config[prop] = config2[prop];
+    } else if (typeof config1[prop] !== 'undefined') {
+      config[prop] = config1[prop];
+    }
+  });
+
+  var axiosKeys = valueFromConfig2Keys
+    .concat(mergeDeepPropertiesKeys)
+    .concat(defaultToConfig2Keys);
+
+  var otherKeys = Object
+    .keys(config2)
+    .filter(function filterAxiosKeys(key) {
+      return axiosKeys.indexOf(key) === -1;
+    });
+
+  utils.forEach(otherKeys, function otherKeysDefaultToConfig2(prop) {
     if (typeof config2[prop] !== 'undefined') {
       config[prop] = config2[prop];
     } else if (typeof config1[prop] !== 'undefined') {
@@ -1035,13 +1096,12 @@ function setContentTypeIfUnset(headers, value) {
 
 function getDefaultAdapter() {
   var adapter;
-  // Only Node.JS has a process variable that is of [[Class]] process
-  if (typeof process !== 'undefined' && Object.prototype.toString.call(process) === '[object process]') {
-    // For node use HTTP adapter
-    adapter = __webpack_require__(/*! ./adapters/http */ "./node_modules/axios/lib/adapters/xhr.js");
-  } else if (typeof XMLHttpRequest !== 'undefined') {
+  if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
     adapter = __webpack_require__(/*! ./adapters/xhr */ "./node_modules/axios/lib/adapters/xhr.js");
+  } else if (typeof process !== 'undefined' && Object.prototype.toString.call(process) === '[object process]') {
+    // For node use HTTP adapter
+    adapter = __webpack_require__(/*! ./adapters/http */ "./node_modules/axios/lib/adapters/xhr.js");
   }
   return adapter;
 }
@@ -1563,7 +1623,6 @@ module.exports = function spread(callback) {
 
 
 var bind = __webpack_require__(/*! ./helpers/bind */ "./node_modules/axios/lib/helpers/bind.js");
-var isBuffer = __webpack_require__(/*! is-buffer */ "./node_modules/axios/node_modules/is-buffer/index.js");
 
 /*global toString:true*/
 
@@ -1579,6 +1638,27 @@ var toString = Object.prototype.toString;
  */
 function isArray(val) {
   return toString.call(val) === '[object Array]';
+}
+
+/**
+ * Determine if a value is undefined
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if the value is undefined, otherwise false
+ */
+function isUndefined(val) {
+  return typeof val === 'undefined';
+}
+
+/**
+ * Determine if a value is a Buffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Buffer, otherwise false
+ */
+function isBuffer(val) {
+  return val !== null && !isUndefined(val) && val.constructor !== null && !isUndefined(val.constructor)
+    && typeof val.constructor.isBuffer === 'function' && val.constructor.isBuffer(val);
 }
 
 /**
@@ -1635,16 +1715,6 @@ function isString(val) {
  */
 function isNumber(val) {
   return typeof val === 'number';
-}
-
-/**
- * Determine if a value is undefined
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if the value is undefined, otherwise false
- */
-function isUndefined(val) {
-  return typeof val === 'undefined';
 }
 
 /**
@@ -1898,32 +1968,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/axios/node_modules/is-buffer/index.js":
-/*!************************************************************!*\
-  !*** ./node_modules/axios/node_modules/is-buffer/index.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/*!
- * Determine if an object is a Buffer
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-
-module.exports = function isBuffer (obj) {
-  return obj != null && obj.constructor != null &&
-    typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../../php/MSFrame/6/Master/MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!E:/Pojects/php/MSFrame/6/Master/MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2043,7 +2091,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MS__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MS */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/MS.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 //
 //
@@ -3205,6 +3253,946 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msListMaker.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msListMaker.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _MS__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MS */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/MS.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "mslistmaker",
+  mixin: [_MS__WEBPACK_IMPORTED_MODULE_0__["default"]],
+  data: function data() {
+    var _ref;
+
+    return _ref = {
+      forUserName: '',
+      hasItemFromServer: false,
+      hasUserFromServer: false,
+      currentUserIdentifier: "",
+      currentItemName: "",
+      currentQt: 1,
+      currentList: [],
+      foundItem: [],
+      pickedItem: 0,
+      defaultTax: [{
+        name: 'CGST'
+      }, {
+        name: 'SGST'
+      }],
+      finalTax: [],
+      currentItemPage: 1,
+      maxItemPage: 10,
+      //       itemTotalTaxable:0,
+      itemTotalTax: 0,
+      //     itemTotalQt:0,
+      //        itemTaxDetails:{},
+      //      itemTaxPlus:0,
+      withData: false,
+      withDataObj: {},
+      oldCurrentList: [],
+      itemDescription: false,
+      baacodeMachineOn: false,
+      msUserMode: false,
+      foundUser: [],
+      pickedUser: 0
+    }, _defineProperty(_ref, "forUserName", ''), _defineProperty(_ref, "forAddress1", ''), _defineProperty(_ref, "forAddress2", ''), _defineProperty(_ref, "forAddress3", ''), _defineProperty(_ref, "forContactNo", ''), _defineProperty(_ref, "forCity", ''), _defineProperty(_ref, "forPincode", ''), _defineProperty(_ref, "forGSTIN", ''), _defineProperty(_ref, "forDate", ''), _defineProperty(_ref, "msFounUserList", false), _defineProperty(_ref, "currentUserPage", 1), _defineProperty(_ref, "allFoundData", {}), _defineProperty(_ref, "PriceMatters", false), _ref;
+  },
+  props: {
+    'msData': {
+      type: Object,
+      required: true
+    }
+  },
+  watch: {
+    pickedUser: function pickedUser(newVal, oldVal) {
+      this.selectUser(newVal);
+    },
+    currentUserIdentifier: function currentUserIdentifier(newVal, oldVal) {
+      var url = this.msData.productApiUrl + "?msFor=" + newVal;
+      var th = this;
+
+      if (newVal == "") {
+        th.resetUserSearch();
+      } else {
+        var config = {
+          headers: {
+            'MS-APP-Token': 'app'
+          }
+        };
+
+        if (!this.hasFoundData('users', 1, newVal)) {
+          this.setFoundUser([]);
+          window.axios.get(url, config).then(function (res) {
+            th.setFoundUser(res.data.msFor);
+            th.hasUserFromServer = true;
+            th.selectUser(0);
+            th.toggleFounUser(true);
+            th.setFoundData('users', 1, newVal, res.data.msFor);
+          })["catch"](function (e) {});
+        } else {
+          var inData = this.getFoundData('users', 1, newVal);
+          th.setFoundUser(inData);
+          th.hasUserFromServer = true;
+          th.selectUser(0);
+          th.toggleFounUser(true);
+        } //  console.log(this.hasFoundData('users',1,newVal));
+
+      }
+    },
+    currentQt: function currentQt(newVal, oldVal) {},
+    currentItemName: function currentItemName(newVal, oldVal) {
+      var url = this.msData.productApiUrl + "?name=" + newVal;
+      var th = this;
+
+      if (newVal == "") {
+        th.hasItemFromServer = false;
+        th.foundItem = [];
+      } else {
+        var config = {
+          headers: {
+            'MS-APP-Token': 'app'
+          }
+        };
+
+        if (this.baacodeMachineOn) {
+          url = this.msData.productApiUrl + "?name=" + newVal + "&barcode=" + this.baacodeMachineOn;
+
+          if (newVal.length == 13) {
+            window.axios.get(url, config).then(function (res) {
+              th.setFoundItem(res.data.msItem);
+              th.hasItemFromServer = true;
+            });
+          }
+        } else {
+          window.axios.get(url, config).then(function (res) {
+            th.setFoundItem(res.data.msItem);
+            th.hasItemFromServer = true;
+          });
+        }
+      } // th.setFoundItem(url);
+
+    }
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    this.loadSettings();
+    this.$nextTick(function () {
+      _this.$refs.cI.focus();
+
+      _this.$refs.cI.click();
+    });
+  },
+  methods: {
+    loadSettings: function loadSettings() {
+      if (this.msData.hasOwnProperty('msConfig')) {
+        if (this.msData['msConfig'].hasOwnProperty('priceMatters')) this.PriceMatters = this.msData.msConfig.priceMatters;
+        if (this.msData['msConfig'].hasOwnProperty('productDescription')) this.itemDescription = this.msData.msConfig.productDescription;
+        if (this.msData['msConfig'].hasOwnProperty('baacodeMachineOn')) this.baacodeMachineOn = this.msData.msConfig.baacodeMachineOn;
+      }
+    },
+    setFoundData: function setFoundData() {
+      var key = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+      var page = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+      var str = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
+      var fdata = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : [];
+
+      //   console.log(key!='');
+      if (key == '' || str == '') {
+        //    console.log("1: "+this.allFoundData.hasOwnProperty(key));
+        return false;
+      } else {
+        if (!this.allFoundData.hasOwnProperty(key)) {
+          //  console.log("2: "+!this.allFoundData.hasOwnProperty(key));
+          this.allFoundData[key] = {};
+
+          if (!this.allFoundData[key].hasOwnProperty(str)) {
+            // console.log("3: "+!this.allFoundData[key].hasOwnProperty(str));
+            this.allFoundData[key][str] = {};
+
+            if (!this.allFoundData[key][str].hasOwnProperty(page)) {
+              //  console.log("4:  "+!this.allFoundData[key][str].hasOwnProperty(page));
+              this.allFoundData[key][str][page] = fdata;
+              return true;
+            }
+          } else {
+            if (!this.allFoundData[key][str].hasOwnProperty(page)) {
+              //  console.log("4:  "+!this.allFoundData[key][str].hasOwnProperty(page));
+              this.allFoundData[key][str][page] = fdata;
+              return true;
+            }
+          }
+        } else {
+          if (!this.allFoundData[key].hasOwnProperty(str)) {
+            // console.log("3: "+!this.allFoundData[key].hasOwnProperty(str));
+            this.allFoundData[key][str] = {};
+
+            if (!this.allFoundData[key][str].hasOwnProperty(page)) {
+              //  console.log("4:  "+!this.allFoundData[key][str].hasOwnProperty(page));
+              this.allFoundData[key][str][page] = fdata;
+              return true;
+            }
+          } else {
+            if (!this.allFoundData[key][str].hasOwnProperty(page)) {
+              //  console.log("4:  "+!this.allFoundData[key][str].hasOwnProperty(page));
+              this.allFoundData[key][str][page] = fdata;
+              return true;
+            }
+          }
+        }
+      } //console.log("5: False");
+
+
+      return false;
+    },
+    getFoundData: function getFoundData() {
+      var key = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+      var page = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+      var str = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
+      var returnD = [];
+
+      if (key != '' && str != '' && this.allFoundData.hasOwnProperty(key) && this.allFoundData[key].hasOwnProperty(str) && this.allFoundData[key][str].hasOwnProperty(page)) {
+        returnD = this.allFoundData[key][str][page];
+      }
+
+      return returnD;
+    },
+    hasFoundData: function hasFoundData() {
+      var key = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+      var page = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+      var str = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
+
+      //  console.log('key : '+ key + " str: "+str);
+      //console.log(key!='' && str!='' && this.allFoundData(key));
+      if (key != '' && str != '' && this.allFoundData.hasOwnProperty(key) && this.allFoundData[key].hasOwnProperty(str) && this.allFoundData[key][str].hasOwnProperty(page)) {
+        return true;
+      }
+
+      return false;
+    },
+    plusUser: function plusUser(event) {
+      event.preventDefault();
+      if (this.foundUser.length <= this.pickedUser || this.pickedUser != 0) this.pickedUser--;
+    },
+    downUser: function downUser(event) {
+      event.preventDefault();
+      if (this.pickedUser >= 0 && this.foundUser.length - 1 > this.pickedUser) this.pickedUser++;
+    },
+    getUsersFromServer: function getUsersFromServer() {
+      var url = this.msData.productApiUrl + "?msFor=" + this.currentUserIdentifier + "&page=" + this.currentUserPage;
+      var th = this;
+
+      if (this.currentUserIdentifier == "") {
+        th.resetUserSearch();
+      } else {
+        var config = {
+          headers: {
+            'MS-APP-Token': 'app'
+          }
+        };
+
+        if (!this.hasFoundData('users', th.currentUserPage, this.currentUserIdentifier)) {
+          this.setFoundUser([]);
+          window.axios.get(url, config).then(function (res) {
+            th.setFoundUser(res.data.msFor);
+            th.hasUserFromServer = true;
+            th.selectUser(0);
+            th.toggleFounUser(true);
+            th.setFoundData('users', th.currentUserPage, th.currentUserIdentifier, res.data.msFor);
+          });
+        } else {
+          var inData = this.getFoundData('users', th.currentUserPage, this.currentUserIdentifier);
+          th.setFoundUser(inData);
+          th.hasUserFromServer = true;
+          th.selectUser(0);
+          th.toggleFounUser(true);
+        } //   window.axios.get(url,config).then((res)=>{th.setFoundUser(res.data.msFor);th.hasUserFromServer=true;th.toggleFounUser(true);})
+
+      }
+    },
+    backUserPage: function backUserPage() {
+      if (this.currentUserPage > 1) {
+        this.currentUserPage--;
+        this.getUsersFromServer();
+      }
+    },
+    nextUserPage: function nextUserPage() {
+      if (this.maxItemPage > this.currentUserPage) {
+        this.currentUserPage++;
+        this.getUsersFromServer();
+      }
+    },
+    resetUserSearch: function resetUserSearch() {
+      this.hasUserFromServer = false;
+      this.foundUser = [];
+      this.msUserMode = false;
+      this.msFounUserList = true;
+    },
+    setFoundUser: function setFoundUser(val) {
+      this.foundUser = val;
+    },
+    getDataFromUrl: function getDataFromUrl(th, url) {
+      var methods = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
+      var config = {
+        headers: {
+          'MS-APP-Token': 'app'
+        }
+      };
+      window.axios.get(url, config).then(function (res) {
+        th.setFoundItem(res.data.msItem);
+        th.hasItemFromServer = true;
+      });
+    },
+    calculatTax: function calculatTax(tax, price) {
+      var taxFinal = 0;
+
+      for (var taxPlus in tax) {
+        taxFinal = taxFinal + price * tax[taxPlus].plus / 100;
+      }
+
+      return taxFinal;
+    },
+    selectItem: function selectItem(val) {
+      this.pickedItem = val;
+      this.addItemRaw(this.foundItem[val]);
+    },
+    selectUser: function selectUser(key) {
+      if (this.foundUser.length > 0) {
+        this.pickedUser = key;
+        this.setUser(this.foundUser[key]);
+      }
+    },
+    setUser: function setUser(data) {
+      this.toggleUserMode(true);
+      this.forUserName = data.name;
+      this.forAddress1 = data.address1;
+      this.forAddress2 = data.address1;
+      this.forAddress3 = data.address3;
+      this.forContactNo = data.contactno;
+      this.forCity = data.city;
+      this.forPincode = data.pincode;
+      this.forGSTIN = data.gstno;
+      this.forDate = new Date().toISOString().slice(0, 10);
+    },
+    setFoundItem: function setFoundItem(val) {
+      var key = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+      this.pickedItem = key;
+      this.foundItem = val;
+    },
+    getItemName: function getItemName() {
+      return this.currentItemName;
+    },
+    setItemName: function setItemName(name) {
+      this.currentItemName = name;
+    },
+    resetItemQt: function resetItemQt() {
+      if (this.currentQt != 1) this.currentQt = 1;
+    },
+    addItemRaw: function addItemRaw(item) {
+      if (typeof item != 'undefined') {
+        var itemF = {
+          name: item.name,
+          qt: this.currentQt,
+          price: item.price,
+          tax: item.tax,
+          stock: item.stock,
+          taxcode: item.taxcode
+        };
+        var taxI = 0;
+        var totalTaxable = itemF.price * itemF.qt;
+
+        for (var tax in itemF.tax) {
+          taxI = taxI + itemF.tax[tax].plus * totalTaxable / 100;
+        } //this.itemTotalTaxable=this.itemTotalTaxable+taxI;
+
+
+        this.resetForNewItemSearch();
+        this.currentList.push(itemF);
+      }
+    },
+    resetForNewItemSearch: function resetForNewItemSearch() {
+      this.hasItemFromServer = false;
+      this.currentItemPage = 1;
+      this.$refs.cI.focus();
+      this.$refs.cI.click();
+      this.setItemName("");
+      this.resetItemQt();
+      this.pickedItem = 0;
+      this.foundItem = this.foundItem.splice(0, this.foundItem.length);
+      this.currentItemName = "";
+    },
+    addItem: function addItem() {
+      var from = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+
+      if (this.baacodeMachineOn) {
+        // var qt=prompt('Quantity: ','1');
+        // this.currentQt=qt;
+        var th = this;
+
+        if (this.getItemName() != "" && this.currentItemName.toString().length == 13) {
+          var th = this;
+
+          if (this.hasItemFromServer) {
+            th.addItemRaw(th.foundItem[th.pickedItem]);
+          } else {
+            //   console.log('i m here')
+            var url = this.msData.productApiUrl + "?name=" + this.currentItemName + "&barscode=" + this.baacodeMachineOn; //th.addItemRaw(th.foundItem[th.pickedItem]);
+            //  if(from=='enter')  console.log(th.foundItem[th.pickedItem]);
+          }
+        }
+      } else {
+        if (this.getItemName() != "" && this.currentItemName.length < 10) {
+          this.addItemRaw(this.foundItem[this.pickedItem]);
+        }
+      }
+    },
+    plusQt: function plusQt() {
+      this.currentQt++;
+    },
+    minusQt: function minusQt() {
+      if (this.currentQt > 1) this.currentQt--;
+    },
+    plusQtCurrent: function plusQtCurrent(key) {
+      var newVal = this.currentList;
+      this.currentList = newVal.map(function (value, index) {
+        if (index == key) value.qt++;
+        return value;
+      }); //this.currentQt++;
+    },
+    minusQtCurrent: function minusQtCurrent(key) {
+      this.currentList = this.currentList.map(function (value, index) {
+        if (index == key && value.qt > 1) value.qt--;
+        return value;
+      }); //this.currentQt++;
+    },
+    plusItem: function plusItem(event) {
+      event.preventDefault();
+      if (this.foundItem.length <= this.pickedItem || this.pickedItem != 0) this.pickedItem--;
+    },
+    downItem: function downItem(event) {
+      event.preventDefault();
+      if (this.pickedItem >= 0 && this.foundItem.length - 1 > this.pickedItem) this.pickedItem++;
+    },
+    getItemsFromServer: function getItemsFromServer() {
+      var url = this.msData.productApiUrl + "?name=" + this.currentItemName + '&page=' + this.currentItemPage;
+      var th = this;
+
+      if (this.currentItemName == "") {
+        th.hasItemFromServer = false;
+        th.foundItem = [];
+      } else {
+        var config = {
+          headers: {
+            'MS-APP-Token': 'app'
+          }
+        };
+        window.axios.get(url, config).then(function (res) {
+          if (res.data.hasOwnProperty('msItemPageData')) th.maxItemPage = res.data.msItemPageData.maxPage;
+          if (th.maxItemPage == 0) th.maxItemPage = 1;
+          th.setFoundItem(res.data.msItem);
+          th.hasItemFromServer = true;
+        });
+      }
+    },
+    backItemPage: function backItemPage() {
+      if (this.currentItemPage > 1) {
+        this.currentItemPage--;
+        this.getItemsFromServer();
+      }
+    },
+    nextItemPage: function nextItemPage() {
+      if (this.maxItemPage > this.currentItemPage) {
+        this.currentItemPage++;
+        this.getItemsFromServer();
+      }
+    },
+    getItemPage: function getItemPage(page) {},
+    roundToTwo: function roundToTwo(val) {
+      return +(Math.round(val + "e+2") + "e-2");
+    },
+    getTotalOfTypeCode: function getTotalOfTypeCode(taxDetails) {
+      var total = 0;
+
+      for (var tax in taxDetails) {
+        total += taxDetails[tax];
+      }
+
+      return total;
+    },
+    removeItemFromList: function removeItemFromList(key) {
+      this.currentList.splice(key, 1);
+    },
+    toggelBarcodeScaner: function toggelBarcodeScaner() {
+      this.baacodeMachineOn = this.baacodeMachineOn ? false : true;
+    },
+    toggleUserMode: function toggleUserMode() {
+      var staticInput = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+
+      if (staticInput == '') {
+        this.msUserMode = this.msUserMode ? false : true;
+      } else {
+        this.msUserMode = staticInput;
+      }
+    },
+    toggleFounUser: function toggleFounUser() {
+      var staticInput = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+
+      if (staticInput == '' || staticInput == "object MouseEvent") {
+        this.msFounUserList = this.msFounUserList ? false : true;
+      } else {
+        this.msFounUserList = staticInput;
+      }
+    },
+    onLytoggleFounUser: function onLytoggleFounUser(event) {
+      this.msFounUserList = this.msFounUserList ? false : true;
+    }
+  },
+  computed: {
+    currentListProcess: function currentListProcess(vueCom) {
+      //   console.log(vueCom.currentList);
+      this.oldCurrentList = vueCom.currentList;
+      return this.currentList;
+    },
+    itemTotalTaxable: function itemTotalTaxable() {
+      var itemTotaltaxable = 0;
+
+      for (var rowKey in this.currentListProcess) {
+        itemTotaltaxable += this.currentListProcess[rowKey]['price'] * this.currentListProcess[rowKey]['qt'];
+      }
+
+      return itemTotaltaxable;
+    },
+    itemTaxDetails: function itemTaxDetails() {
+      var itemTotaltaxDetails = {};
+
+      for (var rowKey in this.currentListProcess) {
+        var subTaxTotal = 0;
+
+        for (var rowKey2 in this.currentListProcess[rowKey]['tax']) {
+          var productTotal = this.currentListProcess[rowKey]['price'] * this.currentListProcess[rowKey]['qt'];
+
+          if (itemTotaltaxDetails.hasOwnProperty(this.currentListProcess[rowKey]['tax'][rowKey2]['name'])) {
+            itemTotaltaxDetails[this.currentListProcess[rowKey]['tax'][rowKey2]['name']] += productTotal * this.currentListProcess[rowKey]['tax'][rowKey2]['plus'] / 100;
+          } else {
+            itemTotaltaxDetails[this.currentListProcess[rowKey]['tax'][rowKey2]['name']] = productTotal * this.currentListProcess[rowKey]['tax'][rowKey2]['plus'] / 100;
+          }
+        }
+      } //  console.log(itemTotaltaxDetails);
+
+
+      return itemTotaltaxDetails;
+    },
+    itemTaxPlus: function itemTaxPlus() {
+      var itemTotaltaxPlus = 0;
+
+      for (var rowKey in this.currentListProcess) {
+        var productTotal = this.currentListProcess[rowKey]['price'] * this.currentListProcess[rowKey]['qt'];
+        var subTaxTotal = 0;
+
+        for (var rowKey2 in this.currentListProcess[rowKey]['tax']) {
+          subTaxTotal += productTotal * this.currentListProcess[rowKey]['tax'][rowKey2]['plus'] / 100;
+        }
+
+        itemTotaltaxPlus += productTotal + subTaxTotal;
+      } //console.log(itemTotaltaxDetails);
+
+
+      return itemTotaltaxPlus;
+    },
+    itemTotalQt: function itemTotalQt() {
+      var itemTotalQt = 0;
+
+      for (var rowKey in this.currentListProcess) {
+        var msD = typeof this.currentListProcess[rowKey]['qt'] != 'number' ? parseInt(this.currentListProcess[rowKey]['qt']) : this.currentListProcess[rowKey]['qt'];
+        itemTotalQt += typeof msD != 'undefined' ? msD : 0;
+      }
+
+      return itemTotalQt;
+    },
+    itemTaxCodeWise: function itemTaxCodeWise() {
+      var itemTaxCodeWise = {};
+
+      for (var rowKey in this.currentListProcess) {
+        var productTotal = this.currentListProcess[rowKey]['price'] * this.currentListProcess[rowKey]['qt'];
+        var subTaxTotal = 0;
+
+        if (itemTaxCodeWise.hasOwnProperty('taxcode_' + this.currentListProcess[rowKey]['taxcode'])) {
+          var oldData = itemTaxCodeWise['taxcode_' + this.currentListProcess[rowKey]['taxcode']];
+          itemTaxCodeWise['taxcode_' + this.currentListProcess[rowKey]['taxcode']] = {
+            taxcode: this.currentListProcess[rowKey]['taxcode'],
+            taxdetail: oldData['taxdetail'],
+            qt: itemTaxCodeWise['taxcode_' + this.currentListProcess[rowKey]['taxcode']]['qt'] + this.currentListProcess[rowKey]['qt']
+          };
+
+          for (var rowKey2 in this.currentListProcess[rowKey]['tax']) {
+            itemTaxCodeWise['taxcode_' + this.currentListProcess[rowKey]['taxcode']]['taxdetail'][this.currentListProcess[rowKey]['tax'][rowKey2]['name']] += productTotal * this.currentListProcess[rowKey]['tax'][rowKey2]['plus'] / 100;
+          }
+        } else {
+          itemTaxCodeWise['taxcode_' + this.currentListProcess[rowKey]['taxcode']] = {
+            taxcode: this.currentListProcess[rowKey]['taxcode'],
+            taxdetail: {},
+            qt: this.currentListProcess[rowKey]['qt']
+          };
+          itemTaxCodeWise['taxcode_' + this.currentListProcess[rowKey]['taxcode']]['taxdetail'] = {};
+
+          for (var rowKey2 in this.currentListProcess[rowKey]['tax']) {
+            itemTaxCodeWise['taxcode_' + this.currentListProcess[rowKey]['taxcode']]['taxdetail'][this.currentListProcess[rowKey]['tax'][rowKey2]['name']] = productTotal * this.currentListProcess[rowKey]['tax'][rowKey2]['plus'] / 100;
+          }
+        }
+      }
+
+      return itemTaxCodeWise;
+    },
+    itemTaxCodeWiseTotalQt: function itemTaxCodeWiseTotalQt() {
+      var itemTaxCodeWiseTotalQt = 0;
+
+      for (var hsn in this.itemTaxCodeWise) {
+        itemTaxCodeWiseTotalQt += this.itemTaxCodeWise[hsn]['qt'];
+      }
+
+      return itemTaxCodeWiseTotalQt;
+    },
+    itemTaxCodeWiseTotalTaxByType: function itemTaxCodeWiseTotalTaxByType() {
+      var itemTaxCodeWiseTotalTaxByType = {};
+
+      for (var hsn in this.itemTaxCodeWise) {
+        for (var rowKey in this.defaultTax) {
+          //  consoles.log( this.itemTaxCodeWise[hsn]['taxdetail'][this.defaultTax[rowKey]['name']]);
+          if (itemTaxCodeWiseTotalTaxByType.hasOwnProperty(this.defaultTax[rowKey]['name'])) {
+            itemTaxCodeWiseTotalTaxByType[this.defaultTax[rowKey]['name']] += this.itemTaxCodeWise[hsn]['taxdetail'][this.defaultTax[rowKey]['name']];
+          } else {
+            itemTaxCodeWiseTotalTaxByType[this.defaultTax[rowKey]['name']] = this.itemTaxCodeWise[hsn]['taxdetail'][this.defaultTax[rowKey]['name']];
+          }
+        }
+      }
+
+      return itemTaxCodeWiseTotalTaxByType;
+    },
+    itemTaxCodeWiseTotalTaxAll: function itemTaxCodeWiseTotalTaxAll() {
+      var itemTaxCodeWiseTotalTaxAll = 0;
+
+      for (var hsn in this.itemTaxCodeWise) {
+        var subTax = 0;
+
+        for (var rowKey in this.defaultTax) {
+          //      console.log(hsn);
+          //    console.log( this.defaultTax[rowKey]['name']);
+          subTax += this.itemTaxCodeWise[hsn]['taxdetail'][this.defaultTax[rowKey]['name']];
+        }
+
+        itemTaxCodeWiseTotalTaxAll += subTax;
+      }
+
+      return itemTaxCodeWiseTotalTaxAll;
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msNewTab.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msNewTab.vue?vue&type=script&lang=js& ***!
@@ -3768,6 +4756,10 @@ __webpack_require__.r(__webpack_exports__);
     'msData': {
       type: Object,
       required: true
+    },
+    'msExtra': {
+      type: Object,
+      required: true
     }
   },
   data: function data() {
@@ -3951,6 +4943,65 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
  // import msMenubar from './msMenubar';
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3965,6 +5016,7 @@ __webpack_require__.r(__webpack_exports__);
       windowWidth: window.innerWidth,
       msMenuData: null,
       msProfileDiv: false,
+      msNotificationDiv: false,
       msUserData: {
         Username: 'maxirooney',
         sex: 'male',
@@ -3979,13 +5031,22 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
+    openProfile: function openProfile() {
+      if (this.msProfileDiv) this.msProfileDiv = false;
+      var data = {
+        modCode: "USERS4O3",
+        modDView: "View Profile",
+        modUrl: "/o3/User/profile"
+      };
+      this.$refs['ms-live-tab'].addActionToTab(data);
+    },
     oprateProfileBox: function oprateProfileBox() {
-      if (this.msProfileDiv) {
-        ;
-        this.msProfileDiv = false;
-      } else {
-        this.msProfileDiv = true;
-      }
+      this.msProfileDiv = this.msProfileDiv ? false : true;
+      if (this.msNotificationDiv) this.msNotificationDiv = false;
+    },
+    oprateNotificationBox: function oprateNotificationBox() {
+      if (this.msProfileDiv) this.msProfileDiv = false;
+      this.msNotificationDiv = this.msNotificationDiv ? false : true;
     },
     onCalac: function onCalac(event, kCode) {
       window.vueApp.msShortCut(event, kCode);
@@ -4057,6 +5118,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     hideNavOnlyForMobile: function hideNavOnlyForMobile(event) {
       this.hideNavBar(event);
+    },
+    darkModeToggel: function darkModeToggel() {
+      this.$root.$data.msDarkMode = this.$root.$data.msDarkMode ? false : true;
     }
   },
   beforeCreate: function beforeCreate() {},
@@ -4092,7 +5156,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   beforeMount: function beforeMount() {// this.getDataForSideBar();
   },
-  components: {//  msMenubar
+  computed: {
+    msDarkMode: function msDarkMode() {
+      //   console.log(this.$root.$data.msDarkMode);
+      return this.$root.$data.msDarkMode;
+    }
   }
 });
 
@@ -5200,9 +6268,9 @@ __webpack_require__.r(__webpack_exports__);
       this.currentTab = newtab;
     },
     addActionToTab: function addActionToTab(data) {
-      var _this2 = this;
-
       //delete this.allTab[this.currentTab];
+      var Handler = this.$refs['tab_' + this.currentTab][0];
+
       if (this.allTab.length < 1) {
         data.tabCode = this.ms_rand(5, 1);
         data.modCode = "MAS";
@@ -5212,7 +6280,6 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       this.$nextTick(function () {
-        var Handler = _this2.$refs['tab_' + _this2.currentTab][0];
         Handler.updateTab(data); //    console.log(data);
         //normalizeArray(this.$refs.form).classList.remove("was-validated");
       }, data); //this.$children[this.currentTab].updateTab(data);
@@ -5243,8 +6310,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _C_MS__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./C/MS */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/MS.js");
 /* harmony import */ var _C_msForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./C/msForm */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msForm.vue");
-/* harmony import */ var E_MS_Master_Projects_FrameworkPHP_gst_invoice_Master_MS_B_M_DCM_V_Vue_dockerMasterDashboard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MS/B/M/DCM/V/Vue/dockerMasterDashboard */ "./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+/* harmony import */ var E_Pojects_php_MSFrame_6_Master_MS_B_M_DCM_V_Vue_dockerMasterDashboard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! E:/Pojects/php/MSFrame/6/Master/MS/B/M/DCM/V/Vue/dockerMasterDashboard */ "../../php/MSFrame/6/Master/MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 //
 //
@@ -5333,7 +6400,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }
   },
   components: {
-    msdockerdashboard: E_MS_Master_Projects_FrameworkPHP_gst_invoice_Master_MS_B_M_DCM_V_Vue_dockerMasterDashboard__WEBPACK_IMPORTED_MODULE_2__["default"],
+    msdockerdashboard: E_Pojects_php_MSFrame_6_Master_MS_B_M_DCM_V_Vue_dockerMasterDashboard__WEBPACK_IMPORTED_MODULE_2__["default"],
     msform: _C_msForm__WEBPACK_IMPORTED_MODULE_1__["default"]
   }
 });
@@ -5348,14 +6415,14 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
-  * Bootstrap v4.3.1 (https://getbootstrap.com/)
+  * Bootstrap v4.4.1 (https://getbootstrap.com/)
   * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
    true ? factory(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")) :
   undefined;
-}(this, function (exports, $, Popper) { 'use strict';
+}(this, (function (exports, $, Popper) { 'use strict';
 
   $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
   Popper = Popper && Popper.hasOwnProperty('default') ? Popper['default'] : Popper;
@@ -5391,20 +6458,35 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     return obj;
   }
 
-  function _objectSpread(target) {
+  function ownKeys(object, enumerableOnly) {
+    var keys = Object.keys(object);
+
+    if (Object.getOwnPropertySymbols) {
+      var symbols = Object.getOwnPropertySymbols(object);
+      if (enumerableOnly) symbols = symbols.filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+      });
+      keys.push.apply(keys, symbols);
+    }
+
+    return keys;
+  }
+
+  function _objectSpread2(target) {
     for (var i = 1; i < arguments.length; i++) {
       var source = arguments[i] != null ? arguments[i] : {};
-      var ownKeys = Object.keys(source);
 
-      if (typeof Object.getOwnPropertySymbols === 'function') {
-        ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
-          return Object.getOwnPropertyDescriptor(source, sym).enumerable;
-        }));
+      if (i % 2) {
+        ownKeys(Object(source), true).forEach(function (key) {
+          _defineProperty(target, key, source[key]);
+        });
+      } else if (Object.getOwnPropertyDescriptors) {
+        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+      } else {
+        ownKeys(Object(source)).forEach(function (key) {
+          Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
       }
-
-      ownKeys.forEach(function (key) {
-        _defineProperty(target, key, source[key]);
-      });
     }
 
     return target;
@@ -5418,7 +6500,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.3.1): util.js
+   * Bootstrap (v4.4.1): util.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5567,8 +6649,25 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
 
       return Util.findShadowRoot(element.parentNode);
+    },
+    jQueryDetection: function jQueryDetection() {
+      if (typeof $ === 'undefined') {
+        throw new TypeError('Bootstrap\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\'s JavaScript.');
+      }
+
+      var version = $.fn.jquery.split(' ')[0].split('.');
+      var minMajor = 1;
+      var ltMajor = 2;
+      var minMinor = 9;
+      var minPatch = 1;
+      var maxMajor = 4;
+
+      if (version[0] < ltMajor && version[1] < minMinor || version[0] === minMajor && version[1] === minMinor && version[2] < minPatch || version[0] >= maxMajor) {
+        throw new Error('Bootstrap\'s JavaScript requires at least jQuery v1.9.1 but less than v4.0.0');
+      }
     }
   };
+  Util.jQueryDetection();
   setTransitionEndSupport();
 
   /**
@@ -5578,7 +6677,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
    */
 
   var NAME = 'alert';
-  var VERSION = '4.3.1';
+  var VERSION = '4.4.1';
   var DATA_KEY = 'bs.alert';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -5595,13 +6694,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     ALERT: 'alert',
     FADE: 'fade',
     SHOW: 'show'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
   };
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
   var Alert =
   /*#__PURE__*/
@@ -5743,7 +6841,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
    */
 
   var NAME$1 = 'button';
-  var VERSION$1 = '4.3.1';
+  var VERSION$1 = '4.4.1';
   var DATA_KEY$1 = 'bs.button';
   var EVENT_KEY$1 = "." + DATA_KEY$1;
   var DATA_API_KEY$1 = '.data-api';
@@ -5755,21 +6853,23 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   };
   var Selector$1 = {
     DATA_TOGGLE_CARROT: '[data-toggle^="button"]',
-    DATA_TOGGLE: '[data-toggle="buttons"]',
+    DATA_TOGGLES: '[data-toggle="buttons"]',
+    DATA_TOGGLE: '[data-toggle="button"]',
+    DATA_TOGGLES_BUTTONS: '[data-toggle="buttons"] .btn',
     INPUT: 'input:not([type="hidden"])',
     ACTIVE: '.active',
     BUTTON: '.btn'
   };
   var Event$1 = {
     CLICK_DATA_API: "click" + EVENT_KEY$1 + DATA_API_KEY$1,
-    FOCUS_BLUR_DATA_API: "focus" + EVENT_KEY$1 + DATA_API_KEY$1 + " " + ("blur" + EVENT_KEY$1 + DATA_API_KEY$1)
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
+    FOCUS_BLUR_DATA_API: "focus" + EVENT_KEY$1 + DATA_API_KEY$1 + " " + ("blur" + EVENT_KEY$1 + DATA_API_KEY$1),
+    LOAD_DATA_API: "load" + EVENT_KEY$1 + DATA_API_KEY$1
   };
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
   var Button =
   /*#__PURE__*/
@@ -5785,7 +6885,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     _proto.toggle = function toggle() {
       var triggerChangeEvent = true;
       var addAriaPressed = true;
-      var rootElement = $(this._element).closest(Selector$1.DATA_TOGGLE)[0];
+      var rootElement = $(this._element).closest(Selector$1.DATA_TOGGLES)[0];
 
       if (rootElement) {
         var input = this._element.querySelector(Selector$1.INPUT);
@@ -5801,13 +6901,16 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                 $(activeElement).removeClass(ClassName$1.ACTIVE);
               }
             }
+          } else if (input.type === 'checkbox') {
+            if (this._element.tagName === 'LABEL' && input.checked === this._element.classList.contains(ClassName$1.ACTIVE)) {
+              triggerChangeEvent = false;
+            }
+          } else {
+            // if it's not a radio button or checkbox don't add a pointless/invalid checked property to the input
+            triggerChangeEvent = false;
           }
 
           if (triggerChangeEvent) {
-            if (input.hasAttribute('disabled') || rootElement.hasAttribute('disabled') || input.classList.contains('disabled') || rootElement.classList.contains('disabled')) {
-              return;
-            }
-
             input.checked = !this._element.classList.contains(ClassName$1.ACTIVE);
             $(input).trigger('change');
           }
@@ -5817,12 +6920,14 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         }
       }
 
-      if (addAriaPressed) {
-        this._element.setAttribute('aria-pressed', !this._element.classList.contains(ClassName$1.ACTIVE));
-      }
+      if (!(this._element.hasAttribute('disabled') || this._element.classList.contains('disabled'))) {
+        if (addAriaPressed) {
+          this._element.setAttribute('aria-pressed', !this._element.classList.contains(ClassName$1.ACTIVE));
+        }
 
-      if (triggerChangeEvent) {
-        $(this._element).toggleClass(ClassName$1.ACTIVE);
+        if (triggerChangeEvent) {
+          $(this._element).toggleClass(ClassName$1.ACTIVE);
+        }
       }
     };
 
@@ -5864,17 +6969,57 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
 
   $(document).on(Event$1.CLICK_DATA_API, Selector$1.DATA_TOGGLE_CARROT, function (event) {
-    event.preventDefault();
     var button = event.target;
 
     if (!$(button).hasClass(ClassName$1.BUTTON)) {
-      button = $(button).closest(Selector$1.BUTTON);
+      button = $(button).closest(Selector$1.BUTTON)[0];
     }
 
-    Button._jQueryInterface.call($(button), 'toggle');
+    if (!button || button.hasAttribute('disabled') || button.classList.contains('disabled')) {
+      event.preventDefault(); // work around Firefox bug #1540995
+    } else {
+      var inputBtn = button.querySelector(Selector$1.INPUT);
+
+      if (inputBtn && (inputBtn.hasAttribute('disabled') || inputBtn.classList.contains('disabled'))) {
+        event.preventDefault(); // work around Firefox bug #1540995
+
+        return;
+      }
+
+      Button._jQueryInterface.call($(button), 'toggle');
+    }
   }).on(Event$1.FOCUS_BLUR_DATA_API, Selector$1.DATA_TOGGLE_CARROT, function (event) {
     var button = $(event.target).closest(Selector$1.BUTTON)[0];
     $(button).toggleClass(ClassName$1.FOCUS, /^focus(in)?$/.test(event.type));
+  });
+  $(window).on(Event$1.LOAD_DATA_API, function () {
+    // ensure correct active class is set to match the controls' actual values/states
+    // find all checkboxes/readio buttons inside data-toggle groups
+    var buttons = [].slice.call(document.querySelectorAll(Selector$1.DATA_TOGGLES_BUTTONS));
+
+    for (var i = 0, len = buttons.length; i < len; i++) {
+      var button = buttons[i];
+      var input = button.querySelector(Selector$1.INPUT);
+
+      if (input.checked || input.hasAttribute('checked')) {
+        button.classList.add(ClassName$1.ACTIVE);
+      } else {
+        button.classList.remove(ClassName$1.ACTIVE);
+      }
+    } // find all button toggles
+
+
+    buttons = [].slice.call(document.querySelectorAll(Selector$1.DATA_TOGGLE));
+
+    for (var _i = 0, _len = buttons.length; _i < _len; _i++) {
+      var _button = buttons[_i];
+
+      if (_button.getAttribute('aria-pressed') === 'true') {
+        _button.classList.add(ClassName$1.ACTIVE);
+      } else {
+        _button.classList.remove(ClassName$1.ACTIVE);
+      }
+    }
   });
   /**
    * ------------------------------------------------------------------------
@@ -5897,7 +7042,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
    */
 
   var NAME$2 = 'carousel';
-  var VERSION$2 = '4.3.1';
+  var VERSION$2 = '4.4.1';
   var DATA_KEY$2 = 'bs.carousel';
   var EVENT_KEY$2 = "." + DATA_KEY$2;
   var DATA_API_KEY$2 = '.data-api';
@@ -5970,13 +7115,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   var PointerType = {
     TOUCH: 'touch',
     PEN: 'pen'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
   };
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
   var Carousel =
   /*#__PURE__*/
@@ -6096,7 +7240,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, Default, config);
+      config = _objectSpread2({}, Default, {}, config);
       Util.typeCheckConfig(NAME$2, config, DefaultType);
       return config;
     };
@@ -6108,7 +7252,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         return;
       }
 
-      var direction = absDeltax / this.touchDeltaX; // swipe left
+      var direction = absDeltax / this.touchDeltaX;
+      this.touchDeltaX = 0; // swipe left
 
       if (direction > 0) {
         this.prev();
@@ -6234,8 +7379,6 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           event.preventDefault();
           this.next();
           break;
-
-        default:
       }
     };
 
@@ -6387,10 +7530,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       return this.each(function () {
         var data = $(this).data(DATA_KEY$2);
 
-        var _config = _objectSpread({}, Default, $(this).data());
+        var _config = _objectSpread2({}, Default, {}, $(this).data());
 
         if (typeof config === 'object') {
-          _config = _objectSpread({}, _config, config);
+          _config = _objectSpread2({}, _config, {}, config);
         }
 
         var action = typeof config === 'string' ? config : _config.slide;
@@ -6428,7 +7571,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         return;
       }
 
-      var config = _objectSpread({}, $(target).data(), $(this).data());
+      var config = _objectSpread2({}, $(target).data(), {}, $(this).data());
 
       var slideIndex = this.getAttribute('data-slide-to');
 
@@ -6497,7 +7640,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
    */
 
   var NAME$3 = 'collapse';
-  var VERSION$3 = '4.3.1';
+  var VERSION$3 = '4.4.1';
   var DATA_KEY$3 = 'bs.collapse';
   var EVENT_KEY$3 = "." + DATA_KEY$3;
   var DATA_API_KEY$3 = '.data-api';
@@ -6530,13 +7673,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   var Selector$3 = {
     ACTIVES: '.show, .collapsing',
     DATA_TOGGLE: '[data-toggle="collapse"]'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
   };
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
   var Collapse =
   /*#__PURE__*/
@@ -6723,7 +7865,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, Default$1, config);
+      config = _objectSpread2({}, Default$1, {}, config);
       config.toggle = Boolean(config.toggle); // Coerce string values
 
       Util.typeCheckConfig(NAME$3, config, DefaultType$1);
@@ -6777,7 +7919,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         var $this = $(this);
         var data = $this.data(DATA_KEY$3);
 
-        var _config = _objectSpread({}, Default$1, $this.data(), typeof config === 'object' && config ? config : {});
+        var _config = _objectSpread2({}, Default$1, {}, $this.data(), {}, typeof config === 'object' && config ? config : {});
 
         if (!data && _config.toggle && /show|hide/.test(config)) {
           _config.toggle = false;
@@ -6857,7 +7999,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
    */
 
   var NAME$4 = 'dropdown';
-  var VERSION$4 = '4.3.1';
+  var VERSION$4 = '4.4.1';
   var DATA_KEY$4 = 'bs.dropdown';
   var EVENT_KEY$4 = "." + DATA_KEY$4;
   var DATA_API_KEY$4 = '.data-api';
@@ -6917,21 +8059,22 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     flip: true,
     boundary: 'scrollParent',
     reference: 'toggle',
-    display: 'dynamic'
+    display: 'dynamic',
+    popperConfig: null
   };
   var DefaultType$2 = {
     offset: '(number|string|function)',
     flip: 'boolean',
     boundary: '(string|element)',
     reference: '(string|element)',
-    display: 'string'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
+    display: 'string',
+    popperConfig: '(null|object)'
   };
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
   var Dropdown =
   /*#__PURE__*/
@@ -6955,8 +8098,6 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         return;
       }
 
-      var parent = Dropdown._getParentFromElement(this._element);
-
       var isActive = $(this._menu).hasClass(ClassName$4.SHOW);
 
       Dropdown._clearMenus();
@@ -6965,10 +8106,25 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         return;
       }
 
+      this.show(true);
+    };
+
+    _proto.show = function show(usePopper) {
+      if (usePopper === void 0) {
+        usePopper = false;
+      }
+
+      if (this._element.disabled || $(this._element).hasClass(ClassName$4.DISABLED) || $(this._menu).hasClass(ClassName$4.SHOW)) {
+        return;
+      }
+
       var relatedTarget = {
         relatedTarget: this._element
       };
       var showEvent = $.Event(Event$4.SHOW, relatedTarget);
+
+      var parent = Dropdown._getParentFromElement(this._element);
+
       $(parent).trigger(showEvent);
 
       if (showEvent.isDefaultPrevented()) {
@@ -6976,7 +8132,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       } // Disable totally Popper.js for Dropdown in Navbar
 
 
-      if (!this._inNavbar) {
+      if (!this._inNavbar && usePopper) {
         /**
          * Check for Popper dependency
          * Popper - https://popper.js.org
@@ -7023,28 +8179,6 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       $(parent).toggleClass(ClassName$4.SHOW).trigger($.Event(Event$4.SHOWN, relatedTarget));
     };
 
-    _proto.show = function show() {
-      if (this._element.disabled || $(this._element).hasClass(ClassName$4.DISABLED) || $(this._menu).hasClass(ClassName$4.SHOW)) {
-        return;
-      }
-
-      var relatedTarget = {
-        relatedTarget: this._element
-      };
-      var showEvent = $.Event(Event$4.SHOW, relatedTarget);
-
-      var parent = Dropdown._getParentFromElement(this._element);
-
-      $(parent).trigger(showEvent);
-
-      if (showEvent.isDefaultPrevented()) {
-        return;
-      }
-
-      $(this._menu).toggleClass(ClassName$4.SHOW);
-      $(parent).toggleClass(ClassName$4.SHOW).trigger($.Event(Event$4.SHOWN, relatedTarget));
-    };
-
     _proto.hide = function hide() {
       if (this._element.disabled || $(this._element).hasClass(ClassName$4.DISABLED) || !$(this._menu).hasClass(ClassName$4.SHOW)) {
         return;
@@ -7061,6 +8195,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
       if (hideEvent.isDefaultPrevented()) {
         return;
+      }
+
+      if (this._popper) {
+        this._popper.destroy();
       }
 
       $(this._menu).toggleClass(ClassName$4.SHOW);
@@ -7101,7 +8239,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     };
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, this.constructor.Default, $(this._element).data(), config);
+      config = _objectSpread2({}, this.constructor.Default, {}, $(this._element).data(), {}, config);
       Util.typeCheckConfig(NAME$4, config, this.constructor.DefaultType);
       return config;
     };
@@ -7150,7 +8288,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
       if (typeof this._config.offset === 'function') {
         offset.fn = function (data) {
-          data.offsets = _objectSpread({}, data.offsets, _this2._config.offset(data.offsets, _this2._element) || {});
+          data.offsets = _objectSpread2({}, data.offsets, {}, _this2._config.offset(data.offsets, _this2._element) || {});
           return data;
         };
       } else {
@@ -7171,9 +8309,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           preventOverflow: {
             boundariesElement: this._config.boundary
           }
-        } // Disable Popper.js if we have a static display
-
-      };
+        }
+      }; // Disable Popper.js if we have a static display
 
       if (this._config.display === 'static') {
         popperConfig.modifiers.applyStyle = {
@@ -7181,7 +8318,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         };
       }
 
-      return popperConfig;
+      return _objectSpread2({}, popperConfig, {}, this._config.popperConfig);
     } // Static
     ;
 
@@ -7253,6 +8390,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         }
 
         toggles[i].setAttribute('aria-expanded', 'false');
+
+        if (context._popper) {
+          context._popper.destroy();
+        }
+
         $(dropdownMenu).removeClass(ClassName$4.SHOW);
         $(parent).removeClass(ClassName$4.SHOW).trigger($.Event(Event$4.HIDDEN, relatedTarget));
       }
@@ -7293,6 +8435,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
       var isActive = $(parent).hasClass(ClassName$4.SHOW);
 
+      if (!isActive && event.which === ESCAPE_KEYCODE) {
+        return;
+      }
+
       if (!isActive || isActive && (event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE)) {
         if (event.which === ESCAPE_KEYCODE) {
           var toggle = parent.querySelector(Selector$4.DATA_TOGGLE);
@@ -7303,7 +8449,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         return;
       }
 
-      var items = [].slice.call(parent.querySelectorAll(Selector$4.VISIBLE_ITEMS));
+      var items = [].slice.call(parent.querySelectorAll(Selector$4.VISIBLE_ITEMS)).filter(function (item) {
+        return $(item).is(':visible');
+      });
 
       if (items.length === 0) {
         return;
@@ -7383,7 +8531,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
    */
 
   var NAME$5 = 'modal';
-  var VERSION$5 = '4.3.1';
+  var VERSION$5 = '4.4.1';
   var DATA_KEY$5 = 'bs.modal';
   var EVENT_KEY$5 = "." + DATA_KEY$5;
   var DATA_API_KEY$5 = '.data-api';
@@ -7404,6 +8552,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   };
   var Event$5 = {
     HIDE: "hide" + EVENT_KEY$5,
+    HIDE_PREVENTED: "hidePrevented" + EVENT_KEY$5,
     HIDDEN: "hidden" + EVENT_KEY$5,
     SHOW: "show" + EVENT_KEY$5,
     SHOWN: "shown" + EVENT_KEY$5,
@@ -7421,7 +8570,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     BACKDROP: 'modal-backdrop',
     OPEN: 'modal-open',
     FADE: 'fade',
-    SHOW: 'show'
+    SHOW: 'show',
+    STATIC: 'modal-static'
   };
   var Selector$5 = {
     DIALOG: '.modal-dialog',
@@ -7430,13 +8580,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     DATA_DISMISS: '[data-dismiss="modal"]',
     FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top',
     STICKY_CONTENT: '.sticky-top'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
   };
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
   var Modal =
   /*#__PURE__*/
@@ -7582,15 +8731,40 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, Default$3, config);
+      config = _objectSpread2({}, Default$3, {}, config);
       Util.typeCheckConfig(NAME$5, config, DefaultType$3);
       return config;
     };
 
-    _proto._showElement = function _showElement(relatedTarget) {
+    _proto._triggerBackdropTransition = function _triggerBackdropTransition() {
       var _this3 = this;
 
+      if (this._config.backdrop === 'static') {
+        var hideEventPrevented = $.Event(Event$5.HIDE_PREVENTED);
+        $(this._element).trigger(hideEventPrevented);
+
+        if (hideEventPrevented.defaultPrevented) {
+          return;
+        }
+
+        this._element.classList.add(ClassName$5.STATIC);
+
+        var modalTransitionDuration = Util.getTransitionDurationFromElement(this._element);
+        $(this._element).one(Util.TRANSITION_END, function () {
+          _this3._element.classList.remove(ClassName$5.STATIC);
+        }).emulateTransitionEnd(modalTransitionDuration);
+
+        this._element.focus();
+      } else {
+        this.hide();
+      }
+    };
+
+    _proto._showElement = function _showElement(relatedTarget) {
+      var _this4 = this;
+
       var transition = $(this._element).hasClass(ClassName$5.FADE);
+      var modalBody = this._dialog ? this._dialog.querySelector(Selector$5.MODAL_BODY) : null;
 
       if (!this._element.parentNode || this._element.parentNode.nodeType !== Node.ELEMENT_NODE) {
         // Don't move modal's DOM position
@@ -7603,8 +8777,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
       this._element.setAttribute('aria-modal', true);
 
-      if ($(this._dialog).hasClass(ClassName$5.SCROLLABLE)) {
-        this._dialog.querySelector(Selector$5.MODAL_BODY).scrollTop = 0;
+      if ($(this._dialog).hasClass(ClassName$5.SCROLLABLE) && modalBody) {
+        modalBody.scrollTop = 0;
       } else {
         this._element.scrollTop = 0;
       }
@@ -7624,12 +8798,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       });
 
       var transitionComplete = function transitionComplete() {
-        if (_this3._config.focus) {
-          _this3._element.focus();
+        if (_this4._config.focus) {
+          _this4._element.focus();
         }
 
-        _this3._isTransitioning = false;
-        $(_this3._element).trigger(shownEvent);
+        _this4._isTransitioning = false;
+        $(_this4._element).trigger(shownEvent);
       };
 
       if (transition) {
@@ -7641,25 +8815,23 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     };
 
     _proto._enforceFocus = function _enforceFocus() {
-      var _this4 = this;
+      var _this5 = this;
 
       $(document).off(Event$5.FOCUSIN) // Guard against infinite focus loop
       .on(Event$5.FOCUSIN, function (event) {
-        if (document !== event.target && _this4._element !== event.target && $(_this4._element).has(event.target).length === 0) {
-          _this4._element.focus();
+        if (document !== event.target && _this5._element !== event.target && $(_this5._element).has(event.target).length === 0) {
+          _this5._element.focus();
         }
       });
     };
 
     _proto._setEscapeEvent = function _setEscapeEvent() {
-      var _this5 = this;
+      var _this6 = this;
 
       if (this._isShown && this._config.keyboard) {
         $(this._element).on(Event$5.KEYDOWN_DISMISS, function (event) {
           if (event.which === ESCAPE_KEYCODE$1) {
-            event.preventDefault();
-
-            _this5.hide();
+            _this6._triggerBackdropTransition();
           }
         });
       } else if (!this._isShown) {
@@ -7668,11 +8840,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     };
 
     _proto._setResizeEvent = function _setResizeEvent() {
-      var _this6 = this;
+      var _this7 = this;
 
       if (this._isShown) {
         $(window).on(Event$5.RESIZE, function (event) {
-          return _this6.handleUpdate(event);
+          return _this7.handleUpdate(event);
         });
       } else {
         $(window).off(Event$5.RESIZE);
@@ -7680,7 +8852,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     };
 
     _proto._hideModal = function _hideModal() {
-      var _this7 = this;
+      var _this8 = this;
 
       this._element.style.display = 'none';
 
@@ -7693,11 +8865,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       this._showBackdrop(function () {
         $(document.body).removeClass(ClassName$5.OPEN);
 
-        _this7._resetAdjustments();
+        _this8._resetAdjustments();
 
-        _this7._resetScrollbar();
+        _this8._resetScrollbar();
 
-        $(_this7._element).trigger(Event$5.HIDDEN);
+        $(_this8._element).trigger(Event$5.HIDDEN);
       });
     };
 
@@ -7709,7 +8881,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     };
 
     _proto._showBackdrop = function _showBackdrop(callback) {
-      var _this8 = this;
+      var _this9 = this;
 
       var animate = $(this._element).hasClass(ClassName$5.FADE) ? ClassName$5.FADE : '';
 
@@ -7723,8 +8895,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
         $(this._backdrop).appendTo(document.body);
         $(this._element).on(Event$5.CLICK_DISMISS, function (event) {
-          if (_this8._ignoreBackdropClick) {
-            _this8._ignoreBackdropClick = false;
+          if (_this9._ignoreBackdropClick) {
+            _this9._ignoreBackdropClick = false;
             return;
           }
 
@@ -7732,11 +8904,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             return;
           }
 
-          if (_this8._config.backdrop === 'static') {
-            _this8._element.focus();
-          } else {
-            _this8.hide();
-          }
+          _this9._triggerBackdropTransition();
         });
 
         if (animate) {
@@ -7760,7 +8928,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         $(this._backdrop).removeClass(ClassName$5.SHOW);
 
         var callbackRemove = function callbackRemove() {
-          _this8._removeBackdrop();
+          _this9._removeBackdrop();
 
           if (callback) {
             callback();
@@ -7807,7 +8975,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     };
 
     _proto._setScrollbar = function _setScrollbar() {
-      var _this9 = this;
+      var _this10 = this;
 
       if (this._isBodyOverflowing) {
         // Note: DOMNode.style.paddingRight returns the actual value or '' if not set
@@ -7818,13 +8986,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         $(fixedContent).each(function (index, element) {
           var actualPadding = element.style.paddingRight;
           var calculatedPadding = $(element).css('padding-right');
-          $(element).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + _this9._scrollbarWidth + "px");
+          $(element).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + _this10._scrollbarWidth + "px");
         }); // Adjust sticky content margin
 
         $(stickyContent).each(function (index, element) {
           var actualMargin = element.style.marginRight;
           var calculatedMargin = $(element).css('margin-right');
-          $(element).data('margin-right', actualMargin).css('margin-right', parseFloat(calculatedMargin) - _this9._scrollbarWidth + "px");
+          $(element).data('margin-right', actualMargin).css('margin-right', parseFloat(calculatedMargin) - _this10._scrollbarWidth + "px");
         }); // Adjust body padding
 
         var actualPadding = document.body.style.paddingRight;
@@ -7873,7 +9041,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       return this.each(function () {
         var data = $(this).data(DATA_KEY$5);
 
-        var _config = _objectSpread({}, Default$3, $(this).data(), typeof config === 'object' && config ? config : {});
+        var _config = _objectSpread2({}, Default$3, {}, $(this).data(), {}, typeof config === 'object' && config ? config : {});
 
         if (!data) {
           data = new Modal(this, _config);
@@ -7914,7 +9082,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
 
   $(document).on(Event$5.CLICK_DATA_API, Selector$5.DATA_TOGGLE, function (event) {
-    var _this10 = this;
+    var _this11 = this;
 
     var target;
     var selector = Util.getSelectorFromElement(this);
@@ -7923,7 +9091,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       target = document.querySelector(selector);
     }
 
-    var config = $(target).data(DATA_KEY$5) ? 'toggle' : _objectSpread({}, $(target).data(), $(this).data());
+    var config = $(target).data(DATA_KEY$5) ? 'toggle' : _objectSpread2({}, $(target).data(), {}, $(this).data());
 
     if (this.tagName === 'A' || this.tagName === 'AREA') {
       event.preventDefault();
@@ -7936,8 +9104,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
 
       $target.one(Event$5.HIDDEN, function () {
-        if ($(_this10).is(':visible')) {
-          _this10.focus();
+        if ($(_this11).is(':visible')) {
+          _this11.focus();
         }
       });
     });
@@ -7960,7 +9128,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.3.1): tools/sanitizer.js
+   * Bootstrap (v4.4.1): tools/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -7998,13 +9166,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     strong: [],
     u: [],
     ul: []
-    /**
-     * A pattern that recognizes a commonly useful subset of URLs that are safe.
-     *
-     * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
-     */
-
   };
+  /**
+   * A pattern that recognizes a commonly useful subset of URLs that are safe.
+   *
+   * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
+   */
+
   var SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^&:/?#]*(?:[/?#]|$))/gi;
   /**
    * A pattern that matches safe data URLs. Only matches image, video and audio types.
@@ -8071,7 +9239,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     };
 
     for (var i = 0, len = elements.length; i < len; i++) {
-      var _ret = _loop(i, len);
+      var _ret = _loop(i);
 
       if (_ret === "continue") continue;
     }
@@ -8086,7 +9254,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
    */
 
   var NAME$6 = 'tooltip';
-  var VERSION$6 = '4.3.1';
+  var VERSION$6 = '4.4.1';
   var DATA_KEY$6 = 'bs.tooltip';
   var EVENT_KEY$6 = "." + DATA_KEY$6;
   var JQUERY_NO_CONFLICT$6 = $.fn[NAME$6];
@@ -8108,7 +9276,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     boundary: '(string|element)',
     sanitize: 'boolean',
     sanitizeFn: '(null|function)',
-    whiteList: 'object'
+    whiteList: 'object',
+    popperConfig: '(null|object)'
   };
   var AttachmentMap$1 = {
     AUTO: 'auto',
@@ -8132,7 +9301,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     boundary: 'scrollParent',
     sanitize: true,
     sanitizeFn: null,
-    whiteList: DefaultWhitelist
+    whiteList: DefaultWhitelist,
+    popperConfig: null
   };
   var HoverState = {
     SHOW: 'show',
@@ -8164,22 +9334,17 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     FOCUS: 'focus',
     CLICK: 'click',
     MANUAL: 'manual'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
   };
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
   var Tooltip =
   /*#__PURE__*/
   function () {
     function Tooltip(element, config) {
-      /**
-       * Check for Popper dependency
-       * Popper - https://popper.js.org
-       */
       if (typeof Popper === 'undefined') {
         throw new TypeError('Bootstrap\'s tooltips require Popper.js (https://popper.js.org/)');
       } // private
@@ -8250,7 +9415,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       clearTimeout(this._timeout);
       $.removeData(this.element, this.constructor.DATA_KEY);
       $(this.element).off(this.constructor.EVENT_KEY);
-      $(this.element).closest('.modal').off('hide.bs.modal');
+      $(this.element).closest('.modal').off('hide.bs.modal', this._hideModalHandler);
 
       if (this.tip) {
         $(this.tip).remove();
@@ -8261,7 +9426,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       this._hoverState = null;
       this._activeTrigger = null;
 
-      if (this._popper !== null) {
+      if (this._popper) {
         this._popper.destroy();
       }
 
@@ -8314,29 +9479,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         }
 
         $(this.element).trigger(this.constructor.Event.INSERTED);
-        this._popper = new Popper(this.element, tip, {
-          placement: attachment,
-          modifiers: {
-            offset: this._getOffset(),
-            flip: {
-              behavior: this.config.fallbackPlacement
-            },
-            arrow: {
-              element: Selector$6.ARROW
-            },
-            preventOverflow: {
-              boundariesElement: this.config.boundary
-            }
-          },
-          onCreate: function onCreate(data) {
-            if (data.originalPlacement !== data.placement) {
-              _this._handlePopperPlacementChange(data);
-            }
-          },
-          onUpdate: function onUpdate(data) {
-            return _this._handlePopperPlacementChange(data);
-          }
-        });
+        this._popper = new Popper(this.element, tip, this._getPopperConfig(attachment));
         $(tip).addClass(ClassName$6.SHOW); // If this is a touch-enabled device we add extra
         // empty mouseover listeners to the body's immediate children;
         // only needed because of broken event delegation on iOS
@@ -8484,14 +9627,43 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     } // Private
     ;
 
-    _proto._getOffset = function _getOffset() {
+    _proto._getPopperConfig = function _getPopperConfig(attachment) {
       var _this3 = this;
+
+      var defaultBsConfig = {
+        placement: attachment,
+        modifiers: {
+          offset: this._getOffset(),
+          flip: {
+            behavior: this.config.fallbackPlacement
+          },
+          arrow: {
+            element: Selector$6.ARROW
+          },
+          preventOverflow: {
+            boundariesElement: this.config.boundary
+          }
+        },
+        onCreate: function onCreate(data) {
+          if (data.originalPlacement !== data.placement) {
+            _this3._handlePopperPlacementChange(data);
+          }
+        },
+        onUpdate: function onUpdate(data) {
+          return _this3._handlePopperPlacementChange(data);
+        }
+      };
+      return _objectSpread2({}, defaultBsConfig, {}, this.config.popperConfig);
+    };
+
+    _proto._getOffset = function _getOffset() {
+      var _this4 = this;
 
       var offset = {};
 
       if (typeof this.config.offset === 'function') {
         offset.fn = function (data) {
-          data.offsets = _objectSpread({}, data.offsets, _this3.config.offset(data.offsets, _this3.element) || {});
+          data.offsets = _objectSpread2({}, data.offsets, {}, _this4.config.offset(data.offsets, _this4.element) || {});
           return data;
         };
       } else {
@@ -8518,32 +9690,35 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     };
 
     _proto._setListeners = function _setListeners() {
-      var _this4 = this;
+      var _this5 = this;
 
       var triggers = this.config.trigger.split(' ');
       triggers.forEach(function (trigger) {
         if (trigger === 'click') {
-          $(_this4.element).on(_this4.constructor.Event.CLICK, _this4.config.selector, function (event) {
-            return _this4.toggle(event);
+          $(_this5.element).on(_this5.constructor.Event.CLICK, _this5.config.selector, function (event) {
+            return _this5.toggle(event);
           });
         } else if (trigger !== Trigger.MANUAL) {
-          var eventIn = trigger === Trigger.HOVER ? _this4.constructor.Event.MOUSEENTER : _this4.constructor.Event.FOCUSIN;
-          var eventOut = trigger === Trigger.HOVER ? _this4.constructor.Event.MOUSELEAVE : _this4.constructor.Event.FOCUSOUT;
-          $(_this4.element).on(eventIn, _this4.config.selector, function (event) {
-            return _this4._enter(event);
-          }).on(eventOut, _this4.config.selector, function (event) {
-            return _this4._leave(event);
+          var eventIn = trigger === Trigger.HOVER ? _this5.constructor.Event.MOUSEENTER : _this5.constructor.Event.FOCUSIN;
+          var eventOut = trigger === Trigger.HOVER ? _this5.constructor.Event.MOUSELEAVE : _this5.constructor.Event.FOCUSOUT;
+          $(_this5.element).on(eventIn, _this5.config.selector, function (event) {
+            return _this5._enter(event);
+          }).on(eventOut, _this5.config.selector, function (event) {
+            return _this5._leave(event);
           });
-        }
-      });
-      $(this.element).closest('.modal').on('hide.bs.modal', function () {
-        if (_this4.element) {
-          _this4.hide();
         }
       });
 
+      this._hideModalHandler = function () {
+        if (_this5.element) {
+          _this5.hide();
+        }
+      };
+
+      $(this.element).closest('.modal').on('hide.bs.modal', this._hideModalHandler);
+
       if (this.config.selector) {
-        this.config = _objectSpread({}, this.config, {
+        this.config = _objectSpread2({}, this.config, {
           trigger: 'manual',
           selector: ''
         });
@@ -8643,7 +9818,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           delete dataAttributes[dataAttr];
         }
       });
-      config = _objectSpread({}, this.constructor.Default, dataAttributes, typeof config === 'object' && config ? config : {});
+      config = _objectSpread2({}, this.constructor.Default, {}, dataAttributes, {}, typeof config === 'object' && config ? config : {});
 
       if (typeof config.delay === 'number') {
         config.delay = {
@@ -8803,21 +9978,21 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
    */
 
   var NAME$7 = 'popover';
-  var VERSION$7 = '4.3.1';
+  var VERSION$7 = '4.4.1';
   var DATA_KEY$7 = 'bs.popover';
   var EVENT_KEY$7 = "." + DATA_KEY$7;
   var JQUERY_NO_CONFLICT$7 = $.fn[NAME$7];
   var CLASS_PREFIX$1 = 'bs-popover';
   var BSCLS_PREFIX_REGEX$1 = new RegExp("(^|\\s)" + CLASS_PREFIX$1 + "\\S+", 'g');
 
-  var Default$5 = _objectSpread({}, Tooltip.Default, {
+  var Default$5 = _objectSpread2({}, Tooltip.Default, {
     placement: 'right',
     trigger: 'click',
     content: '',
     template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
   });
 
-  var DefaultType$5 = _objectSpread({}, Tooltip.DefaultType, {
+  var DefaultType$5 = _objectSpread2({}, Tooltip.DefaultType, {
     content: '(string|element|function)'
   });
 
@@ -8840,13 +10015,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     FOCUSOUT: "focusout" + EVENT_KEY$7,
     MOUSEENTER: "mouseenter" + EVENT_KEY$7,
     MOUSELEAVE: "mouseleave" + EVENT_KEY$7
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
   };
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
   var Popover =
   /*#__PURE__*/
@@ -8990,7 +10164,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
    */
 
   var NAME$8 = 'scrollspy';
-  var VERSION$8 = '4.3.1';
+  var VERSION$8 = '4.4.1';
   var DATA_KEY$8 = 'bs.scrollspy';
   var EVENT_KEY$8 = "." + DATA_KEY$8;
   var DATA_API_KEY$6 = '.data-api';
@@ -9029,13 +10203,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   var OffsetMethod = {
     OFFSET: 'offset',
     POSITION: 'position'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
   };
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
   var ScrollSpy =
   /*#__PURE__*/
@@ -9117,7 +10290,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, Default$6, typeof config === 'object' && config ? config : {});
+      config = _objectSpread2({}, Default$6, {}, typeof config === 'object' && config ? config : {});
 
       if (typeof config.target !== 'string') {
         var id = $(config.target).attr('id');
@@ -9297,7 +10470,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
    */
 
   var NAME$9 = 'tab';
-  var VERSION$9 = '4.3.1';
+  var VERSION$9 = '4.4.1';
   var DATA_KEY$9 = 'bs.tab';
   var EVENT_KEY$9 = "." + DATA_KEY$9;
   var DATA_API_KEY$7 = '.data-api';
@@ -9324,13 +10497,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',
     DROPDOWN_TOGGLE: '.dropdown-toggle',
     DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
   };
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
   var Tab =
   /*#__PURE__*/
@@ -9532,7 +10704,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
    */
 
   var NAME$a = 'toast';
-  var VERSION$a = '4.3.1';
+  var VERSION$a = '4.4.1';
   var DATA_KEY$a = 'bs.toast';
   var EVENT_KEY$a = "." + DATA_KEY$a;
   var JQUERY_NO_CONFLICT$a = $.fn[NAME$a];
@@ -9561,13 +10733,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   };
   var Selector$a = {
     DATA_DISMISS: '[data-dismiss="toast"]'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
   };
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
   var Toast =
   /*#__PURE__*/
@@ -9587,7 +10758,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     _proto.show = function show() {
       var _this = this;
 
-      $(this._element).trigger(Event$a.SHOW);
+      var showEvent = $.Event(Event$a.SHOW);
+      $(this._element).trigger(showEvent);
+
+      if (showEvent.isDefaultPrevented()) {
+        return;
+      }
 
       if (this._config.animation) {
         this._element.classList.add(ClassName$a.FADE);
@@ -9601,11 +10777,15 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         $(_this._element).trigger(Event$a.SHOWN);
 
         if (_this._config.autohide) {
-          _this.hide();
+          _this._timeout = setTimeout(function () {
+            _this.hide();
+          }, _this._config.delay);
         }
       };
 
       this._element.classList.remove(ClassName$a.HIDE);
+
+      Util.reflow(this._element);
 
       this._element.classList.add(ClassName$a.SHOWING);
 
@@ -9617,22 +10797,19 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
     };
 
-    _proto.hide = function hide(withoutTimeout) {
-      var _this2 = this;
-
+    _proto.hide = function hide() {
       if (!this._element.classList.contains(ClassName$a.SHOW)) {
         return;
       }
 
-      $(this._element).trigger(Event$a.HIDE);
+      var hideEvent = $.Event(Event$a.HIDE);
+      $(this._element).trigger(hideEvent);
 
-      if (withoutTimeout) {
-        this._close();
-      } else {
-        this._timeout = setTimeout(function () {
-          _this2._close();
-        }, this._config.delay);
+      if (hideEvent.isDefaultPrevented()) {
+        return;
       }
+
+      this._close();
     };
 
     _proto.dispose = function dispose() {
@@ -9651,26 +10828,26 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, Default$7, $(this._element).data(), typeof config === 'object' && config ? config : {});
+      config = _objectSpread2({}, Default$7, {}, $(this._element).data(), {}, typeof config === 'object' && config ? config : {});
       Util.typeCheckConfig(NAME$a, config, this.constructor.DefaultType);
       return config;
     };
 
     _proto._setListeners = function _setListeners() {
-      var _this3 = this;
+      var _this2 = this;
 
       $(this._element).on(Event$a.CLICK_DISMISS, Selector$a.DATA_DISMISS, function () {
-        return _this3.hide(true);
+        return _this2.hide();
       });
     };
 
     _proto._close = function _close() {
-      var _this4 = this;
+      var _this3 = this;
 
       var complete = function complete() {
-        _this4._element.classList.add(ClassName$a.HIDE);
+        _this3._element.classList.add(ClassName$a.HIDE);
 
-        $(_this4._element).trigger(Event$a.HIDDEN);
+        $(_this3._element).trigger(Event$a.HIDDEN);
       };
 
       this._element.classList.remove(ClassName$a.SHOW);
@@ -9740,31 +10917,6 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     return Toast._jQueryInterface;
   };
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v4.3.1): index.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-  (function () {
-    if (typeof $ === 'undefined') {
-      throw new TypeError('Bootstrap\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\'s JavaScript.');
-    }
-
-    var version = $.fn.jquery.split(' ')[0].split('.');
-    var minMajor = 1;
-    var ltMajor = 2;
-    var minMinor = 9;
-    var minPatch = 1;
-    var maxMajor = 4;
-
-    if (version[0] < ltMajor && version[1] < minMinor || version[0] === minMajor && version[1] === minMinor && version[2] < minPatch || version[0] >= maxMajor) {
-      throw new Error('Bootstrap\'s JavaScript requires at least jQuery v1.9.1 but less than v4.0.0');
-    }
-  })();
-
-  exports.Util = Util;
   exports.Alert = Alert;
   exports.Button = Button;
   exports.Carousel = Carousel;
@@ -9776,10 +10928,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   exports.Tab = Tab;
   exports.Toast = Toast;
   exports.Tooltip = Tooltip;
+  exports.Util = Util;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=bootstrap.js.map
 
 
@@ -25958,7 +27111,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../../../..
 
 
 // module
-exports.push([module.i, ".calculator[data-v-4e27df16] {\n  width: 100%;\n  height: 100%;\n  min-height: 600px;\n  background-image: linear-gradient(to bottom, #038FA1, #023E6E);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 2501;\n}\n.calc-body[data-v-4e27df16] {\n  width: 85%;\n  max-width: 250px;\n  height: 375px;\n  background-image: linear-gradient(to bottom, #004D59, #012024);\n  padding: 10px;\n  border-radius: 10px;\n  box-shadow: 0 25px 35px -15px rgba(3, 28, 31, .85);\n  /*flex*/\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  align-items: stretch;\n  align-content: space-between;\n}\n.calc-body-screen[data-v-4e27df16] {\n  flex: 1 0 100%;\n  height: 24%;\n  color: #A8EEFF;\n  box-shadow: inset 0 0 0 1px #225861;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  text-align: right;\n}\n.calc-body-screen .q[data-v-4e27df16] {\n  width: 100%;\n  line-height: 40px;\n  padding: 0 5%;\n  box-sizing: border-box;\n  font-size: 15px;\n}\n.calc-body-screen .a[data-v-4e27df16] {\n  line-height: 50px;\n  width: 100%;\n  padding: 0 5%;\n  box-sizing: border-box;\n  font-size: 38px;\n}\n.calc-body-btn[data-v-4e27df16] {\n  cursor: pointer;\n  opacity: .6;\n  font-size: 12px;\n  flex: 0 1 18%;\n  height: 11%;\n  color: #A8EEFF;\n  box-shadow: inset 0 0 0 1px #225861;\n  text-align: center;\n  border-radius: 5px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.calc-body-btn[data-v-4e27df16]:hover {\n  background-color: #225861;\n}\n.calc-body-btn.qu[data-v-4e27df16] {\n  height: 23%;\n}\n.left[data-v-4e27df16] {\n  display: flex;\n  flex: 0 0 79.5%;\n  height: 23%;\n  align-content: space-between;\n  justify-content: space-between;\n  flex-wrap: wrap;\n}\n.left .calc-body-btn[data-v-4e27df16] {\n  height: 46%;\n  flex: 0 0 23%;\n}\n.left .calc-body-btn.zero[data-v-4e27df16] {\n  flex: 0 1 48.5%;\n}\n", ""]);
+exports.push([module.i, ".calculator[data-v-4e27df16] {\n  width: 100%;\n  height: 100%;\n  min-height: 600px;\n  background-image: -webkit-gradient(linear, left top, left bottom, from(#038FA1), to(#023E6E));\n  background-image: linear-gradient(to bottom, #038FA1, #023E6E);\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n          align-items: center;\n  z-index: 2501;\n}\n.calc-body[data-v-4e27df16] {\n  width: 85%;\n  max-width: 250px;\n  height: 375px;\n  background-image: -webkit-gradient(linear, left top, left bottom, from(#004D59), to(#012024));\n  background-image: linear-gradient(to bottom, #004D59, #012024);\n  padding: 10px;\n  border-radius: 10px;\n  box-shadow: 0 25px 35px -15px rgba(3, 28, 31, .85);\n  /*flex*/\n  display: -webkit-box;\n  display: flex;\n  flex-wrap: wrap;\n  -webkit-box-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: stretch;\n          align-items: stretch;\n  align-content: space-between;\n}\n.calc-body-screen[data-v-4e27df16] {\n  -webkit-box-flex: 1;\n          flex: 1 0 100%;\n  height: 24%;\n  color: #A8EEFF;\n  box-shadow: inset 0 0 0 1px #225861;\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n          flex-direction: column;\n  -webkit-box-pack: justify;\n          justify-content: space-between;\n  text-align: right;\n}\n.calc-body-screen .q[data-v-4e27df16] {\n  width: 100%;\n  line-height: 40px;\n  padding: 0 5%;\n  box-sizing: border-box;\n  font-size: 15px;\n}\n.calc-body-screen .a[data-v-4e27df16] {\n  line-height: 50px;\n  width: 100%;\n  padding: 0 5%;\n  box-sizing: border-box;\n  font-size: 38px;\n}\n.calc-body-btn[data-v-4e27df16] {\n  cursor: pointer;\n  opacity: .6;\n  font-size: 12px;\n  -webkit-box-flex: 0;\n          flex: 0 1 18%;\n  height: 11%;\n  color: #A8EEFF;\n  box-shadow: inset 0 0 0 1px #225861;\n  text-align: center;\n  border-radius: 5px;\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n          align-items: center;\n}\n.calc-body-btn[data-v-4e27df16]:hover {\n  background-color: #225861;\n}\n.calc-body-btn.qu[data-v-4e27df16] {\n  height: 23%;\n}\n.left[data-v-4e27df16] {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-flex: 0;\n          flex: 0 0 79.5%;\n  height: 23%;\n  align-content: space-between;\n  -webkit-box-pack: justify;\n          justify-content: space-between;\n  flex-wrap: wrap;\n}\n.left .calc-body-btn[data-v-4e27df16] {\n  height: 46%;\n  -webkit-box-flex: 0;\n          flex: 0 0 23%;\n}\n.left .calc-body-btn.zero[data-v-4e27df16] {\n  -webkit-box-flex: 0;\n          flex: 0 1 48.5%;\n}\n", ""]);
 
 // exports
 
@@ -25977,7 +27130,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../../../..
 
 
 // module
-exports.push([module.i, ".btn[data-v-001e5938]{\n  text-transform: capitalize;\n}\n.expand-btn[data-v-001e5938]{\n  display: block;\n  text-align: center;\n  display: inline-flex;\n  border-radius: 0.25rem;\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  margin-right: 0.5rem;\n  float: left;\n  top: 0;\n  bottom: 0;\n  top: 0;\n  bottom: 0;\n}\n.hiiden[data-v-001e5938]{\n  transition: all 1s ease-in-out;\n}\n\n", ""]);
+exports.push([module.i, ".btn[data-v-001e5938]{\n  text-transform: capitalize;\n}\n.expand-btn[data-v-001e5938]{\n  display: block;\n  text-align: center;\n  display: -webkit-inline-box;\n  display: inline-flex;\n  border-radius: 0.25rem;\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  margin-right: 0.5rem;\n  float: left;\n  top: 0;\n  bottom: 0;\n  top: 0;\n  bottom: 0;\n}\n.hiiden[data-v-001e5938]{\n  -webkit-transition: all 1s ease-in-out;\n  transition: all 1s ease-in-out;\n}\n\n", ""]);
 
 // exports
 
@@ -25996,7 +27149,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../../../..
 
 
 // module
-exports.push([module.i, ".margin-fix{\n}\n.custom-select{\n  border-radius: 0px;\n  min-height: 42px;\n}\n.input-group,.form-group{\n  border-radius: 0px;\n}\n.input-group-prepend{\n  border-radius: 0px;\n}\n.form-check-inline,.form-check-label,.form-check-input  {\n  cursor: pointer;\n}\n.form-check-inline\n{\n  border:1px solid rgba(23,162,184,0.5);\n  padding-left:5px;\n  min-height: 35px;\n  box-shadow: rgba(23, 162, 184, 0.2) -3px 3px 1px;\n  cursor: pointer;\n}\n.form-check-inline > div{\n  padding: 5px;\n}\n.form-check-inline >  label{\n  padding-left:5px ;\n  padding-right:5px ;\n  min-height: 35px;\n  padding:5px;\n}\ninput:checked + label  {\n  color:white;\n  background-color:  rgba(23,162,184,1);\n  box-shadow: -22px 0px 0px rgba(23,162,184,1);\n  transition: all 500ms ease-in-out ;\n  -webkit-touch-callout: none; /* iOS Safari */\n  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */\n  -moz-user-select: none; /* Firefox */\n  -ms-user-select: none; /* Internet Explorer/Edge */\n  user-select: none;\n  padding-top:5px ;\n  padding-bottom:5px ;\n}\n.form-group{\n  padding-left: 15px ;\n  margin-bottom: 15px;\n}\n.form-group > label,.form-group>div > label  , .form-group>section> label{\n  padding:5px 5px 5px 5px;\n  border-top:1px solid rgba(35,37,38,0.2) ;\n  border-bottom:1px solid rgba(35,37,38,0.2) ;\n  border-left:2px outset rgba(35,37,38,0.1) ;\n  border-right:2px solid rgba(35,37,38,0.1) ;\n  box-shadow: 3px 3px 1px rgba(35,37,38,0.2);\n  -webkit-touch-callout: none; /* iOS Safari */\n  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */\n  -moz-user-select: none; /* Firefox */\n  -ms-user-select: none; /* Internet Explorer/Edge */\n  user-select: none;\n}\n.form-control{\n  border-radius:0px;\n}\n.msPasswordVisible{\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n  border-right-width: 1px;\n  border-top-width: 1px;\n  border-bottom-width: 1px;\n  background-color: #90cdf4;\n  display: block;\n  text-align: center;\n}\n.msPasswordInput{\n  display: block;\n  border-width: 1px;\n  flex-wrap: wrap;\n}\n.is-invalid{\n  border-width: 1px;\n  border-color: #e53e3e;\n}\n.is-invalid > span{\n  color: #e53e3e;\n  font-weight: 500;\n}\n\n", ""]);
+exports.push([module.i, ".margin-fix{\n}\n.custom-select{\n  border-radius: 0px;\n  min-height: 42px;\n}\n.input-group,.form-group{\n  border-radius: 0px;\n}\n.input-group-prepend{\n  border-radius: 0px;\n}\n.form-check-inline,.form-check-label,.form-check-input  {\n  cursor: pointer;\n}\n.form-check-inline\n{\n  border:1px solid rgba(23,162,184,0.5);\n  padding-left:5px;\n  min-height: 35px;\n  box-shadow: rgba(23, 162, 184, 0.2) -3px 3px 1px;\n  cursor: pointer;\n}\n.form-check-inline > div{\n  padding: 5px;\n}\n.form-check-inline >  label{\n  padding-left:5px ;\n  padding-right:5px ;\n  min-height: 35px;\n  padding:5px;\n}\ninput:checked + label  {\n  color:white;\n  background-color:  rgba(23,162,184,1);\n  box-shadow: -22px 0px 0px rgba(23,162,184,1);\n  -webkit-transition: all 500ms ease-in-out ;\n  transition: all 500ms ease-in-out ;\n  -webkit-touch-callout: none; /* iOS Safari */\n  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */\n  -moz-user-select: none; /* Firefox */\n  -ms-user-select: none; /* Internet Explorer/Edge */\n  user-select: none;\n  padding-top:5px ;\n  padding-bottom:5px ;\n}\n.form-group{\n  padding-left: 15px ;\n  margin-bottom: 15px;\n}\n.form-group > label,.form-group>div > label  , .form-group>section> label{\n  padding:5px 5px 5px 5px;\n  border-top:1px solid rgba(35,37,38,0.2) ;\n  border-bottom:1px solid rgba(35,37,38,0.2) ;\n  border-left:2px outset rgba(35,37,38,0.1) ;\n  border-right:2px solid rgba(35,37,38,0.1) ;\n  box-shadow: 3px 3px 1px rgba(35,37,38,0.2);\n  -webkit-touch-callout: none; /* iOS Safari */\n  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */\n  -moz-user-select: none; /* Firefox */\n  -ms-user-select: none; /* Internet Explorer/Edge */\n  user-select: none;\n}\n.form-control{\n  border-radius:0px;\n}\n.msPasswordVisible{\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n  border-right-width: 1px;\n  border-top-width: 1px;\n  border-bottom-width: 1px;\n  background-color: #90cdf4;\n  display: block;\n  text-align: center;\n}\n.msPasswordInput{\n  display: block;\n  border-width: 1px;\n  flex-wrap: wrap;\n}\n.is-invalid{\n  border-width: 1px;\n  border-color: #e53e3e;\n}\n.is-invalid > span{\n  color: #e53e3e;\n  font-weight: 500;\n}\n\n", ""]);
 
 // exports
 
@@ -26034,7 +27187,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../../../..
 
 
 // module
-exports.push([module.i, ".menu__top[data-v-6cf62330]{\n  background-color: #81e6d9;\n  padding: 0.75rem;\n}\nli> .menu__link[data-v-6cf62330]{\n  display: block;\n  padding: 0.5rem;\n  width: 250px;\n  background-color: #81e6d9;\n  border-top-width: 1px;\n}\n.context-menu-container[data-v-6cf62330]{\n  margin-left:252px ;\n  top:80px;\n  min-width: 200px;\n  background-color: #4fd1c5;\n  border-top-width: 1px;\n  position: fixed;\n}\n.context-menu-container_small[data-v-6cf62330]{\n  margin-left:82px ;\n}\n.context-menu__title[data-v-6cf62330]{\n  border-top-width: 1px;\n  margin-top: 0.5rem;\n}\n.menu__icon[data-v-6cf62330]{\n  padding-right: 0.5rem;\n  padding-left: 0.5rem;\n}\n.menu__top_small[data-v-6cf62330]{\n  transition: all 800ms ease-in-out;\n  max-width: 80px;\n}\n.menu__arrow-icon[data-v-6cf62330]{\n  float: right;\n  padding: 0.25rem;\n}\n.context-menu[data-v-6cf62330]{\n  padding: 0.25rem;\n}\n.context-menu__title[data-v-6cf62330]{\n  padding-right: 0.75rem;\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  padding-left: 0.75rem;\n  min-width: 100%;\n}\n.context-li[data-v-6cf62330]{\n  display: flex;\n}\n.context-li-title[data-v-6cf62330]{\n  border-bottom-width: 1px;\n}\n.ms-nav[data-v-6cf62330]{\n  top: 80px;\n  cursor:ponter;\n}\n\n", ""]);
+exports.push([module.i, ".menu__top[data-v-6cf62330]{\n  background-color: #81e6d9;\n  padding: 0.75rem;\n}\nli> .menu__link[data-v-6cf62330]{\n  display: block;\n  padding: 0.5rem;\n  width: 250px;\n  background-color: #81e6d9;\n  border-top-width: 1px;\n}\n.context-menu-container[data-v-6cf62330]{\n  margin-left:252px ;\n  top:80px;\n  min-width: 200px;\n  background-color: #4fd1c5;\n  border-top-width: 1px;\n  position: fixed;\n}\n.context-menu-container_small[data-v-6cf62330]{\n  margin-left:82px ;\n}\n.context-menu__title[data-v-6cf62330]{\n  border-top-width: 1px;\n  margin-top: 0.5rem;\n}\n.menu__icon[data-v-6cf62330]{\n  padding-right: 0.5rem;\n  padding-left: 0.5rem;\n}\n.menu__top_small[data-v-6cf62330]{\n  -webkit-transition: all 800ms ease-in-out;\n  transition: all 800ms ease-in-out;\n  max-width: 80px;\n}\n.menu__arrow-icon[data-v-6cf62330]{\n  float: right;\n  padding: 0.25rem;\n}\n.context-menu[data-v-6cf62330]{\n  padding: 0.25rem;\n}\n.context-menu__title[data-v-6cf62330]{\n  padding-right: 0.75rem;\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  padding-left: 0.75rem;\n  min-width: 100%;\n}\n.context-li[data-v-6cf62330]{\n  display: -webkit-box;\n  display: flex;\n}\n.context-li-title[data-v-6cf62330]{\n  border-bottom-width: 1px;\n}\n.ms-nav[data-v-6cf62330]{\n  top: 80px;\n  cursor:ponter;\n}\n\n", ""]);
 
 // exports
 
@@ -26124,6 +27277,2657 @@ function toComment(sourceMap) {
 
 	return '/*# ' + data + ' */';
 }
+
+
+/***/ }),
+
+/***/ "./node_modules/hammerjs/hammer.js":
+/*!*****************************************!*\
+  !*** ./node_modules/hammerjs/hammer.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_RESULT__;/*! Hammer.JS - v2.0.7 - 2016-04-22
+ * http://hammerjs.github.io/
+ *
+ * Copyright (c) 2016 Jorik Tangelder;
+ * Licensed under the MIT license */
+(function(window, document, exportName, undefined) {
+  'use strict';
+
+var VENDOR_PREFIXES = ['', 'webkit', 'Moz', 'MS', 'ms', 'o'];
+var TEST_ELEMENT = document.createElement('div');
+
+var TYPE_FUNCTION = 'function';
+
+var round = Math.round;
+var abs = Math.abs;
+var now = Date.now;
+
+/**
+ * set a timeout with a given scope
+ * @param {Function} fn
+ * @param {Number} timeout
+ * @param {Object} context
+ * @returns {number}
+ */
+function setTimeoutContext(fn, timeout, context) {
+    return setTimeout(bindFn(fn, context), timeout);
+}
+
+/**
+ * if the argument is an array, we want to execute the fn on each entry
+ * if it aint an array we don't want to do a thing.
+ * this is used by all the methods that accept a single and array argument.
+ * @param {*|Array} arg
+ * @param {String} fn
+ * @param {Object} [context]
+ * @returns {Boolean}
+ */
+function invokeArrayArg(arg, fn, context) {
+    if (Array.isArray(arg)) {
+        each(arg, context[fn], context);
+        return true;
+    }
+    return false;
+}
+
+/**
+ * walk objects and arrays
+ * @param {Object} obj
+ * @param {Function} iterator
+ * @param {Object} context
+ */
+function each(obj, iterator, context) {
+    var i;
+
+    if (!obj) {
+        return;
+    }
+
+    if (obj.forEach) {
+        obj.forEach(iterator, context);
+    } else if (obj.length !== undefined) {
+        i = 0;
+        while (i < obj.length) {
+            iterator.call(context, obj[i], i, obj);
+            i++;
+        }
+    } else {
+        for (i in obj) {
+            obj.hasOwnProperty(i) && iterator.call(context, obj[i], i, obj);
+        }
+    }
+}
+
+/**
+ * wrap a method with a deprecation warning and stack trace
+ * @param {Function} method
+ * @param {String} name
+ * @param {String} message
+ * @returns {Function} A new function wrapping the supplied method.
+ */
+function deprecate(method, name, message) {
+    var deprecationMessage = 'DEPRECATED METHOD: ' + name + '\n' + message + ' AT \n';
+    return function() {
+        var e = new Error('get-stack-trace');
+        var stack = e && e.stack ? e.stack.replace(/^[^\(]+?[\n$]/gm, '')
+            .replace(/^\s+at\s+/gm, '')
+            .replace(/^Object.<anonymous>\s*\(/gm, '{anonymous}()@') : 'Unknown Stack Trace';
+
+        var log = window.console && (window.console.warn || window.console.log);
+        if (log) {
+            log.call(window.console, deprecationMessage, stack);
+        }
+        return method.apply(this, arguments);
+    };
+}
+
+/**
+ * extend object.
+ * means that properties in dest will be overwritten by the ones in src.
+ * @param {Object} target
+ * @param {...Object} objects_to_assign
+ * @returns {Object} target
+ */
+var assign;
+if (typeof Object.assign !== 'function') {
+    assign = function assign(target) {
+        if (target === undefined || target === null) {
+            throw new TypeError('Cannot convert undefined or null to object');
+        }
+
+        var output = Object(target);
+        for (var index = 1; index < arguments.length; index++) {
+            var source = arguments[index];
+            if (source !== undefined && source !== null) {
+                for (var nextKey in source) {
+                    if (source.hasOwnProperty(nextKey)) {
+                        output[nextKey] = source[nextKey];
+                    }
+                }
+            }
+        }
+        return output;
+    };
+} else {
+    assign = Object.assign;
+}
+
+/**
+ * extend object.
+ * means that properties in dest will be overwritten by the ones in src.
+ * @param {Object} dest
+ * @param {Object} src
+ * @param {Boolean} [merge=false]
+ * @returns {Object} dest
+ */
+var extend = deprecate(function extend(dest, src, merge) {
+    var keys = Object.keys(src);
+    var i = 0;
+    while (i < keys.length) {
+        if (!merge || (merge && dest[keys[i]] === undefined)) {
+            dest[keys[i]] = src[keys[i]];
+        }
+        i++;
+    }
+    return dest;
+}, 'extend', 'Use `assign`.');
+
+/**
+ * merge the values from src in the dest.
+ * means that properties that exist in dest will not be overwritten by src
+ * @param {Object} dest
+ * @param {Object} src
+ * @returns {Object} dest
+ */
+var merge = deprecate(function merge(dest, src) {
+    return extend(dest, src, true);
+}, 'merge', 'Use `assign`.');
+
+/**
+ * simple class inheritance
+ * @param {Function} child
+ * @param {Function} base
+ * @param {Object} [properties]
+ */
+function inherit(child, base, properties) {
+    var baseP = base.prototype,
+        childP;
+
+    childP = child.prototype = Object.create(baseP);
+    childP.constructor = child;
+    childP._super = baseP;
+
+    if (properties) {
+        assign(childP, properties);
+    }
+}
+
+/**
+ * simple function bind
+ * @param {Function} fn
+ * @param {Object} context
+ * @returns {Function}
+ */
+function bindFn(fn, context) {
+    return function boundFn() {
+        return fn.apply(context, arguments);
+    };
+}
+
+/**
+ * let a boolean value also be a function that must return a boolean
+ * this first item in args will be used as the context
+ * @param {Boolean|Function} val
+ * @param {Array} [args]
+ * @returns {Boolean}
+ */
+function boolOrFn(val, args) {
+    if (typeof val == TYPE_FUNCTION) {
+        return val.apply(args ? args[0] || undefined : undefined, args);
+    }
+    return val;
+}
+
+/**
+ * use the val2 when val1 is undefined
+ * @param {*} val1
+ * @param {*} val2
+ * @returns {*}
+ */
+function ifUndefined(val1, val2) {
+    return (val1 === undefined) ? val2 : val1;
+}
+
+/**
+ * addEventListener with multiple events at once
+ * @param {EventTarget} target
+ * @param {String} types
+ * @param {Function} handler
+ */
+function addEventListeners(target, types, handler) {
+    each(splitStr(types), function(type) {
+        target.addEventListener(type, handler, false);
+    });
+}
+
+/**
+ * removeEventListener with multiple events at once
+ * @param {EventTarget} target
+ * @param {String} types
+ * @param {Function} handler
+ */
+function removeEventListeners(target, types, handler) {
+    each(splitStr(types), function(type) {
+        target.removeEventListener(type, handler, false);
+    });
+}
+
+/**
+ * find if a node is in the given parent
+ * @method hasParent
+ * @param {HTMLElement} node
+ * @param {HTMLElement} parent
+ * @return {Boolean} found
+ */
+function hasParent(node, parent) {
+    while (node) {
+        if (node == parent) {
+            return true;
+        }
+        node = node.parentNode;
+    }
+    return false;
+}
+
+/**
+ * small indexOf wrapper
+ * @param {String} str
+ * @param {String} find
+ * @returns {Boolean} found
+ */
+function inStr(str, find) {
+    return str.indexOf(find) > -1;
+}
+
+/**
+ * split string on whitespace
+ * @param {String} str
+ * @returns {Array} words
+ */
+function splitStr(str) {
+    return str.trim().split(/\s+/g);
+}
+
+/**
+ * find if a array contains the object using indexOf or a simple polyFill
+ * @param {Array} src
+ * @param {String} find
+ * @param {String} [findByKey]
+ * @return {Boolean|Number} false when not found, or the index
+ */
+function inArray(src, find, findByKey) {
+    if (src.indexOf && !findByKey) {
+        return src.indexOf(find);
+    } else {
+        var i = 0;
+        while (i < src.length) {
+            if ((findByKey && src[i][findByKey] == find) || (!findByKey && src[i] === find)) {
+                return i;
+            }
+            i++;
+        }
+        return -1;
+    }
+}
+
+/**
+ * convert array-like objects to real arrays
+ * @param {Object} obj
+ * @returns {Array}
+ */
+function toArray(obj) {
+    return Array.prototype.slice.call(obj, 0);
+}
+
+/**
+ * unique array with objects based on a key (like 'id') or just by the array's value
+ * @param {Array} src [{id:1},{id:2},{id:1}]
+ * @param {String} [key]
+ * @param {Boolean} [sort=False]
+ * @returns {Array} [{id:1},{id:2}]
+ */
+function uniqueArray(src, key, sort) {
+    var results = [];
+    var values = [];
+    var i = 0;
+
+    while (i < src.length) {
+        var val = key ? src[i][key] : src[i];
+        if (inArray(values, val) < 0) {
+            results.push(src[i]);
+        }
+        values[i] = val;
+        i++;
+    }
+
+    if (sort) {
+        if (!key) {
+            results = results.sort();
+        } else {
+            results = results.sort(function sortUniqueArray(a, b) {
+                return a[key] > b[key];
+            });
+        }
+    }
+
+    return results;
+}
+
+/**
+ * get the prefixed property
+ * @param {Object} obj
+ * @param {String} property
+ * @returns {String|Undefined} prefixed
+ */
+function prefixed(obj, property) {
+    var prefix, prop;
+    var camelProp = property[0].toUpperCase() + property.slice(1);
+
+    var i = 0;
+    while (i < VENDOR_PREFIXES.length) {
+        prefix = VENDOR_PREFIXES[i];
+        prop = (prefix) ? prefix + camelProp : property;
+
+        if (prop in obj) {
+            return prop;
+        }
+        i++;
+    }
+    return undefined;
+}
+
+/**
+ * get a unique id
+ * @returns {number} uniqueId
+ */
+var _uniqueId = 1;
+function uniqueId() {
+    return _uniqueId++;
+}
+
+/**
+ * get the window object of an element
+ * @param {HTMLElement} element
+ * @returns {DocumentView|Window}
+ */
+function getWindowForElement(element) {
+    var doc = element.ownerDocument || element;
+    return (doc.defaultView || doc.parentWindow || window);
+}
+
+var MOBILE_REGEX = /mobile|tablet|ip(ad|hone|od)|android/i;
+
+var SUPPORT_TOUCH = ('ontouchstart' in window);
+var SUPPORT_POINTER_EVENTS = prefixed(window, 'PointerEvent') !== undefined;
+var SUPPORT_ONLY_TOUCH = SUPPORT_TOUCH && MOBILE_REGEX.test(navigator.userAgent);
+
+var INPUT_TYPE_TOUCH = 'touch';
+var INPUT_TYPE_PEN = 'pen';
+var INPUT_TYPE_MOUSE = 'mouse';
+var INPUT_TYPE_KINECT = 'kinect';
+
+var COMPUTE_INTERVAL = 25;
+
+var INPUT_START = 1;
+var INPUT_MOVE = 2;
+var INPUT_END = 4;
+var INPUT_CANCEL = 8;
+
+var DIRECTION_NONE = 1;
+var DIRECTION_LEFT = 2;
+var DIRECTION_RIGHT = 4;
+var DIRECTION_UP = 8;
+var DIRECTION_DOWN = 16;
+
+var DIRECTION_HORIZONTAL = DIRECTION_LEFT | DIRECTION_RIGHT;
+var DIRECTION_VERTICAL = DIRECTION_UP | DIRECTION_DOWN;
+var DIRECTION_ALL = DIRECTION_HORIZONTAL | DIRECTION_VERTICAL;
+
+var PROPS_XY = ['x', 'y'];
+var PROPS_CLIENT_XY = ['clientX', 'clientY'];
+
+/**
+ * create new input type manager
+ * @param {Manager} manager
+ * @param {Function} callback
+ * @returns {Input}
+ * @constructor
+ */
+function Input(manager, callback) {
+    var self = this;
+    this.manager = manager;
+    this.callback = callback;
+    this.element = manager.element;
+    this.target = manager.options.inputTarget;
+
+    // smaller wrapper around the handler, for the scope and the enabled state of the manager,
+    // so when disabled the input events are completely bypassed.
+    this.domHandler = function(ev) {
+        if (boolOrFn(manager.options.enable, [manager])) {
+            self.handler(ev);
+        }
+    };
+
+    this.init();
+
+}
+
+Input.prototype = {
+    /**
+     * should handle the inputEvent data and trigger the callback
+     * @virtual
+     */
+    handler: function() { },
+
+    /**
+     * bind the events
+     */
+    init: function() {
+        this.evEl && addEventListeners(this.element, this.evEl, this.domHandler);
+        this.evTarget && addEventListeners(this.target, this.evTarget, this.domHandler);
+        this.evWin && addEventListeners(getWindowForElement(this.element), this.evWin, this.domHandler);
+    },
+
+    /**
+     * unbind the events
+     */
+    destroy: function() {
+        this.evEl && removeEventListeners(this.element, this.evEl, this.domHandler);
+        this.evTarget && removeEventListeners(this.target, this.evTarget, this.domHandler);
+        this.evWin && removeEventListeners(getWindowForElement(this.element), this.evWin, this.domHandler);
+    }
+};
+
+/**
+ * create new input type manager
+ * called by the Manager constructor
+ * @param {Hammer} manager
+ * @returns {Input}
+ */
+function createInputInstance(manager) {
+    var Type;
+    var inputClass = manager.options.inputClass;
+
+    if (inputClass) {
+        Type = inputClass;
+    } else if (SUPPORT_POINTER_EVENTS) {
+        Type = PointerEventInput;
+    } else if (SUPPORT_ONLY_TOUCH) {
+        Type = TouchInput;
+    } else if (!SUPPORT_TOUCH) {
+        Type = MouseInput;
+    } else {
+        Type = TouchMouseInput;
+    }
+    return new (Type)(manager, inputHandler);
+}
+
+/**
+ * handle input events
+ * @param {Manager} manager
+ * @param {String} eventType
+ * @param {Object} input
+ */
+function inputHandler(manager, eventType, input) {
+    var pointersLen = input.pointers.length;
+    var changedPointersLen = input.changedPointers.length;
+    var isFirst = (eventType & INPUT_START && (pointersLen - changedPointersLen === 0));
+    var isFinal = (eventType & (INPUT_END | INPUT_CANCEL) && (pointersLen - changedPointersLen === 0));
+
+    input.isFirst = !!isFirst;
+    input.isFinal = !!isFinal;
+
+    if (isFirst) {
+        manager.session = {};
+    }
+
+    // source event is the normalized value of the domEvents
+    // like 'touchstart, mouseup, pointerdown'
+    input.eventType = eventType;
+
+    // compute scale, rotation etc
+    computeInputData(manager, input);
+
+    // emit secret event
+    manager.emit('hammer.input', input);
+
+    manager.recognize(input);
+    manager.session.prevInput = input;
+}
+
+/**
+ * extend the data with some usable properties like scale, rotate, velocity etc
+ * @param {Object} manager
+ * @param {Object} input
+ */
+function computeInputData(manager, input) {
+    var session = manager.session;
+    var pointers = input.pointers;
+    var pointersLength = pointers.length;
+
+    // store the first input to calculate the distance and direction
+    if (!session.firstInput) {
+        session.firstInput = simpleCloneInputData(input);
+    }
+
+    // to compute scale and rotation we need to store the multiple touches
+    if (pointersLength > 1 && !session.firstMultiple) {
+        session.firstMultiple = simpleCloneInputData(input);
+    } else if (pointersLength === 1) {
+        session.firstMultiple = false;
+    }
+
+    var firstInput = session.firstInput;
+    var firstMultiple = session.firstMultiple;
+    var offsetCenter = firstMultiple ? firstMultiple.center : firstInput.center;
+
+    var center = input.center = getCenter(pointers);
+    input.timeStamp = now();
+    input.deltaTime = input.timeStamp - firstInput.timeStamp;
+
+    input.angle = getAngle(offsetCenter, center);
+    input.distance = getDistance(offsetCenter, center);
+
+    computeDeltaXY(session, input);
+    input.offsetDirection = getDirection(input.deltaX, input.deltaY);
+
+    var overallVelocity = getVelocity(input.deltaTime, input.deltaX, input.deltaY);
+    input.overallVelocityX = overallVelocity.x;
+    input.overallVelocityY = overallVelocity.y;
+    input.overallVelocity = (abs(overallVelocity.x) > abs(overallVelocity.y)) ? overallVelocity.x : overallVelocity.y;
+
+    input.scale = firstMultiple ? getScale(firstMultiple.pointers, pointers) : 1;
+    input.rotation = firstMultiple ? getRotation(firstMultiple.pointers, pointers) : 0;
+
+    input.maxPointers = !session.prevInput ? input.pointers.length : ((input.pointers.length >
+        session.prevInput.maxPointers) ? input.pointers.length : session.prevInput.maxPointers);
+
+    computeIntervalInputData(session, input);
+
+    // find the correct target
+    var target = manager.element;
+    if (hasParent(input.srcEvent.target, target)) {
+        target = input.srcEvent.target;
+    }
+    input.target = target;
+}
+
+function computeDeltaXY(session, input) {
+    var center = input.center;
+    var offset = session.offsetDelta || {};
+    var prevDelta = session.prevDelta || {};
+    var prevInput = session.prevInput || {};
+
+    if (input.eventType === INPUT_START || prevInput.eventType === INPUT_END) {
+        prevDelta = session.prevDelta = {
+            x: prevInput.deltaX || 0,
+            y: prevInput.deltaY || 0
+        };
+
+        offset = session.offsetDelta = {
+            x: center.x,
+            y: center.y
+        };
+    }
+
+    input.deltaX = prevDelta.x + (center.x - offset.x);
+    input.deltaY = prevDelta.y + (center.y - offset.y);
+}
+
+/**
+ * velocity is calculated every x ms
+ * @param {Object} session
+ * @param {Object} input
+ */
+function computeIntervalInputData(session, input) {
+    var last = session.lastInterval || input,
+        deltaTime = input.timeStamp - last.timeStamp,
+        velocity, velocityX, velocityY, direction;
+
+    if (input.eventType != INPUT_CANCEL && (deltaTime > COMPUTE_INTERVAL || last.velocity === undefined)) {
+        var deltaX = input.deltaX - last.deltaX;
+        var deltaY = input.deltaY - last.deltaY;
+
+        var v = getVelocity(deltaTime, deltaX, deltaY);
+        velocityX = v.x;
+        velocityY = v.y;
+        velocity = (abs(v.x) > abs(v.y)) ? v.x : v.y;
+        direction = getDirection(deltaX, deltaY);
+
+        session.lastInterval = input;
+    } else {
+        // use latest velocity info if it doesn't overtake a minimum period
+        velocity = last.velocity;
+        velocityX = last.velocityX;
+        velocityY = last.velocityY;
+        direction = last.direction;
+    }
+
+    input.velocity = velocity;
+    input.velocityX = velocityX;
+    input.velocityY = velocityY;
+    input.direction = direction;
+}
+
+/**
+ * create a simple clone from the input used for storage of firstInput and firstMultiple
+ * @param {Object} input
+ * @returns {Object} clonedInputData
+ */
+function simpleCloneInputData(input) {
+    // make a simple copy of the pointers because we will get a reference if we don't
+    // we only need clientXY for the calculations
+    var pointers = [];
+    var i = 0;
+    while (i < input.pointers.length) {
+        pointers[i] = {
+            clientX: round(input.pointers[i].clientX),
+            clientY: round(input.pointers[i].clientY)
+        };
+        i++;
+    }
+
+    return {
+        timeStamp: now(),
+        pointers: pointers,
+        center: getCenter(pointers),
+        deltaX: input.deltaX,
+        deltaY: input.deltaY
+    };
+}
+
+/**
+ * get the center of all the pointers
+ * @param {Array} pointers
+ * @return {Object} center contains `x` and `y` properties
+ */
+function getCenter(pointers) {
+    var pointersLength = pointers.length;
+
+    // no need to loop when only one touch
+    if (pointersLength === 1) {
+        return {
+            x: round(pointers[0].clientX),
+            y: round(pointers[0].clientY)
+        };
+    }
+
+    var x = 0, y = 0, i = 0;
+    while (i < pointersLength) {
+        x += pointers[i].clientX;
+        y += pointers[i].clientY;
+        i++;
+    }
+
+    return {
+        x: round(x / pointersLength),
+        y: round(y / pointersLength)
+    };
+}
+
+/**
+ * calculate the velocity between two points. unit is in px per ms.
+ * @param {Number} deltaTime
+ * @param {Number} x
+ * @param {Number} y
+ * @return {Object} velocity `x` and `y`
+ */
+function getVelocity(deltaTime, x, y) {
+    return {
+        x: x / deltaTime || 0,
+        y: y / deltaTime || 0
+    };
+}
+
+/**
+ * get the direction between two points
+ * @param {Number} x
+ * @param {Number} y
+ * @return {Number} direction
+ */
+function getDirection(x, y) {
+    if (x === y) {
+        return DIRECTION_NONE;
+    }
+
+    if (abs(x) >= abs(y)) {
+        return x < 0 ? DIRECTION_LEFT : DIRECTION_RIGHT;
+    }
+    return y < 0 ? DIRECTION_UP : DIRECTION_DOWN;
+}
+
+/**
+ * calculate the absolute distance between two points
+ * @param {Object} p1 {x, y}
+ * @param {Object} p2 {x, y}
+ * @param {Array} [props] containing x and y keys
+ * @return {Number} distance
+ */
+function getDistance(p1, p2, props) {
+    if (!props) {
+        props = PROPS_XY;
+    }
+    var x = p2[props[0]] - p1[props[0]],
+        y = p2[props[1]] - p1[props[1]];
+
+    return Math.sqrt((x * x) + (y * y));
+}
+
+/**
+ * calculate the angle between two coordinates
+ * @param {Object} p1
+ * @param {Object} p2
+ * @param {Array} [props] containing x and y keys
+ * @return {Number} angle
+ */
+function getAngle(p1, p2, props) {
+    if (!props) {
+        props = PROPS_XY;
+    }
+    var x = p2[props[0]] - p1[props[0]],
+        y = p2[props[1]] - p1[props[1]];
+    return Math.atan2(y, x) * 180 / Math.PI;
+}
+
+/**
+ * calculate the rotation degrees between two pointersets
+ * @param {Array} start array of pointers
+ * @param {Array} end array of pointers
+ * @return {Number} rotation
+ */
+function getRotation(start, end) {
+    return getAngle(end[1], end[0], PROPS_CLIENT_XY) + getAngle(start[1], start[0], PROPS_CLIENT_XY);
+}
+
+/**
+ * calculate the scale factor between two pointersets
+ * no scale is 1, and goes down to 0 when pinched together, and bigger when pinched out
+ * @param {Array} start array of pointers
+ * @param {Array} end array of pointers
+ * @return {Number} scale
+ */
+function getScale(start, end) {
+    return getDistance(end[0], end[1], PROPS_CLIENT_XY) / getDistance(start[0], start[1], PROPS_CLIENT_XY);
+}
+
+var MOUSE_INPUT_MAP = {
+    mousedown: INPUT_START,
+    mousemove: INPUT_MOVE,
+    mouseup: INPUT_END
+};
+
+var MOUSE_ELEMENT_EVENTS = 'mousedown';
+var MOUSE_WINDOW_EVENTS = 'mousemove mouseup';
+
+/**
+ * Mouse events input
+ * @constructor
+ * @extends Input
+ */
+function MouseInput() {
+    this.evEl = MOUSE_ELEMENT_EVENTS;
+    this.evWin = MOUSE_WINDOW_EVENTS;
+
+    this.pressed = false; // mousedown state
+
+    Input.apply(this, arguments);
+}
+
+inherit(MouseInput, Input, {
+    /**
+     * handle mouse events
+     * @param {Object} ev
+     */
+    handler: function MEhandler(ev) {
+        var eventType = MOUSE_INPUT_MAP[ev.type];
+
+        // on start we want to have the left mouse button down
+        if (eventType & INPUT_START && ev.button === 0) {
+            this.pressed = true;
+        }
+
+        if (eventType & INPUT_MOVE && ev.which !== 1) {
+            eventType = INPUT_END;
+        }
+
+        // mouse must be down
+        if (!this.pressed) {
+            return;
+        }
+
+        if (eventType & INPUT_END) {
+            this.pressed = false;
+        }
+
+        this.callback(this.manager, eventType, {
+            pointers: [ev],
+            changedPointers: [ev],
+            pointerType: INPUT_TYPE_MOUSE,
+            srcEvent: ev
+        });
+    }
+});
+
+var POINTER_INPUT_MAP = {
+    pointerdown: INPUT_START,
+    pointermove: INPUT_MOVE,
+    pointerup: INPUT_END,
+    pointercancel: INPUT_CANCEL,
+    pointerout: INPUT_CANCEL
+};
+
+// in IE10 the pointer types is defined as an enum
+var IE10_POINTER_TYPE_ENUM = {
+    2: INPUT_TYPE_TOUCH,
+    3: INPUT_TYPE_PEN,
+    4: INPUT_TYPE_MOUSE,
+    5: INPUT_TYPE_KINECT // see https://twitter.com/jacobrossi/status/480596438489890816
+};
+
+var POINTER_ELEMENT_EVENTS = 'pointerdown';
+var POINTER_WINDOW_EVENTS = 'pointermove pointerup pointercancel';
+
+// IE10 has prefixed support, and case-sensitive
+if (window.MSPointerEvent && !window.PointerEvent) {
+    POINTER_ELEMENT_EVENTS = 'MSPointerDown';
+    POINTER_WINDOW_EVENTS = 'MSPointerMove MSPointerUp MSPointerCancel';
+}
+
+/**
+ * Pointer events input
+ * @constructor
+ * @extends Input
+ */
+function PointerEventInput() {
+    this.evEl = POINTER_ELEMENT_EVENTS;
+    this.evWin = POINTER_WINDOW_EVENTS;
+
+    Input.apply(this, arguments);
+
+    this.store = (this.manager.session.pointerEvents = []);
+}
+
+inherit(PointerEventInput, Input, {
+    /**
+     * handle mouse events
+     * @param {Object} ev
+     */
+    handler: function PEhandler(ev) {
+        var store = this.store;
+        var removePointer = false;
+
+        var eventTypeNormalized = ev.type.toLowerCase().replace('ms', '');
+        var eventType = POINTER_INPUT_MAP[eventTypeNormalized];
+        var pointerType = IE10_POINTER_TYPE_ENUM[ev.pointerType] || ev.pointerType;
+
+        var isTouch = (pointerType == INPUT_TYPE_TOUCH);
+
+        // get index of the event in the store
+        var storeIndex = inArray(store, ev.pointerId, 'pointerId');
+
+        // start and mouse must be down
+        if (eventType & INPUT_START && (ev.button === 0 || isTouch)) {
+            if (storeIndex < 0) {
+                store.push(ev);
+                storeIndex = store.length - 1;
+            }
+        } else if (eventType & (INPUT_END | INPUT_CANCEL)) {
+            removePointer = true;
+        }
+
+        // it not found, so the pointer hasn't been down (so it's probably a hover)
+        if (storeIndex < 0) {
+            return;
+        }
+
+        // update the event in the store
+        store[storeIndex] = ev;
+
+        this.callback(this.manager, eventType, {
+            pointers: store,
+            changedPointers: [ev],
+            pointerType: pointerType,
+            srcEvent: ev
+        });
+
+        if (removePointer) {
+            // remove from the store
+            store.splice(storeIndex, 1);
+        }
+    }
+});
+
+var SINGLE_TOUCH_INPUT_MAP = {
+    touchstart: INPUT_START,
+    touchmove: INPUT_MOVE,
+    touchend: INPUT_END,
+    touchcancel: INPUT_CANCEL
+};
+
+var SINGLE_TOUCH_TARGET_EVENTS = 'touchstart';
+var SINGLE_TOUCH_WINDOW_EVENTS = 'touchstart touchmove touchend touchcancel';
+
+/**
+ * Touch events input
+ * @constructor
+ * @extends Input
+ */
+function SingleTouchInput() {
+    this.evTarget = SINGLE_TOUCH_TARGET_EVENTS;
+    this.evWin = SINGLE_TOUCH_WINDOW_EVENTS;
+    this.started = false;
+
+    Input.apply(this, arguments);
+}
+
+inherit(SingleTouchInput, Input, {
+    handler: function TEhandler(ev) {
+        var type = SINGLE_TOUCH_INPUT_MAP[ev.type];
+
+        // should we handle the touch events?
+        if (type === INPUT_START) {
+            this.started = true;
+        }
+
+        if (!this.started) {
+            return;
+        }
+
+        var touches = normalizeSingleTouches.call(this, ev, type);
+
+        // when done, reset the started state
+        if (type & (INPUT_END | INPUT_CANCEL) && touches[0].length - touches[1].length === 0) {
+            this.started = false;
+        }
+
+        this.callback(this.manager, type, {
+            pointers: touches[0],
+            changedPointers: touches[1],
+            pointerType: INPUT_TYPE_TOUCH,
+            srcEvent: ev
+        });
+    }
+});
+
+/**
+ * @this {TouchInput}
+ * @param {Object} ev
+ * @param {Number} type flag
+ * @returns {undefined|Array} [all, changed]
+ */
+function normalizeSingleTouches(ev, type) {
+    var all = toArray(ev.touches);
+    var changed = toArray(ev.changedTouches);
+
+    if (type & (INPUT_END | INPUT_CANCEL)) {
+        all = uniqueArray(all.concat(changed), 'identifier', true);
+    }
+
+    return [all, changed];
+}
+
+var TOUCH_INPUT_MAP = {
+    touchstart: INPUT_START,
+    touchmove: INPUT_MOVE,
+    touchend: INPUT_END,
+    touchcancel: INPUT_CANCEL
+};
+
+var TOUCH_TARGET_EVENTS = 'touchstart touchmove touchend touchcancel';
+
+/**
+ * Multi-user touch events input
+ * @constructor
+ * @extends Input
+ */
+function TouchInput() {
+    this.evTarget = TOUCH_TARGET_EVENTS;
+    this.targetIds = {};
+
+    Input.apply(this, arguments);
+}
+
+inherit(TouchInput, Input, {
+    handler: function MTEhandler(ev) {
+        var type = TOUCH_INPUT_MAP[ev.type];
+        var touches = getTouches.call(this, ev, type);
+        if (!touches) {
+            return;
+        }
+
+        this.callback(this.manager, type, {
+            pointers: touches[0],
+            changedPointers: touches[1],
+            pointerType: INPUT_TYPE_TOUCH,
+            srcEvent: ev
+        });
+    }
+});
+
+/**
+ * @this {TouchInput}
+ * @param {Object} ev
+ * @param {Number} type flag
+ * @returns {undefined|Array} [all, changed]
+ */
+function getTouches(ev, type) {
+    var allTouches = toArray(ev.touches);
+    var targetIds = this.targetIds;
+
+    // when there is only one touch, the process can be simplified
+    if (type & (INPUT_START | INPUT_MOVE) && allTouches.length === 1) {
+        targetIds[allTouches[0].identifier] = true;
+        return [allTouches, allTouches];
+    }
+
+    var i,
+        targetTouches,
+        changedTouches = toArray(ev.changedTouches),
+        changedTargetTouches = [],
+        target = this.target;
+
+    // get target touches from touches
+    targetTouches = allTouches.filter(function(touch) {
+        return hasParent(touch.target, target);
+    });
+
+    // collect touches
+    if (type === INPUT_START) {
+        i = 0;
+        while (i < targetTouches.length) {
+            targetIds[targetTouches[i].identifier] = true;
+            i++;
+        }
+    }
+
+    // filter changed touches to only contain touches that exist in the collected target ids
+    i = 0;
+    while (i < changedTouches.length) {
+        if (targetIds[changedTouches[i].identifier]) {
+            changedTargetTouches.push(changedTouches[i]);
+        }
+
+        // cleanup removed touches
+        if (type & (INPUT_END | INPUT_CANCEL)) {
+            delete targetIds[changedTouches[i].identifier];
+        }
+        i++;
+    }
+
+    if (!changedTargetTouches.length) {
+        return;
+    }
+
+    return [
+        // merge targetTouches with changedTargetTouches so it contains ALL touches, including 'end' and 'cancel'
+        uniqueArray(targetTouches.concat(changedTargetTouches), 'identifier', true),
+        changedTargetTouches
+    ];
+}
+
+/**
+ * Combined touch and mouse input
+ *
+ * Touch has a higher priority then mouse, and while touching no mouse events are allowed.
+ * This because touch devices also emit mouse events while doing a touch.
+ *
+ * @constructor
+ * @extends Input
+ */
+
+var DEDUP_TIMEOUT = 2500;
+var DEDUP_DISTANCE = 25;
+
+function TouchMouseInput() {
+    Input.apply(this, arguments);
+
+    var handler = bindFn(this.handler, this);
+    this.touch = new TouchInput(this.manager, handler);
+    this.mouse = new MouseInput(this.manager, handler);
+
+    this.primaryTouch = null;
+    this.lastTouches = [];
+}
+
+inherit(TouchMouseInput, Input, {
+    /**
+     * handle mouse and touch events
+     * @param {Hammer} manager
+     * @param {String} inputEvent
+     * @param {Object} inputData
+     */
+    handler: function TMEhandler(manager, inputEvent, inputData) {
+        var isTouch = (inputData.pointerType == INPUT_TYPE_TOUCH),
+            isMouse = (inputData.pointerType == INPUT_TYPE_MOUSE);
+
+        if (isMouse && inputData.sourceCapabilities && inputData.sourceCapabilities.firesTouchEvents) {
+            return;
+        }
+
+        // when we're in a touch event, record touches to  de-dupe synthetic mouse event
+        if (isTouch) {
+            recordTouches.call(this, inputEvent, inputData);
+        } else if (isMouse && isSyntheticEvent.call(this, inputData)) {
+            return;
+        }
+
+        this.callback(manager, inputEvent, inputData);
+    },
+
+    /**
+     * remove the event listeners
+     */
+    destroy: function destroy() {
+        this.touch.destroy();
+        this.mouse.destroy();
+    }
+});
+
+function recordTouches(eventType, eventData) {
+    if (eventType & INPUT_START) {
+        this.primaryTouch = eventData.changedPointers[0].identifier;
+        setLastTouch.call(this, eventData);
+    } else if (eventType & (INPUT_END | INPUT_CANCEL)) {
+        setLastTouch.call(this, eventData);
+    }
+}
+
+function setLastTouch(eventData) {
+    var touch = eventData.changedPointers[0];
+
+    if (touch.identifier === this.primaryTouch) {
+        var lastTouch = {x: touch.clientX, y: touch.clientY};
+        this.lastTouches.push(lastTouch);
+        var lts = this.lastTouches;
+        var removeLastTouch = function() {
+            var i = lts.indexOf(lastTouch);
+            if (i > -1) {
+                lts.splice(i, 1);
+            }
+        };
+        setTimeout(removeLastTouch, DEDUP_TIMEOUT);
+    }
+}
+
+function isSyntheticEvent(eventData) {
+    var x = eventData.srcEvent.clientX, y = eventData.srcEvent.clientY;
+    for (var i = 0; i < this.lastTouches.length; i++) {
+        var t = this.lastTouches[i];
+        var dx = Math.abs(x - t.x), dy = Math.abs(y - t.y);
+        if (dx <= DEDUP_DISTANCE && dy <= DEDUP_DISTANCE) {
+            return true;
+        }
+    }
+    return false;
+}
+
+var PREFIXED_TOUCH_ACTION = prefixed(TEST_ELEMENT.style, 'touchAction');
+var NATIVE_TOUCH_ACTION = PREFIXED_TOUCH_ACTION !== undefined;
+
+// magical touchAction value
+var TOUCH_ACTION_COMPUTE = 'compute';
+var TOUCH_ACTION_AUTO = 'auto';
+var TOUCH_ACTION_MANIPULATION = 'manipulation'; // not implemented
+var TOUCH_ACTION_NONE = 'none';
+var TOUCH_ACTION_PAN_X = 'pan-x';
+var TOUCH_ACTION_PAN_Y = 'pan-y';
+var TOUCH_ACTION_MAP = getTouchActionProps();
+
+/**
+ * Touch Action
+ * sets the touchAction property or uses the js alternative
+ * @param {Manager} manager
+ * @param {String} value
+ * @constructor
+ */
+function TouchAction(manager, value) {
+    this.manager = manager;
+    this.set(value);
+}
+
+TouchAction.prototype = {
+    /**
+     * set the touchAction value on the element or enable the polyfill
+     * @param {String} value
+     */
+    set: function(value) {
+        // find out the touch-action by the event handlers
+        if (value == TOUCH_ACTION_COMPUTE) {
+            value = this.compute();
+        }
+
+        if (NATIVE_TOUCH_ACTION && this.manager.element.style && TOUCH_ACTION_MAP[value]) {
+            this.manager.element.style[PREFIXED_TOUCH_ACTION] = value;
+        }
+        this.actions = value.toLowerCase().trim();
+    },
+
+    /**
+     * just re-set the touchAction value
+     */
+    update: function() {
+        this.set(this.manager.options.touchAction);
+    },
+
+    /**
+     * compute the value for the touchAction property based on the recognizer's settings
+     * @returns {String} value
+     */
+    compute: function() {
+        var actions = [];
+        each(this.manager.recognizers, function(recognizer) {
+            if (boolOrFn(recognizer.options.enable, [recognizer])) {
+                actions = actions.concat(recognizer.getTouchAction());
+            }
+        });
+        return cleanTouchActions(actions.join(' '));
+    },
+
+    /**
+     * this method is called on each input cycle and provides the preventing of the browser behavior
+     * @param {Object} input
+     */
+    preventDefaults: function(input) {
+        var srcEvent = input.srcEvent;
+        var direction = input.offsetDirection;
+
+        // if the touch action did prevented once this session
+        if (this.manager.session.prevented) {
+            srcEvent.preventDefault();
+            return;
+        }
+
+        var actions = this.actions;
+        var hasNone = inStr(actions, TOUCH_ACTION_NONE) && !TOUCH_ACTION_MAP[TOUCH_ACTION_NONE];
+        var hasPanY = inStr(actions, TOUCH_ACTION_PAN_Y) && !TOUCH_ACTION_MAP[TOUCH_ACTION_PAN_Y];
+        var hasPanX = inStr(actions, TOUCH_ACTION_PAN_X) && !TOUCH_ACTION_MAP[TOUCH_ACTION_PAN_X];
+
+        if (hasNone) {
+            //do not prevent defaults if this is a tap gesture
+
+            var isTapPointer = input.pointers.length === 1;
+            var isTapMovement = input.distance < 2;
+            var isTapTouchTime = input.deltaTime < 250;
+
+            if (isTapPointer && isTapMovement && isTapTouchTime) {
+                return;
+            }
+        }
+
+        if (hasPanX && hasPanY) {
+            // `pan-x pan-y` means browser handles all scrolling/panning, do not prevent
+            return;
+        }
+
+        if (hasNone ||
+            (hasPanY && direction & DIRECTION_HORIZONTAL) ||
+            (hasPanX && direction & DIRECTION_VERTICAL)) {
+            return this.preventSrc(srcEvent);
+        }
+    },
+
+    /**
+     * call preventDefault to prevent the browser's default behavior (scrolling in most cases)
+     * @param {Object} srcEvent
+     */
+    preventSrc: function(srcEvent) {
+        this.manager.session.prevented = true;
+        srcEvent.preventDefault();
+    }
+};
+
+/**
+ * when the touchActions are collected they are not a valid value, so we need to clean things up. *
+ * @param {String} actions
+ * @returns {*}
+ */
+function cleanTouchActions(actions) {
+    // none
+    if (inStr(actions, TOUCH_ACTION_NONE)) {
+        return TOUCH_ACTION_NONE;
+    }
+
+    var hasPanX = inStr(actions, TOUCH_ACTION_PAN_X);
+    var hasPanY = inStr(actions, TOUCH_ACTION_PAN_Y);
+
+    // if both pan-x and pan-y are set (different recognizers
+    // for different directions, e.g. horizontal pan but vertical swipe?)
+    // we need none (as otherwise with pan-x pan-y combined none of these
+    // recognizers will work, since the browser would handle all panning
+    if (hasPanX && hasPanY) {
+        return TOUCH_ACTION_NONE;
+    }
+
+    // pan-x OR pan-y
+    if (hasPanX || hasPanY) {
+        return hasPanX ? TOUCH_ACTION_PAN_X : TOUCH_ACTION_PAN_Y;
+    }
+
+    // manipulation
+    if (inStr(actions, TOUCH_ACTION_MANIPULATION)) {
+        return TOUCH_ACTION_MANIPULATION;
+    }
+
+    return TOUCH_ACTION_AUTO;
+}
+
+function getTouchActionProps() {
+    if (!NATIVE_TOUCH_ACTION) {
+        return false;
+    }
+    var touchMap = {};
+    var cssSupports = window.CSS && window.CSS.supports;
+    ['auto', 'manipulation', 'pan-y', 'pan-x', 'pan-x pan-y', 'none'].forEach(function(val) {
+
+        // If css.supports is not supported but there is native touch-action assume it supports
+        // all values. This is the case for IE 10 and 11.
+        touchMap[val] = cssSupports ? window.CSS.supports('touch-action', val) : true;
+    });
+    return touchMap;
+}
+
+/**
+ * Recognizer flow explained; *
+ * All recognizers have the initial state of POSSIBLE when a input session starts.
+ * The definition of a input session is from the first input until the last input, with all it's movement in it. *
+ * Example session for mouse-input: mousedown -> mousemove -> mouseup
+ *
+ * On each recognizing cycle (see Manager.recognize) the .recognize() method is executed
+ * which determines with state it should be.
+ *
+ * If the recognizer has the state FAILED, CANCELLED or RECOGNIZED (equals ENDED), it is reset to
+ * POSSIBLE to give it another change on the next cycle.
+ *
+ *               Possible
+ *                  |
+ *            +-----+---------------+
+ *            |                     |
+ *      +-----+-----+               |
+ *      |           |               |
+ *   Failed      Cancelled          |
+ *                          +-------+------+
+ *                          |              |
+ *                      Recognized       Began
+ *                                         |
+ *                                      Changed
+ *                                         |
+ *                                  Ended/Recognized
+ */
+var STATE_POSSIBLE = 1;
+var STATE_BEGAN = 2;
+var STATE_CHANGED = 4;
+var STATE_ENDED = 8;
+var STATE_RECOGNIZED = STATE_ENDED;
+var STATE_CANCELLED = 16;
+var STATE_FAILED = 32;
+
+/**
+ * Recognizer
+ * Every recognizer needs to extend from this class.
+ * @constructor
+ * @param {Object} options
+ */
+function Recognizer(options) {
+    this.options = assign({}, this.defaults, options || {});
+
+    this.id = uniqueId();
+
+    this.manager = null;
+
+    // default is enable true
+    this.options.enable = ifUndefined(this.options.enable, true);
+
+    this.state = STATE_POSSIBLE;
+
+    this.simultaneous = {};
+    this.requireFail = [];
+}
+
+Recognizer.prototype = {
+    /**
+     * @virtual
+     * @type {Object}
+     */
+    defaults: {},
+
+    /**
+     * set options
+     * @param {Object} options
+     * @return {Recognizer}
+     */
+    set: function(options) {
+        assign(this.options, options);
+
+        // also update the touchAction, in case something changed about the directions/enabled state
+        this.manager && this.manager.touchAction.update();
+        return this;
+    },
+
+    /**
+     * recognize simultaneous with an other recognizer.
+     * @param {Recognizer} otherRecognizer
+     * @returns {Recognizer} this
+     */
+    recognizeWith: function(otherRecognizer) {
+        if (invokeArrayArg(otherRecognizer, 'recognizeWith', this)) {
+            return this;
+        }
+
+        var simultaneous = this.simultaneous;
+        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+        if (!simultaneous[otherRecognizer.id]) {
+            simultaneous[otherRecognizer.id] = otherRecognizer;
+            otherRecognizer.recognizeWith(this);
+        }
+        return this;
+    },
+
+    /**
+     * drop the simultaneous link. it doesnt remove the link on the other recognizer.
+     * @param {Recognizer} otherRecognizer
+     * @returns {Recognizer} this
+     */
+    dropRecognizeWith: function(otherRecognizer) {
+        if (invokeArrayArg(otherRecognizer, 'dropRecognizeWith', this)) {
+            return this;
+        }
+
+        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+        delete this.simultaneous[otherRecognizer.id];
+        return this;
+    },
+
+    /**
+     * recognizer can only run when an other is failing
+     * @param {Recognizer} otherRecognizer
+     * @returns {Recognizer} this
+     */
+    requireFailure: function(otherRecognizer) {
+        if (invokeArrayArg(otherRecognizer, 'requireFailure', this)) {
+            return this;
+        }
+
+        var requireFail = this.requireFail;
+        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+        if (inArray(requireFail, otherRecognizer) === -1) {
+            requireFail.push(otherRecognizer);
+            otherRecognizer.requireFailure(this);
+        }
+        return this;
+    },
+
+    /**
+     * drop the requireFailure link. it does not remove the link on the other recognizer.
+     * @param {Recognizer} otherRecognizer
+     * @returns {Recognizer} this
+     */
+    dropRequireFailure: function(otherRecognizer) {
+        if (invokeArrayArg(otherRecognizer, 'dropRequireFailure', this)) {
+            return this;
+        }
+
+        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+        var index = inArray(this.requireFail, otherRecognizer);
+        if (index > -1) {
+            this.requireFail.splice(index, 1);
+        }
+        return this;
+    },
+
+    /**
+     * has require failures boolean
+     * @returns {boolean}
+     */
+    hasRequireFailures: function() {
+        return this.requireFail.length > 0;
+    },
+
+    /**
+     * if the recognizer can recognize simultaneous with an other recognizer
+     * @param {Recognizer} otherRecognizer
+     * @returns {Boolean}
+     */
+    canRecognizeWith: function(otherRecognizer) {
+        return !!this.simultaneous[otherRecognizer.id];
+    },
+
+    /**
+     * You should use `tryEmit` instead of `emit` directly to check
+     * that all the needed recognizers has failed before emitting.
+     * @param {Object} input
+     */
+    emit: function(input) {
+        var self = this;
+        var state = this.state;
+
+        function emit(event) {
+            self.manager.emit(event, input);
+        }
+
+        // 'panstart' and 'panmove'
+        if (state < STATE_ENDED) {
+            emit(self.options.event + stateStr(state));
+        }
+
+        emit(self.options.event); // simple 'eventName' events
+
+        if (input.additionalEvent) { // additional event(panleft, panright, pinchin, pinchout...)
+            emit(input.additionalEvent);
+        }
+
+        // panend and pancancel
+        if (state >= STATE_ENDED) {
+            emit(self.options.event + stateStr(state));
+        }
+    },
+
+    /**
+     * Check that all the require failure recognizers has failed,
+     * if true, it emits a gesture event,
+     * otherwise, setup the state to FAILED.
+     * @param {Object} input
+     */
+    tryEmit: function(input) {
+        if (this.canEmit()) {
+            return this.emit(input);
+        }
+        // it's failing anyway
+        this.state = STATE_FAILED;
+    },
+
+    /**
+     * can we emit?
+     * @returns {boolean}
+     */
+    canEmit: function() {
+        var i = 0;
+        while (i < this.requireFail.length) {
+            if (!(this.requireFail[i].state & (STATE_FAILED | STATE_POSSIBLE))) {
+                return false;
+            }
+            i++;
+        }
+        return true;
+    },
+
+    /**
+     * update the recognizer
+     * @param {Object} inputData
+     */
+    recognize: function(inputData) {
+        // make a new copy of the inputData
+        // so we can change the inputData without messing up the other recognizers
+        var inputDataClone = assign({}, inputData);
+
+        // is is enabled and allow recognizing?
+        if (!boolOrFn(this.options.enable, [this, inputDataClone])) {
+            this.reset();
+            this.state = STATE_FAILED;
+            return;
+        }
+
+        // reset when we've reached the end
+        if (this.state & (STATE_RECOGNIZED | STATE_CANCELLED | STATE_FAILED)) {
+            this.state = STATE_POSSIBLE;
+        }
+
+        this.state = this.process(inputDataClone);
+
+        // the recognizer has recognized a gesture
+        // so trigger an event
+        if (this.state & (STATE_BEGAN | STATE_CHANGED | STATE_ENDED | STATE_CANCELLED)) {
+            this.tryEmit(inputDataClone);
+        }
+    },
+
+    /**
+     * return the state of the recognizer
+     * the actual recognizing happens in this method
+     * @virtual
+     * @param {Object} inputData
+     * @returns {Const} STATE
+     */
+    process: function(inputData) { }, // jshint ignore:line
+
+    /**
+     * return the preferred touch-action
+     * @virtual
+     * @returns {Array}
+     */
+    getTouchAction: function() { },
+
+    /**
+     * called when the gesture isn't allowed to recognize
+     * like when another is being recognized or it is disabled
+     * @virtual
+     */
+    reset: function() { }
+};
+
+/**
+ * get a usable string, used as event postfix
+ * @param {Const} state
+ * @returns {String} state
+ */
+function stateStr(state) {
+    if (state & STATE_CANCELLED) {
+        return 'cancel';
+    } else if (state & STATE_ENDED) {
+        return 'end';
+    } else if (state & STATE_CHANGED) {
+        return 'move';
+    } else if (state & STATE_BEGAN) {
+        return 'start';
+    }
+    return '';
+}
+
+/**
+ * direction cons to string
+ * @param {Const} direction
+ * @returns {String}
+ */
+function directionStr(direction) {
+    if (direction == DIRECTION_DOWN) {
+        return 'down';
+    } else if (direction == DIRECTION_UP) {
+        return 'up';
+    } else if (direction == DIRECTION_LEFT) {
+        return 'left';
+    } else if (direction == DIRECTION_RIGHT) {
+        return 'right';
+    }
+    return '';
+}
+
+/**
+ * get a recognizer by name if it is bound to a manager
+ * @param {Recognizer|String} otherRecognizer
+ * @param {Recognizer} recognizer
+ * @returns {Recognizer}
+ */
+function getRecognizerByNameIfManager(otherRecognizer, recognizer) {
+    var manager = recognizer.manager;
+    if (manager) {
+        return manager.get(otherRecognizer);
+    }
+    return otherRecognizer;
+}
+
+/**
+ * This recognizer is just used as a base for the simple attribute recognizers.
+ * @constructor
+ * @extends Recognizer
+ */
+function AttrRecognizer() {
+    Recognizer.apply(this, arguments);
+}
+
+inherit(AttrRecognizer, Recognizer, {
+    /**
+     * @namespace
+     * @memberof AttrRecognizer
+     */
+    defaults: {
+        /**
+         * @type {Number}
+         * @default 1
+         */
+        pointers: 1
+    },
+
+    /**
+     * Used to check if it the recognizer receives valid input, like input.distance > 10.
+     * @memberof AttrRecognizer
+     * @param {Object} input
+     * @returns {Boolean} recognized
+     */
+    attrTest: function(input) {
+        var optionPointers = this.options.pointers;
+        return optionPointers === 0 || input.pointers.length === optionPointers;
+    },
+
+    /**
+     * Process the input and return the state for the recognizer
+     * @memberof AttrRecognizer
+     * @param {Object} input
+     * @returns {*} State
+     */
+    process: function(input) {
+        var state = this.state;
+        var eventType = input.eventType;
+
+        var isRecognized = state & (STATE_BEGAN | STATE_CHANGED);
+        var isValid = this.attrTest(input);
+
+        // on cancel input and we've recognized before, return STATE_CANCELLED
+        if (isRecognized && (eventType & INPUT_CANCEL || !isValid)) {
+            return state | STATE_CANCELLED;
+        } else if (isRecognized || isValid) {
+            if (eventType & INPUT_END) {
+                return state | STATE_ENDED;
+            } else if (!(state & STATE_BEGAN)) {
+                return STATE_BEGAN;
+            }
+            return state | STATE_CHANGED;
+        }
+        return STATE_FAILED;
+    }
+});
+
+/**
+ * Pan
+ * Recognized when the pointer is down and moved in the allowed direction.
+ * @constructor
+ * @extends AttrRecognizer
+ */
+function PanRecognizer() {
+    AttrRecognizer.apply(this, arguments);
+
+    this.pX = null;
+    this.pY = null;
+}
+
+inherit(PanRecognizer, AttrRecognizer, {
+    /**
+     * @namespace
+     * @memberof PanRecognizer
+     */
+    defaults: {
+        event: 'pan',
+        threshold: 10,
+        pointers: 1,
+        direction: DIRECTION_ALL
+    },
+
+    getTouchAction: function() {
+        var direction = this.options.direction;
+        var actions = [];
+        if (direction & DIRECTION_HORIZONTAL) {
+            actions.push(TOUCH_ACTION_PAN_Y);
+        }
+        if (direction & DIRECTION_VERTICAL) {
+            actions.push(TOUCH_ACTION_PAN_X);
+        }
+        return actions;
+    },
+
+    directionTest: function(input) {
+        var options = this.options;
+        var hasMoved = true;
+        var distance = input.distance;
+        var direction = input.direction;
+        var x = input.deltaX;
+        var y = input.deltaY;
+
+        // lock to axis?
+        if (!(direction & options.direction)) {
+            if (options.direction & DIRECTION_HORIZONTAL) {
+                direction = (x === 0) ? DIRECTION_NONE : (x < 0) ? DIRECTION_LEFT : DIRECTION_RIGHT;
+                hasMoved = x != this.pX;
+                distance = Math.abs(input.deltaX);
+            } else {
+                direction = (y === 0) ? DIRECTION_NONE : (y < 0) ? DIRECTION_UP : DIRECTION_DOWN;
+                hasMoved = y != this.pY;
+                distance = Math.abs(input.deltaY);
+            }
+        }
+        input.direction = direction;
+        return hasMoved && distance > options.threshold && direction & options.direction;
+    },
+
+    attrTest: function(input) {
+        return AttrRecognizer.prototype.attrTest.call(this, input) &&
+            (this.state & STATE_BEGAN || (!(this.state & STATE_BEGAN) && this.directionTest(input)));
+    },
+
+    emit: function(input) {
+
+        this.pX = input.deltaX;
+        this.pY = input.deltaY;
+
+        var direction = directionStr(input.direction);
+
+        if (direction) {
+            input.additionalEvent = this.options.event + direction;
+        }
+        this._super.emit.call(this, input);
+    }
+});
+
+/**
+ * Pinch
+ * Recognized when two or more pointers are moving toward (zoom-in) or away from each other (zoom-out).
+ * @constructor
+ * @extends AttrRecognizer
+ */
+function PinchRecognizer() {
+    AttrRecognizer.apply(this, arguments);
+}
+
+inherit(PinchRecognizer, AttrRecognizer, {
+    /**
+     * @namespace
+     * @memberof PinchRecognizer
+     */
+    defaults: {
+        event: 'pinch',
+        threshold: 0,
+        pointers: 2
+    },
+
+    getTouchAction: function() {
+        return [TOUCH_ACTION_NONE];
+    },
+
+    attrTest: function(input) {
+        return this._super.attrTest.call(this, input) &&
+            (Math.abs(input.scale - 1) > this.options.threshold || this.state & STATE_BEGAN);
+    },
+
+    emit: function(input) {
+        if (input.scale !== 1) {
+            var inOut = input.scale < 1 ? 'in' : 'out';
+            input.additionalEvent = this.options.event + inOut;
+        }
+        this._super.emit.call(this, input);
+    }
+});
+
+/**
+ * Press
+ * Recognized when the pointer is down for x ms without any movement.
+ * @constructor
+ * @extends Recognizer
+ */
+function PressRecognizer() {
+    Recognizer.apply(this, arguments);
+
+    this._timer = null;
+    this._input = null;
+}
+
+inherit(PressRecognizer, Recognizer, {
+    /**
+     * @namespace
+     * @memberof PressRecognizer
+     */
+    defaults: {
+        event: 'press',
+        pointers: 1,
+        time: 251, // minimal time of the pointer to be pressed
+        threshold: 9 // a minimal movement is ok, but keep it low
+    },
+
+    getTouchAction: function() {
+        return [TOUCH_ACTION_AUTO];
+    },
+
+    process: function(input) {
+        var options = this.options;
+        var validPointers = input.pointers.length === options.pointers;
+        var validMovement = input.distance < options.threshold;
+        var validTime = input.deltaTime > options.time;
+
+        this._input = input;
+
+        // we only allow little movement
+        // and we've reached an end event, so a tap is possible
+        if (!validMovement || !validPointers || (input.eventType & (INPUT_END | INPUT_CANCEL) && !validTime)) {
+            this.reset();
+        } else if (input.eventType & INPUT_START) {
+            this.reset();
+            this._timer = setTimeoutContext(function() {
+                this.state = STATE_RECOGNIZED;
+                this.tryEmit();
+            }, options.time, this);
+        } else if (input.eventType & INPUT_END) {
+            return STATE_RECOGNIZED;
+        }
+        return STATE_FAILED;
+    },
+
+    reset: function() {
+        clearTimeout(this._timer);
+    },
+
+    emit: function(input) {
+        if (this.state !== STATE_RECOGNIZED) {
+            return;
+        }
+
+        if (input && (input.eventType & INPUT_END)) {
+            this.manager.emit(this.options.event + 'up', input);
+        } else {
+            this._input.timeStamp = now();
+            this.manager.emit(this.options.event, this._input);
+        }
+    }
+});
+
+/**
+ * Rotate
+ * Recognized when two or more pointer are moving in a circular motion.
+ * @constructor
+ * @extends AttrRecognizer
+ */
+function RotateRecognizer() {
+    AttrRecognizer.apply(this, arguments);
+}
+
+inherit(RotateRecognizer, AttrRecognizer, {
+    /**
+     * @namespace
+     * @memberof RotateRecognizer
+     */
+    defaults: {
+        event: 'rotate',
+        threshold: 0,
+        pointers: 2
+    },
+
+    getTouchAction: function() {
+        return [TOUCH_ACTION_NONE];
+    },
+
+    attrTest: function(input) {
+        return this._super.attrTest.call(this, input) &&
+            (Math.abs(input.rotation) > this.options.threshold || this.state & STATE_BEGAN);
+    }
+});
+
+/**
+ * Swipe
+ * Recognized when the pointer is moving fast (velocity), with enough distance in the allowed direction.
+ * @constructor
+ * @extends AttrRecognizer
+ */
+function SwipeRecognizer() {
+    AttrRecognizer.apply(this, arguments);
+}
+
+inherit(SwipeRecognizer, AttrRecognizer, {
+    /**
+     * @namespace
+     * @memberof SwipeRecognizer
+     */
+    defaults: {
+        event: 'swipe',
+        threshold: 10,
+        velocity: 0.3,
+        direction: DIRECTION_HORIZONTAL | DIRECTION_VERTICAL,
+        pointers: 1
+    },
+
+    getTouchAction: function() {
+        return PanRecognizer.prototype.getTouchAction.call(this);
+    },
+
+    attrTest: function(input) {
+        var direction = this.options.direction;
+        var velocity;
+
+        if (direction & (DIRECTION_HORIZONTAL | DIRECTION_VERTICAL)) {
+            velocity = input.overallVelocity;
+        } else if (direction & DIRECTION_HORIZONTAL) {
+            velocity = input.overallVelocityX;
+        } else if (direction & DIRECTION_VERTICAL) {
+            velocity = input.overallVelocityY;
+        }
+
+        return this._super.attrTest.call(this, input) &&
+            direction & input.offsetDirection &&
+            input.distance > this.options.threshold &&
+            input.maxPointers == this.options.pointers &&
+            abs(velocity) > this.options.velocity && input.eventType & INPUT_END;
+    },
+
+    emit: function(input) {
+        var direction = directionStr(input.offsetDirection);
+        if (direction) {
+            this.manager.emit(this.options.event + direction, input);
+        }
+
+        this.manager.emit(this.options.event, input);
+    }
+});
+
+/**
+ * A tap is ecognized when the pointer is doing a small tap/click. Multiple taps are recognized if they occur
+ * between the given interval and position. The delay option can be used to recognize multi-taps without firing
+ * a single tap.
+ *
+ * The eventData from the emitted event contains the property `tapCount`, which contains the amount of
+ * multi-taps being recognized.
+ * @constructor
+ * @extends Recognizer
+ */
+function TapRecognizer() {
+    Recognizer.apply(this, arguments);
+
+    // previous time and center,
+    // used for tap counting
+    this.pTime = false;
+    this.pCenter = false;
+
+    this._timer = null;
+    this._input = null;
+    this.count = 0;
+}
+
+inherit(TapRecognizer, Recognizer, {
+    /**
+     * @namespace
+     * @memberof PinchRecognizer
+     */
+    defaults: {
+        event: 'tap',
+        pointers: 1,
+        taps: 1,
+        interval: 300, // max time between the multi-tap taps
+        time: 250, // max time of the pointer to be down (like finger on the screen)
+        threshold: 9, // a minimal movement is ok, but keep it low
+        posThreshold: 10 // a multi-tap can be a bit off the initial position
+    },
+
+    getTouchAction: function() {
+        return [TOUCH_ACTION_MANIPULATION];
+    },
+
+    process: function(input) {
+        var options = this.options;
+
+        var validPointers = input.pointers.length === options.pointers;
+        var validMovement = input.distance < options.threshold;
+        var validTouchTime = input.deltaTime < options.time;
+
+        this.reset();
+
+        if ((input.eventType & INPUT_START) && (this.count === 0)) {
+            return this.failTimeout();
+        }
+
+        // we only allow little movement
+        // and we've reached an end event, so a tap is possible
+        if (validMovement && validTouchTime && validPointers) {
+            if (input.eventType != INPUT_END) {
+                return this.failTimeout();
+            }
+
+            var validInterval = this.pTime ? (input.timeStamp - this.pTime < options.interval) : true;
+            var validMultiTap = !this.pCenter || getDistance(this.pCenter, input.center) < options.posThreshold;
+
+            this.pTime = input.timeStamp;
+            this.pCenter = input.center;
+
+            if (!validMultiTap || !validInterval) {
+                this.count = 1;
+            } else {
+                this.count += 1;
+            }
+
+            this._input = input;
+
+            // if tap count matches we have recognized it,
+            // else it has began recognizing...
+            var tapCount = this.count % options.taps;
+            if (tapCount === 0) {
+                // no failing requirements, immediately trigger the tap event
+                // or wait as long as the multitap interval to trigger
+                if (!this.hasRequireFailures()) {
+                    return STATE_RECOGNIZED;
+                } else {
+                    this._timer = setTimeoutContext(function() {
+                        this.state = STATE_RECOGNIZED;
+                        this.tryEmit();
+                    }, options.interval, this);
+                    return STATE_BEGAN;
+                }
+            }
+        }
+        return STATE_FAILED;
+    },
+
+    failTimeout: function() {
+        this._timer = setTimeoutContext(function() {
+            this.state = STATE_FAILED;
+        }, this.options.interval, this);
+        return STATE_FAILED;
+    },
+
+    reset: function() {
+        clearTimeout(this._timer);
+    },
+
+    emit: function() {
+        if (this.state == STATE_RECOGNIZED) {
+            this._input.tapCount = this.count;
+            this.manager.emit(this.options.event, this._input);
+        }
+    }
+});
+
+/**
+ * Simple way to create a manager with a default set of recognizers.
+ * @param {HTMLElement} element
+ * @param {Object} [options]
+ * @constructor
+ */
+function Hammer(element, options) {
+    options = options || {};
+    options.recognizers = ifUndefined(options.recognizers, Hammer.defaults.preset);
+    return new Manager(element, options);
+}
+
+/**
+ * @const {string}
+ */
+Hammer.VERSION = '2.0.7';
+
+/**
+ * default settings
+ * @namespace
+ */
+Hammer.defaults = {
+    /**
+     * set if DOM events are being triggered.
+     * But this is slower and unused by simple implementations, so disabled by default.
+     * @type {Boolean}
+     * @default false
+     */
+    domEvents: false,
+
+    /**
+     * The value for the touchAction property/fallback.
+     * When set to `compute` it will magically set the correct value based on the added recognizers.
+     * @type {String}
+     * @default compute
+     */
+    touchAction: TOUCH_ACTION_COMPUTE,
+
+    /**
+     * @type {Boolean}
+     * @default true
+     */
+    enable: true,
+
+    /**
+     * EXPERIMENTAL FEATURE -- can be removed/changed
+     * Change the parent input target element.
+     * If Null, then it is being set the to main element.
+     * @type {Null|EventTarget}
+     * @default null
+     */
+    inputTarget: null,
+
+    /**
+     * force an input class
+     * @type {Null|Function}
+     * @default null
+     */
+    inputClass: null,
+
+    /**
+     * Default recognizer setup when calling `Hammer()`
+     * When creating a new Manager these will be skipped.
+     * @type {Array}
+     */
+    preset: [
+        // RecognizerClass, options, [recognizeWith, ...], [requireFailure, ...]
+        [RotateRecognizer, {enable: false}],
+        [PinchRecognizer, {enable: false}, ['rotate']],
+        [SwipeRecognizer, {direction: DIRECTION_HORIZONTAL}],
+        [PanRecognizer, {direction: DIRECTION_HORIZONTAL}, ['swipe']],
+        [TapRecognizer],
+        [TapRecognizer, {event: 'doubletap', taps: 2}, ['tap']],
+        [PressRecognizer]
+    ],
+
+    /**
+     * Some CSS properties can be used to improve the working of Hammer.
+     * Add them to this method and they will be set when creating a new Manager.
+     * @namespace
+     */
+    cssProps: {
+        /**
+         * Disables text selection to improve the dragging gesture. Mainly for desktop browsers.
+         * @type {String}
+         * @default 'none'
+         */
+        userSelect: 'none',
+
+        /**
+         * Disable the Windows Phone grippers when pressing an element.
+         * @type {String}
+         * @default 'none'
+         */
+        touchSelect: 'none',
+
+        /**
+         * Disables the default callout shown when you touch and hold a touch target.
+         * On iOS, when you touch and hold a touch target such as a link, Safari displays
+         * a callout containing information about the link. This property allows you to disable that callout.
+         * @type {String}
+         * @default 'none'
+         */
+        touchCallout: 'none',
+
+        /**
+         * Specifies whether zooming is enabled. Used by IE10>
+         * @type {String}
+         * @default 'none'
+         */
+        contentZooming: 'none',
+
+        /**
+         * Specifies that an entire element should be draggable instead of its contents. Mainly for desktop browsers.
+         * @type {String}
+         * @default 'none'
+         */
+        userDrag: 'none',
+
+        /**
+         * Overrides the highlight color shown when the user taps a link or a JavaScript
+         * clickable element in iOS. This property obeys the alpha value, if specified.
+         * @type {String}
+         * @default 'rgba(0,0,0,0)'
+         */
+        tapHighlightColor: 'rgba(0,0,0,0)'
+    }
+};
+
+var STOP = 1;
+var FORCED_STOP = 2;
+
+/**
+ * Manager
+ * @param {HTMLElement} element
+ * @param {Object} [options]
+ * @constructor
+ */
+function Manager(element, options) {
+    this.options = assign({}, Hammer.defaults, options || {});
+
+    this.options.inputTarget = this.options.inputTarget || element;
+
+    this.handlers = {};
+    this.session = {};
+    this.recognizers = [];
+    this.oldCssProps = {};
+
+    this.element = element;
+    this.input = createInputInstance(this);
+    this.touchAction = new TouchAction(this, this.options.touchAction);
+
+    toggleCssProps(this, true);
+
+    each(this.options.recognizers, function(item) {
+        var recognizer = this.add(new (item[0])(item[1]));
+        item[2] && recognizer.recognizeWith(item[2]);
+        item[3] && recognizer.requireFailure(item[3]);
+    }, this);
+}
+
+Manager.prototype = {
+    /**
+     * set options
+     * @param {Object} options
+     * @returns {Manager}
+     */
+    set: function(options) {
+        assign(this.options, options);
+
+        // Options that need a little more setup
+        if (options.touchAction) {
+            this.touchAction.update();
+        }
+        if (options.inputTarget) {
+            // Clean up existing event listeners and reinitialize
+            this.input.destroy();
+            this.input.target = options.inputTarget;
+            this.input.init();
+        }
+        return this;
+    },
+
+    /**
+     * stop recognizing for this session.
+     * This session will be discarded, when a new [input]start event is fired.
+     * When forced, the recognizer cycle is stopped immediately.
+     * @param {Boolean} [force]
+     */
+    stop: function(force) {
+        this.session.stopped = force ? FORCED_STOP : STOP;
+    },
+
+    /**
+     * run the recognizers!
+     * called by the inputHandler function on every movement of the pointers (touches)
+     * it walks through all the recognizers and tries to detect the gesture that is being made
+     * @param {Object} inputData
+     */
+    recognize: function(inputData) {
+        var session = this.session;
+        if (session.stopped) {
+            return;
+        }
+
+        // run the touch-action polyfill
+        this.touchAction.preventDefaults(inputData);
+
+        var recognizer;
+        var recognizers = this.recognizers;
+
+        // this holds the recognizer that is being recognized.
+        // so the recognizer's state needs to be BEGAN, CHANGED, ENDED or RECOGNIZED
+        // if no recognizer is detecting a thing, it is set to `null`
+        var curRecognizer = session.curRecognizer;
+
+        // reset when the last recognizer is recognized
+        // or when we're in a new session
+        if (!curRecognizer || (curRecognizer && curRecognizer.state & STATE_RECOGNIZED)) {
+            curRecognizer = session.curRecognizer = null;
+        }
+
+        var i = 0;
+        while (i < recognizers.length) {
+            recognizer = recognizers[i];
+
+            // find out if we are allowed try to recognize the input for this one.
+            // 1.   allow if the session is NOT forced stopped (see the .stop() method)
+            // 2.   allow if we still haven't recognized a gesture in this session, or the this recognizer is the one
+            //      that is being recognized.
+            // 3.   allow if the recognizer is allowed to run simultaneous with the current recognized recognizer.
+            //      this can be setup with the `recognizeWith()` method on the recognizer.
+            if (session.stopped !== FORCED_STOP && ( // 1
+                    !curRecognizer || recognizer == curRecognizer || // 2
+                    recognizer.canRecognizeWith(curRecognizer))) { // 3
+                recognizer.recognize(inputData);
+            } else {
+                recognizer.reset();
+            }
+
+            // if the recognizer has been recognizing the input as a valid gesture, we want to store this one as the
+            // current active recognizer. but only if we don't already have an active recognizer
+            if (!curRecognizer && recognizer.state & (STATE_BEGAN | STATE_CHANGED | STATE_ENDED)) {
+                curRecognizer = session.curRecognizer = recognizer;
+            }
+            i++;
+        }
+    },
+
+    /**
+     * get a recognizer by its event name.
+     * @param {Recognizer|String} recognizer
+     * @returns {Recognizer|Null}
+     */
+    get: function(recognizer) {
+        if (recognizer instanceof Recognizer) {
+            return recognizer;
+        }
+
+        var recognizers = this.recognizers;
+        for (var i = 0; i < recognizers.length; i++) {
+            if (recognizers[i].options.event == recognizer) {
+                return recognizers[i];
+            }
+        }
+        return null;
+    },
+
+    /**
+     * add a recognizer to the manager
+     * existing recognizers with the same event name will be removed
+     * @param {Recognizer} recognizer
+     * @returns {Recognizer|Manager}
+     */
+    add: function(recognizer) {
+        if (invokeArrayArg(recognizer, 'add', this)) {
+            return this;
+        }
+
+        // remove existing
+        var existing = this.get(recognizer.options.event);
+        if (existing) {
+            this.remove(existing);
+        }
+
+        this.recognizers.push(recognizer);
+        recognizer.manager = this;
+
+        this.touchAction.update();
+        return recognizer;
+    },
+
+    /**
+     * remove a recognizer by name or instance
+     * @param {Recognizer|String} recognizer
+     * @returns {Manager}
+     */
+    remove: function(recognizer) {
+        if (invokeArrayArg(recognizer, 'remove', this)) {
+            return this;
+        }
+
+        recognizer = this.get(recognizer);
+
+        // let's make sure this recognizer exists
+        if (recognizer) {
+            var recognizers = this.recognizers;
+            var index = inArray(recognizers, recognizer);
+
+            if (index !== -1) {
+                recognizers.splice(index, 1);
+                this.touchAction.update();
+            }
+        }
+
+        return this;
+    },
+
+    /**
+     * bind event
+     * @param {String} events
+     * @param {Function} handler
+     * @returns {EventEmitter} this
+     */
+    on: function(events, handler) {
+        if (events === undefined) {
+            return;
+        }
+        if (handler === undefined) {
+            return;
+        }
+
+        var handlers = this.handlers;
+        each(splitStr(events), function(event) {
+            handlers[event] = handlers[event] || [];
+            handlers[event].push(handler);
+        });
+        return this;
+    },
+
+    /**
+     * unbind event, leave emit blank to remove all handlers
+     * @param {String} events
+     * @param {Function} [handler]
+     * @returns {EventEmitter} this
+     */
+    off: function(events, handler) {
+        if (events === undefined) {
+            return;
+        }
+
+        var handlers = this.handlers;
+        each(splitStr(events), function(event) {
+            if (!handler) {
+                delete handlers[event];
+            } else {
+                handlers[event] && handlers[event].splice(inArray(handlers[event], handler), 1);
+            }
+        });
+        return this;
+    },
+
+    /**
+     * emit event to the listeners
+     * @param {String} event
+     * @param {Object} data
+     */
+    emit: function(event, data) {
+        // we also want to trigger dom events
+        if (this.options.domEvents) {
+            triggerDomEvent(event, data);
+        }
+
+        // no handlers, so skip it all
+        var handlers = this.handlers[event] && this.handlers[event].slice();
+        if (!handlers || !handlers.length) {
+            return;
+        }
+
+        data.type = event;
+        data.preventDefault = function() {
+            data.srcEvent.preventDefault();
+        };
+
+        var i = 0;
+        while (i < handlers.length) {
+            handlers[i](data);
+            i++;
+        }
+    },
+
+    /**
+     * destroy the manager and unbinds all events
+     * it doesn't unbind dom events, that is the user own responsibility
+     */
+    destroy: function() {
+        this.element && toggleCssProps(this, false);
+
+        this.handlers = {};
+        this.session = {};
+        this.input.destroy();
+        this.element = null;
+    }
+};
+
+/**
+ * add/remove the css properties as defined in manager.options.cssProps
+ * @param {Manager} manager
+ * @param {Boolean} add
+ */
+function toggleCssProps(manager, add) {
+    var element = manager.element;
+    if (!element.style) {
+        return;
+    }
+    var prop;
+    each(manager.options.cssProps, function(value, name) {
+        prop = prefixed(element.style, name);
+        if (add) {
+            manager.oldCssProps[prop] = element.style[prop];
+            element.style[prop] = value;
+        } else {
+            element.style[prop] = manager.oldCssProps[prop] || '';
+        }
+    });
+    if (!add) {
+        manager.oldCssProps = {};
+    }
+}
+
+/**
+ * trigger dom event
+ * @param {String} event
+ * @param {Object} data
+ */
+function triggerDomEvent(event, data) {
+    var gestureEvent = document.createEvent('Event');
+    gestureEvent.initEvent(event, true, true);
+    gestureEvent.gesture = data;
+    data.target.dispatchEvent(gestureEvent);
+}
+
+assign(Hammer, {
+    INPUT_START: INPUT_START,
+    INPUT_MOVE: INPUT_MOVE,
+    INPUT_END: INPUT_END,
+    INPUT_CANCEL: INPUT_CANCEL,
+
+    STATE_POSSIBLE: STATE_POSSIBLE,
+    STATE_BEGAN: STATE_BEGAN,
+    STATE_CHANGED: STATE_CHANGED,
+    STATE_ENDED: STATE_ENDED,
+    STATE_RECOGNIZED: STATE_RECOGNIZED,
+    STATE_CANCELLED: STATE_CANCELLED,
+    STATE_FAILED: STATE_FAILED,
+
+    DIRECTION_NONE: DIRECTION_NONE,
+    DIRECTION_LEFT: DIRECTION_LEFT,
+    DIRECTION_RIGHT: DIRECTION_RIGHT,
+    DIRECTION_UP: DIRECTION_UP,
+    DIRECTION_DOWN: DIRECTION_DOWN,
+    DIRECTION_HORIZONTAL: DIRECTION_HORIZONTAL,
+    DIRECTION_VERTICAL: DIRECTION_VERTICAL,
+    DIRECTION_ALL: DIRECTION_ALL,
+
+    Manager: Manager,
+    Input: Input,
+    TouchAction: TouchAction,
+
+    TouchInput: TouchInput,
+    MouseInput: MouseInput,
+    PointerEventInput: PointerEventInput,
+    TouchMouseInput: TouchMouseInput,
+    SingleTouchInput: SingleTouchInput,
+
+    Recognizer: Recognizer,
+    AttrRecognizer: AttrRecognizer,
+    Tap: TapRecognizer,
+    Pan: PanRecognizer,
+    Swipe: SwipeRecognizer,
+    Pinch: PinchRecognizer,
+    Rotate: RotateRecognizer,
+    Press: PressRecognizer,
+
+    on: addEventListeners,
+    off: removeEventListeners,
+    each: each,
+    merge: merge,
+    extend: extend,
+    assign: assign,
+    inherit: inherit,
+    bindFn: bindFn,
+    prefixed: prefixed
+});
+
+// this prevents errors when Hammer is loaded in the presence of an AMD
+//  style loader but by script tag, not by the loader.
+var freeGlobal = (typeof window !== 'undefined' ? window : (typeof self !== 'undefined' ? self : {})); // jshint ignore:line
+freeGlobal.Hammer = Hammer;
+
+if (true) {
+    !(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
+        return Hammer;
+    }).call(exports, __webpack_require__, exports, module),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+} else {}
+
+})(window, document, 'Hammer');
 
 
 /***/ }),
@@ -37544,7 +41348,7 @@ module.exports = kebabCase;
   var undefined;
 
   /** Used as the semantic version number. */
-  var VERSION = '4.17.14';
+  var VERSION = '4.17.15';
 
   /** Used as the size to enable large array optimizations. */
   var LARGE_ARRAY_SIZE = 200;
@@ -73138,7 +76942,7 @@ var substr = 'ab'.substr(-1) === 'b'
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(global) {/**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
- * @version 1.15.0
+ * @version 1.16.1
  * @license
  * Copyright (c) 2016 Federico Zivolo and contributors
  *
@@ -73160,16 +76964,17 @@ __webpack_require__.r(__webpack_exports__);
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-var isBrowser = typeof window !== 'undefined' && typeof document !== 'undefined';
+var isBrowser = typeof window !== 'undefined' && typeof document !== 'undefined' && typeof navigator !== 'undefined';
 
-var longerTimeoutBrowsers = ['Edge', 'Trident', 'Firefox'];
-var timeoutDuration = 0;
-for (var i = 0; i < longerTimeoutBrowsers.length; i += 1) {
-  if (isBrowser && navigator.userAgent.indexOf(longerTimeoutBrowsers[i]) >= 0) {
-    timeoutDuration = 1;
-    break;
+var timeoutDuration = function () {
+  var longerTimeoutBrowsers = ['Edge', 'Trident', 'Firefox'];
+  for (var i = 0; i < longerTimeoutBrowsers.length; i += 1) {
+    if (isBrowser && navigator.userAgent.indexOf(longerTimeoutBrowsers[i]) >= 0) {
+      return 1;
+    }
   }
-}
+  return 0;
+}();
 
 function microtaskDebounce(fn) {
   var called = false;
@@ -73287,6 +77092,17 @@ function getScrollParent(element) {
   }
 
   return getScrollParent(getParentNode(element));
+}
+
+/**
+ * Returns the reference node of the reference object, or the reference object itself.
+ * @method
+ * @memberof Popper.Utils
+ * @param {Element|Object} reference - the reference element (the popper will be relative to this)
+ * @returns {Element} parent
+ */
+function getReferenceNode(reference) {
+  return reference && reference.referenceNode ? reference.referenceNode : reference;
 }
 
 var isIE11 = isBrowser && !!(window.MSInputMethodContext && document.documentMode);
@@ -73472,7 +77288,7 @@ function getBordersSize(styles, axis) {
   var sideA = axis === 'x' ? 'Left' : 'Top';
   var sideB = sideA === 'Left' ? 'Right' : 'Bottom';
 
-  return parseFloat(styles['border' + sideA + 'Width'], 10) + parseFloat(styles['border' + sideB + 'Width'], 10);
+  return parseFloat(styles['border' + sideA + 'Width']) + parseFloat(styles['border' + sideB + 'Width']);
 }
 
 function getSize(axis, body, html, computedStyle) {
@@ -73597,8 +77413,8 @@ function getBoundingClientRect(element) {
 
   // subtract scrollbar size from sizes
   var sizes = element.nodeName === 'HTML' ? getWindowSizes(element.ownerDocument) : {};
-  var width = sizes.width || element.clientWidth || result.right - result.left;
-  var height = sizes.height || element.clientHeight || result.bottom - result.top;
+  var width = sizes.width || element.clientWidth || result.width;
+  var height = sizes.height || element.clientHeight || result.height;
 
   var horizScrollbar = element.offsetWidth - width;
   var vertScrollbar = element.offsetHeight - height;
@@ -73627,8 +77443,8 @@ function getOffsetRectRelativeToArbitraryNode(children, parent) {
   var scrollParent = getScrollParent(children);
 
   var styles = getStyleComputedProperty(parent);
-  var borderTopWidth = parseFloat(styles.borderTopWidth, 10);
-  var borderLeftWidth = parseFloat(styles.borderLeftWidth, 10);
+  var borderTopWidth = parseFloat(styles.borderTopWidth);
+  var borderLeftWidth = parseFloat(styles.borderLeftWidth);
 
   // In cases where the parent is fixed, we must ignore negative scroll in offset calc
   if (fixedPosition && isHTML) {
@@ -73649,8 +77465,8 @@ function getOffsetRectRelativeToArbitraryNode(children, parent) {
   // differently when margins are applied to it. The margins are included in
   // the box of the documentElement, in the other cases not.
   if (!isIE10 && isHTML) {
-    var marginTop = parseFloat(styles.marginTop, 10);
-    var marginLeft = parseFloat(styles.marginLeft, 10);
+    var marginTop = parseFloat(styles.marginTop);
+    var marginLeft = parseFloat(styles.marginLeft);
 
     offsets.top -= borderTopWidth - marginTop;
     offsets.bottom -= borderTopWidth - marginTop;
@@ -73750,7 +77566,7 @@ function getBoundaries(popper, reference, padding, boundariesElement) {
   // NOTE: 1 DOM access here
 
   var boundaries = { top: 0, left: 0 };
-  var offsetParent = fixedPosition ? getFixedPositionOffsetParent(popper) : findCommonOffsetParent(popper, reference);
+  var offsetParent = fixedPosition ? getFixedPositionOffsetParent(popper) : findCommonOffsetParent(popper, getReferenceNode(reference));
 
   // Handle viewport case
   if (boundariesElement === 'viewport') {
@@ -73878,7 +77694,7 @@ function computeAutoPlacement(placement, refRect, popper, reference, boundariesE
 function getReferenceOffsets(state, popper, reference) {
   var fixedPosition = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
 
-  var commonOffsetParent = fixedPosition ? getFixedPositionOffsetParent(popper) : findCommonOffsetParent(popper, reference);
+  var commonOffsetParent = fixedPosition ? getFixedPositionOffsetParent(popper) : findCommonOffsetParent(popper, getReferenceNode(reference));
   return getOffsetRectRelativeToArbitraryNode(reference, commonOffsetParent, fixedPosition);
 }
 
@@ -74140,7 +77956,7 @@ function destroy() {
 
   this.disableEventListeners();
 
-  // remove the popper if user explicity asked for the deletion on destroy
+  // remove the popper if user explicitly asked for the deletion on destroy
   // do not use `remove` because IE11 doesn't support it
   if (this.options.removeOnDestroy) {
     this.popper.parentNode.removeChild(this.popper);
@@ -74589,8 +78405,8 @@ function arrow(data, options) {
   // Compute the sideValue using the updated popper offsets
   // take popper margin in account because we don't have this info available
   var css = getStyleComputedProperty(data.instance.popper);
-  var popperMarginSide = parseFloat(css['margin' + sideCapitalized], 10);
-  var popperBorderSide = parseFloat(css['border' + sideCapitalized + 'Width'], 10);
+  var popperMarginSide = parseFloat(css['margin' + sideCapitalized]);
+  var popperBorderSide = parseFloat(css['border' + sideCapitalized + 'Width']);
   var sideValue = center - data.offsets.popper[side] - popperMarginSide - popperBorderSide;
 
   // prevent arrowElement from being placed not contiguously to its popper
@@ -76872,10 +80688,10 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=template&id=607e3425&scoped=true&":
-/*!*****************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=template&id=607e3425&scoped=true& ***!
-  \*****************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../../php/MSFrame/6/Master/MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=template&id=43cb5e4e&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!E:/Pojects/php/MSFrame/6/Master/MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue?vue&type=template&id=43cb5e4e&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -77954,9 +81770,10 @@ var render = function() {
                   {
                     staticClass:
                       "w-1/3 bg-gray-200  hover:bg-gray-400 border-t border-b  border-r px-3 py-1 text-sm font-semibold text-gray-700",
-                    class: ((_obj = {}),
-                    (_obj[msBtn.btnColor] = msBtn.hasOwnProperty("btnColor")),
-                    _obj),
+                    class:
+                      ((_obj = {}),
+                      (_obj[msBtn.btnColor] = msBtn.hasOwnProperty("btnColor")),
+                      _obj),
                     attrs: { type: "button" },
                     on: {
                       click: function($event) {
@@ -79223,6 +83040,1393 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msListMaker.vue?vue&type=template&id=3f3e58d6&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msListMaker.vue?vue&type=template&id=3f3e58d6&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "bg-white" }, [
+    _c("div", { staticClass: "flex flex-wrap" }, [
+      _vm.PriceMatters
+        ? _c(
+            "div",
+            { staticClass: "flex-1 p-2 m-3 shadow border bg-gray-100 shadow" },
+            [
+              _c("div", { staticClass: "flex flex-wrap" }, [
+                _c("div", { staticClass: "flex flex-wrap px-3 py-2" }, [
+                  _c("div", { staticClass: "flex flex-wrap p-1" }, [
+                    _c("label", { staticClass: "p-2" }, [
+                      _vm._v("Client Name")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.currentUserIdentifier,
+                          expression: "currentUserIdentifier"
+                        }
+                      ],
+                      staticClass: "border px-2",
+                      attrs: {
+                        name: "curCustomer",
+                        type: "text",
+                        placeholder: "Cline Name or Code Or Contact No"
+                      },
+                      domProps: { value: _vm.currentUserIdentifier },
+                      on: {
+                        keyup: [
+                          function($event) {
+                            if (
+                              !$event.type.indexOf("key") &&
+                              _vm._k($event.keyCode, "up", 38, $event.key, [
+                                "Up",
+                                "ArrowUp"
+                              ])
+                            ) {
+                              return null
+                            }
+                            if (!$event.ctrlKey) {
+                              return null
+                            }
+                            return _vm.plusUser($event)
+                          },
+                          function($event) {
+                            if (
+                              !$event.type.indexOf("key") &&
+                              _vm._k($event.keyCode, "down", 40, $event.key, [
+                                "Down",
+                                "ArrowDown"
+                              ])
+                            ) {
+                              return null
+                            }
+                            if (!$event.ctrlKey) {
+                              return null
+                            }
+                            return _vm.downUser($event)
+                          },
+                          function($event) {
+                            if (
+                              !$event.type.indexOf("key") &&
+                              _vm._k($event.keyCode, "up", 38, $event.key, [
+                                "Up",
+                                "ArrowUp"
+                              ])
+                            ) {
+                              return null
+                            }
+                            if (!$event.altKey) {
+                              return null
+                            }
+                            return _vm.backUserPage($event)
+                          },
+                          function($event) {
+                            if (
+                              !$event.type.indexOf("key") &&
+                              _vm._k($event.keyCode, "down", 40, $event.key, [
+                                "Down",
+                                "ArrowDown"
+                              ])
+                            ) {
+                              return null
+                            }
+                            if (!$event.altKey) {
+                              return null
+                            }
+                            return _vm.nextUserPage($event)
+                          },
+                          function($event) {
+                            if (
+                              !$event.type.indexOf("key") &&
+                              _vm._k(
+                                $event.keyCode,
+                                "enter",
+                                13,
+                                $event.key,
+                                "Enter"
+                              )
+                            ) {
+                              return null
+                            }
+                            return _vm.onLytoggleFounUser($event)
+                          }
+                        ],
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.currentUserIdentifier = $event.target.value
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "flex flex-wrap p-1 cursor-pointer select-none"
+                    },
+                    [
+                      _vm.foundUser.length > 0
+                        ? _c(
+                            "button",
+                            {
+                              staticClass: "flex-1 bg-blue-300 px-3 py-2",
+                              on: { click: _vm.onLytoggleFounUser }
+                            },
+                            [
+                              _vm._v(
+                                _vm._s(_vm.msFounUserList ? "Hide" : "View") +
+                                  " Customer List"
+                              )
+                            ]
+                          )
+                        : _vm._e()
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _vm.foundUser.length > 0 && _vm.msFounUserList
+                    ? _c("div", { staticClass: "w-full" }, [
+                        _c(
+                          "div",
+                          { staticClass: "px-2 py-3 " },
+                          [
+                            _c(
+                              "v-touch",
+                              {
+                                on: {
+                                  swipeleft: _vm.nextUserPage,
+                                  swiperight: _vm.backUserPage
+                                }
+                              },
+                              [
+                                _c(
+                                  "table",
+                                  {
+                                    staticClass:
+                                      "table-auto w-full table-bordered   text-xs"
+                                  },
+                                  [
+                                    _c("tr", [
+                                      _c(
+                                        "td",
+                                        { staticClass: "border shadow p-2" },
+                                        [
+                                          _c("input", {
+                                            attrs: {
+                                              type: "radio",
+                                              disabled: ""
+                                            }
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "th",
+                                        { staticClass: "border shadow p-2" },
+                                        [_vm._v("Customer Name")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "th",
+                                        { staticClass: "border shadow p-2" },
+                                        [_vm._v("Contact No")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "th",
+                                        { staticClass: "border shadow p-2" },
+                                        [_vm._v("City")]
+                                      )
+                                    ]),
+                                    _vm._v(" "),
+                                    _vm._l(_vm.foundUser, function(item, key) {
+                                      return _c(
+                                        "tr",
+                                        {
+                                          staticClass: "border cursor-pointer ",
+                                          class: {
+                                            "ms-list-row-highlight-on":
+                                              key == _vm.pickedUser,
+                                            "ms-list-row-highlight-off": !(
+                                              key == _vm.pickedUser
+                                            )
+                                          },
+                                          on: {
+                                            click: function($event) {
+                                              return _vm.selectUser(key)
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "td",
+                                            { staticClass: "text-right p-2" },
+                                            [
+                                              _c("input", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model",
+                                                    value: _vm.pickedUser,
+                                                    expression: "pickedUser"
+                                                  }
+                                                ],
+                                                attrs: { type: "radio" },
+                                                domProps: {
+                                                  value: key,
+                                                  checked: _vm._q(
+                                                    _vm.pickedUser,
+                                                    key
+                                                  )
+                                                },
+                                                on: {
+                                                  change: function($event) {
+                                                    _vm.pickedUser = key
+                                                  }
+                                                }
+                                              })
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("td", [
+                                            _c("div", [
+                                              _c("span", [
+                                                _vm._v(_vm._s(item.name))
+                                              ])
+                                            ])
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("td", [
+                                            _vm._v(_vm._s(item.contactno))
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "td",
+                                            { staticClass: "text-right p-2" },
+                                            [_vm._v(_vm._s(item.city))]
+                                          )
+                                        ]
+                                      )
+                                    })
+                                  ],
+                                  2
+                                )
+                              ]
+                            )
+                          ],
+                          1
+                        )
+                      ])
+                    : _vm._e()
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "flex-1 shadow bg-gray-200 mt-2 ml-4",
+                  class: {
+                    "ms-userForm-box": _vm.msUserMode,
+                    "ms-userForm-box-hidden": !_vm.msUserMode
+                  }
+                },
+                [
+                  _c("div", { staticClass: "px-2 py-3 " }, [
+                    _c("div", { staticClass: "w-full" }, [
+                      _vm._v(
+                        "\n                        Customer Details\n                        "
+                      ),
+                      _c("table", { staticClass: "ms-table-auto text-xs" }, [
+                        _c("tr", [
+                          _c("th", [_vm._v("Customer Name :")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.forUserName,
+                                  expression: "forUserName"
+                                }
+                              ],
+                              attrs: { placeholder: "Enter Customer Name" },
+                              domProps: { value: _vm.forUserName },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.forUserName = $event.target.value
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("th", [_vm._v("Contac No.:")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.forContactNo,
+                                  expression: "forContactNo"
+                                }
+                              ],
+                              attrs: {
+                                placeholder: "Enter Customer Name",
+                                type: "number"
+                              },
+                              domProps: { value: _vm.forContactNo },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.forContactNo = $event.target.value
+                                }
+                              }
+                            })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", [
+                          _c("th", [_vm._v("Address:")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.forAddress1,
+                                  expression: "forAddress1"
+                                }
+                              ],
+                              attrs: { placeholder: "Enter Block/Plot No." },
+                              domProps: { value: _vm.forAddress1 },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.forAddress1 = $event.target.value
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.forAddress2,
+                                  expression: "forAddress2"
+                                }
+                              ],
+                              attrs: { placeholder: "Enter Landmark" },
+                              domProps: { value: _vm.forAddress2 },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.forAddress2 = $event.target.value
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.forAddress3,
+                                  expression: "forAddress3"
+                                }
+                              ],
+                              attrs: { placeholder: "Enter Area" },
+                              domProps: { value: _vm.forAddress3 },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.forAddress3 = $event.target.value
+                                }
+                              }
+                            })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", [
+                          _c("th", [_vm._v("City")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.forCity,
+                                  expression: "forCity"
+                                }
+                              ],
+                              attrs: {
+                                type: "text",
+                                placeholder: "Enter City"
+                              },
+                              domProps: { value: _vm.forCity },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.forCity = $event.target.value
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("th", [_vm._v("Pincode")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.forPincode,
+                                  expression: "forPincode"
+                                }
+                              ],
+                              attrs: { type: "number" },
+                              domProps: { value: _vm.forPincode },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.forPincode = $event.target.value
+                                }
+                              }
+                            })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", [
+                          _c("th", [_vm._v("GSTNo:")]),
+                          _vm._v(" "),
+                          _c("td", { attrs: { colspan: "2" } }, [
+                            _vm.forGSTIN == ""
+                              ? _c("span", [
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.forGSTIN,
+                                        expression: "forGSTIN"
+                                      }
+                                    ],
+                                    attrs: { placeholder: "Enter GST Number" },
+                                    domProps: { value: _vm.forGSTIN },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.forGSTIN = $event.target.value
+                                      }
+                                    }
+                                  })
+                                ])
+                              : _c("span", [
+                                  _vm._v(
+                                    "\n                                         " +
+                                      _vm._s(_vm.forGSTIN) +
+                                      "\n                                "
+                                  )
+                                ])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", [
+                          _c("th", [_vm._v("Date")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.forDate,
+                                  expression: "forDate"
+                                }
+                              ],
+                              attrs: { type: "date" },
+                              domProps: { value: _vm.forDate },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.forDate = $event.target.value
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("th", [_vm._v("Credit")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.forDate,
+                                  expression: "forDate"
+                                }
+                              ],
+                              attrs: { type: "date" },
+                              domProps: { value: _vm.forDate },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.forDate = $event.target.value
+                                }
+                              }
+                            })
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "flex-1 ml-4 shadow bg-gray-200 mt-2",
+                  class: {
+                    "ms-userForm-box-default": !_vm.msUserMode,
+                    "ms-userForm-box-default-hidden": _vm.msUserMode
+                  }
+                },
+                [
+                  _c("span", { staticClass: "pl-1" }, [
+                    _vm._v("Please Enter Valid Customer Name or Contact No")
+                  ])
+                ]
+              )
+            ]
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "flex-1 p-2 m-3 shadow border bg-gray-100 shadow" },
+        [
+          _c("div", { staticClass: "flex flex-wrap" }, [
+            _c("div", { staticClass: "flex flex-wrap px-3 py-2" }, [
+              _c("div", { staticClass: "flex flex-wrap p-1" }, [
+                _c("label", { staticClass: "p-2" }, [_vm._v("Item Name")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.currentItemName,
+                      expression: "currentItemName"
+                    }
+                  ],
+                  ref: "cI",
+                  staticClass: "border px-2",
+                  attrs: {
+                    name: "curItemName",
+                    type: "text",
+                    placeholder: "Item Name or Code"
+                  },
+                  domProps: { value: _vm.currentItemName },
+                  on: {
+                    keyup: [
+                      function($event) {
+                        if (
+                          !$event.type.indexOf("key") &&
+                          _vm._k($event.keyCode, "up", 38, $event.key, [
+                            "Up",
+                            "ArrowUp"
+                          ])
+                        ) {
+                          return null
+                        }
+                        if (!$event.altKey) {
+                          return null
+                        }
+                        return _vm.backItemPage($event)
+                      },
+                      function($event) {
+                        if (
+                          !$event.type.indexOf("key") &&
+                          _vm._k($event.keyCode, "down", 40, $event.key, [
+                            "Down",
+                            "ArrowDown"
+                          ])
+                        ) {
+                          return null
+                        }
+                        if (!$event.altKey) {
+                          return null
+                        }
+                        return _vm.nextItemPage($event)
+                      },
+                      function($event) {
+                        if (
+                          !$event.type.indexOf("key") &&
+                          _vm._k(
+                            $event.keyCode,
+                            "enter",
+                            13,
+                            $event.key,
+                            "Enter"
+                          )
+                        ) {
+                          return null
+                        }
+                        return _vm.addItem("enter")
+                      },
+                      function($event) {
+                        if (
+                          !$event.type.indexOf("key") &&
+                          _vm._k($event.keyCode, "up", 38, $event.key, [
+                            "Up",
+                            "ArrowUp"
+                          ])
+                        ) {
+                          return null
+                        }
+                        if (!$event.shiftKey) {
+                          return null
+                        }
+                        return _vm.plusQt($event)
+                      },
+                      function($event) {
+                        if (
+                          !$event.type.indexOf("key") &&
+                          _vm._k($event.keyCode, "down", 40, $event.key, [
+                            "Down",
+                            "ArrowDown"
+                          ])
+                        ) {
+                          return null
+                        }
+                        if (!$event.shiftKey) {
+                          return null
+                        }
+                        return _vm.minusQt($event)
+                      },
+                      function($event) {
+                        if (
+                          !$event.type.indexOf("key") &&
+                          _vm._k($event.keyCode, "up", 38, $event.key, [
+                            "Up",
+                            "ArrowUp"
+                          ])
+                        ) {
+                          return null
+                        }
+                        if (!$event.ctrlKey) {
+                          return null
+                        }
+                        return _vm.plusItem($event)
+                      },
+                      function($event) {
+                        if (
+                          !$event.type.indexOf("key") &&
+                          _vm._k($event.keyCode, "down", 40, $event.key, [
+                            "Down",
+                            "ArrowDown"
+                          ])
+                        ) {
+                          return null
+                        }
+                        if (!$event.ctrlKey) {
+                          return null
+                        }
+                        return _vm.downItem($event)
+                      }
+                    ],
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.currentItemName = $event.target.value
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "flex flex-wrap p-1" }, [
+                _c("label", { staticClass: "p-2 " }, [_vm._v("Qt.")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.currentQt,
+                      expression: "currentQt"
+                    }
+                  ],
+                  ref: "cQ",
+                  staticClass: "border px-2",
+                  attrs: {
+                    pattern: "[0]",
+                    min: 1,
+                    name: "curItemQt",
+                    type: "number",
+                    placeholder: "quantity"
+                  },
+                  domProps: { value: _vm.currentQt },
+                  on: {
+                    keyup: function($event) {
+                      if (
+                        !$event.type.indexOf("key") &&
+                        _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                      ) {
+                        return null
+                      }
+                      return _vm.addItem($event)
+                    },
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.currentQt = $event.target.value
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "flex flex-wrap p-1" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "flex bg-green-300 px-3 py-2",
+                    on: { click: _vm.plusQt }
+                  },
+                  [_vm._v("+")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "flex bg-red-300 px-3 py-2",
+                    on: { click: _vm.minusQt }
+                  },
+                  [_vm._v("-")]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "flex flex-wrap p-1 cursor-pointer select-none"
+                },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "flex-1 bg-blue-300 px-3 py-2",
+                      on: { click: _vm.addItem }
+                    },
+                    [_vm._v("Add")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "flex-1 px-3 py-2 shadow border ml-2",
+                      class: {
+                        "bg-blue-300": _vm.baacodeMachineOn,
+                        "bg-blue-100": !_vm.baacodeMachineOn
+                      },
+                      on: { click: _vm.toggelBarcodeScaner }
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "fi2 ",
+                        class: {
+                          "flaticon-qr-code": _vm.baacodeMachineOn,
+                          "flaticon-ui-2": !_vm.baacodeMachineOn
+                        }
+                      })
+                    ]
+                  )
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.hasItemFromServer
+            ? _c(
+                "div",
+                { staticClass: "flex-1 shadow bg-gray-200 mt-2 ml-4" },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "px-2 py-3 " },
+                    [
+                      _c(
+                        "v-touch",
+                        {
+                          on: {
+                            swipeleft: _vm.nextItemPage,
+                            swiperight: _vm.backItemPage
+                          }
+                        },
+                        [
+                          _c(
+                            "table",
+                            {
+                              staticClass:
+                                "table-auto w-full table-bordered  ms-item-found-box"
+                            },
+                            [
+                              _c("tr", [
+                                _c("th", { staticClass: "border shadow p-2" }, [
+                                  _vm._v("Item Name")
+                                ]),
+                                _vm._v(" "),
+                                _c("th", { staticClass: "border shadow p-2" }, [
+                                  _vm._v("Item Code")
+                                ]),
+                                _vm._v(" "),
+                                _c("th", { staticClass: "border shadow p-2" }, [
+                                  _vm._v("HSN/SAC Code")
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _vm._l(_vm.foundItem, function(item, key) {
+                                return _c(
+                                  "tr",
+                                  {
+                                    staticClass: "border cursor-pointer ",
+                                    class: {
+                                      "ms-list-row-highlight-on":
+                                        key == _vm.pickedItem,
+                                      "ms-list-row-highlight-off": !(
+                                        key == _vm.pickedItem
+                                      )
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.selectItem(key)
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "td",
+                                      { staticClass: "text-right p-2" },
+                                      [
+                                        _c("input", {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: _vm.pickedItem,
+                                              expression: "pickedItem"
+                                            }
+                                          ],
+                                          attrs: { type: "radio" },
+                                          domProps: {
+                                            value: key,
+                                            checked: _vm._q(_vm.pickedItem, key)
+                                          },
+                                          on: {
+                                            change: function($event) {
+                                              _vm.pickedItem = key
+                                            }
+                                          }
+                                        })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("td", [
+                                      _c("div", [
+                                        _c("span", [_vm._v(_vm._s(item.name))])
+                                      ])
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "td",
+                                      { staticClass: "text-right p-2" },
+                                      [_vm._v(_vm._s(item.taxcode))]
+                                    )
+                                  ]
+                                )
+                              })
+                            ],
+                            2
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                ]
+              )
+            : _c(
+                "div",
+                { staticClass: "flex-1 ml-4 shadow bg-gray-200 mt-2" },
+                [
+                  _c("span", { staticClass: "pl-1" }, [
+                    _vm._v("Please Enter Item Name or Item Code")
+                  ])
+                ]
+              )
+        ]
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "flex flex-wrap" }, [
+      _c("div", { staticClass: "flex-1 p-2 m-3 shadow border bg-white" }, [
+        _c(
+          "div",
+          {
+            staticStyle: {
+              display: "block",
+              "overflow-x": "auto",
+              "white-space": "nowrap"
+            }
+          },
+          [
+            _c(
+              "table",
+              { staticClass: "ms-table-auto " },
+              [
+                _c(
+                  "tr",
+                  { staticClass: "text-left" },
+                  [
+                    _c("th", [_vm._v("Item Name")]),
+                    _vm._v(" "),
+                    _c("th", {}, [_vm._v("Quantity")]),
+                    _vm._v(" "),
+                    _vm.PriceMatters
+                      ? _c("th", { staticClass: "text-right" }, [
+                          _vm._v("Unit rate")
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.PriceMatters
+                      ? _c("th", { staticClass: "text-right" }, [
+                          _vm._v("Taxable Amount")
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm._l(_vm.defaultTax, function(tax) {
+                      return _vm.PriceMatters
+                        ? _c("th", { staticClass: "text-right" }, [
+                            _vm._v(_vm._s(tax.name))
+                          ])
+                        : _vm._e()
+                    }),
+                    _vm._v(" "),
+                    _vm.PriceMatters
+                      ? _c("th", { staticClass: "text-right" }, [
+                          _vm._v("Total")
+                        ])
+                      : _vm._e()
+                  ],
+                  2
+                ),
+                _vm._v(" "),
+                _vm._l(_vm.currentListProcess, function(item, key) {
+                  return _c(
+                    "tr",
+                    { staticClass: "border" },
+                    [
+                      _c("td", {}, [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "flex  cursor-pointer content-center flex-wrap "
+                          },
+                          [
+                            _c(
+                              "span",
+                              {
+                                staticClass: "flex",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.removeItemFromList(key)
+                                  }
+                                }
+                              },
+                              [_vm._m(0, true)]
+                            ),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "flex-1 p-2" }, [
+                              _vm._v(
+                                _vm._s(item.name) + " " + _vm._s(item.taxcode)
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _vm.itemDescription
+                              ? _c(
+                                  "span",
+                                  {
+                                    staticClass: "w-full border border-blue-300"
+                                  },
+                                  [
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: item.description,
+                                          expression: "item.description"
+                                        }
+                                      ],
+                                      attrs: { type: "text" },
+                                      domProps: { value: item.description },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            item,
+                                            "description",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                )
+                              : _vm._e()
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: " " }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "flex cursor-pointer select-none flex-wrap"
+                          },
+                          [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: item.qt,
+                                  expression: "item.qt"
+                                }
+                              ],
+                              staticClass: " sm:w-full lg:w-1/6 shadow flex",
+                              attrs: { min: "1", type: "number" },
+                              domProps: { value: item.qt },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(item, "qt", $event.target.value)
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "flex flex-wrap " }, [
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "flex bg-green-300 px-3 py-2",
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.plusQtCurrent(key)
+                                    }
+                                  }
+                                },
+                                [_vm._v("+")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "flex bg-red-300 px-3 py-2",
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.minusQtCurrent(key)
+                                    }
+                                  }
+                                },
+                                [_vm._v("-")]
+                              )
+                            ])
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _vm.PriceMatters
+                        ? _c("td", { staticClass: "text-right" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: item.price,
+                                  expression: "item.price"
+                                }
+                              ],
+                              staticClass: "shadow",
+                              attrs: { min: "0", type: "number" },
+                              domProps: { value: item.price },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(item, "price", $event.target.value)
+                                }
+                              }
+                            })
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.PriceMatters
+                        ? _c("td", { staticClass: "text-right" }, [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(_vm.roundToTwo(item.qt * item.price)) +
+                                "\n                        "
+                            )
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm._l(item.tax, function(tax) {
+                        return _vm.PriceMatters
+                          ? _c("td", { staticClass: "text-right" }, [
+                              _vm._v(
+                                "\n                            " +
+                                  _vm._s(
+                                    _vm.roundToTwo(
+                                      (tax.plus * (item.qt * item.price)) / 100
+                                    )
+                                  ) +
+                                  "\n                        "
+                              )
+                            ])
+                          : _vm._e()
+                      }),
+                      _vm._v(" "),
+                      _vm.PriceMatters
+                        ? _c("td", { staticClass: "text-right" }, [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(
+                                  _vm.roundToTwo(
+                                    item.qt * item.price +
+                                      _vm.calculatTax(
+                                        item.tax,
+                                        item.qt * item.price
+                                      )
+                                  )
+                                ) +
+                                "\n                        "
+                            )
+                          ])
+                        : _vm._e()
+                    ],
+                    2
+                  )
+                }),
+                _vm._v(" "),
+                _c(
+                  "tr",
+                  [
+                    _c("td", [_vm._v("Total Item Quantity ")]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(_vm.itemTotalQt))]),
+                    _vm._v(" "),
+                    _vm.PriceMatters
+                      ? _c(
+                          "td",
+                          {
+                            staticClass: "text-right",
+                            attrs: { colspan: "2" }
+                          },
+                          [_vm._v(_vm._s(_vm.roundToTwo(_vm.itemTotalTaxable)))]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm._l(_vm.defaultTax, function(tax) {
+                      return _vm.PriceMatters
+                        ? _c("td", [
+                            _vm._v(
+                              _vm._s(
+                                _vm.roundToTwo(_vm.itemTaxDetails[tax.name]) ||
+                                  0
+                              )
+                            )
+                          ])
+                        : _vm._e()
+                    }),
+                    _vm._v(" "),
+                    _vm.PriceMatters
+                      ? _c("td", [
+                          _vm._v(_vm._s(_vm.roundToTwo(_vm.itemTaxPlus)))
+                        ])
+                      : _vm._e()
+                  ],
+                  2
+                )
+              ],
+              2
+            )
+          ]
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _vm.PriceMatters
+      ? _c("div", { staticClass: "flex flex-wrap" }, [
+          _c("div", { staticClass: "flex-1 p-2 m-3 shadow border bg-white" }, [
+            _c(
+              "table",
+              { staticClass: "ms-table-auto" },
+              [
+                _c(
+                  "tr",
+                  [
+                    _c("th", [_vm._v("HSN/SAC Code")]),
+                    _vm._v(" "),
+                    _c("th", [_vm._v("Qt")]),
+                    _vm._v(" "),
+                    _vm._l(_vm.defaultTax, function(tax) {
+                      return _c("th", { staticClass: "text-right" }, [
+                        _vm._v(_vm._s(tax.name))
+                      ])
+                    }),
+                    _vm._v(" "),
+                    _c("th", { staticClass: "text-right" }, [_vm._v("Total")])
+                  ],
+                  2
+                ),
+                _vm._v(" "),
+                _vm._l(_vm.itemTaxCodeWise, function(taxCode, key) {
+                  return _c(
+                    "tr",
+                    [
+                      _c("td", [_vm._v(_vm._s(taxCode.taxcode))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(taxCode.qt))]),
+                      _vm._v(" "),
+                      _vm._l(taxCode.taxdetail, function(taxTypeCode, key2) {
+                        return _c("td", [
+                          _vm._v(_vm._s(_vm.roundToTwo(taxTypeCode)))
+                        ])
+                      }),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v(
+                          " " +
+                            _vm._s(
+                              _vm.roundToTwo(
+                                _vm.getTotalOfTypeCode(taxCode.taxdetail)
+                              )
+                            ) +
+                            " "
+                        )
+                      ])
+                    ],
+                    2
+                  )
+                }),
+                _vm._v(" "),
+                _c(
+                  "tr",
+                  [
+                    _c("th", [_vm._v("Total")]),
+                    _vm._v(" "),
+                    _c("th", [_vm._v(_vm._s(_vm.itemTaxCodeWiseTotalQt))]),
+                    _vm._v(" "),
+                    _vm._l(_vm.defaultTax, function(taxType) {
+                      return _c("th", [
+                        _vm._v(
+                          _vm._s(
+                            _vm.roundToTwo(
+                              _vm.itemTaxCodeWiseTotalTaxByType[taxType.name] ||
+                                0
+                            )
+                          )
+                        )
+                      ])
+                    }),
+                    _vm._v(" "),
+                    _c("th", [
+                      _vm._v(
+                        _vm._s(_vm.roundToTwo(_vm.itemTaxCodeWiseTotalTaxAll))
+                      )
+                    ])
+                  ],
+                  2
+                )
+              ],
+              2
+            )
+          ])
+        ])
+      : _vm._e()
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "bg-red-200 px-3 py-2" }, [
+      _c("i", { staticClass: "fi2 flaticon-delete" })
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msNewTab.vue?vue&type=template&id=5d3fa416&scoped=true&":
 /*!********************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msNewTab.vue?vue&type=template&id=5d3fa416&scoped=true& ***!
@@ -79857,12 +85061,12 @@ var render = function() {
                   _vm._v(" "),
                   _c("td", [_vm._v("  + 10  ")])
                 ])
-              }),
-              _vm._v(" "),
-              _vm._m(2)
+              })
             ],
             2
-          )
+          ),
+          _vm._v(" "),
+          _vm._m(2)
         ])
       ])
     ])
@@ -79917,7 +85121,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "ms-dashboard-container" },
+    {
+      staticClass: "ms-dashboard-container",
+      class: { "ms-dark-mode": this.msDarkMode }
+    },
     [
       _c("div", { staticClass: "fixed w-full ms-nav-container shadow " }, [
         _c(
@@ -79987,8 +85194,7 @@ var render = function() {
               },
               [
                 _c("img", {
-                  staticClass:
-                    "fill-current h-12 mr-2 ms-company-logo hover:shadow-outline hover:bg-gray-200",
+                  staticClass: "fill-current h-12 mr-2 ms-company-logo ",
                   attrs: { src: "/images/logo.png" }
                 })
               ]
@@ -79999,29 +85205,34 @@ var render = function() {
               : _vm._e(),
             _vm._v(" "),
             _c("div", { staticClass: "ms-dashboard-right-nav-box" }, [
-              _c("div", { staticClass: "ms-dashboard-right-nav-btn" }, [
-                _c(
-                  "div",
-                  { staticClass: "ms-dashboard-right-nav-btn-notification" },
-                  [
-                    _c("svg", {}, [
-                      _c("use", {
-                        attrs: { "xlink:href": "#msicon-svg-notification-read" }
-                      })
-                    ])
-                  ]
-                )
-              ]),
+              _c(
+                "div",
+                {
+                  staticClass: "ms-dashboard-right-nav-btn",
+                  on: { click: _vm.oprateNotificationBox }
+                },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "ms-dashboard-right-nav-btn-notification" },
+                    [
+                      _c("svg", {}, [
+                        _c("use", {
+                          attrs: {
+                            "xlink:href": "#msicon-svg-notification-read"
+                          }
+                        })
+                      ])
+                    ]
+                  )
+                ]
+              ),
               _vm._v(" "),
               _c(
                 "div",
                 {
                   staticClass: "ms-dashboard-right-nav-btn ",
-                  on: {
-                    click: function($event) {
-                      return _vm.oprateProfileBox()
-                    }
-                  }
+                  on: { click: _vm.oprateProfileBox }
                 },
                 [
                   _c(
@@ -80063,23 +85274,141 @@ var render = function() {
               _c("hr", { staticClass: "ms-dashboard-profile-hr" }),
               _vm._v(" "),
               _c("div", { staticClass: "text-center" }, [
-                _vm._v(_vm._s(_vm.msUserData.Username) + "\n                "),
+                _vm._v(
+                  _vm._s(_vm.msUserData.Username) + "\n                    "
+                ),
                 _c("br"),
-                _vm._v(_vm._s(_vm.msUserData.email) + "\n                ")
+                _vm._v(_vm._s(_vm.msUserData.email) + "\n                    ")
               ]),
               _vm._v(" "),
               _c("hr", { staticClass: "ms-dashboard-profile-hr" }),
               _vm._v(" "),
               _c("div", { staticClass: "ms-dashboard-profile-footer" }, [
-                _c("div", { staticClass: "ms-dashboard-profile-edit-btn" }, [
-                  _c("svg", { staticClass: "ms-dashboard-profile-edit-icon" }, [
-                    _c("use", {
-                      attrs: { "xlink:href": "#msicon-svg-user-edit" }
-                    })
-                  ]),
+                _c(
+                  "div",
+                  {
+                    staticClass: "ms-dashboard-profile-edit-btn",
+                    on: { click: _vm.openProfile }
+                  },
+                  [
+                    _c(
+                      "svg",
+                      { staticClass: "ms-dashboard-profile-edit-icon" },
+                      [
+                        _c("use", {
+                          attrs: { "xlink:href": "#msicon-svg-user-edit" }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("Edit Profile")])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "ms-dashboard-profile-signout-btn" }, [
+                  _c("span", [_vm._v("Log out")]),
                   _vm._v(" "),
-                  _c("span", [_vm._v("Edit Profile")])
-                ]),
+                  _c(
+                    "svg",
+                    { staticClass: "ms-dashboard-profile-signout-icon" },
+                    [
+                      _c("use", {
+                        attrs: { "xlink:href": "#msicon-svg-user-signout" }
+                      })
+                    ]
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("hr", { staticClass: "ms-dashboard-profile-hr" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "ms-dashboard-profile-footer" }, [
+                _c("span", { staticClass: "flex" }, [_vm._v("Switch mode : ")]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "ms-dashboard-profile-darkmode-btn ",
+                    on: { click: _vm.darkModeToggel }
+                  },
+                  [
+                    _c("span", [
+                      _c("i", {
+                        staticClass:
+                          "ms-dashboard-profile-darkmode-icon fi2 flaticon-replace",
+                        class: {
+                          "flaticon-replace": _vm.msDarkMode
+                        }
+                      }),
+                      _vm._v(
+                        "\n                                " +
+                          _vm._s(_vm.msDarkMode ? "Light" : "Dark") +
+                          " "
+                      )
+                    ])
+                  ]
+                )
+              ])
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            class: {
+              "ms-dashboard-profile-box": _vm.msNotificationDiv,
+              "ms-dashboard-profile-box-hidden": !_vm.msNotificationDiv
+            }
+          },
+          [
+            _c("div", { staticClass: "ms-dashboard-profile-body" }, [
+              _c("div", { staticClass: "ms-dashboard-profile-user-box " }, [
+                _c("small", [_vm._v("Notification")]),
+                _vm._v(" "),
+                _c("svg", { staticClass: "ms-dashboard-profile-user-icon" }, [
+                  _c("use", {
+                    attrs: {
+                      "xlink:href":
+                        "#msicon-svg-user-" + _vm.msUserData.sex + "-1"
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("hr", { staticClass: "ms-dashboard-profile-hr" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "text-center" }, [
+                _vm._v(
+                  _vm._s(_vm.msUserData.Username) + "\n                    "
+                ),
+                _c("br"),
+                _vm._v(_vm._s(_vm.msUserData.email) + "\n                    ")
+              ]),
+              _vm._v(" "),
+              _c("hr", { staticClass: "ms-dashboard-profile-hr" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "ms-dashboard-profile-footer" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "ms-dashboard-profile-edit-btn",
+                    on: { click: _vm.openProfile }
+                  },
+                  [
+                    _c(
+                      "svg",
+                      { staticClass: "ms-dashboard-profile-edit-icon" },
+                      [
+                        _c("use", {
+                          attrs: { "xlink:href": "#msicon-svg-user-edit" }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("Edit Profile")])
+                  ]
+                ),
                 _vm._v(" "),
                 _c("div", { staticClass: "ms-dashboard-profile-signout-btn" }, [
                   _c("span", [_vm._v("Log out")]),
@@ -80113,7 +85442,7 @@ var render = function() {
         "div",
         {
           class: {
-            "ms-livebox bg-white-200 ": true,
+            "ms-livebox ": true,
             "ms-livebox-full": !_vm.msNavOn,
             "ms-livebox-without-nav": !_vm.msNavBar
           }
@@ -80878,10 +86207,11 @@ var render = function() {
                 },
                 [
                   _c("i", {
-                    class: ((_obj = {}),
-                    (_obj[btn.btnIcon] = true),
-                    (_obj["inline-flex"] = true),
-                    _obj)
+                    class:
+                      ((_obj = {}),
+                      (_obj[btn.btnIcon] = true),
+                      (_obj["inline-flex"] = true),
+                      _obj)
                   }),
                   _vm._v(" "),
                   _c("strong", { class: { "inline-flex": true } }, [
@@ -80910,9 +86240,8 @@ var render = function() {
                       return _c("div", { staticClass: "cursor-pointer" }, [
                         _c("a", { attrs: { href: sor.VerifyUrl } }, [
                           _c("i", {
-                            class: ((_obj = {}),
-                            (_obj[sor.VerifyIcon] = true),
-                            _obj)
+                            class:
+                              ((_obj = {}), (_obj[sor.VerifyIcon] = true), _obj)
                           })
                         ])
                       ])
@@ -81476,6 +86805,276 @@ function normalizeComponent (
 
 /***/ }),
 
+/***/ "./node_modules/vue-touch/dist/vue-touch.js":
+/*!**************************************************!*\
+  !*** ./node_modules/vue-touch/dist/vue-touch.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function (global, factory) {
+   true ? factory(__webpack_require__(/*! hammerjs */ "./node_modules/hammerjs/hammer.js")) :
+  undefined;
+}(this, (function (Hammer) { 'use strict';
+
+Hammer = 'default' in Hammer ? Hammer['default'] : Hammer;
+
+function assign(target) {
+  var sources = [], len = arguments.length - 1;
+  while ( len-- > 0 ) sources[ len ] = arguments[ len + 1 ];
+  for (var i = 0; i < sources.length; i++) {
+    var source = sources[i];
+    var keys = Object.keys(source);
+    for (var i$1 = 0; i$1 < keys.length; i$1++) {
+      var key = keys[i$1];
+      target[key] = source[key];
+    }
+  }
+  return target
+}
+function createProp() {
+  return {
+    type: Object,
+    default: function() { return {} }
+  }
+}
+function capitalize (str) {
+  return str.charAt(0).toUpperCase() + str.slice(1)
+}
+var directions = ['up', 'down', 'left', 'right', 'horizontal', 'vertical', 'all'];
+function guardDirections (options) {
+  var dir = options.direction;
+  if (typeof dir === 'string') {
+    var hammerDirection = 'DIRECTION_' + dir.toUpperCase();
+    if (directions.indexOf(dir) > -1 && Hammer.hasOwnProperty(hammerDirection)) {
+      options.direction = Hammer[hammerDirection];
+    } else {
+      console.warn('[vue-touch] invalid direction: ' + dir);
+    }
+  }
+  return options
+}
+var config = {
+};
+var customEvents = {
+};
+var gestures = [
+  'pan','panstart','panmove','panend','pancancel','panleft','panright','panup','pandown',
+  'pinch','pinchstart','pinchmove','pinchend','pinchcancel','pinchin','pinchout',
+  'press','pressup',
+  'rotate','rotatestart','rotatemove','rotateend','rotatecancel',
+  'swipe','swipeleft','swiperight','swipeup','swipedown',
+  'tap'
+];
+var gestureMap = {
+  pan: 'pan',
+  panstart: 'pan',
+  panmove: 'pan',
+  panend: 'pan',
+  pancancel: 'pan',
+  panleft: 'pan',
+  panright: 'pan',
+  panup: 'pan',
+  pandown: 'pan',
+  pinch: 'pinch',
+  pinchstart: 'pinch',
+  pinchmove: 'pinch',
+  pinchend: 'pinch',
+  pinchcancel: 'pinch',
+  pinchin: 'pinch',
+  pinchout: 'pinch',
+  press: 'press',
+  pressup: 'press',
+  rotate: 'rotate',
+  rotatestart: 'rotate',
+  rotatemove: 'rotate',
+  rotateend: 'rotate',
+  rotatecancel: 'rotate',
+  swipe: 'swipe',
+  swipeleft: 'swipe',
+  swiperight: 'swipe',
+  swipeup: 'swipe',
+  swipedown: 'swipe',
+  tap: 'tap'
+};
+
+var Component = {
+  props: {
+    options: createProp(),
+    tapOptions: createProp(),
+    panOptions: createProp(),
+    pinchOptions: createProp(),
+    pressOptions: createProp(),
+    rotateOptions: createProp(),
+    swipeOptions: createProp(),
+    tag: { type: String, default: 'div' },
+    enabled: {
+      default: true,
+      type: [Boolean, Object],
+    }
+  },
+  mounted: function mounted() {
+    if (!this.$isServer) {
+      this.hammer = new Hammer.Manager(this.$el, this.options);
+      this.recognizers = {};
+      this.setupBuiltinRecognizers();
+      this.setupCustomRecognizers();
+      this.updateEnabled(this.enabled);
+    }
+  },
+  destroyed: function destroyed() {
+    if (!this.$isServer) {
+      this.hammer.destroy();
+    }
+  },
+  watch: {
+    enabled: {
+      deep: true,
+      handler: function handler() {
+        var args = [], len = arguments.length;
+        while ( len-- ) args[ len ] = arguments[ len ];
+        (ref = this).updateEnabled.apply(ref, args);
+        var ref;
+      }
+    }
+  },
+  methods: {
+    setupBuiltinRecognizers: function setupBuiltinRecognizers()  {
+      var this$1 = this;
+      for (var i = 0; i < gestures.length; i++) {
+        var gesture = gestures[i];
+        if (this$1._events[gesture]) {
+          var mainGesture = gestureMap[gesture];
+          var options = assign({}, (config[mainGesture] || {}), this$1[(mainGesture + "Options")]);
+          this$1.addRecognizer(mainGesture, options);
+          this$1.addEvent(gesture);
+        }
+      }
+    },
+    setupCustomRecognizers: function setupCustomRecognizers() {
+      var this$1 = this;
+      var gestures$$1 = Object.keys(customEvents);
+      for (var i = 0; i < gestures$$1.length; i++) {
+        var gesture = gestures$$1[i];
+        if (this$1._events[gesture]) {
+          var opts = customEvents[gesture];
+          var localCustomOpts = this$1[(gesture + "Options")] || {};
+          var options = assign({}, opts, localCustomOpts);
+          this$1.addRecognizer(gesture, options, {mainGesture: options.type});
+          this$1.addEvent(gesture);
+        }
+      }
+    },
+    addRecognizer: function addRecognizer(gesture, options, ref) {
+      if ( ref === void 0 ) ref = {};
+      var mainGesture = ref.mainGesture;
+      if (!this.recognizers[gesture]) {
+        var recognizer = new Hammer[capitalize(mainGesture || gesture)](guardDirections(options));
+        this.recognizers[gesture] = recognizer;
+        this.hammer.add(recognizer);
+        recognizer.recognizeWith(this.hammer.recognizers);
+      }
+    },
+    addEvent: function addEvent(gesture) {
+      var this$1 = this;
+      this.hammer.on(gesture, function (e) { return this$1.$emit(gesture, e); });
+    },
+    updateEnabled: function updateEnabled(newVal, oldVal) {
+      var this$1 = this;
+      if (newVal === true) {
+        this.enableAll();
+      } else if (newVal === false) {
+        this.disableAll();
+      } else if (typeof newVal === 'object') {
+        var keys = Object.keys(newVal);
+        for (var i = 0; i < keys.length; i++) {
+          var event = keys[i];
+          if (this$1.recognizers[event]) {
+            newVal[event]
+              ? this$1.enable(event)
+              : this$1.disable(event);
+          }
+        }
+      }
+    },
+    enable: function enable(r) {
+      var recognizer = this.recognizers[r];
+      if (!recognizer.options.enable) {
+        recognizer.set({ enable: true });
+      }
+    },
+    disable: function disable(r) {
+      var recognizer = this.recognizers[r];
+      if (recognizer.options.enable) {
+        recognizer.set({ enable: false });
+      }
+    },
+    toggle: function toggle(r) {
+      var recognizer = this.recognizers[r];
+      if (recognizer) {
+        recognizer.options.enable
+          ? this.disable(r)
+          : this.enable(r);
+      }
+    },
+    enableAll: function enableAll(r) {
+      this.toggleAll({ enable: true });
+    },
+    disableAll: function disableAll(r) {
+      this.toggleAll({ enable: false });
+    },
+    toggleAll: function toggleAll(ref) {
+      var this$1 = this;
+      var enable = ref.enable;
+      var keys = Object.keys(this.recognizers);
+      for (var i = 0; i < keys.length; i++) {
+        var r = this$1.recognizers[keys[i]];
+        if (r.options.enable !== enable) {
+          r.set({ enable: enable });
+        }
+      }
+    },
+    isEnabled: function isEnabled(r) {
+      return this.recognizers[r] && this.recognizers[r].options.enable
+    }
+  },
+  render: function render(h) {
+    return h(this.tag, {}, this.$slots.default)
+  }
+};
+
+var installed = false;
+var vueTouch = { config: config, customEvents: customEvents };
+vueTouch.install = function install(Vue, opts) {
+  if ( opts === void 0 ) opts = {};
+  var name = opts.name || 'v-touch';
+  Vue.component(name, assign(Component, { name: name }));
+  installed = true;
+}.bind(vueTouch);
+vueTouch.registerCustomEvent = function registerCustomEvent(event, options) {
+  if ( options === void 0 ) options = {};
+  if (installed) {
+    console.warn(("\n      [vue-touch]: Custom Event '" + event + "' couldn't be added to vue-touch.\n      Custom Events have to be registered before installing the plugin.\n      "));
+    return
+  }
+  options.event = event;
+  customEvents[event] = options;
+  Component.props[(event + "Options")] = {
+    type: Object,
+    default: function default$1() { return {} }
+  };
+}.bind(vueTouch);
+vueTouch.component = Component;
+if (true) {
+  module.exports = vueTouch;
+} else {}
+
+})));
+//# sourceMappingURL=vue-touch.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/vue/dist/vue.common.dev.js":
 /*!*************************************************!*\
   !*** ./node_modules/vue/dist/vue.common.dev.js ***!
@@ -81485,7 +87084,7 @@ function normalizeComponent (
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global, setImmediate) {/*!
- * Vue.js v2.6.10
+ * Vue.js v2.6.11
  * (c) 2014-2019 Evan You
  * Released under the MIT License.
  */
@@ -83451,7 +89050,7 @@ if (typeof Promise !== 'undefined' && isNative(Promise)) {
   isUsingMicroTask = true;
 } else if (typeof setImmediate !== 'undefined' && isNative(setImmediate)) {
   // Fallback to setImmediate.
-  // Techinically it leverages the (macro) task queue,
+  // Technically it leverages the (macro) task queue,
   // but it is still a better choice than setTimeout.
   timerFunc = function () {
     setImmediate(flushCallbacks);
@@ -83540,7 +89139,7 @@ var initProxy;
     warn(
       "Property \"" + key + "\" must be accessed with \"$data." + key + "\" because " +
       'properties starting with "$" or "_" are not proxied in the Vue instance to ' +
-      'prevent conflicts with Vue internals' +
+      'prevent conflicts with Vue internals. ' +
       'See: https://vuejs.org/v2/api/#data',
       target
     );
@@ -84400,7 +89999,7 @@ function bindDynamicKeys (baseObj, values) {
     if (typeof key === 'string' && key) {
       baseObj[values[i]] = values[i + 1];
     } else if (key !== '' && key !== null) {
-      // null is a speical value for explicitly removing a binding
+      // null is a special value for explicitly removing a binding
       warn(
         ("Invalid value for dynamic directive argument (expected string or null): " + key),
         this
@@ -84895,6 +90494,12 @@ function _createElement (
     ns = (context.$vnode && context.$vnode.ns) || config.getTagNamespace(tag);
     if (config.isReservedTag(tag)) {
       // platform built-in elements
+      if (isDef(data) && isDef(data.nativeOn)) {
+        warn(
+          ("The .native modifier for v-on is only valid on components but it was used on <" + tag + ">."),
+          context
+        );
+      }
       vnode = new VNode(
         config.parsePlatformTagName(tag), data, children,
         undefined, undefined, context
@@ -85020,7 +90625,7 @@ function renderMixin (Vue) {
     // render self
     var vnode;
     try {
-      // There's no need to maintain a stack becaues all render fns are called
+      // There's no need to maintain a stack because all render fns are called
       // separately from one another. Nested component's render fns are called
       // when parent component is patched.
       currentRenderingInstance = vm;
@@ -86919,7 +92524,7 @@ Object.defineProperty(Vue, 'FunctionalRenderContext', {
   value: FunctionalRenderContext
 });
 
-Vue.version = '2.6.10';
+Vue.version = '2.6.11';
 
 /*  */
 
@@ -87592,7 +93197,7 @@ function createPatchFunction (backend) {
     }
   }
 
-  function removeVnodes (parentElm, vnodes, startIdx, endIdx) {
+  function removeVnodes (vnodes, startIdx, endIdx) {
     for (; startIdx <= endIdx; ++startIdx) {
       var ch = vnodes[startIdx];
       if (isDef(ch)) {
@@ -87703,7 +93308,7 @@ function createPatchFunction (backend) {
       refElm = isUndef(newCh[newEndIdx + 1]) ? null : newCh[newEndIdx + 1].elm;
       addVnodes(parentElm, refElm, newCh, newStartIdx, newEndIdx, insertedVnodeQueue);
     } else if (newStartIdx > newEndIdx) {
-      removeVnodes(parentElm, oldCh, oldStartIdx, oldEndIdx);
+      removeVnodes(oldCh, oldStartIdx, oldEndIdx);
     }
   }
 
@@ -87795,7 +93400,7 @@ function createPatchFunction (backend) {
         if (isDef(oldVnode.text)) { nodeOps.setTextContent(elm, ''); }
         addVnodes(elm, null, ch, 0, ch.length - 1, insertedVnodeQueue);
       } else if (isDef(oldCh)) {
-        removeVnodes(elm, oldCh, 0, oldCh.length - 1);
+        removeVnodes(oldCh, 0, oldCh.length - 1);
       } else if (isDef(oldVnode.text)) {
         nodeOps.setTextContent(elm, '');
       }
@@ -88024,7 +93629,7 @@ function createPatchFunction (backend) {
 
         // destroy old node
         if (isDef(parentElm)) {
-          removeVnodes(parentElm, [oldVnode], 0, 0);
+          removeVnodes([oldVnode], 0, 0);
         } else if (isDef(oldVnode.tag)) {
           invokeDestroyHook(oldVnode);
         }
@@ -90730,7 +96335,7 @@ var startTagOpen = new RegExp(("^<" + qnameCapture));
 var startTagClose = /^\s*(\/?)>/;
 var endTag = new RegExp(("^<\\/" + qnameCapture + "[^>]*>"));
 var doctype = /^<!DOCTYPE [^>]+>/i;
-// #7298: escape - to avoid being pased as HTML comment when inlined in page
+// #7298: escape - to avoid being passed as HTML comment when inlined in page
 var comment = /^<!\--/;
 var conditionalComment = /^<!\[/;
 
@@ -91015,7 +96620,7 @@ function parseHTML (html, options) {
 /*  */
 
 var onRE = /^@|^v-on:/;
-var dirRE = /^v-|^@|^:/;
+var dirRE = /^v-|^@|^:|^#/;
 var forAliasRE = /([\s\S]*?)\s+(?:in|of)\s+([\s\S]*)/;
 var forIteratorRE = /,([^,\}\]]*)(?:,([^,\}\]]*))?$/;
 var stripParensRE = /^\(|\)$/g;
@@ -91639,7 +97244,7 @@ function processSlotContent (el) {
           if (el.parent && !maybeComponent(el.parent)) {
             warn$2(
               "<template v-slot> can only appear at the root level inside " +
-              "the receiving the component",
+              "the receiving component",
               el
             );
           }
@@ -92202,7 +97807,7 @@ function isDirectChildOfTemplateFor (node) {
 
 /*  */
 
-var fnExpRE = /^([\w$_]+|\([^)]*?\))\s*=>|^function\s*(?:[\w$]+)?\s*\(/;
+var fnExpRE = /^([\w$_]+|\([^)]*?\))\s*=>|^function(?:\s+[\w$]+)?\s*\(/;
 var fnInvokeRE = /\([^)]*?\);*$/;
 var simplePathRE = /^[A-Za-z_$][\w$]*(?:\.[A-Za-z_$][\w$]*|\['[^']*?']|\["[^"]*?"]|\[\d+]|\[[A-Za-z_$][\w$]*])*$/;
 
@@ -92971,6 +98576,8 @@ function checkNode (node, warn) {
           var range = node.rawAttrsMap[name];
           if (name === 'v-for') {
             checkFor(node, ("v-for=\"" + value + "\""), warn, range);
+          } else if (name === 'v-slot' || name[0] === '#') {
+            checkFunctionParameterExpression(value, (name + "=\"" + value + "\""), warn, range);
           } else if (onRE.test(name)) {
             checkEvent(value, (name + "=\"" + value + "\""), warn, range);
           } else {
@@ -92990,9 +98597,9 @@ function checkNode (node, warn) {
 }
 
 function checkEvent (exp, text, warn, range) {
-  var stipped = exp.replace(stripStringRE, '');
-  var keywordMatch = stipped.match(unaryOperatorsRE);
-  if (keywordMatch && stipped.charAt(keywordMatch.index - 1) !== '$') {
+  var stripped = exp.replace(stripStringRE, '');
+  var keywordMatch = stripped.match(unaryOperatorsRE);
+  if (keywordMatch && stripped.charAt(keywordMatch.index - 1) !== '$') {
     warn(
       "avoid using JavaScript unary operator as property name: " +
       "\"" + (keywordMatch[0]) + "\" in expression " + (text.trim()),
@@ -93044,6 +98651,19 @@ function checkExpression (exp, text, warn, range) {
         range
       );
     }
+  }
+}
+
+function checkFunctionParameterExpression (exp, text, warn, range) {
+  try {
+    new Function(exp, '');
+  } catch (e) {
+    warn(
+      "invalid function parameter expression: " + (e.message) + " in\n\n" +
+      "    " + exp + "\n\n" +
+      "  Raw expression: " + (text.trim()) + "\n",
+      range
+    );
   }
 }
 
@@ -93563,11 +99183,11 @@ __webpack_require__.r(__webpack_exports__);
     },
     getGetRaw: function getGetRaw(url, classFor, callBack) {
       var returnX = 'ok';
+      var Handler = classFor;
       fetch(url).then(function (response) {
         //   console.log(response);
         return response.json();
       }).then(function (data) {
-        var Handler = classFor;
         Handler[callBack](data);
       })["catch"](function (error) {
         console.log(error);
@@ -93576,9 +99196,14 @@ __webpack_require__.r(__webpack_exports__);
     },
     getGetLink: function getGetLink(url, classFor) {
       //   url=url+"?dataLink=true"
-      var returnX = "";
+      var returnX = true;
       var self = classFor;
-      var re = axios.get(url).then(function (response) {
+      var config = {
+        headers: {
+          'MS-APP-Token': 'app'
+        }
+      };
+      var re = axios.get(url, config).then(function (response) {
         //console.log(response.data);
         returnX = response.data;
         self.setHtml(returnX);
@@ -94035,6 +99660,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_msInput_vue_vue_type_template_id_0aac7f4c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_msInput_vue_vue_type_template_id_0aac7f4c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msListMaker.vue":
+/*!**********************************************************************!*\
+  !*** ./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msListMaker.vue ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _msListMaker_vue_vue_type_template_id_3f3e58d6_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./msListMaker.vue?vue&type=template&id=3f3e58d6&scoped=true& */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msListMaker.vue?vue&type=template&id=3f3e58d6&scoped=true&");
+/* harmony import */ var _msListMaker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./msListMaker.vue?vue&type=script&lang=js& */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msListMaker.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _msListMaker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _msListMaker_vue_vue_type_template_id_3f3e58d6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _msListMaker_vue_vue_type_template_id_3f3e58d6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "3f3e58d6",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "vendor/msllp/core/src/Views/core/B/s/js/MS/C/msListMaker.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msListMaker.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************!*\
+  !*** ./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msListMaker.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_msListMaker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./msListMaker.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msListMaker.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_msListMaker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msListMaker.vue?vue&type=template&id=3f3e58d6&scoped=true&":
+/*!*****************************************************************************************************************!*\
+  !*** ./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msListMaker.vue?vue&type=template&id=3f3e58d6&scoped=true& ***!
+  \*****************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_msListMaker_vue_vue_type_template_id_3f3e58d6_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./msListMaker.vue?vue&type=template&id=3f3e58d6&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msListMaker.vue?vue&type=template&id=3f3e58d6&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_msListMaker_vue_vue_type_template_id_3f3e58d6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_msListMaker_vue_vue_type_template_id_3f3e58d6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -94840,7 +100534,15 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 var path = __webpack_require__(/*! path */ "./node_modules/path-browserify/index.js");
 
 var appDir = path.dirname(__webpack_require__.c[__webpack_require__.s].filename);
- //Vue.component('inputtext', require('./components/inputText.vue').default);
+
+
+var VueTouch = __webpack_require__(/*! vue-touch */ "./node_modules/vue-touch/dist/vue-touch.js");
+
+Vue.use(VueTouch, {
+  name: 'v-touch'
+}); //window.moment = require('moment');
+//Vue.directive('touch', VueTouch);
+//Vue.component('inputtext', require('./components/inputText.vue').default);
 //Vue.component('panelbackend', require('./components/panelBackend.vue').default);
 //Vue.component('msform', require('./components/msForm.vue').default);
 //Vue.component('msinvoice', require('./components/msInvoice.vue').default);
@@ -94854,13 +100556,14 @@ Vue.component('msdashboard', __webpack_require__(/*! ./MS/msDashboard.vue */ "./
 Vue.component('mswindow', __webpack_require__(/*! ./MS/msWindow.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/msWindow.vue")["default"]);
 Vue.component('msmenubar', __webpack_require__(/*! ./MS/msMenubar.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/msMenubar.vue")["default"]);
 Vue.component('msdatatable', __webpack_require__(/*! ./MS/msDatatable.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/msDatatable.vue")["default"]);
-Vue.component('msdockerdashboard', __webpack_require__(/*! ./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue */ "./MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue")["default"]);
+Vue.component('msdockerdashboard', __webpack_require__(/*! E:/Pojects/php/MSFrame/6/Master/MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue */ "../../php/MSFrame/6/Master/MS/B/M/DCM/V/Vue/dockerMasterDashboard.vue")["default"]);
 Vue.component('mssidenav', __webpack_require__(/*! ./MS/C/msSideNav.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msSideNav.vue")["default"]);
 Vue.component('newtab', __webpack_require__(/*! ./MS/C/msNewTab.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msNewTab.vue")["default"]);
 Vue.component('salesdashboard', __webpack_require__(/*! ./MS/D/Sales.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/D/Sales.vue")["default"]);
 Vue.component('mscalc', __webpack_require__(/*! ./MS/C/msCalc.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msCalc.vue")["default"]);
 Vue.component('mslogin', __webpack_require__(/*! ./MS/msLoginPage.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/msLoginPage.vue")["default"]);
-Vue.component('profile', __webpack_require__(/*! ./MS/P/profilePage.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/P/profilePage.vue")["default"]); //Components
+Vue.component('profile', __webpack_require__(/*! ./MS/P/profilePage.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/P/profilePage.vue")["default"]);
+Vue.component('mslistmaker', __webpack_require__(/*! ./MS/C/msListMaker.vue */ "./vendor/msllp/core/src/Views/core/B/s/js/MS/C/msListMaker.vue")["default"]); //Components
 
 
 var store = {
@@ -94973,7 +100676,8 @@ var app = new Vue({
       mserrorCount: false,
       msform: [],
       msNavigation: false,
-      msCalc: false
+      msCalc: false,
+      msDarkMode: false
     };
   },
   mounted: function mounted() {// console.log(this.msform);
@@ -94991,8 +100695,8 @@ window.vueApp = app;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\MS-Master\Projects\FrameworkPHP\gst_invoice\Master\vendor\msllp\core\src\Views\core\B\s\js\app.js */"./vendor/msllp/core/src/Views/core/B/s/js/app.js");
-module.exports = __webpack_require__(/*! E:\MS-Master\Projects\FrameworkPHP\gst_invoice\Master\vendor\msllp\core\src\Views\core\B\s\css\app.scss */"./vendor/msllp/core/src/Views/core/B/s/css/app.scss");
+__webpack_require__(/*! E:\Pojects\Live\o3 mainframe\vendor\msllp\core\src\Views\core\B\s\js\app.js */"./vendor/msllp/core/src/Views/core/B/s/js/app.js");
+module.exports = __webpack_require__(/*! E:\Pojects\Live\o3 mainframe\vendor\msllp\core\src\Views\core\B\s\css\app.scss */"./vendor/msllp/core/src/Views/core/B/s/css/app.scss");
 
 
 /***/ })
